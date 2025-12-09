@@ -16,7 +16,6 @@
       --bg-alt: #ffffff;
       --bg-band: #e4ecf8;
       --bg-band-strong: #0b2345;
-      --bg-highlight: #12284d;
       --text-main: #141827;
       --text-muted: #5e6473;
       --accent-primary: #1c4fd0;
@@ -26,7 +25,6 @@
       --shadow-soft: 0 10px 28px rgba(9, 15, 40, 0.12);
       --radius-lg: 20px;
       --radius-md: 14px;
-      --radius-sm: 10px;
       --max-width: 1180px;
     }
 
@@ -43,7 +41,6 @@
     a { color: var(--accent-primary); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Header */
     header {
       background: #ffffffee;
       backdrop-filter: blur(8px);
@@ -61,11 +58,7 @@
       justify-content: space-between;
       gap: 12px;
     }
-    .logo-block {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
+    .logo-block { display: flex; flex-direction: column; gap: 3px; }
     .logo-main {
       font-size: 1.3rem;
       font-weight: 900;
@@ -103,7 +96,6 @@
       color: #ffffff;
     }
 
-    /* Layout */
     main {
       max-width: var(--max-width);
       margin: 18px auto 40px;
@@ -112,8 +104,8 @@
 
     .band {
       width: 100%;
-      border-radius: 26px;
-      padding: 18px 20px 18px;
+      border-radius: 24px;
+      padding: 18px 20px;
       background: linear-gradient(135deg, var(--bg-band), #fdfdff);
       margin-bottom: 18px;
       box-shadow: 0 10px 24px rgba(11, 35, 69, 0.08);
@@ -123,9 +115,8 @@
       color: #ffffff;
     }
     .band-strong h2,
-    .band-strong p {
-      color: #ffffff;
-    }
+    .band-strong p { color: #ffffff; }
+
     .band-top-banner {
       background: linear-gradient(135deg, #0b2345, #101d3a);
       color: #ffffff;
@@ -243,9 +234,7 @@
       color: var(--text-muted);
       border-color: transparent;
     }
-    .btn:hover {
-      opacity: 0.92;
-    }
+    .btn:hover { opacity: 0.92; }
 
     .label-pill {
       display: inline-block;
@@ -293,7 +282,36 @@
       margin-right: 4px;
     }
 
-    /* Video */
+    .image-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 10px 0 4px;
+    }
+    .image-thumb {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 90px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 8px 20px rgba(10, 20, 40, 0.18);
+    }
+    .image-thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.45), transparent);
+    }
+    .image-thumb-label {
+      position: absolute;
+      left: 8px;
+      bottom: 6px;
+      color: #fdfdfd;
+      font-size: 0.75rem;
+      z-index: 2;
+    }
+
     .video-layout {
       display: grid;
       grid-template-columns: 2fr 1.2fr;
@@ -334,7 +352,6 @@
       font-size: 0.86rem;
     }
 
-    /* Sections */
     .section { display: none; margin-top: 20px; }
     .section.active { display: block; }
 
@@ -388,7 +405,61 @@
       font-size: 0.8rem;
     }
 
-    /* Footer */
+    .ad-box {
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 0.88rem;
+      margin: 10px 0 4px;
+    }
+    .ad-searchconverts {
+      background: linear-gradient(135deg, #12284d, #1e4ea8);
+      color: #fdfdfd;
+    }
+    .ad-aging {
+      background: #fff7ea;
+      border: 1px solid #f1d49a;
+      color: #7b5313;
+    }
+    .ad-barnwood {
+      background: #f5eee7;
+      border: 1px solid #d0b79a;
+      color: #5a4330;
+    }
+    .ad-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.9;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .ad-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 3px;
+    }
+    .ad-link {
+      font-size: 0.82rem;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+    .compare-table th,
+    .compare-table td {
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 8px;
+      text-align: left;
+    }
+    .compare-table th {
+      background: rgba(0,0,0,0.2);
+    }
+
     footer {
       background: #0b1020;
       color: #d2d7e7;
@@ -421,22 +492,19 @@
     }
     .powered-by a { color: #f9fbff; font-weight: 600; }
 
-    /* Responsive */
     @media (max-width: 900px) {
       .layout-grid,
       .article-grid,
       .video-layout,
-      .stories-grid {
+      .stories-grid,
+      .image-row {
         grid-template-columns: 1fr;
       }
       .header-inner {
         flex-direction: column;
         align-items: flex-start;
       }
-      nav {
-        width: 100%;
-        overflow-x: auto;
-      }
+      nav { width: 100%; overflow-x: auto; }
     }
     @media (max-width: 600px) {
       .hero-title { font-size: 1.5rem; }
@@ -465,9 +533,8 @@
   </header>
 
   <main>
-    <!-- HOME / TOP STORIES -->
+    <!-- HOME -->
     <section id="home" class="section active">
-      <!-- Dark top banner with hero + quick links -->
       <div class="band band-top-banner">
         <div class="layout-grid">
           <div>
@@ -490,13 +557,15 @@
               <button class="btn btn-soft" onclick="window.print()">🖨 Print this page</button>
             </div>
             <p style="font-size:0.83rem; color:#c0c6e8; max-width:460px;">
-              In this feature, we explore why some entrepreneurs grow during downturns, how they
-              adapt when credit tightens, and what patterns repeat across past recessions.
+              We explore why some entrepreneurs grow during downturns, how they adapt when credit
+              tightens, and what patterns repeat across past recessions.
             </p>
           </div>
 
           <aside>
-            <div class="label-pill" style="background:#16356e; color:#f0f3ff;">Featured hero stories</div>
+            <div class="label-pill" style="background:#16356e; color:#f0f3ff;">
+              Featured hero stories
+            </div>
             <div class="hero-secondary-grid">
               <div class="hero-secondary" onclick="scrollToArticle('article-inflation')">
                 <div class="hero-secondary-title">
@@ -519,7 +588,22 @@
         </div>
       </div>
 
-      <!-- Latest video band -->
+      <!-- Image row -->
+      <div class="band">
+        <div class="image-row">
+          <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=800');">
+            <div class="image-thumb-label">Market volatility</div>
+          </div>
+          <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/37347/office-freelancer-computer-business-37347.jpeg?auto=compress&cs=tinysrgb&w=800');">
+            <div class="image-thumb-label">Small teams, big calls</div>
+          </div>
+          <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/6954177/pexels-photo-6954177.jpeg?auto=compress&cs=tinysrgb&w=800');">
+            <div class="image-thumb-label">AI & automation at work</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Videos on home -->
       <div class="band band-strong">
         <div class="section-title-row">
           <h2 class="section-title">Latest Video Briefings</h2>
@@ -557,8 +641,7 @@
 
             <div class="video-sidebar-item">
               <div class="video-sidebar-caption">
-                Add more videos by duplicating this block and swapping the
-                <code>src</code> to your own clips.
+                Duplicate this block and swap the <code>src</code> to feature additional clips.
               </div>
             </div>
           </aside>
@@ -566,7 +649,7 @@
       </div>
 
       <!-- Snapshot tiles -->
-      <div class="band" style="margin-top:10px;">
+      <div class="band">
         <div class="section-title-row">
           <h2 class="section-title">Today’s Business & AI Snapshot</h2>
           <span class="section-sub">Quick highlights across inflation, automation and global shifts</span>
@@ -576,70 +659,101 @@
             <span class="story-badge">Downturns</span>
             <div class="story-title">Why recessions don’t treat every business equally</div>
             <div class="story-meta">Analysis • Action Global News</div>
-            <a class="story-link" href="javascript:scrollToArticle('article-down-economy')">Read full feature →</a>
+            <a class="story-link" href="javascript:scrollToArticle('article-down-economy')">
+              Read full feature →
+            </a>
           </div>
           <div class="story-card">
             <span class="story-badge">Inflation</span>
             <div class="story-title">Small firms adapt faster than large brands to price shocks</div>
             <div class="story-meta">Inflation • Small Business</div>
-            <a class="story-link" href="javascript:scrollToArticle('article-inflation')">Explore our breakdown →</a>
+            <a class="story-link" href="javascript:scrollToArticle('article-inflation')">
+              Explore our breakdown →
+            </a>
           </div>
           <div class="story-card">
             <span class="story-badge">AI & Work</span>
             <div class="story-title">How automation is reshaping the “size advantage” in competition</div>
             <div class="story-meta">AI • Automation</div>
-            <a class="story-link" href="javascript:scrollToArticle('article-automation')">Read the AI feature →</a>
+            <a class="story-link" href="javascript:scrollToArticle('article-automation')">
+              Read the AI feature →
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Global highlight tiles -->
+      <!-- Ads -->
       <div class="band">
         <div class="section-title-row">
-          <h2 class="section-title">Global Highlights</h2>
-          <span class="section-sub">World, U.S., tech and market stories at a glance</span>
+          <h2 class="section-title">Sponsored Partners</h2>
+          <span class="section-sub">Services featured by Action Global News</span>
         </div>
-        <div class="stories-grid">
-          <div class="story-card">
-            <span class="story-badge">World</span>
-            <div class="story-title">Energy prices, currency swings and supply chains</div>
-            <div class="story-meta">Global • Macro</div>
-            <a class="story-link" href="javascript:showSection('world')">Open world section →</a>
+
+        <div class="ad-box ad-searchconverts">
+          <span class="ad-tag">Sponsored • SearchConverts.com</span>
+          <div class="ad-title">Search Converts vs. Typical Marketing Agency</div>
+          <p style="margin:4px 0 6px;">
+            Lean, AI-optimized campaigns designed for outcomes—not vanity metrics.
+          </p>
+          <table class="compare-table">
+            <tr>
+              <th></th>
+              <th>Search Converts</th>
+              <th>Typical Agency</th>
+            </tr>
+            <tr>
+              <td>Strategy</td>
+              <td>Custom AIO+SEO playbooks</td>
+              <td>Generic “packages”</td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td>AI-assisted, human-edited, SEO aligned</td>
+              <td>Slow, expensive, often generic</td>
+            </tr>
+            <tr>
+              <td>Transparency</td>
+              <td>Plain-language reporting & actions</td>
+              <td>Complex reports, unclear next steps</td>
+            </tr>
+            <tr>
+              <td>Pricing</td>
+              <td>Growth-focused options & memberships</td>
+              <td>High retainers, rigid bundles</td>
+            </tr>
+          </table>
+          <div style="margin-top:6px;">
+            <a class="ad-link" href="https://www.searchconverts.com" target="_blank" rel="noopener">
+              Visit SearchConverts.com →
+            </a>
           </div>
-          <div class="story-card">
-            <span class="story-badge">U.S.</span>
-            <div class="story-title">How American main street is feeling rate changes</div>
-            <div class="story-meta">U.S. • Sentiment</div>
-            <a class="story-link" href="javascript:showSection('us')">Go to U.S. coverage →</a>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Business</span>
-            <div class="story-title">Why some founders grow into downturns instead of freezing</div>
-            <div class="story-meta">Business • Strategy</div>
-            <a class="story-link" href="javascript:showSection('business')">View business desk →</a>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">AI</span>
-            <div class="story-title">New tools that compress weeks of work into days</div>
-            <div class="story-meta">AI • Tools</div>
-            <a class="story-link" href="javascript:showSection('tech')">Jump to AI & Tech →</a>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Video</span>
-            <div class="story-title">Latest visual explainers and quick briefings</div>
-            <div class="story-meta">Video Desk</div>
-            <a class="story-link" href="javascript:showSection('videos')">Open video desk →</a>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Perspective</span>
-            <div class="story-title">What past cycles can teach today’s entrepreneurs</div>
-            <div class="story-meta">Opinion • Analysis</div>
-            <a class="story-link" href="javascript:scrollToArticle('article-down-economy')">Read analysis →</a>
-          </div>
+        </div>
+
+        <div class="ad-box ad-aging">
+          <span class="ad-tag">Sponsored • AgingSafelyBaths.com</span>
+          <div class="ad-title">Walk-In Tubs & Roll-In Showers Nationwide</div>
+          <p style="margin:4px 0 6px;">
+            Safety-focused hydrotherapy tubs and ADA-style showers for homes and care environments—
+            DIY delivery or professional installation.
+          </p>
+          <a class="ad-link" href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">
+            Explore Aging Safely Baths →
+          </a>
+        </div>
+
+        <div class="ad-box ad-barnwood">
+          <span class="ad-tag">Sponsored • RusticBarnwoodFurniture.com</span>
+          <div class="ad-title">Handcrafted Barnwood Furniture from Raised in a Barn</div>
+          <p style="margin:4px 0 6px;">
+            Reclaimed-wood furniture that brings warmth and character to homes, rentals and offices.
+          </p>
+          <a class="ad-link" href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">
+            See Rustic Barnwood Furniture →
+          </a>
         </div>
       </div>
 
-      <!-- Article cluster 1 -->
+      <!-- Articles -->
       <div class="card article-grid" id="article-down-economy">
         <article>
           <div class="article-meta-top">
@@ -700,20 +814,8 @@
           <h3>Entrepreneurs who refuse to quit</h3>
           <p>
             The entrepreneurs who manage to grow through a downturn almost never describe the process
-            as easy. But they share common behavior: they accept reality quickly, cut costs early,
-            talk to customers constantly and keep shipping new offers even when the outlook is uncertain.
-          </p>
-
-          <h3>Practical strategies for a down economy</h3>
-          <ul>
-            <li><strong>Refocus on your most valuable customers.</strong></li>
-            <li><strong>Audit every fixed cost.</strong></li>
-            <li><strong>Bundle value instead of racing to the lowest price.</strong></li>
-            <li><strong>Invest in visibility while others go quiet.</strong></li>
-          </ul>
-          <p>
-            When large parts of the market freeze, the companies that keep learning and iterating
-            often emerge as the next cycle’s leaders.
+            as easy. But they accept reality quickly, cut costs early, talk to customers constantly
+            and keep shipping new offers even when the outlook is uncertain.
           </p>
         </article>
 
@@ -738,11 +840,10 @@ High              Very High          New leaders emerge
         </aside>
       </div>
 
-      <!-- Inflation article -->
       <div class="card" id="article-inflation" style="margin-top:22px;">
         <article>
           <div class="article-meta-top">
-            INFLATION & SMALL BUSINESS • Feature | Includes data references
+            INFLATION & SMALL BUSINESS • Feature
           </div>
           <h2>How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back</h2>
 
@@ -761,42 +862,17 @@ High              Very High          New leaders emerge
             can become an unexpected opening.
           </p>
           <p>
-            In the United States, annual inflation spiked to roughly 9 percent in 2022 before easing
-            back toward the 3 percent range by 2025. Surveys from major business groups showed that
-            a large majority of small firms listed inflation as their top concern, and many planned
-            price increases to cope with higher input costs.
-          </p>
-
-          <h3>Why big brands pull back in inflationary cycles</h3>
-          <p>
-            Large organizations carry large fixed costs: long-term leases, national advertising
-            contracts, complex logistics and multi-layered management. When inflation raises costs
-            across the board, protecting quarterly earnings often takes priority over experimentation.
-          </p>
-
-          <h3>How smaller firms can turn inflation into an advantage</h3>
-          <p>Smaller businesses typically operate with less overhead and fewer layers of approval.</p>
-          <ul>
-            <li><strong>They can reframe value.</strong> Bundle services, add support, offer longer-term plans.</li>
-            <li><strong>They can shift their mix.</strong> Tilt toward essentials rather than luxuries.</li>
-            <li><strong>They can renegotiate faster.</strong> Local partners are often more flexible.</li>
-            <li><strong>They can lean on personal trust.</strong> Many customers prefer dealing with people they know.</li>
-          </ul>
-
-          <h3>Inflation as a filter rather than a verdict</h3>
-          <p>
-            Inflationary periods are difficult. Some business models no longer work as they did under
-            low-rate, low-inflation conditions. But that doesn’t make growth impossible—it raises the
-            bar for efficiency and real value.
+            Smaller businesses typically operate with less overhead and fewer layers of approval,
+            allowing them to adjust pricing, product mix and service levels far more quickly than
+            a national chain.
           </p>
         </article>
       </div>
 
-      <!-- Automation / AI article -->
       <div class="card" id="article-automation" style="margin-top:22px;">
         <article>
           <div class="article-meta-top">
-            AI & AUTOMATION • Feature | The small-business automation advantage
+            AI & AUTOMATION • Feature
           </div>
           <h2>The Automation Advantage: How Small Businesses Using AI Can Outrun Corporate Giants</h2>
 
@@ -818,47 +894,11 @@ High              Very High          New leaders emerge
             entire departments: customer support, data entry, basic design, first-draft copywriting,
             analytics reporting and more.
           </p>
-
-          <h3>Why AI can be a “size equalizer”</h3>
-          <p>
-            Many large organizations are slower to adopt new technology. They must navigate legacy
-            systems, compliance, procurement cycles and internal politics. Small businesses, by
-            contrast, can often test and implement new tools in days rather than months.
-          </p>
-
-          <h3>Where small businesses are already using AI effectively</h3>
-          <ul>
-            <li>writing and optimizing website content and product descriptions</li>
-            <li>creating first-draft proposals, estimates and outreach messages</li>
-            <li>summarizing customer conversations and extracting follow-up actions</li>
-            <li>analyzing reviews to identify recurring complaints or opportunities</li>
-          </ul>
-
-          <h3>The next five years</h3>
-          <p>
-            As AI tools become cheaper and more capable, the gap may widen between small businesses that
-            adopt them thoughtfully and those that ignore them. At the same time, large organizations
-            that move slowly could find their size advantage eroding in areas where software can do much
-            of the heavy lifting.
-          </p>
         </article>
-      </div>
-
-      <!-- Comments block (Disqus placeholder) -->
-      <div class="card" style="margin-top:22px;">
-        <h3 style="margin-top:0;">Conversation</h3>
-        <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:10px;">
-          Join the discussion below. Comments are provided via a third-party platform.
-        </p>
-        <div id="disqus_thread"></div>
-        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px;">
-          Note: To fully enable comments, create a free Disqus site and replace the
-          <code>example-shortname</code> value in the script at the bottom of this file.
-        </p>
       </div>
     </section>
 
-    <!-- BUSINESS SECTION -->
+    <!-- BUSINESS -->
     <section id="business" class="section">
       <div class="band">
         <div class="section-title-row">
@@ -866,9 +906,7 @@ High              Very High          New leaders emerge
           <span class="section-sub">Recession strategy, market share, small-business shifts</span>
         </div>
         <p style="font-size:0.9rem; color:var(--text-muted);">
-          A curated set of business stories and perspectives, including how companies adapt when
-          conditions tighten. These cards are static so your visitors always see content, even
-          without any external feed setup.
+          Curated business stories and perspective, with live external headlines below when available.
         </p>
       </div>
       <div class="card-soft">
@@ -885,52 +923,24 @@ High              Very High          New leaders emerge
             <span class="story-badge">Cash Flow</span>
             <div class="story-title">Why cash discipline matters when credit gets expensive</div>
             <div class="story-meta">Capital • Risk</div>
-            <p class="story-meta">
-              Many founders discover that sustainability in a high-rate world depends less on
-              growth-at-all-costs and more on timing of cash in vs. cash out.
-            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Small Business</span>
             <div class="story-title">How owners are rethinking “value” when budgets tighten</div>
             <div class="story-meta">Strategy • Positioning</div>
-            <p class="story-meta">
-              Instead of cutting prices, some companies are bundling services, adding longer-term
-              support and making offers easier to say yes to.
-            </p>
           </div>
-          <div class="story-card">
-            <span class="story-badge">Hiring</span>
-            <div class="story-title">Finding talent in a market full of mixed signals</div>
-            <div class="story-meta">Workforce • Hiring</div>
-            <p class="story-meta">
-              Layoffs in one sector can hide shortages in another. Smart teams recruit during
-              uncertainty instead of waiting for perfect clarity.
-            </p>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Pricing</span>
-            <div class="story-title">Raising prices without losing your best customers</div>
-            <div class="story-meta">Pricing • Communication</div>
-            <p class="story-meta">
-              Clear explanations, transparent cost reasoning and better packaging often matter
-              more than the exact number.
-            </p>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Local</span>
-            <div class="story-title">Why local relationships still matter in a digital-first world</div>
-            <div class="story-meta">Community • Service</div>
-            <p class="story-meta">
-              Even as more transactions move online, trust and proximity remain powerful advantages
-              for main-street firms.
-            </p>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="label-pill">Live Business Headlines (external)</div>
+          <div id="business-feed" style="font-size:0.86rem; color:var(--text-muted);">
+            Loading latest business headlines…
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WORLD SECTION -->
+    <!-- WORLD -->
     <section id="world" class="section">
       <div class="band band-strong">
         <div class="section-title-row">
@@ -939,63 +949,38 @@ High              Very High          New leaders emerge
         </div>
         <p style="font-size:0.9rem;">
           Currency swings, energy markets, trade disputes and regulation debates all contribute
-          to the environment businesses operate in. This section highlights global factors that
-          influence local decisions.
+          to the environment businesses operate in.
         </p>
       </div>
       <div class="card-soft">
         <div class="stories-grid">
           <div class="story-card">
             <span class="story-badge">Energy</span>
-            <div class="story-title">Energy price shocks and their impact on small manufacturers</div>
+            <div class="story-title">Energy price shocks and their impact on manufacturers</div>
             <div class="story-meta">Global • Energy</div>
-            <p class="story-meta">
-              When fuel and power prices spike, energy-intensive sectors face immediate pressure,
-              while others adjust indirectly over time.
-            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Trade</span>
-            <div class="story-title">Supply-chain rerouting and the rise of new manufacturing hubs</div>
+            <div class="story-title">Supply-chain rerouting and new manufacturing hubs</div>
             <div class="story-meta">Trade • Logistics</div>
-            <p class="story-meta">
-              Shipping routes, nearshoring and regional trade agreements continue to reshape how
-              and where goods are produced.
-            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Policy</span>
             <div class="story-title">Data rules, AI regulation and cross-border compliance</div>
             <div class="story-meta">Policy • Technology</div>
-            <p class="story-meta">
-              Different regions are moving at different speeds on questions of AI oversight,
-              data protection and privacy rules.
-            </p>
           </div>
-          <div class="story-card">
-            <span class="story-badge">Currency</span>
-            <div class="story-title">Exchange rates and imported price pressure</div>
-            <div class="story-meta">FX • Inflation</div>
-            <p class="story-meta">
-              Currency moves can soften or amplify inflation, especially for countries dependent
-              on imported food and energy.
-            </p>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Emerging Markets</span>
-            <div class="story-title">Where new consumer demand is still expanding</div>
-            <div class="story-meta">Growth • Demand</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Risk</span>
-            <div class="story-title">Geopolitical tension and business continuity planning</div>
-            <div class="story-meta">Risk • Strategy</div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="label-pill">Live World Headlines (external)</div>
+          <div id="world-feed" style="font-size:0.86rem; color:var(--text-muted);">
+            Loading latest world headlines…
           </div>
         </div>
       </div>
     </section>
 
-    <!-- U.S. NEWS SECTION -->
+    <!-- U.S. -->
     <section id="us" class="section">
       <div class="band">
         <div class="section-title-row">
@@ -1003,8 +988,7 @@ High              Very High          New leaders emerge
           <span class="section-sub">Main-street stories, sentiment and policy shifts</span>
         </div>
         <p style="font-size:0.9rem; color:var(--text-muted);">
-          A closer look at how national economic trends translate into local realities across
-          American households and small businesses.
+          How national economic trends translate into local realities across American households and small businesses.
         </p>
       </div>
       <div class="card-soft">
@@ -1013,10 +997,6 @@ High              Very High          New leaders emerge
             <span class="story-badge">Sentiment</span>
             <div class="story-title">Small-business owners weigh inflation against local demand</div>
             <div class="story-meta">U.S. • Business</div>
-            <p class="story-meta">
-              Local demand can remain resilient even when national surveys show worry, creating
-              mixed signals for decision makers.
-            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Housing</span>
@@ -1028,26 +1008,18 @@ High              Very High          New leaders emerge
             <div class="story-title">Remote work, hybrid patterns and regional job markets</div>
             <div class="story-meta">Work • Labor</div>
           </div>
-          <div class="story-card">
-            <span class="story-badge">Consumer</span>
-            <div class="story-title">Household budgets under pressure from multiple directions</div>
-            <div class="story-meta">Consumer • Spending</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Local</span>
-            <div class="story-title">Why some cities rebound faster than others</div>
-            <div class="story-meta">Cities • Recovery</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Policy</span>
-            <div class="story-title">Tax changes and incentives facing smaller firms</div>
-            <div class="story-meta">Policy • Business</div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="label-pill">Live U.S. Headlines (external)</div>
+          <div id="us-feed" style="font-size:0.86rem; color:var(--text-muted);">
+            Loading latest U.S. headlines…
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TECH / AI SECTION -->
+    <!-- TECH -->
     <section id="tech" class="section">
       <div class="band band-strong">
         <div class="section-title-row">
@@ -1056,8 +1028,7 @@ High              Very High          New leaders emerge
         </div>
         <p style="font-size:0.9rem;">
           From generative AI to process automation, small teams now have access to capabilities
-          that once required entire departments. This section follows tools, risks and real-world
-          adoption stories.
+          that once required entire departments.
         </p>
       </div>
       <div class="card-soft">
@@ -1074,36 +1045,24 @@ High              Very High          New leaders emerge
             <span class="story-badge">Tools</span>
             <div class="story-title">Practical AI use cases that save founders hours per week</div>
             <div class="story-meta">Tools • Workflows</div>
-            <p class="story-meta">
-              Content drafts, customer replies, data summaries and basic design can all be sped up
-              with careful use of AI assistance.
-            </p>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Governance</span>
-            <div class="story-title">Balancing human judgment with automated systems</div>
-            <div class="story-meta">Ethics • Governance</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Productivity</span>
-            <div class="story-title">How small teams are building internal AI “copilots”</div>
-            <div class="story-meta">Work • Productivity</div>
           </div>
           <div class="story-card">
             <span class="story-badge">Risk</span>
             <div class="story-title">Avoiding over-automation and keeping the human voice</div>
             <div class="story-meta">Risk • Brand</div>
           </div>
-          <div class="story-card">
-            <span class="story-badge">Future of Work</span>
-            <div class="story-title">New roles emerging around AI supervision and quality control</div>
-            <div class="story-meta">Work • Roles</div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="label-pill">Live Tech Headlines (external)</div>
+          <div id="tech-feed" style="font-size:0.86rem; color:var(--text-muted);">
+            Loading latest tech headlines…
           </div>
         </div>
       </div>
     </section>
 
-    <!-- VIDEO SECTION -->
+    <!-- VIDEO DESK -->
     <section id="videos" class="section">
       <div class="band">
         <div class="section-title-row">
@@ -1155,7 +1114,7 @@ High              Very High          New leaders emerge
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
     <section id="about" class="section">
       <div class="band">
         <div class="section-title-row">
@@ -1191,6 +1150,7 @@ High              Very High          New leaders emerge
           <a href="javascript:showSection('home')">Top Stories</a><br />
           <a href="javascript:showSection('business')">Business</a><br />
           <a href="javascript:showSection('world')">World</a><br />
+          <a href="javascript:showSection('us')">U.S. News</a><br />
           <a href="javascript:showSection('tech')">AI & Tech</a><br />
           <a href="javascript:showSection('videos')">Video Desk</a><br />
         </div>
@@ -1214,87 +1174,110 @@ High              Very High          New leaders emerge
   </footer>
 
   <script>
-    // Year in footer
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Section navigation
+    // Nav
     function showSection(id) {
-      document.querySelectorAll('.section').forEach(function (sec) {
-        sec.classList.remove('active');
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      const s = document.getElementById(id);
+      if (s) s.classList.add('active');
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('active', link.dataset.section === id);
       });
-      var section = document.getElementById(id);
-      if (section) section.classList.add('active');
-
-      document.querySelectorAll('.nav-link').forEach(function (link) {
-        if (link.dataset.section === id) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    document.querySelectorAll('.nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        var target = this.dataset.section;
-        showSection(target);
-      });
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => showSection(link.dataset.section));
     });
 
-    // Scroll to article within home
-    function scrollToArticle(articleId) {
+    function scrollToArticle(id) {
       showSection('home');
-      var el = document.getElementById(articleId);
-      if (el) {
-        const rectTop = el.getBoundingClientRect().top + window.scrollY - 90;
-        window.scrollTo({ top: rectTop, behavior: 'smooth' });
-      }
+      const el = document.getElementById(id);
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
 
-    // Social share
+    // Sharing
     function shareArticle(platform) {
-      var url = window.location.href;
-      var title = document.title || 'Action Global News';
-
+      const url = window.location.href;
+      const title = document.title || 'Action Global News';
       if (platform === 'twitter') {
-        var tw = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) +
-          '&url=' + encodeURIComponent(url);
-        window.open(tw, '_blank', 'noopener');
+        window.open(
+          'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) +
+          '&url=' + encodeURIComponent(url),
+          '_blank','noopener'
+        );
       } else if (platform === 'facebook') {
-        var fb = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
-        window.open(fb, '_blank', 'noopener');
+        window.open(
+          'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
+          '_blank','noopener'
+        );
       } else if (platform === 'email') {
-        var em = 'mailto:?subject=' + encodeURIComponent(title) +
+        window.location.href =
+          'mailto:?subject=' + encodeURIComponent(title) +
           '&body=' + encodeURIComponent(url);
-        window.location.href = em;
       }
     }
 
     function copyLink() {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(window.location.href)
-          .then(function () { alert('Link copied to clipboard.'); })
-          .catch(function () { alert('Unable to copy link automatically.'); });
+          .then(() => alert('Link copied to clipboard.'))
+          .catch(() => alert('Unable to copy link automatically.'));
       } else {
         alert('Please copy the link from your browser address bar.');
       }
     }
 
-    // Disqus embed (optional – placeholder shortname)
-    /*
-    var disqus_config = function () {
-      this.page.url = window.location.href;
-      this.page.identifier = window.location.pathname;
-    };
-    (function () {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://example-shortname.disqus.com/embed.js'; // Replace example-shortname with your Disqus shortname.
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-    */
+    // RSS via AllOrigins (best-effort, non-breaking)
+    function loadFeed(targetId, feedUrl, maxItems) {
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(feedUrl);
+      fetch(proxyUrl)
+        .then(res => res.json())
+        .then(data => {
+          const parser = new DOMParser();
+          const xml = parser.parseFromString(data.contents, 'text/xml');
+          const items = xml.getElementsByTagName('item');
+          if (!items || items.length === 0) {
+            target.textContent = 'No external headlines available right now.';
+            return;
+          }
+          const list = document.createElement('ul');
+          list.style.listStyle = 'none';
+          list.style.padding = '0';
+          list.style.margin = '4px 0';
+          const count = Math.min(maxItems, items.length);
+          for (let i = 0; i < count; i++) {
+            const item = items[i];
+            const titleNode = item.getElementsByTagName('title')[0];
+            const linkNode = item.getElementsByTagName('link')[0];
+            const li = document.createElement('li');
+            li.style.marginBottom = '4px';
+            const a = document.createElement('a');
+            a.href = linkNode ? linkNode.textContent : '#';
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.textContent = titleNode ? titleNode.textContent : 'External headline';
+            a.style.fontSize = '0.86rem';
+            li.appendChild(a);
+            list.appendChild(li);
+          }
+          target.innerHTML = '';
+          target.appendChild(list);
+        })
+        .catch(() => {
+          target.textContent = 'Unable to load external headlines right now.';
+        });
+    }
+
+    loadFeed('business-feed', 'https://feeds.marketwatch.com/marketwatch/topstories/', 5);
+    loadFeed('world-feed', 'https://feeds.bbci.co.uk/news/world/rss.xml', 5);
+    loadFeed('us-feed', 'https://feeds.npr.org/1003/rss.xml', 5);
+    loadFeed('tech-feed', 'https://feeds.arstechnica.com/arstechnica/technology-lab', 5);
   </script>
 </body>
 </html>
