@@ -5,50 +5,60 @@
   <title>Action Global News | Business, Economy, AI & World Headlines</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Action Global News covers international headlines, small business in down economies, inflation-era survival, and how AI and automation are changing the competitive landscape." />
-  <meta name="theme-color" content="#0b2345" />
+  <meta name="theme-color" content="#071427" />
 
   <!-- Google AdSense verification script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561679124556057" crossorigin="anonymous"></script>
 
   <style>
     :root {
-      --bg-main: #f5f7fb;
+      --bg-main: #f3f6fb;
       --bg-alt: #ffffff;
-      --bg-band: #e4ecf8;
-      --bg-band-strong: #0b2345;
+      --bg-band: #e3ecff;
+      --bg-band-soft: #f6f7fc;
+      --bg-strong: #071427;
       --text-main: #141827;
-      --text-muted: #5e6473;
-      --accent-primary: #1c4fd0;
-      --accent-secondary: #df3b47;
+      --text-muted: #5f6574;
+      --accent-primary: #2c6dff;
+      --accent-secondary: #ffbf3b;
+      --accent-danger: #df3b47;
       --accent-teal: #00a3a3;
-      --border-soft: #d6dbe8;
-      --shadow-soft: 0 10px 28px rgba(9, 15, 40, 0.12);
-      --radius-lg: 20px;
-      --radius-md: 14px;
+      --border-soft: #d4d9e6;
+      --shadow-soft: 0 12px 32px rgba(5, 12, 30, 0.18);
       --max-width: 1180px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #ecf1ff 0, #f6f8fc 40%, #f5f7fb 100%);
+      background: radial-gradient(circle at top, #e1e8ff 0, #f5f7fb 35%, #f8f9fd 100%);
       color: var(--text-main);
       line-height: 1.6;
     }
 
-    a { color: var(--accent-primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
 
     header {
-      background: #ffffffee;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.04);
       position: sticky;
       top: 0;
       z-index: 100;
+      background: rgba(7, 20, 39, 0.96);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
     }
+
     .header-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -56,83 +66,116 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
     }
-    .logo-block { display: flex; flex-direction: column; gap: 3px; }
+
+    /* Planet-style orb */
+    .header-inner::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.7), transparent 45%),
+        radial-gradient(circle at 70% 80%, rgba(35,133,255,0.9), rgba(2,23,68,1));
+      box-shadow:
+        0 0 40px rgba(107,175,255,0.85),
+        0 0 120px rgba(37,113,255,0.9);
+      opacity: 0.92;
+    }
+
+    .logo-block {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
     .logo-main {
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: 900;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--bg-band-strong);
+      color: #fdfdff;
     }
+
     .logo-tagline {
       font-size: 0.8rem;
+      color: #a9b6ff;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent-primary);
-      letter-spacing: 0.18em;
     }
 
     nav {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
+
     nav a {
       padding: 6px 11px;
       border-radius: 999px;
-      color: var(--text-muted);
       border: 1px solid transparent;
-      cursor: pointer;
+      color: #d8def8;
       white-space: nowrap;
     }
+
     nav a:hover {
-      border-color: var(--border-soft);
-      background: #f0f3ff;
+      border-color: rgba(255,255,255,0.28);
+      background: rgba(7, 20, 39, 0.9);
     }
+
     nav a.active {
-      background: var(--bg-band-strong);
-      color: #ffffff;
+      background: #ffbf3b;
+      color: #0c1532;
+      border-color: #f5aa07;
+      font-weight: 600;
     }
+
+    /* MAIN LAYOUT */
 
     main {
       max-width: var(--max-width);
-      margin: 18px auto 40px;
+      margin: 20px auto 40px;
       padding: 0 18px 40px;
     }
 
     .band {
       width: 100%;
-      border-radius: 24px;
       padding: 18px 20px;
-      background: linear-gradient(135deg, var(--bg-band), #fdfdff);
+      border-radius: 22px;
       margin-bottom: 18px;
-      box-shadow: 0 10px 24px rgba(11, 35, 69, 0.08);
+      background: linear-gradient(135deg, var(--bg-band), #fdfdff);
+      box-shadow: 0 14px 32px rgba(7, 20, 39, 0.14);
     }
-    .band-strong {
-      background: linear-gradient(135deg, #0b2345, #1d3c77);
-      color: #ffffff;
-    }
-    .band-strong h2,
-    .band-strong p { color: #ffffff; }
 
-    .band-top-banner {
-      background: linear-gradient(135deg, #0b2345, #101d3a);
-      color: #ffffff;
-      margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
+    .band-soft {
+      background: var(--bg-band-soft);
+      box-shadow: none;
+      border-radius: 16px;
+      border: 1px solid #e0e4f0;
     }
-    .band-top-banner::after {
-      content: "";
-      position: absolute;
-      right: -60px;
-      top: -60px;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: radial-gradient(circle at center, #2f7bff55, transparent 70%);
+
+    .band-strong {
+      background: linear-gradient(135deg, #071427, #132c5a);
+      color: #f4f6ff;
+      border-radius: 22px;
+      box-shadow: 0 16px 40px rgba(1, 5, 18, 0.7);
+    }
+
+    .band-strong h1,
+    .band-strong h2,
+    .band-strong p {
+      color: #f4f6ff;
     }
 
     .layout-grid {
@@ -143,38 +186,58 @@
 
     .card {
       background: var(--bg-alt);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
+      border-radius: 18px;
       padding: 18px 20px;
+      box-shadow: 0 12px 32px rgba(7, 15, 35, 0.14);
     }
+
     .card-soft {
-      background: #f9fafe;
-      border-radius: var(--radius-lg);
+      background: #f7f8fd;
+      border-radius: 16px;
       padding: 16px 18px;
       border: 1px solid var(--border-soft);
     }
 
+    .label-pill {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: rgba(10, 40, 105, 0.1);
+      color: #11275f;
+    }
+
+    .label-pill-light {
+      background: rgba(255,255,255,0.08);
+      color: #e3e8ff;
+    }
+
     .hero-tag {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.18em;
-      color: var(--accent-teal);
+      color: #75f3ff;
       margin-bottom: 4px;
     }
+
     .hero-title {
       font-size: 1.9rem;
       line-height: 1.22;
       margin: 4px 0 10px;
     }
+
     .hero-meta {
-      font-size: 0.82rem;
-      color: #c7cde6;
+      font-size: 0.83rem;
+      color: #b5c3ff;
       margin-bottom: 12px;
     }
+
     .hero-lede {
-      font-size: 0.99rem;
+      font-size: 1rem;
       margin-bottom: 18px;
-      max-width: 650px;
+      max-width: 660px;
     }
 
     .hero-secondary-grid {
@@ -182,27 +245,31 @@
       grid-template-columns: 1fr;
       gap: 10px;
     }
+
     .hero-secondary {
-      border-radius: var(--radius-md);
-      background: #0f1935;
-      border: 1px solid #223566;
+      border-radius: 14px;
       padding: 11px 12px;
+      background: #0d1a38;
+      border: 1px solid #233667;
+      color: #d6ddff;
       cursor: pointer;
-      transition: background 0.18s ease, transform 0.18s ease;
-      color: #dde3ff;
+      transition: background 0.16s ease, transform 0.16s ease;
     }
+
     .hero-secondary:hover {
-      background: #1a2850;
+      background: #17264b;
       transform: translateY(-1px);
     }
+
     .hero-secondary-title {
-      font-size: 0.95rem;
-      margin: 0 0 4px;
+      font-size: 0.96rem;
       color: #ffffff;
+      margin: 0 0 3px;
     }
+
     .hero-secondary-meta {
       font-size: 0.78rem;
-      color: #9aa4d8;
+      color: #9ba7d8;
     }
 
     .btn-row {
@@ -211,76 +278,65 @@
       gap: 10px;
       margin-bottom: 12px;
     }
+
     .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       border-radius: 999px;
       padding: 7px 14px;
       font-size: 0.84rem;
       border: 1px solid transparent;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
       background: #ffffff;
       color: var(--accent-primary);
     }
+
     .btn-primary {
-      background: #ffbf3b;
-      color: #0b2345;
-      border-color: #f9b02a;
+      background: var(--accent-secondary);
+      color: #071427;
+      border-color: #f2a70c;
       font-weight: 600;
     }
+
     .btn-soft {
-      background: #eef1ff;
+      background: rgba(244, 247, 255, 0.85);
       color: var(--text-muted);
       border-color: transparent;
     }
-    .btn:hover { opacity: 0.92; }
 
-    .label-pill {
-      display: inline-block;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      background: #dde5ff;
-      color: #193777;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .btn:hover {
+      opacity: 0.93;
     }
 
-    article h2 { margin-top: 0; }
-    article h3 { margin-top: 22px; margin-bottom: 8px; font-size: 1.05rem; }
-    article p { margin: 6px 0 10px; }
-    .article-meta-top {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-    .article-band {
-      background: #f3f5ff;
-      border-left: 3px solid var(--accent-primary);
-      padding: 10px 12px;
-      border-radius: 10px;
-      margin: 12px 0 16px;
-      font-size: 0.9rem;
-    }
-    .article-grid {
-      display: grid;
-      grid-template-columns: 3fr 1.3fr;
-      gap: 18px;
+    .section {
+      display: none;
+      margin-top: 20px;
     }
 
-    .share-row {
+    .section.active {
+      display: block;
+    }
+
+    .section-title-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 10px 0 18px;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
     }
-    .share-tag {
-      font-size: 0.8rem;
+
+    .section-title {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .section-sub {
+      font-size: 0.86rem;
       color: var(--text-muted);
-      margin-right: 4px;
     }
+
+    /* Image row */
 
     .image-row {
       display: grid;
@@ -288,158 +344,124 @@
       gap: 10px;
       margin: 10px 0 4px;
     }
+
     .image-thumb {
       position: relative;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
-      min-height: 90px;
+      min-height: 95px;
       background-size: cover;
       background-position: center;
-      box-shadow: 0 8px 20px rgba(10, 20, 40, 0.18);
+      box-shadow: 0 10px 24px rgba(9, 18, 45, 0.3);
     }
+
     .image-thumb::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.45), transparent);
+      background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
     }
+
     .image-thumb-label {
       position: absolute;
       left: 8px;
       bottom: 6px;
-      color: #fdfdfd;
-      font-size: 0.75rem;
       z-index: 2;
+      font-size: 0.75rem;
+      color: #fdfdfd;
     }
 
-    .video-layout {
-      display: grid;
-      grid-template-columns: 2fr 1.2fr;
-      gap: 18px;
-    }
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-      background: #000;
-    }
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    .video-sidebar-item {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: #ffffff;
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 12px;
-    }
-    .video-sidebar-item iframe {
-      width: 100%;
-      height: 190px;
-      border: 0;
-      display: block;
-    }
-    .video-sidebar-caption {
-      padding: 8px 10px;
-      font-size: 0.86rem;
-    }
-
-    .section { display: none; margin-top: 20px; }
-    .section.active { display: block; }
-
-    .section-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .section-title {
-      font-size: 1.2rem;
-      margin: 0;
-    }
-    .section-sub {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+    /* Stories grid */
 
     .stories-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
     }
+
     .story-card {
       background: #ffffff;
-      border-radius: var(--radius-md);
+      border-radius: 12px;
       border: 1px solid var(--border-soft);
       padding: 10px 12px 12px;
       font-size: 0.9rem;
+      box-shadow: 0 8px 18px rgba(7, 16, 39, 0.09);
       display: flex;
       flex-direction: column;
       gap: 6px;
-      box-shadow: 0 6px 18px rgba(10, 20, 40, 0.04);
     }
+
     .story-badge {
       display: inline-block;
       padding: 2px 7px;
       font-size: 0.72rem;
       border-radius: 999px;
-      background: #e8edff;
-      color: #1c2e64;
+      background: #e4ecff;
+      color: #142a6b;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-    .story-title { font-weight: 600; margin-bottom: 2px; }
-    .story-meta { font-size: 0.75rem; color: var(--text-muted); }
+
+    .story-title {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .story-meta {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
     .story-link {
-      display: inline-block;
       margin-top: 4px;
       font-size: 0.8rem;
     }
 
+    /* Ads – 90° corners, separated */
+
     .ad-box {
-      border-radius: 14px;
+      border-radius: 0;
       padding: 12px 14px;
       font-size: 0.88rem;
-      margin: 10px 0 4px;
+      margin: 10px 0 6px;
+      border: 1px solid transparent;
     }
+
     .ad-searchconverts {
-      background: linear-gradient(135deg, #12284d, #1e4ea8);
-      color: #fdfdfd;
+      background: linear-gradient(135deg, #061638, #123a8d);
+      border-color: #224ea6;
+      color: #f4f7ff;
     }
+
     .ad-aging {
-      background: #fff7ea;
-      border: 1px solid #f1d49a;
-      color: #7b5313;
+      background: #fff4df;
+      border-color: #f0cb8b;
+      color: #7c5621;
     }
+
     .ad-barnwood {
-      background: #f5eee7;
-      border: 1px solid #d0b79a;
+      background: #f3e9e0;
+      border-color: #d1b499;
       color: #5a4330;
     }
+
     .ad-tag {
+      display: block;
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      opacity: 0.9;
-      display: block;
       margin-bottom: 4px;
+      opacity: 0.9;
     }
+
     .ad-title {
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       margin-bottom: 3px;
     }
+
     .ad-link {
-      font-size: 0.82rem;
+      font-size: 0.83rem;
       text-decoration: underline;
       cursor: pointer;
     }
@@ -447,50 +469,187 @@
     .compare-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       margin-top: 6px;
     }
+
     .compare-table th,
     .compare-table td {
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 6px 8px;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 4px 6px;
       text-align: left;
     }
+
     .compare-table th {
-      background: rgba(0,0,0,0.2);
+      background: rgba(0,0,0,0.18);
     }
 
-    footer {
-      background: #0b1020;
-      color: #d2d7e7;
-      padding: 24px 18px 32px;
-      margin-top: 30px;
+    /* Article layout */
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 3fr 1.3fr;
+      gap: 18px;
     }
+
+    .article-meta-top {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    article h2 {
+      margin-top: 0;
+    }
+
+    article h3 {
+      margin-top: 22px;
+      margin-bottom: 8px;
+      font-size: 1.06rem;
+    }
+
+    article p {
+      margin: 6px 0 10px;
+    }
+
+    .article-band {
+      background: #eef3ff;
+      border-left: 3px solid var(--accent-primary);
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin: 12px 0 16px;
+      font-size: 0.9rem;
+    }
+
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 16px;
+    }
+
+    .share-tag {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Video layout */
+
+    .video-layout {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr;
+      gap: 18px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-sidebar-item {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 26px rgba(7, 15, 35, 0.24);
+      margin-bottom: 12px;
+    }
+
+    .video-sidebar-item iframe {
+      width: 100%;
+      height: 190px;
+      border: 0;
+      display: block;
+    }
+
+    .video-sidebar-caption {
+      padding: 8px 10px;
+      font-size: 0.86rem;
+    }
+
+    /* FEEDS */
+
+    .feed-container {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .feed-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+    }
+
+    .feed-container li {
+      margin-bottom: 4px;
+    }
+
+    .feed-source-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #8590b3;
+      margin-bottom: 3px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #050816;
+      color: #cbd2ea;
+      padding: 24px 18px 30px;
+    }
+
     .footer-inner {
       max-width: var(--max-width);
       margin: 0 auto;
       font-size: 0.86rem;
     }
+
     .footer-top {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 20px;
       justify-content: space-between;
-      align-items: flex-start;
       margin-bottom: 12px;
     }
-    .footer-col { min-width: 180px; }
-    .footer-link a { color: #f9fbff; }
+
+    .footer-col {
+      min-width: 180px;
+    }
+
+    .footer-links a {
+      color: #f4f7ff;
+    }
+
     .footer-meta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
       justify-content: space-between;
       align-items: center;
-      margin-top: 10px;
-      color: #8b90a4;
+      color: #8c92a8;
     }
-    .powered-by a { color: #f9fbff; font-weight: 600; }
+
+    .powered-by a {
+      color: #f4f7ff;
+      font-weight: 600;
+    }
+
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .layout-grid,
@@ -504,12 +663,25 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      nav { width: 100%; overflow-x: auto; }
+      nav {
+        width: 100%;
+        overflow-x: auto;
+      }
     }
+
     @media (max-width: 600px) {
-      .hero-title { font-size: 1.5rem; }
-      .card, .band { padding: 14px 14px; }
-      .stories-grid { grid-template-columns: 1fr; }
+      .hero-title {
+        font-size: 1.55rem;
+      }
+      .card,
+      .band,
+      .band-soft,
+      .band-strong {
+        padding: 14px 14px;
+      }
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -525,7 +697,7 @@
         <a class="nav-link" data-section="business">Business</a>
         <a class="nav-link" data-section="world">World</a>
         <a class="nav-link" data-section="us">U.S. News</a>
-        <a class="nav-link" data-section="tech">AI & Tech</a>
+        <a class="nav-link" data-section="tech">AI &amp; Tech</a>
         <a class="nav-link" data-section="videos">Video Desk</a>
         <a class="nav-link" data-section="about">About</a>
       </nav>
@@ -533,9 +705,9 @@
   </header>
 
   <main>
-    <!-- HOME -->
+    <!-- HOME / TOP STORIES -->
     <section id="home" class="section active">
-      <div class="band band-top-banner">
+      <div class="band band-strong">
         <div class="layout-grid">
           <div>
             <div class="hero-tag">Special Report</div>
@@ -543,36 +715,33 @@
               Rising in a Down Economy: Why Some Businesses Thrive When Markets Fall
             </h1>
             <div class="hero-meta">
-              By Action Global News – Business & Economy Desk
+              By Action Global News – Business &amp; Economy Desk
             </div>
             <p class="hero-lede">
-              Recessions don’t stop markets—they reshuffle them. While headlines dwell on layoffs
-              and shrinking GDP, a smaller group of companies quietly gain market share by moving
-              faster than everyone else.
+              Recessions don’t stop markets — they reshuffle them. While headlines dwell on layoffs and shrinking GDP,
+              a smaller group of companies quietly gains market share by moving faster than everyone else.
             </p>
             <div class="btn-row">
               <button class="btn btn-primary" onclick="scrollToArticle('article-down-economy')">
                 Read full analysis
               </button>
-              <button class="btn btn-soft" onclick="window.print()">🖨 Print this page</button>
+              <button class="btn btn-soft" onclick="window.print()">🖨 Print page</button>
             </div>
-            <p style="font-size:0.83rem; color:#c0c6e8; max-width:460px;">
-              We explore why some entrepreneurs grow during downturns, how they adapt when credit
-              tightens, and what patterns repeat across past recessions.
+            <p style="font-size:0.84rem; color:#c4cffb; max-width:480px;">
+              We explore why some entrepreneurs grow during downturns, how they adapt when credit tightens,
+              and what patterns repeat across past recessions.
             </p>
           </div>
 
           <aside>
-            <div class="label-pill" style="background:#16356e; color:#f0f3ff;">
-              Featured hero stories
-            </div>
-            <div class="hero-secondary-grid">
+            <div class="label-pill label-pill-light">Featured hero stories</div>
+            <div class="hero-secondary-grid" style="margin-top:8px;">
               <div class="hero-secondary" onclick="scrollToArticle('article-inflation')">
                 <div class="hero-secondary-title">
                   How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back
                 </div>
                 <div class="hero-secondary-meta">
-                  Inflation reshapes spending—and gives lean, local companies a moment to win trust.
+                  Inflation reshapes spending — and gives lean, local companies a moment to win trust.
                 </div>
               </div>
               <div class="hero-secondary" onclick="scrollToArticle('article-automation')">
@@ -580,7 +749,7 @@
                   The Automation Advantage: How AI Lets Small Teams Compete With Giants
                 </div>
                 <div class="hero-secondary-meta">
-                  Used well, AI is less a threat to jobs and more an amplifier for small, focused teams.
+                  Used well, AI is less a threat to jobs and more an amplifier for focused teams.
                 </div>
               </div>
             </div>
@@ -588,30 +757,95 @@
         </div>
       </div>
 
-      <!-- Image row -->
-      <div class="band">
+      <!-- Image row band -->
+      <div class="band-soft">
+        <div class="section-title-row">
+          <h2 class="section-title">Visual Snapshot</h2>
+          <span class="section-sub">Volatile markets, small teams and AI-powered workflows</span>
+        </div>
         <div class="image-row">
           <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=800');">
-            <div class="image-thumb-label">Market volatility</div>
+            <div class="image-thumb-label">Market turbulence</div>
           </div>
           <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/37347/office-freelancer-computer-business-37347.jpeg?auto=compress&cs=tinysrgb&w=800');">
-            <div class="image-thumb-label">Small teams, big calls</div>
+            <div class="image-thumb-label">Lean operations</div>
           </div>
           <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/6954177/pexels-photo-6954177.jpeg?auto=compress&cs=tinysrgb&w=800');">
-            <div class="image-thumb-label">AI & automation at work</div>
+            <div class="image-thumb-label">Automation in practice</div>
           </div>
         </div>
       </div>
 
+      <!-- Sponsored band -->
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">Partner Highlights</h2>
+          <span class="section-sub">Sponsors featured on Action Global News</span>
+        </div>
+
+        <div class="ad-box ad-searchconverts">
+          <span class="ad-tag">Sponsored • SearchConverts.com</span>
+          <div class="ad-title">Search Converts vs. Typical Agency — A Different Kind of Partner</div>
+          <p style="margin:4px 0 6px;">
+            Lean, AI-optimized campaigns focused on outcomes — not vanity metrics. Built for
+            entrepreneurs who care about margin, not buzzwords.
+          </p>
+          <table class="compare-table">
+            <tr>
+              <th></th>
+              <th>Search Converts</th>
+              <th>Typical Agency</th>
+            </tr>
+            <tr>
+              <td>Strategy</td>
+              <td>Custom AIO+SEO growth plans</td>
+              <td>Generic “bronze/silver/gold”</td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td>AI-assisted, human-edited, intent-based</td>
+              <td>Slow, expensive, often generic</td>
+            </tr>
+            <tr>
+              <td>Reporting</td>
+              <td>Plain-language actions you can use</td>
+              <td>40-page PDFs no one reads</td>
+            </tr>
+            <tr>
+              <td>Pricing</td>
+              <td>Growth-focused options &amp; memberships</td>
+              <td>High retainers, locked contracts</td>
+            </tr>
+          </table>
+          <div style="margin-top:6px;">
+            <a class="ad-link" href="https://www.searchconverts.com" target="_blank" rel="noopener">
+              Visit SearchConverts.com →
+            </a>
+          </div>
+        </div>
+
+        <div class="ad-box ad-aging">
+          <span class="ad-tag">Sponsored • AgingSafelyBaths.com</span>
+          <div class="ad-title">Walk-In Tubs &amp; Roll-In Showers Nationwide</div>
+          <p style="margin:4px 0 6px;">
+            Safety-focused hydrotherapy tubs and ADA-style showers for homes and care environments —
+            DIY delivery or professional installation.
+          </p>
+          <a class="ad-link" href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">
+            Explore Aging Safely Baths →
+          </a>
+        </div>
+      </div>
+
       <!-- Videos on home -->
-      <div class="band band-strong">
+      <div class="band-soft">
         <div class="section-title-row">
           <h2 class="section-title">Latest Video Briefings</h2>
           <span class="section-sub">Short takes and commentary from the Action Global News desk</span>
         </div>
         <div class="video-layout">
           <div>
-            <div class="label-pill" style="background:#ffbf3b; color:#12224a;">Featured video</div>
+            <div class="label-pill">Featured video</div>
             <div class="video-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/GVrdcmqXJDs"
@@ -623,7 +857,7 @@
             </div>
           </div>
           <aside>
-            <h3 style="margin-top:4px; font-size:1rem;">Trending clips</h3>
+            <h3 style="margin-top:0; font-size:1rem;">Trending clips</h3>
 
             <div class="video-sidebar-item">
               <iframe
@@ -641,7 +875,7 @@
 
             <div class="video-sidebar-item">
               <div class="video-sidebar-caption">
-                Duplicate this block and swap the <code>src</code> to feature additional clips.
+                Duplicate this block and swap the <code>src</code> to add more videos.
               </div>
             </div>
           </aside>
@@ -649,9 +883,9 @@
       </div>
 
       <!-- Snapshot tiles -->
-      <div class="band">
+      <div class="band-soft">
         <div class="section-title-row">
-          <h2 class="section-title">Today’s Business & AI Snapshot</h2>
+          <h2 class="section-title">Today’s Business &amp; AI Snapshot</h2>
           <span class="section-sub">Quick highlights across inflation, automation and global shifts</span>
         </div>
         <div class="stories-grid">
@@ -665,15 +899,15 @@
           </div>
           <div class="story-card">
             <span class="story-badge">Inflation</span>
-            <div class="story-title">Small firms adapt faster than large brands to price shocks</div>
+            <div class="story-title">How small firms adjust faster than large brands</div>
             <div class="story-meta">Inflation • Small Business</div>
             <a class="story-link" href="javascript:scrollToArticle('article-inflation')">
               Explore our breakdown →
             </a>
           </div>
           <div class="story-card">
-            <span class="story-badge">AI & Work</span>
-            <div class="story-title">How automation is reshaping the “size advantage” in competition</div>
+            <span class="story-badge">AI &amp; Work</span>
+            <div class="story-title">How automation reshapes the “size advantage” in competition</div>
             <div class="story-meta">AI • Automation</div>
             <a class="story-link" href="javascript:scrollToArticle('article-automation')">
               Read the AI feature →
@@ -682,82 +916,11 @@
         </div>
       </div>
 
-      <!-- Ads -->
-      <div class="band">
-        <div class="section-title-row">
-          <h2 class="section-title">Sponsored Partners</h2>
-          <span class="section-sub">Services featured by Action Global News</span>
-        </div>
-
-        <div class="ad-box ad-searchconverts">
-          <span class="ad-tag">Sponsored • SearchConverts.com</span>
-          <div class="ad-title">Search Converts vs. Typical Marketing Agency</div>
-          <p style="margin:4px 0 6px;">
-            Lean, AI-optimized campaigns designed for outcomes—not vanity metrics.
-          </p>
-          <table class="compare-table">
-            <tr>
-              <th></th>
-              <th>Search Converts</th>
-              <th>Typical Agency</th>
-            </tr>
-            <tr>
-              <td>Strategy</td>
-              <td>Custom AIO+SEO playbooks</td>
-              <td>Generic “packages”</td>
-            </tr>
-            <tr>
-              <td>Content</td>
-              <td>AI-assisted, human-edited, SEO aligned</td>
-              <td>Slow, expensive, often generic</td>
-            </tr>
-            <tr>
-              <td>Transparency</td>
-              <td>Plain-language reporting & actions</td>
-              <td>Complex reports, unclear next steps</td>
-            </tr>
-            <tr>
-              <td>Pricing</td>
-              <td>Growth-focused options & memberships</td>
-              <td>High retainers, rigid bundles</td>
-            </tr>
-          </table>
-          <div style="margin-top:6px;">
-            <a class="ad-link" href="https://www.searchconverts.com" target="_blank" rel="noopener">
-              Visit SearchConverts.com →
-            </a>
-          </div>
-        </div>
-
-        <div class="ad-box ad-aging">
-          <span class="ad-tag">Sponsored • AgingSafelyBaths.com</span>
-          <div class="ad-title">Walk-In Tubs & Roll-In Showers Nationwide</div>
-          <p style="margin:4px 0 6px;">
-            Safety-focused hydrotherapy tubs and ADA-style showers for homes and care environments—
-            DIY delivery or professional installation.
-          </p>
-          <a class="ad-link" href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">
-            Explore Aging Safely Baths →
-          </a>
-        </div>
-
-        <div class="ad-box ad-barnwood">
-          <span class="ad-tag">Sponsored • RusticBarnwoodFurniture.com</span>
-          <div class="ad-title">Handcrafted Barnwood Furniture from Raised in a Barn</div>
-          <p style="margin:4px 0 6px;">
-            Reclaimed-wood furniture that brings warmth and character to homes, rentals and offices.
-          </p>
-          <a class="ad-link" href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">
-            See Rustic Barnwood Furniture →
-          </a>
-        </div>
-      </div>
-
-      <!-- Articles -->
+      <!-- Main hero article -->
       <div class="card article-grid" id="article-down-economy">
         <article>
           <div class="article-meta-top">
-            BUSINESS & ECONOMY • Feature | Estimated read time: 10–12 minutes
+            BUSINESS &amp; ECONOMY • Feature | Estimated read time: 10–12 minutes
           </div>
           <h2>Rising in a Down Economy: Why Some Businesses Thrive When Markets Fall</h2>
 
@@ -825,7 +988,7 @@
             <p style="font-size:0.86rem;">
               As pressure on margins rises, so does the level of market disruption:
             </p>
-            <pre style="font-size:0.78rem; background:#101630; color:#f4f5ff; padding:10px 12px; border-radius:10px; overflow-x:auto;">
+            <pre style="font-size:0.78rem; background:#0b1228; color:#f4f5ff; padding:10px 12px; border-radius:10px; overflow-x:auto;">
 Market pressure   Innovation level   Outcome
 ───────────────   ────────────────   ───────────────────────
 Low               Low                Slow, incremental change
@@ -833,17 +996,29 @@ Medium            Medium             Competitive, crowded
 High              Very High          New leaders emerge
             </pre>
             <p style="font-size:0.84rem; color:var(--text-muted);">
-              When the economy tightens, staying still becomes the risky option.
-              Action and adaptation keep companies in the game.
+              When the economy tightens, staying still becomes the risky option. Action and
+              adaptation keep companies in the game.
             </p>
+          </div>
+
+          <div class="ad-box ad-barnwood" style="margin-top:14px;">
+            <span class="ad-tag">Sponsored • RusticBarnwoodFurniture.com</span>
+            <div class="ad-title">Handcrafted Barnwood Furniture from Raised in a Barn</div>
+            <p style="margin:4px 0 6px;">
+              Reclaimed-wood furniture that brings warmth and character to homes, rentals and offices.
+            </p>
+            <a class="ad-link" href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">
+              See Rustic Barnwood Furniture →
+            </a>
           </div>
         </aside>
       </div>
 
+      <!-- Secondary hero articles -->
       <div class="card" id="article-inflation" style="margin-top:22px;">
         <article>
           <div class="article-meta-top">
-            INFLATION & SMALL BUSINESS • Feature
+            INFLATION &amp; SMALL BUSINESS • Feature
           </div>
           <h2>How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back</h2>
 
@@ -872,7 +1047,7 @@ High              Very High          New leaders emerge
       <div class="card" id="article-automation" style="margin-top:22px;">
         <article>
           <div class="article-meta-top">
-            AI & AUTOMATION • Feature
+            AI &amp; AUTOMATION • Feature
           </div>
           <h2>The Automation Advantage: How Small Businesses Using AI Can Outrun Corporate Giants</h2>
 
@@ -898,17 +1073,18 @@ High              Very High          New leaders emerge
       </div>
     </section>
 
-    <!-- BUSINESS -->
+    <!-- BUSINESS SECTION -->
     <section id="business" class="section">
       <div class="band">
         <div class="section-title-row">
-          <h2 class="section-title">Business & Markets</h2>
-          <span class="section-sub">Recession strategy, market share, small-business shifts</span>
+          <h2 class="section-title">Business &amp; Markets</h2>
+          <span class="section-sub">Recession strategy, market share and small-business shifts</span>
         </div>
         <p style="font-size:0.9rem; color:var(--text-muted);">
-          Curated business stories and perspective, with live external headlines below when available.
+          Curated business stories and perspective, with live external headlines from established outlets below.
         </p>
       </div>
+
       <div class="card-soft">
         <div class="stories-grid">
           <div class="story-card">
@@ -916,7 +1092,7 @@ High              Very High          New leaders emerge
             <div class="story-title">Rising in a Down Economy</div>
             <div class="story-meta">Action Global News • Analysis</div>
             <a class="story-link" href="javascript:showSection('home');scrollToArticle('article-down-economy')">
-              Read our full breakdown →
+              Read full breakdown →
             </a>
           </div>
           <div class="story-card">
@@ -926,32 +1102,45 @@ High              Very High          New leaders emerge
           </div>
           <div class="story-card">
             <span class="story-badge">Small Business</span>
-            <div class="story-title">How owners are rethinking “value” when budgets tighten</div>
+            <div class="story-title">How owners rethink “value” when budgets tighten</div>
             <div class="story-meta">Strategy • Positioning</div>
           </div>
         </div>
 
         <div style="margin-top:18px;">
-          <div class="label-pill">Live Business Headlines (external)</div>
-          <div id="business-feed" style="font-size:0.86rem; color:var(--text-muted);">
+          <div class="feed-source-label">External headlines: MarketWatch (via RSS)</div>
+          <div id="business-feed" class="feed-container">
             Loading latest business headlines…
           </div>
         </div>
       </div>
+
+      <div class="ad-box ad-aging" style="margin-top:16px;">
+        <span class="ad-tag">Sponsored • AgingSafelyBaths.com</span>
+        <div class="ad-title">Safety Upgrades That Protect Margin, Too</div>
+        <p style="margin:4px 0 6px;">
+          Step-in tubs and roll-in showers can reduce liability in care environments and
+          at-home settings while supporting comfort and dignity.
+        </p>
+        <a class="ad-link" href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">
+          View Aging Safely solutions →
+        </a>
+      </div>
     </section>
 
-    <!-- WORLD -->
+    <!-- WORLD SECTION -->
     <section id="world" class="section">
       <div class="band band-strong">
         <div class="section-title-row">
           <h2 class="section-title">World News</h2>
-          <span class="section-sub">International headlines and macro trends</span>
+          <span class="section-sub">International headlines and macroeconomic shifts</span>
         </div>
         <p style="font-size:0.9rem;">
-          Currency swings, energy markets, trade disputes and regulation debates all contribute
-          to the environment businesses operate in.
+          Currency swings, energy markets, trade disputes and regulation debates all contribute to the
+          environment businesses operate in.
         </p>
       </div>
+
       <div class="card-soft">
         <div class="stories-grid">
           <div class="story-card">
@@ -972,15 +1161,15 @@ High              Very High          New leaders emerge
         </div>
 
         <div style="margin-top:18px;">
-          <div class="label-pill">Live World Headlines (external)</div>
-          <div id="world-feed" style="font-size:0.86rem; color:var(--text-muted);">
+          <div class="feed-source-label">External headlines: BBC World (via RSS)</div>
+          <div id="world-feed" class="feed-container">
             Loading latest world headlines…
           </div>
         </div>
       </div>
     </section>
 
-    <!-- U.S. -->
+    <!-- U.S. SECTION -->
     <section id="us" class="section">
       <div class="band">
         <div class="section-title-row">
@@ -988,9 +1177,11 @@ High              Very High          New leaders emerge
           <span class="section-sub">Main-street stories, sentiment and policy shifts</span>
         </div>
         <p style="font-size:0.9rem; color:var(--text-muted);">
-          How national economic trends translate into local realities across American households and small businesses.
+          How national economic trends translate into local realities across American households,
+          small businesses and regional labor markets.
         </p>
       </div>
+
       <div class="card-soft">
         <div class="stories-grid">
           <div class="story-card">
@@ -1011,19 +1202,19 @@ High              Very High          New leaders emerge
         </div>
 
         <div style="margin-top:18px;">
-          <div class="label-pill">Live U.S. Headlines (external)</div>
-          <div id="us-feed" style="font-size:0.86rem; color:var(--text-muted);">
+          <div class="feed-source-label">External headlines: NPR U.S. News (via RSS)</div>
+          <div id="us-feed" class="feed-container">
             Loading latest U.S. headlines…
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TECH -->
+    <!-- TECH SECTION -->
     <section id="tech" class="section">
       <div class="band band-strong">
         <div class="section-title-row">
-          <h2 class="section-title">AI & Technology</h2>
+          <h2 class="section-title">AI &amp; Technology</h2>
           <span class="section-sub">Automation, software and the future of work</span>
         </div>
         <p style="font-size:0.9rem;">
@@ -1031,6 +1222,7 @@ High              Very High          New leaders emerge
           that once required entire departments.
         </p>
       </div>
+
       <div class="card-soft">
         <div class="stories-grid">
           <div class="story-card">
@@ -1054,11 +1246,23 @@ High              Very High          New leaders emerge
         </div>
 
         <div style="margin-top:18px;">
-          <div class="label-pill">Live Tech Headlines (external)</div>
-          <div id="tech-feed" style="font-size:0.86rem; color:var(--text-muted);">
+          <div class="feed-source-label">External headlines: Ars Technica (via RSS)</div>
+          <div id="tech-feed" class="feed-container">
             Loading latest tech headlines…
           </div>
         </div>
+      </div>
+
+      <div class="ad-box ad-searchconverts" style="margin-top:16px;">
+        <span class="ad-tag">Sponsored • SearchConverts.com</span>
+        <div class="ad-title">Need a technical partner to deploy this kind of site?</div>
+        <p style="margin:4px 0 6px;">
+          Use automation and AI to create landing pages, content systems and SEO assets
+          that keep working long after launch.
+        </p>
+        <a class="ad-link" href="https://www.searchconverts.com" target="_blank" rel="noopener">
+          Talk with Search Converts →
+        </a>
       </div>
     </section>
 
@@ -1089,7 +1293,7 @@ High              Very High          New leaders emerge
           </div>
         </div>
         <aside>
-          <h3 style="margin-top:0; font-size:1rem;">Latest Clips & Shorts</h3>
+          <h3 style="margin-top:0; font-size:1rem;">Latest Clips &amp; Shorts</h3>
 
           <div class="video-sidebar-item">
             <iframe
@@ -1114,7 +1318,7 @@ High              Very High          New leaders emerge
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section">
       <div class="band">
         <div class="section-title-row">
@@ -1128,8 +1332,8 @@ High              Very High          New leaders emerge
           focused on how global and local economic trends intersect with real businesses and workers.
         </p>
         <p>
-          The project doubles as a live example of how far a single static site can go when paired
-          with focused reporting, curated stories and practical tools for entrepreneurs.
+          The project also serves as a live example of what a single static page can do when paired
+          with focused reporting, curated external sources and practical tools for entrepreneurs.
         </p>
       </div>
     </section>
@@ -1139,23 +1343,23 @@ High              Very High          New leaders emerge
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-col">
-          <div class="logo-main" style="color:#f9fbff; font-size:1rem;">Action Global News</div>
+          <div class="logo-main" style="font-size:1rem; color:#f4f7ff;">Action Global News</div>
           <p style="margin:6px 0 10px; max-width:260px;">
             Independent coverage of business, economy, AI and global developments. Built to be lean,
             fast and useful for entrepreneurs, workers and curious readers.
           </p>
         </div>
-        <div class="footer-col footer-link">
+        <div class="footer-col footer-links">
           <strong>Key Sections</strong><br />
           <a href="javascript:showSection('home')">Top Stories</a><br />
           <a href="javascript:showSection('business')">Business</a><br />
           <a href="javascript:showSection('world')">World</a><br />
           <a href="javascript:showSection('us')">U.S. News</a><br />
-          <a href="javascript:showSection('tech')">AI & Tech</a><br />
+          <a href="javascript:showSection('tech')">AI &amp; Tech</a><br />
           <a href="javascript:showSection('videos')">Video Desk</a><br />
         </div>
-        <div class="footer-col footer-link">
-          <strong>Partner & Sponsor Destinations</strong><br />
+        <div class="footer-col footer-links">
+          <strong>Partner Destinations</strong><br />
           <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a><br />
           <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com</a><br />
           <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">RusticBarnwoodFurniture.com</a><br />
@@ -1177,7 +1381,7 @@ High              Very High          New leaders emerge
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Nav
+    // Section nav
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
       const s = document.getElementById(id);
@@ -1199,7 +1403,7 @@ High              Very High          New leaders emerge
       window.scrollTo({ top, behavior: 'smooth' });
     }
 
-    // Sharing
+    // Share helpers
     function shareArticle(platform) {
       const url = window.location.href;
       const title = document.title || 'Action Global News';
@@ -1207,12 +1411,12 @@ High              Very High          New leaders emerge
         window.open(
           'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) +
           '&url=' + encodeURIComponent(url),
-          '_blank','noopener'
+          '_blank', 'noopener'
         );
       } else if (platform === 'facebook') {
         window.open(
           'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
-          '_blank','noopener'
+          '_blank', 'noopener'
         );
       } else if (platform === 'email') {
         window.location.href =
@@ -1225,47 +1429,42 @@ High              Very High          New leaders emerge
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(window.location.href)
           .then(() => alert('Link copied to clipboard.'))
-          .catch(() => alert('Unable to copy link automatically.'));
+          .catch(() => alert('Unable to copy automatically. Please copy from the address bar.'));
       } else {
         alert('Please copy the link from your browser address bar.');
       }
     }
 
-    // RSS via AllOrigins (best-effort, non-breaking)
+    // RSS loader using rss2json
     function loadFeed(targetId, feedUrl, maxItems) {
       const target = document.getElementById(targetId);
       if (!target) return;
-      const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(feedUrl);
-      fetch(proxyUrl)
+
+      const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl);
+
+      fetch(apiUrl)
         .then(res => res.json())
         .then(data => {
-          const parser = new DOMParser();
-          const xml = parser.parseFromString(data.contents, 'text/xml');
-          const items = xml.getElementsByTagName('item');
-          if (!items || items.length === 0) {
+          if (!data || data.status !== 'ok' || !data.items || !data.items.length) {
             target.textContent = 'No external headlines available right now.';
             return;
           }
+          const items = data.items;
           const list = document.createElement('ul');
-          list.style.listStyle = 'none';
-          list.style.padding = '0';
-          list.style.margin = '4px 0';
-          const count = Math.min(maxItems, items.length);
-          for (let i = 0; i < count; i++) {
+          const limit = Math.min(maxItems, items.length);
+
+          for (let i = 0; i < limit; i++) {
             const item = items[i];
-            const titleNode = item.getElementsByTagName('title')[0];
-            const linkNode = item.getElementsByTagName('link')[0];
             const li = document.createElement('li');
-            li.style.marginBottom = '4px';
             const a = document.createElement('a');
-            a.href = linkNode ? linkNode.textContent : '#';
+            a.href = item.link || '#';
             a.target = '_blank';
             a.rel = 'noopener';
-            a.textContent = titleNode ? titleNode.textContent : 'External headline';
-            a.style.fontSize = '0.86rem';
+            a.textContent = item.title || 'External headline';
             li.appendChild(a);
             list.appendChild(li);
           }
+
           target.innerHTML = '';
           target.appendChild(list);
         })
@@ -1274,10 +1473,11 @@ High              Very High          New leaders emerge
         });
     }
 
-    loadFeed('business-feed', 'https://feeds.marketwatch.com/marketwatch/topstories/', 5);
-    loadFeed('world-feed', 'https://feeds.bbci.co.uk/news/world/rss.xml', 5);
-    loadFeed('us-feed', 'https://feeds.npr.org/1003/rss.xml', 5);
-    loadFeed('tech-feed', 'https://feeds.arstechnica.com/arstechnica/technology-lab', 5);
+    // Load feeds (balanced mix of sources)
+    loadFeed('business-feed', 'https://feeds.marketwatch.com/marketwatch/topstories', 6);
+    loadFeed('world-feed', 'https://feeds.bbci.co.uk/news/world/rss.xml', 6);
+    loadFeed('us-feed', 'https://feeds.npr.org/1003/rss.xml', 6);
+    loadFeed('tech-feed', 'https://feeds.arstechnica.com/arstechnica/technology-lab', 6);
   </script>
 </body>
 </html>
