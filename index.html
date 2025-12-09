@@ -557,15 +557,15 @@
 
             <div class="video-sidebar-item">
               <div class="video-sidebar-caption">
-                Add more videos by duplicating the block above and swapping the
-                <code>src</code> value. No extra pages required.
+                Add more videos by duplicating this block and swapping the
+                <code>src</code> to your own clips.
               </div>
             </div>
           </aside>
         </div>
       </div>
 
-      <!-- Top section tiles -->
+      <!-- Snapshot tiles -->
       <div class="band" style="margin-top:10px;">
         <div class="section-title-row">
           <h2 class="section-title">Today’s Business & AI Snapshot</h2>
@@ -589,6 +589,52 @@
             <div class="story-title">How automation is reshaping the “size advantage” in competition</div>
             <div class="story-meta">AI • Automation</div>
             <a class="story-link" href="javascript:scrollToArticle('article-automation')">Read the AI feature →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Global highlight tiles -->
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">Global Highlights</h2>
+          <span class="section-sub">World, U.S., tech and market stories at a glance</span>
+        </div>
+        <div class="stories-grid">
+          <div class="story-card">
+            <span class="story-badge">World</span>
+            <div class="story-title">Energy prices, currency swings and supply chains</div>
+            <div class="story-meta">Global • Macro</div>
+            <a class="story-link" href="javascript:showSection('world')">Open world section →</a>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">U.S.</span>
+            <div class="story-title">How American main street is feeling rate changes</div>
+            <div class="story-meta">U.S. • Sentiment</div>
+            <a class="story-link" href="javascript:showSection('us')">Go to U.S. coverage →</a>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Business</span>
+            <div class="story-title">Why some founders grow into downturns instead of freezing</div>
+            <div class="story-meta">Business • Strategy</div>
+            <a class="story-link" href="javascript:showSection('business')">View business desk →</a>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">AI</span>
+            <div class="story-title">New tools that compress weeks of work into days</div>
+            <div class="story-meta">AI • Tools</div>
+            <a class="story-link" href="javascript:showSection('tech')">Jump to AI & Tech →</a>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Video</span>
+            <div class="story-title">Latest visual explainers and quick briefings</div>
+            <div class="story-meta">Video Desk</div>
+            <a class="story-link" href="javascript:showSection('videos')">Open video desk →</a>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Perspective</span>
+            <div class="story-title">What past cycles can teach today’s entrepreneurs</div>
+            <div class="story-meta">Opinion • Analysis</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-down-economy')">Read analysis →</a>
           </div>
         </div>
       </div>
@@ -820,8 +866,9 @@ High              Very High          New leaders emerge
           <span class="section-sub">Recession strategy, market share, small-business shifts</span>
         </div>
         <p style="font-size:0.9rem; color:var(--text-muted);">
-          A curated mix of Action Global News features and business headlines designed
-          for founders, investors and workers following global and local shifts.
+          A curated set of business stories and perspectives, including how companies adapt when
+          conditions tighten. These cards are static so your visitors always see content, even
+          without any external feed setup.
         </p>
       </div>
       <div class="card-soft">
@@ -835,15 +882,49 @@ High              Very High          New leaders emerge
             </a>
           </div>
           <div class="story-card">
-            <span class="story-badge">Small Business</span>
-            <div class="story-title">How owners are rethinking value when budgets tighten</div>
-            <div class="story-meta">Strategy • Commentary</div>
-            <span class="story-link">Additional original reporting will be added here over time.</span>
+            <span class="story-badge">Cash Flow</span>
+            <div class="story-title">Why cash discipline matters when credit gets expensive</div>
+            <div class="story-meta">Capital • Risk</div>
+            <p class="story-meta">
+              Many founders discover that sustainability in a high-rate world depends less on
+              growth-at-all-costs and more on timing of cash in vs. cash out.
+            </p>
           </div>
           <div class="story-card">
-            <span class="story-badge">Markets</span>
-            <div class="story-title">Why cash discipline matters more when money feels expensive</div>
-            <div class="story-meta">Capital • Risk</div>
+            <span class="story-badge">Small Business</span>
+            <div class="story-title">How owners are rethinking “value” when budgets tighten</div>
+            <div class="story-meta">Strategy • Positioning</div>
+            <p class="story-meta">
+              Instead of cutting prices, some companies are bundling services, adding longer-term
+              support and making offers easier to say yes to.
+            </p>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Hiring</span>
+            <div class="story-title">Finding talent in a market full of mixed signals</div>
+            <div class="story-meta">Workforce • Hiring</div>
+            <p class="story-meta">
+              Layoffs in one sector can hide shortages in another. Smart teams recruit during
+              uncertainty instead of waiting for perfect clarity.
+            </p>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Pricing</span>
+            <div class="story-title">Raising prices without losing your best customers</div>
+            <div class="story-meta">Pricing • Communication</div>
+            <p class="story-meta">
+              Clear explanations, transparent cost reasoning and better packaging often matter
+              more than the exact number.
+            </p>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Local</span>
+            <div class="story-title">Why local relationships still matter in a digital-first world</div>
+            <div class="story-meta">Community • Service</div>
+            <p class="story-meta">
+              Even as more transactions move online, trust and proximity remain powerful advantages
+              for main-street firms.
+            </p>
           </div>
         </div>
       </div>
@@ -858,8 +939,8 @@ High              Very High          New leaders emerge
         </div>
         <p style="font-size:0.9rem;">
           Currency swings, energy markets, trade disputes and regulation debates all contribute
-          to the environment businesses operate in. This section is built to host international
-          coverage and curated analysis.
+          to the environment businesses operate in. This section highlights global factors that
+          influence local decisions.
         </p>
       </div>
       <div class="card-soft">
@@ -868,16 +949,47 @@ High              Very High          New leaders emerge
             <span class="story-badge">Energy</span>
             <div class="story-title">Energy price shocks and their impact on small manufacturers</div>
             <div class="story-meta">Global • Energy</div>
+            <p class="story-meta">
+              When fuel and power prices spike, energy-intensive sectors face immediate pressure,
+              while others adjust indirectly over time.
+            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Trade</span>
             <div class="story-title">Supply-chain rerouting and the rise of new manufacturing hubs</div>
             <div class="story-meta">Trade • Logistics</div>
+            <p class="story-meta">
+              Shipping routes, nearshoring and regional trade agreements continue to reshape how
+              and where goods are produced.
+            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Policy</span>
             <div class="story-title">Data rules, AI regulation and cross-border compliance</div>
             <div class="story-meta">Policy • Technology</div>
+            <p class="story-meta">
+              Different regions are moving at different speeds on questions of AI oversight,
+              data protection and privacy rules.
+            </p>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Currency</span>
+            <div class="story-title">Exchange rates and imported price pressure</div>
+            <div class="story-meta">FX • Inflation</div>
+            <p class="story-meta">
+              Currency moves can soften or amplify inflation, especially for countries dependent
+              on imported food and energy.
+            </p>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Emerging Markets</span>
+            <div class="story-title">Where new consumer demand is still expanding</div>
+            <div class="story-meta">Growth • Demand</div>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Risk</span>
+            <div class="story-title">Geopolitical tension and business continuity planning</div>
+            <div class="story-meta">Risk • Strategy</div>
           </div>
         </div>
       </div>
@@ -901,6 +1013,10 @@ High              Very High          New leaders emerge
             <span class="story-badge">Sentiment</span>
             <div class="story-title">Small-business owners weigh inflation against local demand</div>
             <div class="story-meta">U.S. • Business</div>
+            <p class="story-meta">
+              Local demand can remain resilient even when national surveys show worry, creating
+              mixed signals for decision makers.
+            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Housing</span>
@@ -911,6 +1027,21 @@ High              Very High          New leaders emerge
             <span class="story-badge">Labor</span>
             <div class="story-title">Remote work, hybrid patterns and regional job markets</div>
             <div class="story-meta">Work • Labor</div>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Consumer</span>
+            <div class="story-title">Household budgets under pressure from multiple directions</div>
+            <div class="story-meta">Consumer • Spending</div>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Local</span>
+            <div class="story-title">Why some cities rebound faster than others</div>
+            <div class="story-meta">Cities • Recovery</div>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Policy</span>
+            <div class="story-title">Tax changes and incentives facing smaller firms</div>
+            <div class="story-meta">Policy • Business</div>
           </div>
         </div>
       </div>
@@ -943,11 +1074,30 @@ High              Very High          New leaders emerge
             <span class="story-badge">Tools</span>
             <div class="story-title">Practical AI use cases that save founders hours per week</div>
             <div class="story-meta">Tools • Workflows</div>
+            <p class="story-meta">
+              Content drafts, customer replies, data summaries and basic design can all be sped up
+              with careful use of AI assistance.
+            </p>
           </div>
           <div class="story-card">
             <span class="story-badge">Governance</span>
             <div class="story-title">Balancing human judgment with automated systems</div>
             <div class="story-meta">Ethics • Governance</div>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Productivity</span>
+            <div class="story-title">How small teams are building internal AI “copilots”</div>
+            <div class="story-meta">Work • Productivity</div>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Risk</span>
+            <div class="story-title">Avoiding over-automation and keeping the human voice</div>
+            <div class="story-meta">Risk • Brand</div>
+          </div>
+          <div class="story-card">
+            <span class="story-badge">Future of Work</span>
+            <div class="story-title">New roles emerging around AI supervision and quality control</div>
+            <div class="story-meta">Work • Roles</div>
           </div>
         </div>
       </div>
@@ -1020,7 +1170,7 @@ High              Very High          New leaders emerge
         </p>
         <p>
           The project doubles as a live example of how far a single static site can go when paired
-          with focused reporting, curated links and practical tools for entrepreneurs.
+          with focused reporting, curated stories and practical tools for entrepreneurs.
         </p>
       </div>
     </section>
