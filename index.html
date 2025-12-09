@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Action Global News | Business, Economy, AI & World Headlines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Action Global News covers international headlines, small business in down economies, inflation-era survival, and how AI and automation are changing the competitive landscape." />
+  <meta name="theme-color" content="#0b2345" />
+
+  <!-- Google AdSense verification script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561679124556057" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg-main: #f5f7fb;
+      --bg-alt: #ffffff;
+      --bg-band: #e4ecf8;
+      --bg-band-strong: #0b2345;
+      --text-main: #141827;
+      --text-muted: #5e6473;
+      --accent-primary: #1c4fd0;
+      --accent-secondary: #df3b47;
+      --border-soft: #d6dbe8;
+      --shadow-soft: 0 8px 24px rgba(9, 15, 40, 0.09);
+      --radius-lg: 18px;
+      --radius-sm: 10px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: #ffffff;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .logo-block {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .logo-main {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bg-band-strong);
+    }
+    .logo-tagline {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      letter-spacing: 0.12em;
+    }
+
+    /* Nav */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      border-color: var(--border-soft);
+      background: #f0f2f9;
+    }
+    nav a.active {
+      background: var(--bg-band-strong);
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    /* Layout */
+    main {
+      max-width: var(--max-width);
+      margin: 18px auto 40px;
+      padding: 0 18px;
+    }
+    .band {
+      width: 100%;
+      border-radius: 22px;
+      padding: 18px 18px 4px;
+      background: linear-gradient(135deg, var(--bg-band), #f9fbff);
+      margin-bottom: 18px;
+    }
+    .band-strong {
+      background: linear-gradient(135deg, #0b2345, #132a55);
+      color: #ffffff;
+    }
+    .band-strong h2,
+    .band-strong p {
+      color: #ffffff;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.1fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 20px;
+    }
+
+    .card-soft {
+      background: #f9fafe;
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .hero-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent-secondary);
+      margin-bottom: 4px;
+    }
+    .hero-title {
+      font-size: 1.8rem;
+      line-height: 1.25;
+      margin: 4px 0 10px;
+    }
+    .hero-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .hero-lede {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      margin-bottom: 18px;
+    }
+
+    .hero-secondary-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .hero-secondary {
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+    .hero-secondary:hover {
+      background: #f0f2fb;
+      transform: translateY(-1px);
+    }
+    .hero-secondary-title {
+      font-size: 0.95rem;
+      margin: 0 0 4px;
+    }
+    .hero-secondary-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .btn {
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 0.84rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      color: var(--accent-primary);
+    }
+    .btn-primary {
+      background: var(--accent-primary);
+      color: #ffffff;
+      border-color: var(--accent-primary);
+    }
+    .btn-soft {
+      background: #eff2fb;
+      color: var(--text-muted);
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .label-pill {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: #dde5ff;
+      color: #193777;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Articles */
+    article h2 {
+      margin-top: 0;
+    }
+    article h3 {
+      margin-top: 22px;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    article p {
+      margin: 6px 0 10px;
+    }
+    .article-meta-top {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .article-band {
+      background: #f3f5ff;
+      border-left: 3px solid var(--accent-primary);
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin: 12px 0 16px;
+      font-size: 0.9rem;
+    }
+    .article-grid {
+      display: grid;
+      grid-template-columns: 3fr 1.2fr;
+      gap: 18px;
+    }
+
+    .share-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 18px;
+    }
+    .share-tag {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+
+    /* Video */
+    .video-layout {
+      display: grid;
+      grid-template-columns: 2fr 1.1fr;
+      gap: 18px;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-sidebar-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 12px;
+    }
+    .video-sidebar-item iframe {
+      width: 100%;
+      height: 188px;
+      border: 0;
+      display: block;
+    }
+    .video-sidebar-caption {
+      padding: 8px 10px;
+      font-size: 0.86rem;
+    }
+
+    /* Sections */
+    .section {
+      display: none;
+      margin-top: 20px;
+    }
+    .section.active {
+      display: block;
+    }
+
+    .section-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    .section-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .story-card {
+      background: #ffffff;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-soft);
+      padding: 10px 12px;
+      font-size: 0.9rem;
+    }
+    .story-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .story-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .story-link {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 0.8rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #0b1020;
+      color: #d2d7e7;
+      padding: 22px 18px 30px;
+      margin-top: 30px;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      font-size: 0.86rem;
+    }
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .footer-col {
+      min-width: 180px;
+    }
+    .footer-link a {
+      color: #f9fbff;
+    }
+    .footer-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      color: #8b90a4;
+    }
+    .powered-by a {
+      color: #f9fbff;
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .layout-grid,
+      .article-grid,
+      .video-layout,
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 1.45rem;
+      }
+      .card,
+      .band {
+        padding: 14px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-main">Action Global News</div>
+        <div class="logo-tagline">Business • Economy • AI • World</div>
+      </div>
+      <nav>
+        <a class="nav-link active" data-section="home">Top Stories</a>
+        <a class="nav-link" data-section="business">Business</a>
+        <a class="nav-link" data-section="world">World</a>
+        <a class="nav-link" data-section="us">U.S. News</a>
+        <a class="nav-link" data-section="tech">AI & Tech</a>
+        <a class="nav-link" data-section="videos">Video Desk</a>
+        <a class="nav-link" data-section="about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME / TOP STORIES -->
+    <section id="home" class="section active">
+      <div class="band">
+        <div class="layout-grid">
+          <div class="card">
+            <div class="hero-tag">Featured Analysis</div>
+            <h1 class="hero-title">
+              Rising in a Down Economy: Why Some Businesses Thrive When Markets Fall
+            </h1>
+            <div class="hero-meta">
+              By Action Global News – Business & Economy Desk
+            </div>
+            <p class="hero-lede">
+              Recessions and downturns reshape markets, thin out competitors, and
+              reward entrepreneurs who adapt quickly. While headlines often focus
+              on layoffs and shrinking GDP, history shows an equally powerful story:
+              downturns are the moment when new winners emerge.
+            </p>
+            <div class="btn-row">
+              <button class="btn btn-primary" onclick="scrollToArticle('article-down-economy')">
+                Read full analysis
+              </button>
+              <button class="btn btn-soft" onclick="window.print()">
+                🖨 Print this page
+              </button>
+            </div>
+            <div class="article-band">
+              <strong>Key idea:</strong> When money tightens, the market doesn’t stop — it reshuffles.
+              Companies willing to rethink pricing, product mix and customer value can gain
+              market share precisely when others pull back.
+            </div>
+          </div>
+
+          <aside>
+            <div class="card-soft">
+              <div class="label-pill">Featured Hero Articles</div>
+              <div class="hero-secondary-grid">
+                <div class="hero-secondary" onclick="scrollToArticle('article-inflation')">
+                  <div class="hero-secondary-title">
+                    How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back
+                  </div>
+                  <div class="hero-secondary-meta">
+                    Inflation is painful—but it can tilt the playing field in favor of lean,
+                    local and agile companies.
+                  </div>
+                </div>
+                <div class="hero-secondary" onclick="scrollToArticle('article-automation')">
+                  <div class="hero-secondary-title">
+                    The Automation Advantage: How Small Businesses Using AI Can Outrun Corporate Giants
+                  </div>
+                  <div class="hero-secondary-meta">
+                    AI used smartly can turn a small team into a force that competes with far larger organizations.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-soft" style="margin-top:12px;">
+              <div class="section-title-row">
+                <h3 class="section-title" style="font-size:1rem;">Global Highlights</h3>
+                <span class="section-sub">From partner feeds & independent sources</span>
+              </div>
+              <ul style="margin:0; padding-left:16px; font-size:0.88rem; color:var(--text-muted);">
+                <li>International markets react to rate decisions and energy prices.</li>
+                <li>Small-business sentiment diverges sharply by region and sector.</li>
+                <li>AI regulation debates intensify across North America and Europe.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Color band for cards -->
+      <div class="band band-strong" style="margin-top:10px;">
+        <div class="section-title-row">
+          <h2 class="section-title">Latest Business & AI Headlines</h2>
+          <span class="section-sub">Business, markets, automation and entrepreneurship</span>
+        </div>
+        <div class="stories-grid">
+          <div class="story-card">
+            <div class="story-title">Why downturns accelerate market disruption</div>
+            <div class="story-meta">Analysis • Action Global News</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-down-economy')">Read analysis →</a>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Inflation pressures: small firms adapt faster than giants</div>
+            <div class="story-meta">Inflation • Small Business</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-inflation')">Read breakdown →</a>
+          </div>
+          <div class="story-card">
+            <div class="story-title">AI tools quietly shift power toward lean organizations</div>
+            <div class="story-meta">AI & Automation</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-automation')">Read insight →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article cluster -->
+      <div class="card article-grid" id="article-down-economy">
+        <article>
+          <div class="article-meta-top">
+            BUSINESS & ECONOMY • Feature | Estimated read time: 10–12 minutes
+          </div>
+          <h2>Rising in a Down Economy: Why Some Businesses Thrive When Markets Fall</h2>
+
+          <div class="share-row">
+            <span class="share-tag">Share:</span>
+            <button class="btn btn-soft" onclick="shareArticle('twitter')">Twitter / X</button>
+            <button class="btn btn-soft" onclick="shareArticle('facebook')">Facebook</button>
+            <button class="btn btn-soft" onclick="shareArticle('email')">Email</button>
+            <button class="btn btn-soft" onclick="copyLink()">Copy link</button>
+          </div>
+
+          <p>
+            Most headlines during a recession focus on layoffs, shrinking GDP and market fear.
+            Yet when you look closely across past downturns, another pattern is just as clear:
+            while many companies stall or disappear, a smaller group quietly grows faster than ever.
+          </p>
+          <p>
+            From discount retailers in the 2008 financial crisis, to cloud software companies during
+            the COVID-19 pandemic, downturns often act as a reset button. Businesses that stay
+            flexible, protect cash and lean into new demand can emerge with more market share
+            than they held in “good” times.
+          </p>
+
+          <h3>Downturns don’t stop markets — they reshuffle them</h3>
+          <p>
+            In boom times, easy credit and optimistic forecasts allow many weak business models
+            to survive. Competitors multiply, marketing gets noisy and it’s hard for any single
+            company to stand out. A recession reverses those conditions.
+          </p>
+          <p>
+            Higher interest rates and tighter lending push under-capitalized firms to the brink.
+            Businesses with thin margins or slow cash cycles struggle to pay suppliers. Marketing
+            budgets get cut. Hiring freezes lock in existing capabilities while customer preferences
+            are actively changing.
+          </p>
+          <div class="article-band">
+            <strong>Key point:</strong> downturns act as a stress test. Companies that were
+            only sustainable in “easy money” conditions fall away, opening space for stronger
+            models to expand.
+          </div>
+
+          <h3>Why some companies grow faster during recessions</h3>
+          <p>
+            If recessions are so painful, how can any business grow during one? In practice,
+            the same factors that punish inflexibility reward adaptability:
+          </p>
+          <ul>
+            <li><strong>Ad costs often fall</strong> as big brands cut campaigns, opening cheaper slots for smaller players.</li>
+            <li><strong>Competitors exit</strong> entire segments, creating openings in local or niche markets.</li>
+            <li><strong>Talent becomes available</strong> as layoffs release experienced staff back into the labor pool.</li>
+            <li><strong>New problems emerge</strong> that didn’t exist in boom times, creating new demand.</li>
+          </ul>
+
+          <h3>Entrepreneurs who refuse to quit</h3>
+          <p>
+            The entrepreneurs who manage to grow through a downturn almost never describe the process
+            as easy. But they share common behavior: they accept reality quickly, cut costs early,
+            talk to customers constantly and keep shipping new offers even when the outlook is uncertain.
+          </p>
+          <p>
+            Instead of waiting for conditions to improve, they ask a different question:
+            “Given the way things are now, where is value missing — and how can we deliver it better?”
+          </p>
+
+          <h3>Practical strategies for a down economy</h3>
+          <ul>
+            <li><strong>Refocus on your most valuable customers.</strong> Protect the relationships that drive the majority of your revenue.</li>
+            <li><strong>Audit every fixed cost.</strong> Office space, software, unused subscriptions and under-utilized roles add up fast.</li>
+            <li><strong>Bundle value instead of racing to the lowest price.</strong> Customers care about total usefulness, not just cost.</li>
+            <li><strong>Invest in visibility while others go quiet.</strong> Smart, targeted marketing stands out even more when the field thins.</li>
+          </ul>
+
+          <p>
+            Regardless of industry, the underlying pattern is the same: when large parts of the
+            market freeze, those who keep learning, iterating and showing up consistently often
+            emerge as the next cycle’s leaders.
+          </p>
+        </article>
+
+        <aside>
+          <div class="card-soft">
+            <h3 style="margin-top:0;">Quick chart: pressure vs. disruption</h3>
+            <p style="font-size:0.86rem;">
+              As pressure on margins rises, so does the level of market disruption:
+            </p>
+            <pre style="font-size:0.78rem; background:#101630; color:#f4f5ff; padding:10px 12px; border-radius:10px; overflow-x:auto;">
+Market pressure   Innovation level   Outcome
+───────────────   ────────────────   ───────────────────────
+Low               Low                Slow, incremental change
+Medium            Medium             Competitive, crowded
+High              Very High          New leaders emerge
+            </pre>
+            <p style="font-size:0.84rem; color:var(--text-muted);">
+              When the economy tightens, staying still becomes the risky option. Action and adaptation
+              are what keep companies in the game.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Inflation article -->
+      <div class="card" id="article-inflation" style="margin-top:22px;">
+        <article>
+          <div class="article-meta-top">
+            INFLATION & SMALL BUSINESS • Feature | Includes recent data references
+          </div>
+          <h2>How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back</h2>
+
+          <div class="share-row">
+            <span class="share-tag">Share:</span>
+            <button class="btn btn-soft" onclick="shareArticle('twitter')">Twitter / X</button>
+            <button class="btn btn-soft" onclick="shareArticle('facebook')">Facebook</button>
+            <button class="btn btn-soft" onclick="shareArticle('email')">Email</button>
+            <button class="btn btn-soft" onclick="copyLink()">Copy link</button>
+          </div>
+
+          <p>
+            Inflation doesn’t hit every business equally. For heavily leveraged, high-overhead
+            corporations, even a few percentage points of price pressure can force cost-cutting,
+            hiring freezes and cancelled expansions. For leaner, local companies, the same environment
+            can become an unexpected opening.
+          </p>
+          <p>
+            In the United States, annual inflation spiked to roughly 9 percent in 2022 before easing
+            back toward the 3 percent range by late 2025, according to publicly reported consumer price
+            data. During that period, surveys from major business groups showed that a large majority
+            of small firms listed inflation as their top concern, and many planned price increases
+            to cope with higher input costs.
+          </p>
+
+          <h3>Why big brands pull back in inflationary cycles</h3>
+          <p>
+            Large organizations carry large fixed costs: long-term leases, national advertising
+            contracts, complex logistics and multi-layered management. When inflation raises costs
+            across the board, protecting quarterly earnings often takes priority over experimentation.
+          </p>
+          <p>
+            That means:
+          </p>
+          <ul>
+            <li>expansion plans are paused</li>
+            <li>marketing budgets are trimmed</li>
+            <li>marginal locations or product lines are cut</li>
+            <li>procurement is locked into pricing that lags reality</li>
+          </ul>
+          <p>
+            For customers, the result is visible: higher prices, less flexibility and often weaker
+            service as support teams get stretched.
+          </p>
+
+          <h3>How smaller firms can turn inflation into an advantage</h3>
+          <p>
+            Smaller businesses typically operate with less overhead and fewer layers of approval.
+            They can adjust pricing, change suppliers or alter service models quickly. In inflationary
+            environments, that agility matters.
+          </p>
+          <ul>
+            <li><strong>They can reframe value.</strong> Instead of cutting price, they bundle services, add support or offer longer-term plans.</li>
+            <li><strong>They can shift their mix.</strong> They tilt toward essentials—maintenance, repairs, core services—rather than luxuries.</li>
+            <li><strong>They can renegotiate faster.</strong> Landlords, suppliers and local partners are often more flexible with a smaller, known counterparty.</li>
+            <li><strong>They can lean on personal trust.</strong> In uncertain times, many customers prefer dealing with people they know by name.</li>
+          </ul>
+
+          <h3>Marketing in an inflation era</h3>
+          <p>
+            One under-appreciated effect of inflation is what happens to advertising. When national
+            brands pull back, attention becomes cheaper. That creates a rare window for small players
+            to buy visibility they couldn’t afford during boom years.
+          </p>
+          <p>
+            An inflation-resilient marketing plan for a small business often includes:
+          </p>
+          <ul>
+            <li>doubling down on local search and review platforms</li>
+            <li>publishing helpful, niche-focused content that answers real customer questions</li>
+            <li>retargeting existing customers with value-driven offers, not just discounts</li>
+            <li>emphasizing reliability and clarity over hype</li>
+          </ul>
+
+          <h3>Inflation as a filter rather than a verdict</h3>
+          <p>
+            Inflationary periods are difficult. Some business models no longer work as they did under
+            low-rate, low-inflation conditions. But that doesn’t make growth impossible—it simply raises
+            the bar for efficiency and true value.
+          </p>
+          <p>
+            Entrepreneurs who understand their numbers, stay close to customers and adjust their
+            offerings quickly can still grow in real terms, even when headline inflation is high.
+          </p>
+        </article>
+      </div>
+
+      <!-- Automation / AI article -->
+      <div class="card" id="article-automation" style="margin-top:22px;">
+        <article>
+          <div class="article-meta-top">
+            AI & AUTOMATION • Feature | The small-business automation advantage
+          </div>
+          <h2>The Automation Advantage: How Small Businesses Using AI Can Outrun Corporate Giants</h2>
+
+          <div class="share-row">
+            <span class="share-tag">Share:</span>
+            <button class="btn btn-soft" onclick="shareArticle('twitter')">Twitter / X</button>
+            <button class="btn btn-soft" onclick="shareArticle('facebook')">Facebook</button>
+            <button class="btn btn-soft" onclick="shareArticle('email')">Email</button>
+            <button class="btn btn-soft" onclick="copyLink()">Copy link</button>
+          </div>
+
+          <p>
+            For most of the last century, scale was a nearly unshakeable advantage. Bigger balance
+            sheets, bigger factories and bigger workforces translated directly into more market power.
+            But the rise of cloud software and now generative AI is quietly rewriting that formula.
+          </p>
+          <p>
+            Today, a small business with a handful of people can automate tasks that once required
+            entire departments: customer support, data entry, basic design, first-draft copywriting,
+            analytics reporting and more. The question is no longer whether AI will reshape competition
+            — it’s who will use it well.
+          </p>
+
+          <h3>Why AI can be a “size equalizer”</h3>
+          <p>
+            Many large organizations are slower to adopt new technology. They must navigate legacy
+            systems, compliance, procurement cycles and internal politics. Small businesses, by
+            contrast, can often test and implement new tools in days rather than months.
+          </p>
+          <ul>
+            <li><strong>Workflow automation.</strong> Repetitive tasks—follow-up emails, reminders, scheduling—can be handled by software.</li>
+            <li><strong>Customer communication.</strong> AI-assisted chat and templating can help small teams respond faster without losing the human voice.</li>
+            <li><strong>Marketing and SEO.</strong> Research, drafting and optimization can move from weeks to hours with the right checks and editing.</li>
+          </ul>
+
+          <h3>Where small businesses are already using AI effectively</h3>
+          <p>Across industries, some of the most common early wins include:</p>
+          <ul>
+            <li>writing and optimizing website content and product descriptions</li>
+            <li>creating first-draft proposals, estimates and outreach messages</li>
+            <li>summarizing customer conversations and extracting follow-up actions</li>
+            <li>analyzing reviews to identify recurring complaints or opportunities</li>
+            <li>building simple decision tools or calculators for customers</li>
+          </ul>
+
+          <h3>Risks and guardrails</h3>
+          <p>
+            AI is powerful, but it is not magic. Over-automation can make a business feel impersonal,
+            and relying on unedited outputs can lead to errors. The companies that gain the most advantage
+            treat AI as an amplifier for human judgment, not a replacement.
+          </p>
+          <p>
+            That usually means:
+          </p>
+          <ul>
+            <li>reviewing and editing AI-generated content before it goes public</li>
+            <li>being transparent with customers about how data is used</li>
+            <li>keeping humans in the loop for sensitive or high-impact decisions</li>
+          </ul>
+
+          <h3>The next five years</h3>
+          <p>
+            As AI tools become cheaper and more capable, the gap may widen between small businesses that
+            adopt them thoughtfully and those that ignore them. At the same time, large organizations
+            that move slowly could find their size advantage eroding in areas where software can do much
+            of the heavy lifting.
+          </p>
+          <p>
+            For small firms, the goal is not to “look like a corporation.” It’s to combine the things
+            that only humans can do—trust, creativity, local knowledge—with the speed and efficiency
+            that automation provides.
+          </p>
+          <p>
+            Used well, AI can turn a lean team into a durable competitor: one that responds faster,
+            serves customers better and keeps improving even when the economy is uncertain.
+          </p>
+        </article>
+      </div>
+
+      <!-- Comments block (Disqus placeholder) -->
+      <div class="card" style="margin-top:22px;">
+        <h3 style="margin-top:0;">Conversation</h3>
+        <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:10px;">
+          Join the discussion below. Comments are provided via a third-party platform.
+        </p>
+        <div id="disqus_thread"></div>
+        <p style="font-size:0.78rem; color:var(--text-muted); margin-top:10px;">
+          Note: To fully enable comments, create a free Disqus site and replace the
+          <code>example-shortname</code> value in the script at the bottom of this file.
+        </p>
+      </div>
+    </section>
+
+    <!-- BUSINESS SECTION -->
+    <section id="business" class="section">
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">Business & Markets</h2>
+          <span class="section-sub">Recession strategy, market share, small-business shifts</span>
+        </div>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          This section highlights key business stories and perspectives, including how companies
+          adapt when conditions tighten. Featured pieces below are curated from Action Global News
+          and external sources.
+        </p>
+      </div>
+      <div class="card-soft">
+        <div class="stories-grid" id="business-feed">
+          <!-- RSS-populated business stories will appear here (requires CORS-friendly endpoints). -->
+          <div class="story-card">
+            <div class="story-title">Featured: Rising in a Down Economy</div>
+            <div class="story-meta">Action Global News</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-down-economy')">Read our full feature →</a>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Featured: Inflation and small-business resilience</div>
+            <div class="story-meta">Action Global News</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-inflation')">Read our analysis →</a>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Automation and AI as competitive leverage</div>
+            <div class="story-meta">Action Global News</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-automation')">Explore insights →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORLD SECTION -->
+    <section id="world" class="section">
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">World News</h2>
+          <span class="section-sub">International headlines and macro trends</span>
+        </div>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          Global developments in energy, trade, policy and technology continue to shape local
+          business conditions and household budgets. This section is structured to host curated
+          links and RSS-powered headlines from international sources.
+        </p>
+      </div>
+      <div class="card-soft">
+        <div class="stories-grid" id="world-feed">
+          <div class="story-card">
+            <div class="story-title">Regional inflation and currency pressure</div>
+            <div class="story-meta">Macro • Snapshot</div>
+            <span class="story-link">External feeds will appear here as they are configured.</span>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Energy prices and supply chains</div>
+            <div class="story-meta">Energy • Trade</div>
+            <span class="story-link">Placeholder for world news aggregation.</span>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Technology rules, data localization and AI policy</div>
+            <div class="story-meta">Tech • Regulation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- U.S. NEWS SECTION -->
+    <section id="us" class="section">
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">United States</h2>
+          <span class="section-sub">Business, policy, consumer and main-street stories</span>
+        </div>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          Coverage designed to support readers tracking the U.S. economy, local business conditions,
+          small-business sentiment and shifts in policy environment.
+        </p>
+      </div>
+      <div class="card-soft">
+        <div class="stories-grid" id="us-feed">
+          <div class="story-card">
+            <div class="story-title">Small-business sentiment and inflation worries</div>
+            <div class="story-meta">U.S. • Business</div>
+            <span class="story-link">External feeds and curated links can be added here.</span>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Housing, consumer credit and regional differences</div>
+            <div class="story-meta">Housing • Credit</div>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Remote work, hybrid models and regional economies</div>
+            <div class="story-meta">Work • Labor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH / AI SECTION -->
+    <section id="tech" class="section">
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">AI & Technology</h2>
+          <span class="section-sub">Automation, software and the future of work</span>
+        </div>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          Action Global News tracks how AI and software automation affect small businesses,
+          employment and competition. This section highlights tools, trends and responsible
+          adoption strategies.
+        </p>
+      </div>
+      <div class="card-soft">
+        <div class="stories-grid" id="tech-feed">
+          <div class="story-card">
+            <div class="story-title">The automation advantage for lean teams</div>
+            <div class="story-meta">Action Global News</div>
+            <a class="story-link" href="javascript:scrollToArticle('article-automation')">Read our feature →</a>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Practical AI use cases for small businesses</div>
+            <div class="story-meta">Tools • Workflows</div>
+            <span class="story-link">Additional coverage can be added here.</span>
+          </div>
+          <div class="story-card">
+            <div class="story-title">Balancing human judgment with automated systems</div>
+            <div class="story-meta">Ethics • Governance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section id="videos" class="section">
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">Video Desk</h2>
+          <span class="section-sub">Short briefings, commentary and interviews</span>
+        </div>
+        <p style="font-size:0.9rem; color:var(--text-muted);">
+          Featured videos can be updated by swapping the YouTube links in the code. The main
+          video appears on the left, with additional clips and shorts listed on the right.
+        </p>
+      </div>
+
+      <div class="card video-layout">
+        <div>
+          <div class="label-pill">Featured Video</div>
+          <div class="video-wrapper">
+            <!-- Your main YouTube video -->
+            <iframe
+              src="https://www.youtube.com/embed/GVrdcmqXJDs"
+              title="Featured video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <aside>
+          <h3 style="margin-top:0; font-size:1rem;">Latest Clips & Shorts</h3>
+
+          <div class="video-sidebar-item">
+            <iframe
+              src="https://www.youtube.com/embed/Q0Ew1Z2K9D8"
+              title="Short clip"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <div class="video-sidebar-caption">
+              Short commentary or highlight segment. Replace this description to match the chosen video.
+            </div>
+          </div>
+
+          <!-- Placeholder for future videos -->
+          <div class="video-sidebar-item">
+            <div class="video-sidebar-caption">
+              Add more clips by duplicating the block above and changing the YouTube <code>src</code> value.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT / INFO SECTION -->
+    <section id="about" class="section">
+      <div class="band">
+        <div class="section-title-row">
+          <h2 class="section-title">About Action Global News</h2>
+          <span class="section-sub">Independent coverage on business, economy and technology</span>
+        </div>
+      </div>
+      <div class="card">
+        <p>
+          Action Global News is designed as a lean, fast-moving digital news and analysis platform,
+          focused on how global and local economic trends intersect with real businesses and workers.
+          The aim is to highlight practical insights: how companies adapt, where risk is building,
+          and where new opportunity is quietly emerging.
+        </p>
+        <p>
+          This project also serves as a live demonstration of what lean digital infrastructure can
+          do—combining static hosting, light automation, curated external feeds and original reporting
+          without the overhead of a traditional newsroom.
+        </p>
+        <p>
+          Over time, additional sections, contributors and tools may be added, including more video,
+          interactive features and curated resources for entrepreneurs.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-col">
+          <div class="logo-main" style="color:#f9fbff; font-size:1rem;">Action Global News</div>
+          <p style="margin:6px 0 10px; max-width:260px;">
+            Independent coverage of business, economy, AI and global developments. Built to be lean,
+            fast and useful for entrepreneurs, workers and curious readers.
+          </p>
+        </div>
+        <div class="footer-col footer-link">
+          <strong>Key Sections</strong><br />
+          <a href="javascript:showSection('home')">Top Stories</a><br />
+          <a href="javascript:showSection('business')">Business</a><br />
+          <a href="javascript:showSection('world')">World</a><br />
+          <a href="javascript:showSection('tech')">AI & Tech</a><br />
+          <a href="javascript:showSection('videos')">Video Desk</a><br />
+        </div>
+        <div class="footer-col footer-link">
+          <strong>Partner & Sponsor Destinations</strong><br />
+          <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a><br />
+          <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com</a><br />
+          <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">RusticBarnwoodFurniture.com</a><br />
+        </div>
+      </div>
+      <div class="footer-meta-row">
+        <div>© <span id="year"></span> ActionGlobalNews.com. All rights reserved.</div>
+        <div class="powered-by">
+          Powered by
+          <a href="https://www.searchconverts.com" target="_blank" rel="noopener">
+            Search Converts – AIO-SEO Marketing Experts
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JS: navigation, sharing, simple RSS hook, Disqus placeholder -->
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Section navigation
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(function (sec) {
+        sec.classList.remove('active');
+      });
+      var section = document.getElementById(id);
+      if (section) section.classList.add('active');
+
+      document.querySelectorAll('.nav-link').forEach(function (link) {
+        if (link.dataset.section === id) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var target = this.dataset.section;
+        showSection(target);
+      });
+    });
+
+    // Scroll to article within home
+    function scrollToArticle(articleId) {
+      showSection('home');
+      var el = document.getElementById(articleId);
+      if (el) {
+        const rectTop = el.getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({ top: rectTop, behavior: 'smooth' });
+      }
+    }
+
+    // Social share
+    function shareArticle(platform) {
+      var url = window.location.href;
+      var title = document.title || 'Action Global News';
+
+      if (platform === 'twitter') {
+        var tw = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) +
+          '&url=' + encodeURIComponent(url);
+        window.open(tw, '_blank', 'noopener');
+      } else if (platform === 'facebook') {
+        var fb = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+        window.open(fb, '_blank', 'noopener');
+      } else if (platform === 'email') {
+        var em = 'mailto:?subject=' + encodeURIComponent(title) +
+          '&body=' + encodeURIComponent(url);
+        window.location.href = em;
+      }
+    }
+
+    function copyLink() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(window.location.href)
+          .then(function () {
+            alert('Link copied to clipboard.');
+          })
+          .catch(function () {
+            alert('Unable to copy link automatically.');
+          });
+      } else {
+        alert('Your browser does not support automatic copy. Please copy from the address bar.');
+      }
+    }
+
+    // Basic RSS fetch template (CORS note)
+    // This is a structural placeholder. Many major news RSS feeds require a proxy due to CORS.
+    async function loadRssFeed(feedUrl, containerId) {
+      try {
+        // NOTE: In production, you may need to route this request through a CORS-friendly endpoint.
+        const res = await fetch(feedUrl);
+        const text = await res.text();
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(text, 'text/xml');
+        var items = xml.querySelectorAll('item');
+        var container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+        items.forEach(function (item, index) {
+          if (index > 5) return; // limit
+          var title = item.querySelector('title') ? item.querySelector('title').textContent : 'Untitled';
+          var link = item.querySelector('link') ? item.querySelector('link').textContent : '#';
+          var card = document.createElement('div');
+          card.className = 'story-card';
+          card.innerHTML =
+            '<div class="story-title">' + title + '</div>' +
+            '<div class="story-meta">From RSS feed</div>' +
+            '<a class="story-link" href="' + link + '" target="_blank" rel="noopener">Open source →</a>';
+          container.appendChild(card);
+        });
+      } catch (e) {
+        console.warn('RSS load failed for', feedUrl, e);
+      }
+    }
+
+    // Example usage (commented out until a proxy is used):
+    // loadRssFeed('https://www.reutersagency.com/feed/?best-topics=business-finance', 'business-feed');
+
+    // Disqus embed (placeholder shortname)
+    /*
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = window.location.pathname;
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://example-shortname.disqus.com/embed.js'; // Replace example-shortname with your Disqus shortname.
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    */
+  </script>
+</body>
+</html>
