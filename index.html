@@ -2,544 +2,1128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Action Global News | Business, Economy, AI & World Headlines</title>
+  <title>Action Global News | Business • Economy • AI • World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Action Global News covers international headlines, small business in down economies, inflation-era survival, and how AI and automation are changing the competitive landscape." />
-  <meta name="theme-color" content="#071427" />
+  <meta name="description" content="Action Global News covers international headlines, small business, inflation-era survival, AI disruption, and how technology is reshaping the global economy." />
+  <meta name="theme-color" content="#05080f" />
 
-  <!-- Google AdSense verification script -->
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561679124556057" crossorigin="anonymous"></script>
 
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
+    /* ============================================================
+       DESIGN TOKENS — edit these to retheme the whole site
+    ============================================================ */
     :root {
-      --bg-main: #f3f6fb;
-      --bg-alt: #ffffff;
-      --bg-band: #e3ecff;
-      --bg-band-soft: #f6f7fc;
-      --bg-strong: #071427;
-      --text-main: #141827;
-      --text-muted: #5f6574;
-      --accent-primary: #2c6dff;
-      --accent-secondary: #ffbf3b;
-      --accent-teal: #00a3a3;
-      --border-soft: #d4d9e6;
-      --shadow-soft: 0 12px 32px rgba(5, 12, 30, 0.18);
-      --max-width: 1180px;
+      --ink:        #0a0d14;
+      --ink-mid:    #2c3040;
+      --ink-soft:   #5a6070;
+      --paper:      #fafaf8;
+      --paper-alt:  #f2f1ed;
+      --paper-warm: #ede9e0;
+      --rule:       #dddbd4;
+      --accent:     #c8382a;   /* editorial red */
+      --accent-2:   #1a4fc4;   /* deep blue */
+      --accent-gold:#d4a520;
+      --accent-teal:#0a7c6e;
+      --night:      #05080f;
+      --night-mid:  #0e1220;
+      --night-soft: #1a2035;
+      --night-rule: #272c3e;
+      --headline-font: 'Playfair Display', Georgia, serif;
+      --body-font:  'DM Sans', sans-serif;
+      --mono-font:  'DM Mono', monospace;
+      --max-w:      1200px;
+      --radius-sm:  6px;
+      --radius:     12px;
+      --radius-lg:  20px;
     }
 
-    * { box-sizing: border-box; }
+    /* ============================================================
+       RESET + BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #e1e8ff 0, #f5f7fb 35%, #f8f9fd 100%);
-      color: var(--text-main);
-      line-height: 1.6;
+      font-family: var(--body-font);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: var(--accent-primary);
-      text-decoration: none;
-    }
+    a { color: var(--accent-2); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* HEADER */
+    img { max-width: 100%; display: block; }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(7, 20, 39, 0.96);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
-    }
-
-    .header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 10px 18px;
+    /* ============================================================
+       TICKER BAR
+    ============================================================ */
+    .ticker-bar {
+      background: var(--night);
+      color: #fff;
+      font-size: 0.76rem;
+      font-family: var(--mono-font);
+      letter-spacing: 0.04em;
+      overflow: hidden;
+      height: 30px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      position: relative;
-      overflow: hidden;
+      white-space: nowrap;
     }
 
-    /* Planet-style orb */
-
-    .header-inner::after {
-      content: "";
-      position: absolute;
-      right: -90px;
-      top: -60px;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.7), transparent 45%),
-        radial-gradient(circle at 70% 80%, rgba(35,133,255,0.9), rgba(2,23,68,1));
-      box-shadow:
-        0 0 40px rgba(107,175,255,0.85),
-        0 0 120px rgba(37,113,255,0.9);
-      opacity: 0.92;
+    .ticker-label {
+      background: var(--accent);
+      color: #fff;
+      padding: 0 12px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      z-index: 1;
     }
 
-    .logo-block {
-      position: relative;
-      z-index: 2;
+    .ticker-track {
+      display: flex;
+      animation: ticker-scroll 60s linear infinite;
+      gap: 0;
+    }
+
+    .ticker-track:hover { animation-play-state: paused; }
+
+    .ticker-item {
+      padding: 0 32px 0 0;
+      color: #c8cfe0;
+      flex-shrink: 0;
+    }
+
+    .ticker-item span {
+      color: var(--accent-gold);
+      font-weight: 500;
+      margin-right: 6px;
+    }
+
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       MASTHEAD / HEADER
+    ============================================================ */
+    .masthead {
+      background: var(--night);
+      border-bottom: 1px solid var(--night-rule);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+
+    .masthead-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 20px;
+      height: 64px;
+    }
+
+    .logo {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 1px;
+      text-decoration: none;
     }
 
-    .logo-main {
-      font-size: 1.35rem;
+    .logo-name {
+      font-family: var(--headline-font);
+      font-size: 1.45rem;
       font-weight: 900;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #fdfdff;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+
+    .logo-name em {
+      color: var(--accent);
+      font-style: normal;
     }
 
     .logo-tagline {
-      font-size: 0.8rem;
-      color: #a9b6ff;
-      letter-spacing: 0.16em;
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
+      color: #6b7490;
+      font-weight: 500;
     }
 
-    nav {
-      position: relative;
-      z-index: 2;
+    /* ---- nav ---- */
+    .main-nav {
       display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 0.86rem;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
-    nav a {
-      padding: 6px 11px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      color: #d8def8;
-      white-space: nowrap;
-      cursor: pointer;
-    }
-
-    nav a:hover {
-      border-color: rgba(255,255,255,0.28);
-      background: rgba(7, 20, 39, 0.9);
-    }
-
-    nav a.active {
-      background: #ffbf3b;
-      color: #0c1532;
-      border-color: #f5aa07;
-      font-weight: 600;
-    }
-
-    /* MAIN LAYOUT */
-
-    main {
-      max-width: var(--max-width);
-      margin: 20px auto 40px;
-      padding: 0 18px 40px;
-    }
-
-    .band {
-      width: 100%;
-      padding: 18px 20px;
-      border-radius: 22px;
-      margin-bottom: 18px;
-      background: linear-gradient(135deg, var(--bg-band), #fdfdff);
-      box-shadow: 0 14px 32px rgba(7, 20, 39, 0.14);
-    }
-
-    .band-soft {
-      background: var(--bg-band-soft);
-      box-shadow: none;
-      border-radius: 16px;
-      border: 1px solid #e0e4f0;
-      margin-bottom: 18px;
-      padding: 16px 18px;
-    }
-
-    .band-strong {
-      background: linear-gradient(135deg, #071427, #132c5a);
-      color: #f4f6ff;
-      border-radius: 22px;
-      box-shadow: 0 16px 40px rgba(1, 5, 18, 0.7);
-      margin-bottom: 18px;
-    }
-
-    .band-strong h1,
-    .band-strong h2,
-    .band-strong p {
-      color: #f4f6ff;
-    }
-
-    .layout-grid {
-      display: grid;
-      grid-template-columns: 2.1fr 1.1fr;
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--bg-alt);
-      border-radius: 18px;
-      padding: 18px 20px;
-      box-shadow: 0 12px 32px rgba(7, 15, 35, 0.14);
-      margin-bottom: 18px;
-    }
-
-    .card-soft {
-      background: #f7f8fd;
-      border-radius: 16px;
-      padding: 16px 18px;
-      border: 1px solid var(--border-soft);
-      margin-bottom: 18px;
-    }
-
-    .label-pill {
-      display: inline-block;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      background: rgba(10, 40, 105, 0.1);
-      color: #11275f;
-    }
-
-    .label-pill-light {
-      background: rgba(255,255,255,0.08);
-      color: #e3e8ff;
-    }
-
-    .hero-tag {
+    .nav-link {
       font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #75f3ff;
-      margin-bottom: 4px;
+      color: #8892aa;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.15s, background 0.15s;
+      background: none;
+      border: none;
+    }
+
+    .nav-link:hover { color: #fff; background: rgba(255,255,255,0.07); }
+    .nav-link.active { color: #fff; background: var(--accent); }
+
+    .masthead-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-btn {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #8892aa;
+      border-radius: var(--radius-sm);
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--body-font);
+    }
+
+    .search-btn:hover { color: #fff; border-color: rgba(255,255,255,0.25); }
+
+    /* ============================================================
+       SECTIONS — SPA-style show/hide
+    ============================================================ */
+    .section { display: none; animation: fade-in 0.3s ease; }
+    .section.active { display: block; }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       WRAPPER
+    ============================================================ */
+    .page-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    /* ============================================================
+       SECTION HEADERS (the band at top of each section)
+    ============================================================ */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .section-header h1,
+    .section-header h2 {
+      font-family: var(--headline-font);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--ink);
+    }
+
+    .section-header-sub {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    .section-header.light {
+      border-color: var(--night-rule);
+    }
+
+    .section-header.light h1,
+    .section-header.light h2 {
+      color: #fff;
+    }
+
+    .section-header.light .section-header-sub { color: #6b7490; }
+
+    /* ============================================================
+       EDITORIAL LABEL / PILL
+    ============================================================ */
+    .label {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 3px;
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .label-blue  { background: var(--accent-2); }
+    .label-gold  { background: var(--accent-gold); color: var(--ink); }
+    .label-teal  { background: var(--accent-teal); }
+    .label-ghost { background: transparent; border: 1px solid var(--rule); color: var(--ink-soft); }
+
+    /* ============================================================
+       ===  HOME / TOP STORIES  ===
+    ============================================================ */
+
+    /* ---- HERO ---- */
+    /* ✏️ TO CHANGE HERO: edit the #HERO_CONFIG object in the <script> section at the bottom */
+
+    .hero-block {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 0;
+      background: var(--night);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 28px;
+      min-height: 440px;
+    }
+
+    .hero-main {
+      padding: 40px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      background:
+        linear-gradient(135deg, #05080f 0%, #0d1428 60%, transparent 100%);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
     .hero-title {
-      font-size: 1.9rem;
-      line-height: 1.22;
-      margin: 4px 0 10px;
-    }
-
-    .hero-meta {
-      font-size: 0.83rem;
-      color: #b5c3ff;
-      margin-bottom: 12px;
+      font-family: var(--headline-font);
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 14px;
+      max-width: 580px;
     }
 
     .hero-lede {
-      font-size: 1rem;
-      margin-bottom: 18px;
-      max-width: 660px;
+      font-size: 0.98rem;
+      color: #9aa3be;
+      max-width: 520px;
+      margin-bottom: 22px;
+      line-height: 1.7;
     }
 
-    .hero-secondary-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    .hero-secondary {
-      border-radius: 14px;
-      padding: 11px 12px;
-      background: #0d1a38;
-      border: 1px solid #233667;
-      color: #d6ddff;
-      cursor: pointer;
-      transition: background 0.16s ease, transform 0.16s ease;
-    }
-
-    .hero-secondary:hover {
-      background: #17264b;
-      transform: translateY(-1px);
-    }
-
-    .hero-secondary-title {
-      font-size: 0.96rem;
-      color: #ffffff;
-      margin: 0 0 3px;
-    }
-
-    .hero-secondary-meta {
-      font-size: 0.78rem;
-      color: #9ba7d8;
-    }
-
-    .btn-row {
+    .hero-cta-row {
       display: flex;
-      flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 12px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      border-radius: 999px;
-      padding: 7px 14px;
-      font-size: 0.84rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      background: #ffffff;
-      color: var(--accent-primary);
-    }
-
-    .btn-primary {
-      background: var(--accent-secondary);
-      color: #071427;
-      border-color: #f2a70c;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
       font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border: none;
+      font-family: var(--body-font);
+      transition: all 0.15s;
+      text-decoration: none;
     }
 
-    .btn-soft {
-      background: rgba(244, 247, 255, 0.85);
-      color: var(--text-muted);
-      border-color: transparent;
-    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #a62d21; text-decoration: none; }
 
-    .btn:hover { opacity: 0.93; }
+    .btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #c4cbe0; }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
 
-    .section {
-      display: none;
-      margin-top: 20px;
-    }
-    .section.active { display: block; }
+    .btn-ghost { background: var(--paper-alt); color: var(--ink-mid); }
+    .btn-ghost:hover { background: var(--paper-warm); text-decoration: none; }
 
-    .section-title-row {
+    .btn-sm { padding: 5px 12px; font-size: 0.75rem; }
+
+    /* hero sidebar (secondary stories) */
+    .hero-sidebar {
+      background: var(--night-soft);
+      border-left: 1px solid var(--night-rule);
+      padding: 20px;
       display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 10px;
+      flex-direction: column;
+      gap: 0;
     }
 
-    .section-title {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-    .section-sub {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    /* Image row */
-
-    .image-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin: 10px 0 4px;
+    .hero-sidebar-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #4e5870;
+      font-weight: 600;
+      margin-bottom: 14px;
     }
 
-    .image-thumb {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      min-height: 95px;
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 10px 24px rgba(9, 18, 45, 0.3);
+    .hero-side-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--night-rule);
+      cursor: pointer;
+      transition: opacity 0.15s;
     }
 
-    .image-thumb::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    .hero-side-item:last-child { border-bottom: none; }
+    .hero-side-item:hover { opacity: 0.8; }
+
+    .hero-side-tag {
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 5px;
     }
 
-    .image-thumb-label {
-      position: absolute;
-      left: 8px;
-      bottom: 6px;
-      z-index: 2;
-      font-size: 0.75rem;
-      color: #fdfdfd;
+    .hero-side-title {
+      font-family: var(--headline-font);
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: #d8dfef;
+      line-height: 1.35;
+      margin-bottom: 4px;
     }
 
-    /* Stories grid */
+    .hero-side-meta {
+      font-size: 0.72rem;
+      color: #4e5870;
+    }
 
-    .stories-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* ---- BREAKING NEWS RIBBON ---- */
+    .breaking-ribbon {
+      background: var(--accent);
+      color: #fff;
+      border-radius: var(--radius-sm);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
       gap: 12px;
+      margin-bottom: 28px;
+      font-size: 0.82rem;
     }
 
-    .story-card {
-      background: #ffffff;
-      border-radius: 12px;
-      border: 1px solid var(--border-soft);
-      padding: 10px 12px 12px;
-      font-size: 0.9rem;
-      box-shadow: 0 8px 18px rgba(7, 16, 39, 0.09);
+    .breaking-badge {
+      background: rgba(0,0,0,0.25);
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    /* ---- MAIN 3-COL GRID + SIDEBAR ---- */
+    .home-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 300px;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .home-grid-main {
+      grid-column: 1 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* ---- ARTICLE CARD ---- */
+    .art-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .art-card:hover {
+      box-shadow: 0 8px 28px rgba(10,13,20,0.12);
+      transform: translateY(-2px);
+    }
+
+    .art-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--paper-alt);
+    }
+
+    .art-card-body {
+      padding: 16px 18px 18px;
+      flex: 1;
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
 
-    .story-badge {
-      display: inline-block;
-      padding: 2px 7px;
-      font-size: 0.72rem;
-      border-radius: 999px;
-      background: #e4ecff;
-      color: #142a6b;
+    .art-card-category {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: var(--accent);
     }
 
-    .story-title {
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-    .story-meta {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-    }
-    .story-link {
-      margin-top: 4px;
-      font-size: 0.8rem;
-    }
-
-    /* Ads – 90° corners */
-
-    .ad-box {
-      border-radius: 0;
-      padding: 12px 14px;
-      font-size: 0.88rem;
-      margin: 10px 0 6px;
-      border: 1px solid transparent;
-    }
-
-    .ad-searchconverts {
-      background: linear-gradient(135deg, #061638, #123a8d);
-      border-color: #224ea6;
-      color: #f4f7ff;
-    }
-
-    .ad-aging {
-      background: #fff4df;
-      border-color: #f0cb8b;
-      color: #7c5621;
-    }
-
-    .ad-barnwood {
-      background: #f3e9e0;
-      border-color: #d1b499;
-      color: #5a4330;
-    }
-
-    .ad-tag {
-      display: block;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 4px;
-      opacity: 0.9;
-    }
-
-    .ad-title {
-      font-weight: 600;
-      font-size: 0.96rem;
-      margin-bottom: 3px;
-    }
-
-    .ad-link {
-      font-size: 0.83rem;
-      text-decoration: underline;
+    .art-card-title {
+      font-family: var(--headline-font);
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--ink);
       cursor: pointer;
     }
 
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
+    .art-card-title:hover { color: var(--accent); }
+
+    .art-card-excerpt {
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .art-card-meta {
+      font-size: 0.72rem;
+      color: #8892a8;
+      margin-top: 4px;
+    }
+
+    /* large card variant */
+    .art-card-lg .art-card-title { font-size: 1.3rem; }
+    .art-card-lg .art-card-excerpt { font-size: 0.88rem; }
+
+    /* ---- SIDEBAR ---- */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+    .sidebar-widget {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .widget-header {
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 16px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .widget-body { padding: 14px 16px; }
+
+    /* sponsor widget */
+    .sponsor-card {
+      background: linear-gradient(135deg, #061432, #0e2260);
+      border-radius: var(--radius);
+      padding: 18px;
+      color: #fff;
+      border: 1px solid #1e3670;
+    }
+
+    .sponsor-card-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #6b7faa;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .sponsor-card h3 {
+      font-family: var(--headline-font);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .sponsor-card p {
       font-size: 0.82rem;
+      color: #8b9bc4;
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+
+    /* ---- WIDE FEED ROW (for RSS sections) ---- */
+    .feed-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
       margin-top: 6px;
     }
 
-    .compare-table th,
-    .compare-table td {
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 4px 6px;
-      text-align: left;
+    .feed-card {
+      display: flex;
+      gap: 12px;
+      padding: 14px;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      transition: box-shadow 0.2s;
     }
 
-    .compare-table th {
-      background: rgba(0,0,0,0.18);
+    .feed-card:hover { box-shadow: 0 4px 16px rgba(10,13,20,0.09); }
+
+    .feed-thumb {
+      width: 80px;
+      height: 68px;
+      border-radius: var(--radius-sm);
+      background-size: cover;
+      background-position: center;
+      background-color: var(--paper-alt);
+      flex-shrink: 0;
     }
 
-    /* Article layout */
+    .feed-body { flex: 1; min-width: 0; }
 
-    .article-grid {
+    .feed-source {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .feed-title {
+      font-family: var(--headline-font);
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
+
+    .feed-excerpt {
+      font-size: 0.76rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin-bottom: 6px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .feed-link {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent-2);
+    }
+
+    .feed-link:hover { text-decoration: underline; }
+
+    /* big grid (for world/business) */
+    .feed-grid-big {
       display: grid;
-      grid-template-columns: 3fr 1.3fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .article-meta-top {
-      font-size: 0.82rem;
-      color: var(--text-muted);
+    .feed-card-big {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .feed-card-big:hover {
+      box-shadow: 0 8px 24px rgba(10,13,20,0.1);
+      transform: translateY(-2px);
+    }
+
+    .feed-card-big-img {
+      width: 100%;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--paper-alt);
+    }
+
+    .feed-card-big-body {
+      padding: 14px 16px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feed-card-big .feed-title {
+      font-size: 0.96rem;
+      margin-bottom: 8px;
+      flex: 1;
+    }
+
+    /* loading skeleton */
+    .skeleton { animation: shimmer 1.5s infinite; }
+
+    @keyframes shimmer {
+      0%,100% { opacity: 0.5; }
+      50%      { opacity: 1; }
+    }
+
+    .skel-block {
+      background: var(--paper-alt);
+      border-radius: 4px;
+      height: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* ---- ARTICLE FULL-VIEW ---- */
+    .article-view {
+      display: none;
+    }
+
+    .article-view.active {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 28px;
+    }
+
+    .article-body-wrap {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+    }
+
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: var(--body-font);
+    }
+
+    .article-back:hover { color: var(--ink); }
+
+    .article-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
       margin-bottom: 10px;
     }
 
-    article h2 { margin-top: 0; }
-    article h3 {
-      margin-top: 22px;
-      margin-bottom: 8px;
-      font-size: 1.06rem;
+    .article-title {
+      font-family: var(--headline-font);
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 14px;
     }
-    article p { margin: 6px 0 10px; }
 
-    .article-band {
-      background: #eef3ff;
-      border-left: 3px solid var(--accent-primary);
-      padding: 10px 12px;
-      border-radius: 10px;
-      margin: 12px 0 16px;
-      font-size: 0.9rem;
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+      flex-wrap: wrap;
     }
+
+    .article-meta strong { color: var(--ink-mid); }
+
+    .article-hero-img {
+      width: 100%;
+      border-radius: var(--radius);
+      margin-bottom: 28px;
+      aspect-ratio: 16/7;
+      object-fit: cover;
+      background: var(--paper-alt);
+    }
+
+    .article-content h2 {
+      font-family: var(--headline-font);
+      font-size: 1.45rem;
+      font-weight: 900;
+      margin: 30px 0 12px;
+      color: var(--ink);
+    }
+
+    .article-content h3 {
+      font-family: var(--headline-font);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 24px 0 10px;
+      color: var(--ink);
+    }
+
+    .article-content p {
+      font-size: 1rem;
+      line-height: 1.78;
+      color: var(--ink-mid);
+      margin-bottom: 18px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin: 0 0 18px 22px;
+    }
+
+    .article-content li {
+      font-size: 0.97rem;
+      line-height: 1.72;
+      color: var(--ink-mid);
+      margin-bottom: 6px;
+    }
+
+    .article-content blockquote {
+      border-left: 4px solid var(--accent);
+      margin: 24px 0;
+      padding: 12px 20px;
+      background: var(--paper-alt);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: var(--headline-font);
+      font-style: italic;
+      font-size: 1.12rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .article-content .callout {
+      background: #eef3ff;
+      border: 1px solid #c5d3f0;
+      border-left: 4px solid var(--accent-2);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      line-height: 1.65;
+    }
+
+    .article-content .callout strong { color: var(--accent-2); }
 
     .share-row {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 8px;
-      margin: 8px 0 16px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+      padding: 16px 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
     }
 
-    .share-tag {
-      font-size: 0.8rem;
-      color: var(--text-muted);
+    .share-label {
+      font-size: 0.76rem;
+      color: var(--ink-soft);
+      font-weight: 500;
+      margin-right: 4px;
     }
 
-    /* Video layout */
+    /* ---- ARTICLE LIST VIEW (home articles below hero) ---- */
+    .article-strip {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+      cursor: pointer;
+    }
 
-    .video-layout {
+    .article-strip:last-child { border-bottom: none; }
+
+    .article-strip:hover .article-strip-title { color: var(--accent); }
+
+    .article-strip-num {
+      font-family: var(--headline-font);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--rule);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 32px;
+      text-align: right;
+    }
+
+    .article-strip-body { flex: 1; }
+
+    .article-strip-cat {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+
+    .article-strip-title {
+      font-family: var(--headline-font);
+      font-size: 1.02rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 4px;
+      transition: color 0.15s;
+    }
+
+    .article-strip-meta {
+      font-size: 0.72rem;
+      color: var(--ink-soft);
+    }
+
+    /* ---- DIVIDER ---- */
+    .divider {
+      height: 1px;
+      background: var(--rule);
+      margin: 28px 0;
+    }
+
+    .section-title-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-title-bar h2 {
+      font-family: var(--headline-font);
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .section-title-bar::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .section-title-bar.on-dark h2 { color: #fff; }
+    .section-title-bar.on-dark::after { background: var(--night-rule); }
+
+    /* ---- NIGHT PANEL (dark bg panel) ---- */
+    .night-panel {
+      background: var(--night-mid);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    .night-panel .section-header h2 { color: #fff; }
+    .night-panel .section-header { border-color: var(--night-rule); }
+
+    /* ============================================================
+       TECH SECTION CARDS
+    ============================================================ */
+    .tech-hero-card {
+      background: var(--night);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
       display: grid;
-      grid-template-columns: 2fr 1.2fr;
-      gap: 18px;
+      grid-template-columns: 1fr 360px;
+      margin-bottom: 28px;
+      min-height: 320px;
     }
 
-    .video-wrapper {
+    .tech-hero-body {
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .tech-hero-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-teal);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .tech-hero-title {
+      font-family: var(--headline-font);
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .tech-hero-lede {
+      font-size: 0.92rem;
+      color: #8892aa;
+      margin-bottom: 20px;
+      line-height: 1.65;
+      max-width: 400px;
+    }
+
+    .tech-hero-img {
+      background: var(--night-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .tech-hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+
+    /* ============================================================
+       FEED SOURCE ROW
+    ============================================================ */
+    .feed-sources-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .feed-source-pill {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 99px;
+      border: 1px solid var(--rule);
+      color: var(--ink-soft);
+      background: #fff;
+    }
+
+    .feed-source-pill.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    /* ============================================================
+       MULTI-FEED TABS (for sections that combine feeds)
+    ============================================================ */
+    .feed-tabs {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 0;
+    }
+
+    .feed-tab {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+      border: 1px solid transparent;
+      border-bottom: none;
+      background: none;
+      font-family: var(--body-font);
+      transition: all 0.15s;
+      margin-bottom: -2px;
+    }
+
+    .feed-tab:hover { color: var(--ink); background: var(--paper-alt); }
+
+    .feed-tab.active {
+      background: #fff;
+      color: var(--ink);
+      border-color: var(--rule);
+      border-bottom-color: #fff;
+    }
+
+    .feed-panel { display: none; }
+    .feed-panel.active { display: block; }
+
+    /* ============================================================
+       VIDEO DESK
+    ============================================================ */
+    .video-feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .video-embed-wrap {
       position: relative;
       padding-bottom: 56.25%;
-      height: 0;
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border-radius: 18px;
-      box-shadow: var(--shadow-soft);
       background: #000;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
     }
 
-    .video-wrapper iframe {
+    .video-embed-wrap iframe {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -547,1085 +1131,1411 @@
       border: 0;
     }
 
-    .video-sidebar-item {
-      background: #ffffff;
-      border-radius: 14px;
+    .video-sidebar { display: flex; flex-direction: column; gap: 14px; }
+
+    .video-thumb-item {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 10px 26px rgba(7, 15, 35, 0.24);
-      margin-bottom: 12px;
     }
 
-    .video-sidebar-item iframe {
+    .video-thumb-item iframe {
       width: 100%;
-      height: 190px;
+      height: 170px;
       border: 0;
       display: block;
     }
 
-    .video-sidebar-caption {
-      padding: 8px 10px;
-      font-size: 0.86rem;
-    }
-
-    /* FEEDS */
-
-    .feed-container {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      margin-top: 8px;
-    }
-
-    .feed-source-label {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #8590b3;
-      margin-bottom: 4px;
-    }
-
-    .feed-grid-big,
-    .feed-grid-side {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 6px;
-    }
-
-    .feed-card {
-      background: #ffffff;
-      border-radius: 10px;
-      border: 1px solid var(--border-soft);
-      display: flex;
-      gap: 8px;
-      padding: 8px 9px;
-      box-shadow: 0 6px 16px rgba(7, 16, 39, 0.08);
-      font-size: 0.85rem;
-    }
-
-    /* Big layout (World, Business): image on top */
-
-    .feed-grid-big .feed-card {
-      flex-direction: column;
-    }
-
-    .feed-grid-big .feed-thumb {
-      width: 100%;
-      height: 150px;
-    }
-
-    /* Side layout (Tech, U.S.): thumb left, text right */
-
-    .feed-grid-side .feed-card {
-      flex-direction: row;
-    }
-
-    .feed-thumb {
-      flex: 0 0 76px;
-      border-radius: 8px;
-      background-size: cover;
-      background-position: center;
-      background-color: #d6dcec;
-      min-height: 60px;
-    }
-
-    .feed-body {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .feed-title {
-      font-weight: 600;
-      margin: 0 0 3px;
-      font-size: 0.86rem;
-    }
-
-    .feed-excerpt {
+    .video-thumb-caption {
+      padding: 10px 12px;
       font-size: 0.8rem;
-      color: var(--text-muted);
-      margin: 0 0 4px;
+      color: var(--ink-soft);
     }
 
-    .feed-meta {
-      font-size: 0.74rem;
-      color: #9aa0b8;
+    /* ============================================================
+       ABOUT SECTION
+    ============================================================ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
 
-    .feed-meta a {
-      color: var(--accent-primary);
-      text-decoration: none;
+    .about-card {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
     }
-    .feed-meta a:hover { text-decoration: underline; }
 
-    /* FOOTER */
+    .about-card h3 {
+      font-family: var(--headline-font);
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
 
+    .about-card p {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       ADSENSE PLACEHOLDERS
+    ============================================================ */
+    .adsense-slot {
+      background: var(--paper-alt);
+      border: 1px dashed var(--rule);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.7rem;
+      color: #aaa;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .adsense-728 { height: 90px; width: 100%; margin: 20px 0; }
+    .adsense-300 { height: 250px; width: 100%; margin: 16px 0; }
+
+    /* ============================================================
+       SPONSOR BOXES
+    ============================================================ */
+    .sponsor-bar {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent-2);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 20px;
+    }
+
+    .sponsor-bar-tag {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 5px;
+    }
+
+    .sponsor-bar h3 {
+      font-family: var(--headline-font);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .sponsor-bar p {
+      font-size: 0.84rem;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+      line-height: 1.55;
+    }
+
+    /* compare table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+
+    .compare-table th,
+    .compare-table td {
+      border: 1px solid var(--rule);
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    .compare-table th {
+      background: var(--paper-alt);
+      font-weight: 600;
+      color: var(--ink-mid);
+    }
+
+    .compare-table td:first-child { color: var(--ink-soft); font-size: 0.76rem; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
     footer {
-      background: #050816;
-      color: #cbd2ea;
-      padding: 24px 18px 30px;
+      background: var(--night);
+      color: #6b7490;
+      padding: 40px 20px;
+      margin-top: 40px;
     }
 
     .footer-inner {
-      max-width: var(--max-width);
+      max-width: var(--max-w);
       margin: 0 auto;
-      font-size: 0.86rem;
     }
 
     .footer-top {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--night-rule);
+      margin-bottom: 20px;
     }
 
-    .footer-col { min-width: 180px; }
+    .footer-brand .logo-name {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      display: block;
+    }
 
-    .footer-links a { color: #f4f7ff; }
+    .footer-brand p {
+      font-size: 0.83rem;
+      line-height: 1.65;
+      max-width: 260px;
+    }
 
-    .footer-meta-row {
+    .footer-col h4 {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.83rem;
+      color: #6b7490;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-col a:hover { color: #fff; text-decoration: none; }
+
+    .footer-bottom {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
       justify-content: space-between;
       align-items: center;
-      color: #8c92a8;
+      font-size: 0.78rem;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .powered-by a {
-      color: #f4f7ff;
-      font-weight: 600;
+    .footer-bottom a { color: #6b7490; }
+    .footer-bottom a:hover { color: #fff; }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .hero-block { grid-template-columns: 1fr; }
+      .hero-sidebar { display: none; }
+      .home-grid { grid-template-columns: 1fr 1fr; }
+      .home-grid-main { grid-column: 1/3; grid-template-columns: 1fr 1fr; }
+      .tech-hero-card { grid-template-columns: 1fr; }
+      .tech-hero-img { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .article-view.active { grid-template-columns: 1fr; }
     }
 
-    /* RESPONSIVE */
-
-    @media (max-width: 900px) {
-      .layout-grid,
-      .article-grid,
-      .video-layout,
-      .stories-grid,
-      .image-row,
-      .feed-grid-big,
-      .feed-grid-side {
-        grid-template-columns: 1fr;
-      }
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        width: 100%;
-        overflow-x: auto;
-      }
+    @media (max-width: 768px) {
+      .home-grid, .home-grid-main { grid-template-columns: 1fr; grid-column: 1; }
+      .masthead-inner { grid-template-columns: 1fr auto; }
+      .main-nav { display: none; }
+      .hero-title { font-size: 1.8rem; }
+      .article-title { font-size: 1.7rem; }
+      .article-body-wrap { padding: 24px 20px; }
+      .feed-grid-big { grid-template-columns: 1fr; }
+      .feed-row { grid-template-columns: 1fr; }
+      .video-feature-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 600px) {
-      .hero-title { font-size: 1.55rem; }
-      .card,
-      .card-soft,
-      .band,
-      .band-soft,
-      .band-strong {
-        padding: 14px 14px;
-      }
-      .stories-grid { grid-template-columns: 1fr; }
-    }
+    /* ============================================================
+       UTILITY
+    ============================================================ */
+    .mt0 { margin-top: 0; }
+    .mb20 { margin-bottom: 20px; }
+    .mb28 { margin-bottom: 28px; }
+    .text-muted { color: var(--ink-soft); }
+    .text-sm { font-size: 0.84rem; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <div class="logo-block">
-        <div class="logo-main">Action Global News</div>
-        <div class="logo-tagline">Business • Economy • AI • World</div>
+
+  <!-- ============================================================
+       TICKER
+  ============================================================ -->
+  <div class="ticker-bar">
+    <div class="ticker-label">Live</div>
+    <div style="overflow:hidden; flex:1; display:flex;">
+      <div class="ticker-track" id="ticker-track">
+        <span class="ticker-item"><span>AI & TECH</span> Tesla Optimus robot entering mass production trials — factory deployment expected 2026</span>
+        <span class="ticker-item"><span>MARKETS</span> S&amp;P 500 holds near record highs despite rate uncertainty</span>
+        <span class="ticker-item"><span>ECONOMY</span> Small business optimism index edges higher for third consecutive month</span>
+        <span class="ticker-item"><span>GLOBAL</span> G7 finance ministers meet to discuss AI governance framework</span>
+        <span class="ticker-item"><span>AI & TECH</span> OpenAI, Google and Anthropic release joint safety benchmarks</span>
+        <span class="ticker-item"><span>BUSINESS</span> Inflation eases in eurozone; ECB signals rate path discussion</span>
+        <span class="ticker-item"><span>AI & TECH</span> Tesla Optimus robot entering mass production trials — factory deployment expected 2026</span>
+        <span class="ticker-item"><span>MARKETS</span> S&amp;P 500 holds near record highs despite rate uncertainty</span>
+        <span class="ticker-item"><span>ECONOMY</span> Small business optimism index edges higher for third consecutive month</span>
+        <span class="ticker-item"><span>GLOBAL</span> G7 finance ministers meet to discuss AI governance framework</span>
+        <span class="ticker-item"><span>AI & TECH</span> OpenAI, Google and Anthropic release joint safety benchmarks</span>
+        <span class="ticker-item"><span>BUSINESS</span> Inflation eases in eurozone; ECB signals rate path discussion</span>
       </div>
-      <nav>
-        <a class="nav-link active" data-section="home">Top Stories</a>
-        <a class="nav-link" data-section="business">Business</a>
-        <a class="nav-link" data-section="world">World</a>
-        <a class="nav-link" data-section="us">U.S. News</a>
-        <a class="nav-link" data-section="tech">AI &amp; Tech</a>
-        <a class="nav-link" data-section="videos">Video Desk</a>
-        <a class="nav-link" data-section="about">About</a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MASTHEAD
+  ============================================================ -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="logo" onclick="showSection('home'); return false;" style="cursor:pointer;">
+        <span class="logo-name"><em>Action</em> Global News</span>
+        <span class="logo-tagline">Business · Economy · AI · World</span>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-link active" onclick="showSection('home')" data-section="home">Top Stories</button>
+        <button class="nav-link" onclick="showSection('business')" data-section="business">Business</button>
+        <button class="nav-link" onclick="showSection('world')" data-section="world">World</button>
+        <button class="nav-link" onclick="showSection('us')" data-section="us">U.S. News</button>
+        <button class="nav-link" onclick="showSection('tech')" data-section="tech">AI &amp; Tech</button>
+        <button class="nav-link" onclick="showSection('videos')" data-section="videos">Video Desk</button>
+        <button class="nav-link" onclick="showSection('about')" data-section="about">About</button>
       </nav>
+      <div class="masthead-right">
+        <button class="search-btn" onclick="alert('Search coming soon!')">⌕ Search</button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- HOME / TOP STORIES -->
-    <section id="home" class="section active">
-      <div class="band band-strong">
-        <div class="layout-grid">
-          <div>
-            <div class="hero-tag">Special Report</div>
-            <h1 class="hero-title">
-              Rising in a Down Economy: Why Some Businesses Grow Faster When Markets Fall
-            </h1>
-            <div class="hero-meta">
-              By Action Global News – Business &amp; Economy Desk
-            </div>
-            <p class="hero-lede">
-              Recessions don’t stop markets — they reshuffle them. While headlines dwell on layoffs and shrinking GDP,
-              a smaller group of companies quietly gains market share by moving faster than everyone else.
-            </p>
-            <div class="btn-row">
-              <button class="btn btn-primary" onclick="scrollToArticle('article-down-economy')">
-                Read full analysis
-              </button>
-              <button class="btn btn-soft" onclick="window.print()">Print page</button>
-            </div>
-            <p style="font-size:0.84rem; color:#c4cffb; max-width:520px;">
-              Explore why some entrepreneurs grow during downturns, how they adapt when credit tightens,
-              and what patterns repeat across recent recessions and inflation shocks.
-            </p>
-          </div>
+  <!-- ============================================================
+       PAGE CONTENT
+  ============================================================ -->
+  <div id="page-root">
 
-          <aside>
-            <div class="label-pill label-pill-light">Hero features</div>
-            <div class="hero-secondary-grid" style="margin-top:8px;">
-              <div class="hero-secondary" onclick="scrollToArticle('article-inflation')">
-                <div class="hero-secondary-title">
-                  How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back
-                </div>
-                <div class="hero-secondary-meta">
-                  Inflation reshapes spending — and gives lean, local companies a chance to earn trust.
-                </div>
-              </div>
-              <div class="hero-secondary" onclick="scrollToArticle('article-automation')">
-                <div class="hero-secondary-title">
-                  The Automation Advantage: How AI Lets Small Teams Compete With Giants
-                </div>
-                <div class="hero-secondary-meta">
-                  Used well, AI becomes an amplifier for focused teams rather than a simple cost-cutting tool.
-                </div>
-              </div>
-            </div>
-          </aside>
+  <!-- ====== HOME SECTION ====== -->
+  <section id="home" class="section active">
+    <div class="page-wrap">
+
+      <!-- HERO — controlled by HERO_CONFIG in script -->
+      <div class="hero-block" id="hero-block">
+        <div class="hero-main" id="hero-main">
+          <div class="hero-eyebrow" id="hero-eyebrow">Special Report</div>
+          <h1 class="hero-title" id="hero-title">Loading featured story…</h1>
+          <p class="hero-lede" id="hero-lede"></p>
+          <div class="hero-cta-row">
+            <button class="btn btn-primary" id="hero-btn" onclick="">Read full story</button>
+            <button class="btn btn-outline" onclick="window.print()">Print</button>
+          </div>
         </div>
+        <aside class="hero-sidebar" id="hero-sidebar">
+          <div class="hero-sidebar-label">More Top Stories</div>
+          <!-- filled by JS -->
+        </aside>
       </div>
 
-      <!-- Image row band -->
-      <div class="band-soft">
-        <div class="section-title-row">
-          <h2 class="section-title">Global Business Snapshot</h2>
-          <span class="section-sub">Volatile markets, small teams and automation in action</span>
-        </div>
-        <div class="image-row">
-          <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=800');">
-            <div class="image-thumb-label">Market turbulence</div>
-          </div>
-          <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/37347/office-freelancer-computer-business-37347.jpeg?auto=compress&cs=tinysrgb&w=800');">
-            <div class="image-thumb-label">Lean operations</div>
-          </div>
-          <div class="image-thumb" style="background-image:url('https://images.pexels.com/photos/6954177/pexels-photo-6954177.jpeg?auto=compress&cs=tinysrgb&w=800');">
-            <div class="image-thumb-label">Automation &amp; AI</div>
-          </div>
-        </div>
+      <!-- AdSense leaderboard -->
+      <div class="adsense-728">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3561679124556057"
+             data-ad-slot="LEADERBOARD_SLOT_ID"></ins>
+        Advertisement
       </div>
 
-      <!-- Sponsored band -->
-      <div class="band">
-        <div class="section-title-row">
-          <h2 class="section-title">Partner Highlights</h2>
-          <span class="section-sub">Sponsors featured on Action Global News</span>
-        </div>
+      <!-- ARTICLE CARDS GRID -->
+      <div class="section-title-bar mb20"><h2>Latest Stories</h2></div>
 
-        <div class="ad-box ad-searchconverts">
-          <span class="ad-tag">Sponsored • SearchConverts.com</span>
-          <div class="ad-title">Search Converts vs. Typical Agency — A Different Kind of Marketing Partner</div>
-          <p style="margin:4px 0 6px;">
-            Lean, AI-optimized campaigns focused on outcomes — not vanity metrics. Built for entrepreneurs
-            who care about margin, not buzzwords.
-          </p>
-          <table class="compare-table">
-            <tr>
-              <th></th>
-              <th>Search Converts</th>
-              <th>Typical Agency</th>
-            </tr>
-            <tr>
-              <td>Strategy</td>
-              <td>Custom AIO+SEO growth plans</td>
-              <td>Generic “bronze/silver/gold” bundles</td>
-            </tr>
-            <tr>
-              <td>Content</td>
-              <td>AI-assisted, human-edited, intent-based</td>
-              <td>Slow, expensive, often generic</td>
-            </tr>
-            <tr>
-              <td>Reporting</td>
-              <td>Plain-language actions you can use</td>
-              <td>Long PDFs no one reads</td>
-            </tr>
-            <tr>
-              <td>Pricing</td>
-              <td>Growth-focused options &amp; memberships</td>
-              <td>High retainers, locked contracts</td>
-            </tr>
-          </table>
-          <div style="margin-top:6px;">
-            <a class="ad-link" href="https://www.searchconverts.com" target="_blank" rel="noopener">
+      <div class="home-grid">
+        <div class="home-grid-main" id="home-cards-grid">
+          <!-- populated by JS from ARTICLES array -->
+        </div>
+        <aside class="sidebar" id="home-sidebar">
+          <!-- Sponsor widget -->
+          <div class="sponsor-card">
+            <div class="sponsor-card-label">Sponsored · SearchConverts.com</div>
+            <h3>AI-Optimized Marketing That Actually Converts</h3>
+            <p>Custom AIO+SEO growth plans built for entrepreneurs who care about margin, not vanity metrics.</p>
+            <a href="https://www.searchconverts.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="color:var(--ink); display:inline-flex;">
               Visit SearchConverts.com →
             </a>
           </div>
-        </div>
 
-        <div class="ad-box ad-aging">
-          <span class="ad-tag">Sponsored • AgingSafelyBaths.com</span>
-          <div class="ad-title">Walk-In Tubs &amp; Roll-In Showers Nationwide</div>
-          <p style="margin:4px 0 6px;">
-            Safety-focused hydrotherapy tubs and ADA-style showers for homes and care environments —
-            DIY delivery or professional installation.
-          </p>
-          <a class="ad-link" href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">
-            Explore Aging Safely Baths →
-          </a>
-        </div>
-      </div>
-
-      <!-- Videos on home -->
-      <div class="band-soft">
-        <div class="section-title-row">
-          <h2 class="section-title">Latest Video Briefings</h2>
-          <span class="section-sub">Short takes and commentary from the Action Global News desk</span>
-        </div>
-        <div class="video-layout">
-          <div>
-            <div class="label-pill">Featured video</div>
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/GVrdcmqXJDs"
-                title="Featured video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+          <!-- Most read widget -->
+          <div class="sidebar-widget">
+            <div class="widget-header">Most Read</div>
+            <div class="widget-body" id="most-read-list">
+              <!-- filled by JS -->
             </div>
           </div>
-          <aside>
-            <h3 style="margin-top:0; font-size:1rem;">Trending clips</h3>
 
-            <div class="video-sidebar-item">
-              <iframe
-                src="https://www.youtube.com/embed/Q0Ew1Z2K9D8"
-                title="Short clip"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-              <div class="video-sidebar-caption">
-                Short-form commentary or highlight segment. Replace this with any YouTube Shorts link
-                you want to feature.
-              </div>
-            </div>
+          <!-- AdSense 300x250 -->
+          <div class="adsense-300">
+            <ins class="adsbygoogle"
+                 style="display:block;width:300px;height:250px"
+                 data-ad-client="ca-pub-3561679124556057"
+                 data-ad-slot="BOX_SLOT_ID"></ins>
+            Advertisement
+          </div>
 
-            <div class="video-sidebar-item">
-              <div class="video-sidebar-caption">
-                Duplicate this block and swap the <code>src</code> to add more videos.
-              </div>
-            </div>
-          </aside>
-        </div>
+          <!-- Sponsor 2 -->
+          <div class="sponsor-bar">
+            <div class="sponsor-bar-tag">Sponsored · AgingSafelyBaths.com</div>
+            <h3>Walk-In Tubs &amp; ADA Showers Nationwide</h3>
+            <p>Safety-focused hydrotherapy tubs for homes and care environments — DIY or professional installation.</p>
+            <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="display:inline-flex;">
+              Explore Aging Safely Baths →
+            </a>
+          </div>
+        </aside>
       </div>
 
-      <!-- Snapshot tiles -->
-      <div class="band-soft">
-        <div class="section-title-row">
-          <h2 class="section-title">Today’s Business &amp; AI Snapshot</h2>
-          <span class="section-sub">Quick highlights across inflation, automation and global shifts</span>
-        </div>
-        <div class="stories-grid">
-          <div class="story-card">
-            <span class="story-badge">Downturns</span>
-            <div class="story-title">Why recessions don’t treat every business equally</div>
-            <div class="story-meta">Analysis • Action Global News</div>
-            <a class="story-link" href="javascript:scrollToArticle('article-down-economy')">
-              Read full feature →
-            </a>
+      <!-- ---- FULL ARTICLE VIEW (hidden until clicked) ---- -->
+      <div id="article-view" class="article-view">
+        <div class="article-body-wrap">
+          <button class="article-back" onclick="closeArticle()">← Back to Top Stories</button>
+          <div class="article-eyebrow" id="av-eyebrow"></div>
+          <h1 class="article-title" id="av-title"></h1>
+          <div class="article-meta">
+            <span>By <strong id="av-author"></strong></span>
+            <span id="av-date"></span>
+            <span id="av-read"></span>
           </div>
-          <div class="story-card">
-            <span class="story-badge">Inflation</span>
-            <div class="story-title">How small firms adjust faster than large brands</div>
-            <div class="story-meta">Inflation • Small Business</div>
-            <a class="story-link" href="javascript:scrollToArticle('article-inflation')">
-              Explore our breakdown →
-            </a>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">AI &amp; Work</span>
-            <div class="story-title">How automation reshapes the “size advantage” in competition</div>
-            <div class="story-meta">AI • Automation</div>
-            <a class="story-link" href="javascript:scrollToArticle('article-automation')">
-              Read the AI feature →
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main hero article -->
-      <div class="card article-grid" id="article-down-economy">
-        <article>
-          <div class="article-meta-top">
-            BUSINESS &amp; ECONOMY • Feature | Estimated read time: 8–10 minutes
-          </div>
-          <h2>Rising in a Down Economy: Why Some Businesses Grow Faster When Markets Fall</h2>
-
+          <img class="article-hero-img" id="av-img" src="" alt="" />
           <div class="share-row">
-            <span class="share-tag">Share this piece:</span>
-            <button class="btn btn-soft" onclick="shareArticle('twitter')">Twitter / X</button>
-            <button class="btn btn-soft" onclick="shareArticle('facebook')">Facebook</button>
-            <button class="btn btn-soft" onclick="shareArticle('email')">Email</button>
-            <button class="btn btn-soft" onclick="copyLink()">Copy link</button>
+            <span class="share-label">Share:</span>
+            <button class="btn btn-ghost btn-sm" onclick="shareArticle('twitter')">Twitter / X</button>
+            <button class="btn btn-ghost btn-sm" onclick="shareArticle('facebook')">Facebook</button>
+            <button class="btn btn-ghost btn-sm" onclick="shareArticle('email')">Email</button>
+            <button class="btn btn-ghost btn-sm" onclick="copyLink()">Copy link</button>
           </div>
-
-          <p>
-            Most headlines during a recession focus on layoffs, shrinking GDP and market fear.
-            Yet when you look closely across past downturns, another pattern is just as clear:
-            while many companies stall or disappear, a smaller group quietly grows faster than ever.
-          </p>
-          <p>
-            From discount retailers in the 2008 financial crisis, to cloud software during the
-            COVID-19 pandemic, downturns often act as a reset button. Businesses that stay
-            flexible, protect cash and lean into new demand can emerge with more market share
-            than they held in “good” times.
-          </p>
-
-          <h3>Downturns don’t stop markets — they reshuffle them</h3>
-          <p>
-            In boom times, easy credit and optimistic forecasts allow many weak business models
-            to survive. Competitors multiply, marketing gets noisy and it’s hard for any single
-            company to stand out. A recession reverses those conditions:
-          </p>
-          <ul>
-            <li>Credit tightens and exposes fragile balance sheets.</li>
-            <li>Customers scrutinize every purchase more closely.</li>
-            <li>Companies that relied on momentum suddenly face resistance.</li>
-          </ul>
-          <p>
-            For resilient firms, this disruption can be an opportunity. Reduced competition,
-            cheaper advertising and clearer customer priorities make it easier to stand out.
-          </p>
-
-          <div class="article-band">
-            <strong>Key idea:</strong> downturns are less about “no opportunity” and more about
-            <em>different</em> opportunity — often concentrated in value, trust and execution.
+          <div class="article-content" id="av-content"></div>
+        </div>
+        <aside class="sidebar">
+          <div class="sidebar-widget">
+            <div class="widget-header">Related Stories</div>
+            <div class="widget-body" id="av-related"></div>
           </div>
-
-          <h3>Patterns that show up in every recession</h3>
-          <p>
-            While every economic cycle is unique, three patterns keep showing up in post-crisis
-            research and case studies:
-          </p>
-          <ol>
-            <li><strong>Companies that cut waste, not muscle, bounce back faster.</strong></li>
-            <li><strong>Brands that stay in front of customers during the downturn gain share.</strong></li>
-            <li><strong>Teams that keep shipping new value learn faster than those who wait.</strong></li>
-          </ol>
-          <p>
-            Entrepreneurs who take action early — renegotiating terms, refining offers, talking
-            directly to customers — give themselves more time to adapt while competitors freeze.
-          </p>
-        </article>
-
-        <aside>
-          <div class="card-soft">
-            <h3 style="margin-top:0;">Pressure vs. disruption</h3>
-            <p style="font-size:0.86rem;">
-              As pressure on margins rises, so does the level of disruption in the market:
-            </p>
-            <pre style="font-size:0.78rem; background:#0b1228; color:#f4f5ff; padding:10px 12px; border-radius:10px; overflow-x:auto;">
-Market pressure   Innovation level   Outcome
-───────────────   ────────────────   ──────────────────────
-Low               Low                Slow, incremental change
-Medium            Medium             Competitive, crowded
-High              Very High          New leaders emerge
-            </pre>
-            <p style="font-size:0.84rem; color:var(--text-muted);">
-              When the economy tightens, standing still becomes the risky option. Action and
-              adaptation keep companies in the game.
-            </p>
-            <p style="font-size:0.84rem; color:var(--text-muted);">
-              For a deeper dive into inflation and small-business resilience, visit
-              <a href="javascript:showSection('business')">our Business section</a>.
-            </p>
-          </div>
-
-          <div class="ad-box ad-barnwood" style="margin-top:14px;">
-            <span class="ad-tag">Sponsored • RusticBarnwoodFurniture.com</span>
-            <div class="ad-title">Handcrafted Barnwood Furniture from Raised in a Barn</div>
-            <p style="margin:4px 0 6px;">
-              Reclaimed-wood furniture that brings warmth and character to homes, rentals and offices.
-            </p>
-            <a class="ad-link" href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">
+          <div class="sponsor-card">
+            <div class="sponsor-card-label">Sponsored · RusticBarnwoodFurniture.com</div>
+            <h3>Handcrafted Reclaimed Barnwood Furniture</h3>
+            <p>Warm, characterful pieces for homes, rentals and offices. Responsibly sourced, built to last.</p>
+            <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="display:inline-flex; margin-top:4px;">
               See Rustic Barnwood Furniture →
             </a>
           </div>
+          <div class="adsense-300">Advertisement</div>
         </aside>
       </div>
 
-      <!-- Secondary hero articles -->
-      <div class="card" id="article-inflation">
-        <article>
-          <div class="article-meta-top">
-            INFLATION &amp; SMALL BUSINESS • Feature
-          </div>
-          <h2>How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back</h2>
+      <!-- ---- LIVE FEEDS (home page) ---- -->
+      <div class="divider"></div>
+      <div class="section-title-bar mb20"><h2>External Headlines</h2></div>
 
-          <div class="share-row">
-            <span class="share-tag">Share this analysis:</span>
-            <button class="btn btn-soft" onclick="shareArticle('twitter')">Twitter / X</button>
-            <button class="btn btn-soft" onclick="shareArticle('facebook')">Facebook</button>
-            <button class="btn btn-soft" onclick="shareArticle('email')">Email</button>
-          </div>
-
-          <p>
-            Inflation doesn’t hit every business equally. For heavily leveraged, high-overhead
-            corporations, even a few percentage points of price pressure can force cost-cutting,
-            hiring freezes and cancelled expansions. For leaner, local companies, the same environment
-            can become an unexpected opening.
-          </p>
-          <p>
-            Smaller businesses typically operate with less overhead and fewer layers of approval,
-            allowing them to adjust pricing, product mix and service levels more quickly than
-            a national chain.
-          </p>
-        </article>
+      <div class="feed-tabs" id="home-feed-tabs">
+        <button class="feed-tab active" onclick="switchFeedTab('home', 'business-home', this)">Business</button>
+        <button class="feed-tab" onclick="switchFeedTab('home', 'tech-home', this)">AI &amp; Tech</button>
+        <button class="feed-tab" onclick="switchFeedTab('home', 'world-home', this)">World</button>
+        <button class="feed-tab" onclick="switchFeedTab('home', 'alt-home', this)">Alternative</button>
       </div>
 
-      <div class="card" id="article-automation">
-        <article>
-          <div class="article-meta-top">
-            AI &amp; AUTOMATION • Feature
-          </div>
-          <h2>The Automation Advantage: How Small Businesses Using AI Can Outrun Corporate Giants</h2>
-
-          <div class="share-row">
-            <span class="share-tag">Share this feature:</span>
-            <button class="btn btn-soft" onclick="shareArticle('twitter')">Twitter / X</button>
-            <button class="btn btn-soft" onclick="shareArticle('facebook')">Facebook</button>
-            <button class="btn btn-soft" onclick="shareArticle('email')">Email</button>
-          </div>
-
-          <p>
-            For most of the last century, scale was a nearly unshakeable advantage. Bigger balance
-            sheets, bigger factories and bigger workforces translated directly into more market power.
-            But the rise of cloud software and generative AI is quietly rewriting that formula.
-          </p>
-          <p>
-            Today, a small business with a handful of people can automate tasks that once required
-            entire departments: customer support, data entry, basic design, first-draft copywriting,
-            analytics reporting and more.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- BUSINESS SECTION -->
-    <section id="business" class="section">
-      <div class="band">
-        <div class="section-title-row">
-          <h2 class="section-title">Business &amp; Markets</h2>
-          <span class="section-sub">Recession strategy, market share and small-business shifts</span>
-        </div>
-        <p style="font-size:0.9rem; color:var(--text-muted);">
-          Curated business stories and perspective, with live external headlines from established outlets below.
-          Explore this section if you want practical ideas on how owners navigate a tighter economy.
-        </p>
-        <p style="font-size:0.85rem; color:var(--text-muted);">
-          Quick links:
-          <a href="javascript:scrollToArticle('article-down-economy')">Feature: Rising in a Down Economy</a> ·
-          <a href="javascript:scrollToArticle('article-inflation')">Inflation survival article</a> ·
-          <a href="javascript:showSection('tech')">AI &amp; Tech section</a>
-        </p>
-      </div>
-
-      <div class="card-soft">
-        <div class="stories-grid">
-          <div class="story-card">
-            <span class="story-badge">Feature</span>
-            <div class="story-title">Rising in a Down Economy</div>
-            <div class="story-meta">Action Global News • Analysis</div>
-            <a class="story-link" href="javascript:showSection('home');scrollToArticle('article-down-economy')">
-              Read full breakdown →
-            </a>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Cash Flow</span>
-            <div class="story-title">Why cash discipline matters when credit gets expensive</div>
-            <div class="story-meta">Capital • Risk</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Small Business</span>
-            <div class="story-title">How owners rethink “value” when budgets tighten</div>
-            <div class="story-meta">Strategy • Positioning</div>
-          </div>
-        </div>
-
-        <div style="margin-top:18px;">
-          <div class="feed-source-label">External headlines: MarketWatch (via RSS)</div>
-          <div id="business-feed" class="feed-container">
-            Loading latest business headlines…
-          </div>
+      <div id="business-home" class="feed-panel active">
+        <div class="feed-grid-big" id="feed-business-home">
+          <div class="skeleton skel-block" style="height:200px; border-radius:12px;"></div>
+          <div class="skeleton skel-block" style="height:200px; border-radius:12px;"></div>
+          <div class="skeleton skel-block" style="height:200px; border-radius:12px;"></div>
         </div>
       </div>
-
-      <div class="ad-box ad-aging" style="margin-top:6px;">
-        <span class="ad-tag">Sponsored • AgingSafelyBaths.com</span>
-        <div class="ad-title">Safety Upgrades That Protect Margin, Too</div>
-        <p style="margin:4px 0 6px;">
-          Step-in tubs and roll-in showers can help reduce liability in care environments and
-          at-home settings while supporting comfort and dignity.
-        </p>
-        <a class="ad-link" href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">
-          View Aging Safely solutions →
-        </a>
+      <div id="tech-home" class="feed-panel">
+        <div class="feed-grid-big" id="feed-tech-home"></div>
       </div>
-    </section>
-
-    <!-- WORLD SECTION -->
-    <section id="world" class="section">
-      <div class="band band-strong">
-        <div class="section-title-row">
-          <h2 class="section-title">World News</h2>
-          <span class="section-sub">International headlines and macroeconomic shifts</span>
-        </div>
-        <p style="font-size:0.9rem;">
-          Currency swings, energy markets, trade disputes and regulation debates all contribute to the
-          environment businesses operate in. Use this section to stay aware of global context.
-        </p>
+      <div id="world-home" class="feed-panel">
+        <div class="feed-grid-big" id="feed-world-home"></div>
+      </div>
+      <div id="alt-home" class="feed-panel">
+        <div class="feed-grid-big" id="feed-alt-home"></div>
       </div>
 
-      <div class="card-soft">
-        <div class="stories-grid">
-          <div class="story-card">
-            <span class="story-badge">Energy</span>
-            <div class="story-title">Energy price shocks and their impact on manufacturers</div>
-            <div class="story-meta">Global • Energy</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Trade</span>
-            <div class="story-title">Supply-chain rerouting and new manufacturing hubs</div>
-            <div class="story-meta">Trade • Logistics</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Policy</span>
-            <div class="story-title">Data rules, AI regulation and cross-border compliance</div>
-            <div class="story-meta">Policy • Technology</div>
-          </div>
-        </div>
-
-        <div style="margin-top:18px;">
-          <div class="feed-source-label">External headlines: BBC World (via RSS)</div>
-          <div id="world-feed" class="feed-container">
-            Loading latest world headlines…
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- U.S. SECTION -->
-    <section id="us" class="section">
-      <div class="band">
-        <div class="section-title-row">
-          <h2 class="section-title">United States</h2>
-          <span class="section-sub">Main-street stories, sentiment and policy shifts</span>
-        </div>
-        <p style="font-size:0.9rem; color:var(--text-muted);">
-          How national economic trends translate into local realities across American households,
-          small businesses and regional labor markets.
-        </p>
-        <p style="font-size:0.85rem; color:var(--text-muted);">
-          Navigate this section:
-          <a href="#us-local">Local business stories</a> ·
-          <a href="#us-housing">Housing and rates</a> ·
-          <a href="#us-feed">National headlines</a>
-        </p>
-      </div>
-
-      <div class="card-soft" id="us-local">
-        <div class="stories-grid">
-          <div class="story-card">
-            <span class="story-badge">Sentiment</span>
-            <div class="story-title">Small-business owners weigh inflation against local demand</div>
-            <div class="story-meta">U.S. • Business</div>
-          </div>
-          <div class="story-card" id="us-housing">
-            <span class="story-badge">Housing</span>
-            <div class="story-title">Rates, rents and affordability gaps between regions</div>
-            <div class="story-meta">Housing • Credit</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Labor</span>
-            <div class="story-title">Remote work, hybrid patterns and regional job markets</div>
-            <div class="story-meta">Work • Labor</div>
-          </div>
-        </div>
-
-        <div style="margin-top:18px;">
-          <div class="feed-source-label">External headlines: NPR U.S. News (via RSS)</div>
-          <div id="us-feed" class="feed-container">
-            Loading latest U.S. headlines…
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECH SECTION -->
-    <section id="tech" class="section">
-      <div class="band band-strong">
-        <div class="section-title-row">
-          <h2 class="section-title">AI &amp; Technology</h2>
-          <span class="section-sub">Automation, software and the future of work</span>
-        </div>
-        <p style="font-size:0.9rem;">
-          From generative AI to process automation, small teams now have access to capabilities
-          that once required entire departments. Use this section to track what’s changing.
-        </p>
-      </div>
-
-      <div class="card-soft">
-        <div class="stories-grid">
-          <div class="story-card">
-            <span class="story-badge">Feature</span>
-            <div class="story-title">The automation advantage for lean teams</div>
-            <div class="story-meta">Action Global News</div>
-            <a class="story-link" href="javascript:showSection('home');scrollToArticle('article-automation')">
-              Read our AI feature →
-            </a>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Tools</span>
-            <div class="story-title">Practical AI use cases that save founders hours per week</div>
-            <div class="story-meta">Tools • Workflows</div>
-          </div>
-          <div class="story-card">
-            <span class="story-badge">Risk</span>
-            <div class="story-title">Avoiding over-automation and keeping the human voice</div>
-            <div class="story-meta">Risk • Brand</div>
-          </div>
-        </div>
-
-        <div style="margin-top:18px;">
-          <div class="feed-source-label">External headlines: Ars Technica (via RSS)</div>
-          <div id="tech-feed" class="feed-container">
-            Loading latest tech headlines…
-          </div>
-        </div>
-      </div>
-
-      <div class="ad-box ad-searchconverts" style="margin-top:6px;">
-        <span class="ad-tag">Sponsored • SearchConverts.com</span>
-        <div class="ad-title">Need a technical partner to deploy this kind of site?</div>
-        <p style="margin:4px 0 6px;">
-          Use automation and AI to create landing pages, content systems and SEO assets
-          that keep working long after launch.
-        </p>
-        <a class="ad-link" href="https://www.searchconverts.com" target="_blank" rel="noopener">
-          Talk with Search Converts →
-        </a>
-      </div>
-    </section>
-
-    <!-- VIDEO DESK -->
-    <section id="videos" class="section">
-      <div class="band">
-        <div class="section-title-row">
-          <h2 class="section-title">Video Desk</h2>
-          <span class="section-sub">Short briefings, commentary and interviews</span>
-        </div>
-        <p style="font-size:0.9rem; color:var(--text-muted);">
-          To update videos, simply swap the YouTube links in the embed code below. No extra pages,
-          scripts or integrations required.
-        </p>
-      </div>
-
-      <div class="card video-layout">
+      <!-- Latest video briefings -->
+      <div class="divider"></div>
+      <div class="section-title-bar mb20"><h2>Video Briefings</h2></div>
+      <div class="video-feature-grid">
         <div>
-          <div class="label-pill">Featured Video</div>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/GVrdcmqXJDs"
+          <div class="video-embed-wrap">
+            <iframe src="https://www.youtube.com/embed/GVrdcmqXJDs" title="Featured video briefing"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="video-sidebar">
+          <div class="video-thumb-item">
+            <iframe src="https://www.youtube.com/embed/Q0Ew1Z2K9D8" title="Short clip"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+            <div class="video-thumb-caption">Commentary on AI disruption and small business adaptation.</div>
+          </div>
+          <!-- ADD MORE VIDEO CLIPS: duplicate .video-thumb-item above and change the YouTube embed ID -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== BUSINESS SECTION ====== -->
+  <section id="business" class="section">
+    <div class="page-wrap">
+      <div class="section-header">
+        <h2>Business &amp; Markets</h2>
+        <span class="section-header-sub">Inflation · small business · global markets · strategy</span>
+      </div>
+
+      <!-- Tech hero card for main business story -->
+      <div class="tech-hero-card mb28">
+        <div class="tech-hero-body">
+          <div class="tech-hero-tag">Feature Analysis</div>
+          <div class="tech-hero-title">Rising in a Down Economy:<br>Why Some Businesses Grow Faster When Markets Fall</div>
+          <div class="tech-hero-lede">Recessions reshuffle markets. While headlines focus on layoffs and shrinking GDP, a smaller group of companies quietly gains ground by moving faster than everyone else.</div>
+          <button class="btn btn-primary" onclick="openArticle('down-economy')">Read the Full Analysis</button>
+        </div>
+        <div class="tech-hero-img">
+          <img src="https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Markets" />
+        </div>
+      </div>
+
+      <!-- AdSense -->
+      <div class="adsense-728">Advertisement</div>
+
+      <!-- Feed tabs -->
+      <div class="section-title-bar mb20"><h2>Live Business Headlines</h2></div>
+      <div class="feed-tabs">
+        <button class="feed-tab active" onclick="switchFeedTab('biz', 'biz-mw', this)">MarketWatch</button>
+        <button class="feed-tab" onclick="switchFeedTab('biz', 'biz-reuters', this)">Reuters Business</button>
+        <button class="feed-tab" onclick="switchFeedTab('biz', 'biz-ft', this)">Bloomberg / Finance</button>
+      </div>
+      <div id="biz-mw" class="feed-panel active">
+        <div class="feed-grid-big" id="feed-biz-mw"></div>
+      </div>
+      <div id="biz-reuters" class="feed-panel">
+        <div class="feed-grid-big" id="feed-biz-reuters"></div>
+      </div>
+      <div id="biz-ft" class="feed-panel">
+        <div class="feed-grid-big" id="feed-biz-ft"></div>
+      </div>
+
+      <div class="divider"></div>
+      <!-- Sponsor -->
+      <div class="sponsor-bar">
+        <div class="sponsor-bar-tag">Sponsored · SearchConverts.com</div>
+        <h3>Search Converts vs. Typical Agency — A Different Kind of Marketing Partner</h3>
+        <p>Lean, AI-optimized campaigns focused on outcomes — not vanity metrics. Built for entrepreneurs who care about margin, not buzzwords.</p>
+        <table class="compare-table">
+          <tr><th></th><th>Search Converts</th><th>Typical Agency</th></tr>
+          <tr><td>Strategy</td><td>Custom AIO+SEO growth plans</td><td>Generic "bronze/silver/gold" bundles</td></tr>
+          <tr><td>Content</td><td>AI-assisted, human-edited, intent-based</td><td>Slow, expensive, often generic</td></tr>
+          <tr><td>Reporting</td><td>Plain-language actions you can use</td><td>Long PDFs no one reads</td></tr>
+          <tr><td>Pricing</td><td>Growth-focused options &amp; memberships</td><td>High retainers, locked contracts</td></tr>
+        </table>
+        <div style="margin-top:12px;">
+          <a href="https://www.searchconverts.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit SearchConverts.com →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== WORLD SECTION ====== -->
+  <section id="world" class="section">
+    <div class="page-wrap">
+      <div class="section-header">
+        <h2>World News</h2>
+        <span class="section-header-sub">Global politics · trade · energy · conflict · diplomacy</span>
+      </div>
+      <div class="section-title-bar mb20"><h2>Live World Headlines</h2></div>
+      <div class="feed-tabs">
+        <button class="feed-tab active" onclick="switchFeedTab('world', 'world-bbc', this)">BBC World</button>
+        <button class="feed-tab" onclick="switchFeedTab('world', 'world-reuters', this)">Reuters</button>
+        <button class="feed-tab" onclick="switchFeedTab('world', 'world-ap', this)">Associated Press</button>
+        <button class="feed-tab" onclick="switchFeedTab('world', 'world-rt', this)">Alternative View</button>
+      </div>
+      <div id="world-bbc" class="feed-panel active">
+        <div class="feed-grid-big" id="feed-world-bbc"></div>
+      </div>
+      <div id="world-reuters" class="feed-panel">
+        <div class="feed-grid-big" id="feed-world-reuters"></div>
+      </div>
+      <div id="world-ap" class="feed-panel">
+        <div class="feed-grid-big" id="feed-world-ap"></div>
+      </div>
+      <div id="world-rt" class="feed-panel">
+        <div class="feed-grid-big" id="feed-world-rt"></div>
+      </div>
+      <div class="adsense-728">Advertisement</div>
+    </div>
+  </section>
+
+  <!-- ====== U.S. SECTION ====== -->
+  <section id="us" class="section">
+    <div class="page-wrap">
+      <div class="section-header">
+        <h2>United States</h2>
+        <span class="section-header-sub">Main street · policy · housing · labor · sentiment</span>
+      </div>
+      <div class="section-title-bar mb20"><h2>Live U.S. Headlines</h2></div>
+      <div class="feed-tabs">
+        <button class="feed-tab active" onclick="switchFeedTab('us', 'us-npr', this)">NPR</button>
+        <button class="feed-tab" onclick="switchFeedTab('us', 'us-axios', this)">Axios</button>
+        <button class="feed-tab" onclick="switchFeedTab('us', 'us-hill', this)">The Hill</button>
+        <button class="feed-tab" onclick="switchFeedTab('us', 'us-reason', this)">Reason / Alt</button>
+      </div>
+      <div id="us-npr" class="feed-panel active">
+        <div class="feed-grid-big" id="feed-us-npr"></div>
+      </div>
+      <div id="us-axios" class="feed-panel">
+        <div class="feed-grid-big" id="feed-us-axios"></div>
+      </div>
+      <div id="us-hill" class="feed-panel">
+        <div class="feed-grid-big" id="feed-us-hill"></div>
+      </div>
+      <div id="us-reason" class="feed-panel">
+        <div class="feed-grid-big" id="feed-us-reason"></div>
+      </div>
+      <div class="adsense-728">Advertisement</div>
+    </div>
+  </section>
+
+  <!-- ====== TECH / AI SECTION ====== -->
+  <section id="tech" class="section">
+    <div class="page-wrap">
+      <div class="section-header">
+        <h2>AI &amp; Technology</h2>
+        <span class="section-header-sub">Automation · robotics · software · the future of work</span>
+      </div>
+
+      <!-- Tech feature hero for Optimus -->
+      <div class="tech-hero-card mb28">
+        <div class="tech-hero-body">
+          <div class="tech-hero-tag">Deep Dive · AI &amp; Robotics</div>
+          <div class="tech-hero-title">Tesla Optimus:<br>The Robot That Could Rewrite Work</div>
+          <div class="tech-hero-lede">With mass production on the horizon, Tesla's humanoid robot is poised to transform manufacturing, logistics — and the economics of human labor. What does it mean for businesses and workers?</div>
+          <button class="btn btn-primary" onclick="openArticle('tesla-optimus')">Read the Full Story</button>
+        </div>
+        <div class="tech-hero-img">
+          <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="AI Robotics" />
+        </div>
+      </div>
+
+      <div class="adsense-728">Advertisement</div>
+
+      <div class="section-title-bar mb20"><h2>Live Tech &amp; AI Headlines</h2></div>
+      <div class="feed-tabs">
+        <button class="feed-tab active" onclick="switchFeedTab('tech', 'tech-ars', this)">Ars Technica</button>
+        <button class="feed-tab" onclick="switchFeedTab('tech', 'tech-wired', this)">Wired</button>
+        <button class="feed-tab" onclick="switchFeedTab('tech', 'tech-mit', this)">MIT Tech Review</button>
+        <button class="feed-tab" onclick="switchFeedTab('tech', 'tech-verge', this)">The Verge</button>
+        <button class="feed-tab" onclick="switchFeedTab('tech', 'tech-zd', this)">ZDNet</button>
+      </div>
+      <div id="tech-ars" class="feed-panel active">
+        <div class="feed-grid-big" id="feed-tech-ars"></div>
+      </div>
+      <div id="tech-wired" class="feed-panel">
+        <div class="feed-grid-big" id="feed-tech-wired"></div>
+      </div>
+      <div id="tech-mit" class="feed-panel">
+        <div class="feed-grid-big" id="feed-tech-mit"></div>
+      </div>
+      <div id="tech-verge" class="feed-panel">
+        <div class="feed-grid-big" id="feed-tech-verge"></div>
+      </div>
+      <div id="tech-zd" class="feed-panel">
+        <div class="feed-grid-big" id="feed-tech-zd"></div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="sponsor-bar">
+        <div class="sponsor-bar-tag">Sponsored · SearchConverts.com</div>
+        <h3>Need an AI-Powered Technical Partner?</h3>
+        <p>Use automation and AI to create landing pages, content systems and SEO assets that keep working long after launch.</p>
+        <a href="https://www.searchconverts.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Talk with Search Converts →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== VIDEO DESK ====== -->
+  <section id="videos" class="section">
+    <div class="page-wrap">
+      <div class="section-header">
+        <h2>Video Desk</h2>
+        <span class="section-header-sub">Short briefings · interviews · commentary</span>
+      </div>
+      <p class="text-muted text-sm mb28">To update videos, swap the YouTube embed IDs below. No extra scripts required.</p>
+
+      <div class="video-feature-grid">
+        <div>
+          <div class="label mb20" style="display:inline-block;">Featured Video</div>
+          <div class="video-embed-wrap">
+            <!--  ✏️ CHANGE FEATURED VIDEO: replace the YouTube ID in src below -->
+            <iframe src="https://www.youtube.com/embed/GVrdcmqXJDs"
               title="Featured video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
+              allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
-        <aside>
-          <h3 style="margin-top:0; font-size:1rem;">Latest Clips &amp; Shorts</h3>
-
-          <div class="video-sidebar-item">
-            <iframe
-              src="https://www.youtube.com/embed/Q0Ew1Z2K9D8"
-              title="Short clip"
+        <div class="video-sidebar">
+          <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;">Latest Clips &amp; Shorts</div>
+          <!-- ✏️ ADD/CHANGE CLIPS: duplicate .video-thumb-item and swap the YouTube ID -->
+          <div class="video-thumb-item">
+            <iframe src="https://www.youtube.com/embed/Q0Ew1Z2K9D8"
+              title="Short clip 1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
-            <div class="video-sidebar-caption">
-              Short-form commentary or highlight segment. Replace this with your own description.
-            </div>
+              allowfullscreen loading="lazy"></iframe>
+            <div class="video-thumb-caption">Replace with your own description and YouTube link.</div>
           </div>
-
-          <div class="video-sidebar-item">
-            <div class="video-sidebar-caption">
-              Duplicate this block and update the YouTube <code>src</code> to add more videos to
-              the Video Desk without changing anything else.
-            </div>
+          <div class="video-thumb-item" style="background:var(--paper-alt); border:1px dashed var(--rule); border-radius:var(--radius); padding:16px; font-size:0.8rem; color:var(--ink-soft);">
+            Duplicate a <code>.video-thumb-item</code> block above to add more clips here.
           </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-      <div class="band">
-        <div class="section-title-row">
-          <h2 class="section-title">About Action Global News</h2>
-          <span class="section-sub">Independent coverage on business, economy and technology</span>
         </div>
       </div>
-      <div class="card">
-        <p>
-          Action Global News is designed as a lean, fast-moving digital news and analysis platform,
-          focused on how global and local economic trends intersect with real businesses and workers.
-        </p>
-        <p>
-          The project also serves as a live example of what a single static page can do when paired
-          with focused reporting, curated external sources and practical tools for entrepreneurs.
-        </p>
-        <p>
-          You can navigate quickly using the header, or jump directly to:
-          <a href="javascript:showSection('business')">Business &amp; Markets</a>,
-          <a href="javascript:showSection('world')">World News</a>,
-          <a href="javascript:showSection('tech')">AI &amp; Technology</a> and
-          <a href="javascript:showSection('videos')">Video Desk</a>.
-        </p>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about" class="section">
+    <div class="page-wrap">
+      <div class="section-header">
+        <h2>About Action Global News</h2>
+        <span class="section-header-sub">Independent coverage on business, economy and technology</span>
+      </div>
+      <div class="about-grid mb28">
+        <div class="about-card">
+          <h3>Our Mission</h3>
+          <p>Action Global News is a lean, fast-moving digital news and analysis platform focused on how global and local economic trends intersect with real businesses and workers. We cover the intersection of technology, economics and entrepreneurship without the noise.</p>
+        </div>
+        <div class="about-card">
+          <h3>What We Cover</h3>
+          <p>From AI breakthroughs and automation to small business strategy during inflationary times, we track the stories that matter to entrepreneurs, investors and curious readers who want context — not just headlines.</p>
+        </div>
+        <div class="about-card">
+          <h3>Partner Destinations</h3>
+          <p>
+            <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a> — AIO-SEO Marketing Experts<br><br>
+            <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com</a> — Walk-In Tubs &amp; ADA Showers<br><br>
+            <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">RusticBarnwoodFurniture.com</a> — Handcrafted Reclaimed Wood Furniture
+          </p>
+        </div>
+        <div class="about-card">
+          <h3>Advertising</h3>
+          <p>Action Global News is supported by Google AdSense and select partner sponsors. Sponsored content is clearly labeled. For advertising inquiries, visit <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /page-root -->
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
   <footer>
     <div class="footer-inner">
       <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-name"><em>Action</em> Global News</span>
+          <p>Independent coverage of business, economy, AI and global developments. Built to be lean, fast and useful for entrepreneurs, workers and curious readers.</p>
+        </div>
         <div class="footer-col">
-          <div class="logo-main" style="font-size:1rem; color:#f4f7ff;">Action Global News</div>
-          <p style="margin:6px 0 10px; max-width:260px;">
-            Independent coverage of business, economy, AI and global developments. Built to be lean,
-            fast and useful for entrepreneurs, workers and curious readers.
-          </p>
+          <h4>Sections</h4>
+          <a href="javascript:void(0)" onclick="showSection('home')">Top Stories</a>
+          <a href="javascript:void(0)" onclick="showSection('business')">Business</a>
+          <a href="javascript:void(0)" onclick="showSection('world')">World</a>
+          <a href="javascript:void(0)" onclick="showSection('us')">U.S. News</a>
+          <a href="javascript:void(0)" onclick="showSection('tech')">AI &amp; Tech</a>
+          <a href="javascript:void(0)" onclick="showSection('videos')">Video Desk</a>
         </div>
-        <div class="footer-col footer-links">
-          <strong>Key Sections</strong><br />
-          <a href="javascript:showSection('home')">Top Stories</a><br />
-          <a href="javascript:showSection('business')">Business</a><br />
-          <a href="javascript:showSection('world')">World</a><br />
-          <a href="javascript:showSection('us')">U.S. News</a><br />
-          <a href="javascript:showSection('tech')">AI &amp; Tech</a><br />
-          <a href="javascript:showSection('videos')">Video Desk</a><br />
+        <div class="footer-col">
+          <h4>Partners</h4>
+          <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a>
+          <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com</a>
+          <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">RusticBarnwoodFurniture.com</a>
         </div>
-        <div class="footer-col footer-links">
-          <strong>Partner Destinations</strong><br />
-          <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a><br />
-          <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com</a><br />
-          <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">RusticBarnwoodFurniture.com</a><br />
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="javascript:void(0)" onclick="showSection('about')">About Us</a>
+          <a href="javascript:void(0)" onclick="alert('Privacy policy coming soon.')">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="alert('Terms coming soon.')">Terms of Use</a>
+          <a href="https://www.searchconverts.com" target="_blank" rel="noopener">Advertise</a>
         </div>
       </div>
-      <div class="footer-meta-row">
+      <div class="footer-bottom">
         <div>© <span id="year"></span> ActionGlobalNews.com. All rights reserved.</div>
-        <div class="powered-by">
-          Powered by
-          <a href="https://www.searchconverts.com" target="_blank" rel="noopener">
-            Search Converts – AIO-SEO Marketing Experts
-          </a>
-        </div>
+        <div>Powered by <a href="https://www.searchconverts.com" target="_blank" rel="noopener" style="font-weight:600; color:#fff;">Search Converts – AIO-SEO Marketing Experts</a></div>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+<script>
+/* ================================================================
+   ✏️ ARTICLE DATABASE
+   To add a new article:
+   1. Copy any existing object in the ARTICLES array below
+   2. Give it a unique `id`
+   3. Fill in all fields
+   4. Set `hero: true` on the one you want featured in the hero
+   5. Set `heroSidebar: true` on 2-3 others to show in hero sidebar
+   ================================================================ */
 
-    // Section nav
-    function showSection(id) {
-      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-      const s = document.getElementById(id);
-      if (s) s.classList.add('active');
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.toggle('active', link.dataset.section === id);
-      });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => showSection(link.dataset.section));
+const ARTICLES = [
+
+  /* ---- HERO ARTICLE (hero: true) ---- */
+  {
+    id: 'tesla-optimus',
+    hero: true,
+    heroSidebar: false,
+    category: 'AI & Robotics',
+    label: 'label-teal',
+    title: 'Tesla Optimus: The Robot That Could Rewrite Work As We Know It',
+    lede: 'With mass production on the horizon, Tesla\'s humanoid robot is poised to transform manufacturing, logistics — and the economics of human labor. A deep investigation into what\'s coming.',
+    author: 'Action Global News — AI & Technology Desk',
+    date: 'March 2026',
+    readTime: '8–10 min read',
+    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    excerpt: 'Tesla\'s humanoid robot could transform manufacturing and logistics — and the economics of human labor.',
+    content: `
+      <p>When Elon Musk unveiled the first walking prototype of the <strong>Tesla Optimus</strong> robot in 2022, many observers filed it away with other futuristic demo moments — impressive, certainly, but years away from any practical reality. That calculus has fundamentally changed.</p>
+
+      <p>By early 2025, Tesla confirmed that Optimus units were performing real tasks inside the company's own Gigafactories — sorting battery cells, moving components, executing repetitive assembly work alongside human colleagues. The company's stated goal: manufacture <strong>one million humanoid robots per year</strong> by the end of the decade.</p>
+
+      <blockquote>"Optimus will be the most transformative product in Tesla's history — potentially more valuable than the car business itself."<br>— Elon Musk, Tesla Annual Shareholder Meeting, 2024</blockquote>
+
+      <h2>What Optimus Can Actually Do Right Now</h2>
+      <p>Current-generation Optimus units are not science-fiction androids. They move at roughly the pace of a careful human worker, stand about 5'8" tall, weigh approximately 125 lbs, and can lift objects up to 45 lbs. Their dexterous hands — featuring 11 degrees of freedom — can grasp, rotate and place components with surprising reliability.</p>
+
+      <p>The real breakthrough isn't the hardware alone. Tesla feeds Optimus the same neural network training infrastructure that powers Full Self-Driving. The robot learns from video demonstrations, improving through a feedback loop of real-world trial and human correction — a process Tesla calls <em>end-to-end AI learning</em>.</p>
+
+      <div class="callout">
+        <strong>Key capability snapshot (Gen 2 Optimus):</strong> 11-DoF dexterous hands · Onboard AI processing · 8-hour battery life · Camera + depth sensing · Real-time obstacle avoidance · OTA software updates
+      </div>
+
+      <h2>The Economics That Change Everything</h2>
+      <p>The critical number is projected cost. Tesla has guided toward a price point of <strong>$20,000–$25,000 per unit</strong> at scale — roughly the annual salary of a minimum-wage worker in the United States. When you factor in no overtime, no benefits, no sick days, 24/7 availability, and consistent performance without fatigue, the economic math for manufacturers becomes overwhelming.</p>
+
+      <p>Consider a mid-sized fulfillment warehouse that currently employs 200 workers on a repetitive picking-and-packing line. At $25,000 per robot and projected maintenance costs of $2,000–$3,000 per year, the break-even point versus human labor could be reached in under three years. After that, the cost structure transforms entirely.</p>
+
+      <h3>Industries First in Line</h3>
+      <p>Analysts and supply chain experts have identified the industries most likely to see early mass deployment:</p>
+      <ul>
+        <li><strong>Automotive manufacturing</strong> — the first and most obvious market, where Tesla itself is proving the model</li>
+        <li><strong>Warehouse and fulfillment</strong> — Amazon, Walmart and other logistics giants are all watching closely</li>
+        <li><strong>Agriculture</strong> — fruit picking, planting and irrigation tasks in controlled environments</li>
+        <li><strong>Construction</strong> — material handling, concrete pouring, repetitive finish work</li>
+        <li><strong>Healthcare support</strong> — patient transport, supply restocking, sanitation in hospitals</li>
+        <li><strong>Retail</strong> — shelf stocking, inventory management, overnight restocking</li>
+      </ul>
+
+      <h2>What It Means for Workers</h2>
+      <p>The honest answer is: it depends enormously on how fast deployment happens, which sectors move first, and whether policy keeps pace with technology. Economic history offers two main templates for automation waves.</p>
+
+      <p>The <strong>optimistic scenario</strong> mirrors what happened with ATMs and bank tellers. Paradoxically, the number of bank tellers <em>increased</em> after ATMs were introduced, because lower operating costs per branch allowed banks to open more branches and hire more human relationship managers. Automation freed workers from repetitive cash-counting to focus on higher-value customer interactions.</p>
+
+      <p>The <strong>pessimistic scenario</strong> resembles the impact of industrial looms on textile workers in 19th-century England — brutal displacement without adequate transition infrastructure. The Luddite movement was not simply technophobia; it was a rational response to rapid economic disruption without social safety nets.</p>
+
+      <p>Humanoid robotics at scale would be the largest automation event in human history. The International Monetary Fund estimated in 2024 that AI and automation could affect up to <strong>40% of global jobs</strong> — and humanoid robots extend that impact to physical labor in ways software alone cannot.</p>
+
+      <h2>Competing Players: Tesla Isn't Alone</h2>
+      <p>Tesla has a significant lead in vertical integration — building its own chips, training its own AI, controlling its own manufacturing — but the race is intensifying:</p>
+      <ul>
+        <li><strong>Figure AI</strong> (backed by Microsoft and OpenAI) has deployed Figure 02 robots at BMW plants</li>
+        <li><strong>Boston Dynamics' Atlas</strong> is now fully electric and performing complex manipulation tasks</li>
+        <li><strong>Agility Robotics' Digit</strong> is operational in Amazon fulfillment centers today</li>
+        <li><strong>Apptronik's Apollo</strong> has signed agreements with NASA and GXO Logistics</li>
+        <li><strong>Unitree and UBTECH</strong> in China are producing robots at dramatically lower price points</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Analyst projection:</strong> Goldman Sachs estimates the humanoid robot market could reach <strong>$38 billion by 2035</strong>, with over 250,000 units deployed annually by the end of the decade. More aggressive forecasts put the market at over $150 billion by 2040.
+      </div>
+
+      <h2>The Business Opportunity: Small and Medium Enterprises</h2>
+      <p>The narrative around humanoid robots tends to focus on Fortune 500 manufacturers. But the more profound — and less discussed — opportunity may be for <strong>small and medium enterprises (SMEs)</strong>.</p>
+
+      <p>Today, a small manufacturing company simply cannot afford to automate a four-person assembly line. Custom industrial robots cost $100,000–$400,000 per unit and require specialized programming, dedicated safety enclosures and expensive maintenance contracts. The economics are reserved for companies with volume that justifies the investment.</p>
+
+      <p>A general-purpose humanoid robot that costs $20,000 and can be retrained via demonstration — rather than reprogrammed by engineers — changes that calculus entirely. The same robot that handles morning assembly tasks could be reassigned to afternoon warehouse work. The flexibility that makes humanoid robots slightly less efficient than purpose-built machines in high-volume settings is actually a <em>feature</em> for SMEs that need versatility.</p>
+
+      <h2>Timeline and What to Watch</h2>
+      <p>Several milestones will signal whether Optimus (and humanoid robotics broadly) are tracking toward the transformative scenario:</p>
+      <ul>
+        <li><strong>2025–2026:</strong> Tesla deploying hundreds of Optimus units internally; first announced commercial sales</li>
+        <li><strong>2026–2027:</strong> External enterprise deployments in automotive and logistics; reliability data becomes public</li>
+        <li><strong>2027–2029:</strong> Price points drop below $20,000; SME deployments begin in earnest</li>
+        <li><strong>2030+:</strong> Mass market, potential regulatory frameworks, labor displacement becomes measurable</li>
+      </ul>
+
+      <p>For businesses of all sizes, the time to begin thinking about humanoid robotics is not when the robots arrive at your door — it's now. Understanding the trajectory, identifying which tasks in your operation are candidates for automation, and thinking through the human capital implications puts you years ahead of competitors who will scramble to respond after the fact.</p>
+
+      <p>The age of the humanoid robot is not science fiction anymore. It's an engineering and economics problem that is being solved in real time. The question is no longer <em>if</em> — only <em>when</em>, and whether your business is positioned to adapt.</p>
+    `
+  },
+
+  /* ---- HERO SIDEBAR ARTICLES (heroSidebar: true, up to 3) ---- */
+  {
+    id: 'ai-advantage',
+    hero: false,
+    heroSidebar: true,
+    category: 'AI & Business',
+    label: 'label-blue',
+    title: 'The AI Advantage: How Small Teams Now Compete With Giants',
+    lede: 'Used strategically, artificial intelligence is the great equalizer — giving lean, focused businesses capabilities once reserved for companies with entire departments dedicated to them.',
+    author: 'Action Global News — Technology Desk',
+    date: 'March 2026',
+    readTime: '6–8 min read',
+    image: 'https://images.pexels.com/photos/6954177/pexels-photo-6954177.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    excerpt: 'How AI tools are letting two-person startups out-execute companies with 200-person teams.',
+    content: `
+      <p>In 2019, a startup founder who wanted to run sophisticated A/B tests, generate professional-grade marketing copy, handle customer service around the clock and analyze competitor pricing data in real time needed either a large budget or a large team — ideally both. In 2026, they need a laptop, a few subscriptions, and an understanding of how to use these tools strategically.</p>
+
+      <p>The artificial intelligence revolution is often discussed in terms of its largest players — the chip companies, the foundation model labs, the trillion-dollar tech giants building AI into every product. But the less glamorous and arguably more consequential story is what AI is doing for <strong>the small operator at the edge of the economy</strong>.</p>
+
+      <h2>The Capability Gap Is Closing Fast</h2>
+      <p>For most of business history, scale conferred durable competitive advantages. Large companies could afford better marketing, more sophisticated data analysis, more customer support agents, more product development capacity. A mid-size competitor simply couldn't match these investments.</p>
+
+      <p>AI is systematically dismantling that advantage in domain after domain. Consider what's now accessible to a solo entrepreneur or small team:</p>
+
+      <ul>
+        <li><strong>Content and copywriting</strong> at near-professional quality, in any volume, on demand</li>
+        <li><strong>24/7 customer service</strong> via AI assistants that handle 80%+ of routine queries</li>
+        <li><strong>Code and software development</strong> — non-technical founders can now build functional tools</li>
+        <li><strong>Data analysis and financial modeling</strong> — weeks of analyst work compressed to hours</li>
+        <li><strong>Video, image and design production</strong> — previously requiring agencies or in-house creative teams</li>
+        <li><strong>SEO and content strategy</strong> — competitive research and optimization at scale</li>
+        <li><strong>Lead research and sales prospecting</strong> — automated enrichment and outreach sequences</li>
+      </ul>
+
+      <h2>The "100x Leverage" Framework</h2>
+      <p>The most useful mental model for thinking about AI in small business is <strong>leverage</strong>. Historically, an operator's productive output was essentially linear — one person working hard could do roughly one person's worth of work. Management and delegation created some multiplier, but the ceiling was relatively low.</p>
+
+      <p>AI changes the ceiling. A skilled operator using AI tools intelligently can produce at 10x, 50x, or in some domains 100x their pre-AI output rate. This isn't about replacing human judgment — it's about removing the bottlenecks around that judgment. When the mechanical, repetitive, templated work is automated, a human's time concentrates almost entirely on the decisions and relationships where humans still hold a genuine edge.</p>
+
+      <blockquote>"We went from needing 12 people to run our content operation to needing 3. The 3 we kept are the ones who could think strategically — everyone else was doing work AI now handles better."<br>— Marketing director, mid-size e-commerce brand</blockquote>
+
+      <h2>Where Small Businesses Have the Real Edge</h2>
+      <p>Counterintuitively, the businesses positioned to benefit most from AI aren't always the largest. Large enterprises face significant friction in AI adoption: legacy systems, compliance overhead, bureaucratic decision-making and cultural resistance slow deployment dramatically.</p>
+
+      <p>Small businesses can move fast. An entrepreneur who decides on Monday to integrate an AI customer service layer can have it running by Thursday. A startup that identifies a productivity tool can test, adopt and scale it within weeks. That speed of adoption creates a window — which may close as enterprise AI infrastructure matures — where lean operators can build genuine advantages over slower-moving incumbents.</p>
+
+      <h3>The High-Value AI Use Cases for Small Business</h3>
+      <p>Based on adoption patterns across industries, the highest-ROI applications for small business AI tend to cluster in a few categories:</p>
+      <ul>
+        <li><strong>Customer communication:</strong> AI-drafted responses, onboarding sequences and follow-ups</li>
+        <li><strong>Proposals and quoting:</strong> Faster, more professional documentation</li>
+        <li><strong>Research and due diligence:</strong> Competitive intelligence, market sizing, supplier evaluation</li>
+        <li><strong>Operations and process documentation:</strong> SOPs, training materials, compliance checklists</li>
+        <li><strong>Financial analysis:</strong> Cash flow modeling, pricing strategy, scenario planning</li>
+      </ul>
+
+      <h2>The Risks Worth Taking Seriously</h2>
+      <p>The AI advantage isn't without its complications. Over-reliance on AI-generated content can erode the authentic voice and personality that often differentiates small businesses from large ones. Customers increasingly recognize — and are put off by — generic AI-generated communications.</p>
+
+      <p>There's also the question of judgment. AI tools are extraordinarily capable at producing plausible, well-structured output — but "plausible" is not the same as "correct." Businesses that deploy AI without maintaining human review processes for consequential decisions expose themselves to confident errors that can be costly to correct.</p>
+
+      <div class="callout">
+        <strong>The rule of thumb:</strong> Use AI to <em>accelerate</em> your thinking, not to <em>replace</em> it. The businesses winning with AI are those where a skilled human is directing the tool, reviewing its output, and adding the judgment, nuance and relationship intelligence that AI still genuinely lacks.
+      </div>
+
+      <h2>Getting Started: A Practical Path</h2>
+      <p>For business owners new to AI tools, the highest-leverage starting point is usually the task that currently consumes the most time relative to the value it creates. Common candidates include email drafting, social media content, customer FAQ responses, and report generation.</p>
+
+      <p>Pick one tool, learn it deeply over 30 days, measure the time saved, then expand. The compounding effect of systematically applying AI across your operations adds up faster than most people expect — and the competitive gap between early adopters and those who wait continues to widen.</p>
+    `
+  },
+
+  {
+    id: 'down-economy',
+    hero: false,
+    heroSidebar: true,
+    category: 'Business & Economy',
+    label: '',
+    title: 'Rising in a Down Economy: Why Some Businesses Grow Faster When Markets Fall',
+    lede: 'Recessions don\'t stop markets — they reshuffle them. While headlines dwell on layoffs and shrinking GDP, a smaller group of companies quietly gains market share by moving faster than everyone else.',
+    author: 'Action Global News — Business & Economy Desk',
+    date: 'February 2026',
+    readTime: '7–9 min read',
+    image: 'https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    excerpt: 'When recessions hit, the companies that move fastest and adapt most fluidly gain ground at everyone else\'s expense.',
+    content: `
+      <p>Most headlines during a recession focus on layoffs, shrinking GDP and market fear. Yet when you look closely across past downturns, another pattern is just as clear: while many companies stall or disappear, a smaller group quietly grows faster than ever.</p>
+
+      <p>From discount retailers in the 2008 financial crisis, to cloud software during the COVID-19 pandemic, downturns often act as a reset button. Businesses that stay flexible, protect cash and lean into new demand can emerge with more market share than they held in good times.</p>
+
+      <h2>Downturns Don't Stop Markets — They Reshuffle Them</h2>
+      <p>In boom times, easy credit and optimistic forecasts allow many weak business models to survive. Competitors multiply, marketing gets noisy and it's hard for any single company to stand out. A recession reverses those conditions:</p>
+      <ul>
+        <li>Credit tightens and exposes fragile balance sheets</li>
+        <li>Customers scrutinize every purchase more closely</li>
+        <li>Companies that relied on momentum suddenly face resistance</li>
+      </ul>
+      <p>For resilient firms, this disruption can be an opportunity. Reduced competition, cheaper advertising and clearer customer priorities make it easier to stand out.</p>
+
+      <blockquote>"When the tide goes out, you find out who's been swimming naked." — Warren Buffett</blockquote>
+
+      <h2>Three Patterns That Repeat in Every Recession</h2>
+      <p>While every economic cycle is unique, three patterns keep showing up in post-crisis research and case studies:</p>
+      <ol>
+        <li><strong>Companies that cut waste, not muscle, bounce back faster.</strong> The instinct to slash headcount is understandable but often counterproductive. Companies that surgically remove inefficiency while protecting revenue-generating and customer-facing capacity consistently outperform those that cut indiscriminately.</li>
+        <li><strong>Brands that stay in front of customers during the downturn gain share.</strong> When competitors go quiet — reducing marketing spend, pulling back from customer engagement — the companies that maintain visibility earn a disproportionate share of reduced market attention.</li>
+        <li><strong>Teams that keep shipping new value learn faster.</strong> Downturns concentrate customer feedback brutally. The businesses that keep iterating, even at a slower pace, emerge from recessions with products and services that are genuinely better calibrated to what the market actually wants.</li>
+      </ol>
+
+      <h2>Case Studies: Who Won the Last Recessions</h2>
+      <p>The 2008 financial crisis produced several unexpected winners. Dollar stores grew aggressively as consumers traded down. Netflix accelerated its shift from DVDs to streaming. Airbnb launched in the middle of the crisis, betting that budget-conscious travelers and cash-strapped hosts would find a deal that worked for both.</p>
+
+      <p>The COVID recession of 2020 produced an even more dramatic example. While airlines, hospitality and retail were devastated, cloud software companies, delivery logistics platforms and e-commerce infrastructure businesses compounded faster than they ever had in "normal" times.</p>
+
+      <div class="callout">
+        <strong>Key insight:</strong> Downturns are less about "no opportunity" and more about <em>different</em> opportunity — often concentrated in value, trust and execution speed. The question isn't whether to act; it's whether you can identify which direction to act faster than your competitors.
+      </div>
+
+      <h2>What It Means for Your Business Right Now</h2>
+      <p>The practical implication for business owners is clear: the time to prepare for a downturn is not when one begins. It's before. Building cash reserves, reducing fixed costs where possible, deepening customer relationships and investing in operational efficiency while conditions are favorable gives you the flexibility to act aggressively when others are frozen.</p>
+
+      <p>The businesses that emerge from recessions stronger aren't necessarily the ones with the best products or the most capital. They're usually the ones that acted early, adapted genuinely and kept moving while the competition waited for certainty that never came.</p>
+    `
+  },
+
+  {
+    id: 'inflation-small-biz',
+    hero: false,
+    heroSidebar: true,
+    category: 'Inflation & Small Business',
+    label: 'label-gold',
+    title: 'How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back',
+    lede: 'Inflation reshapes spending — and gives lean, local companies a chance to earn trust that outlasts the economic cycle.',
+    author: 'Action Global News — Business & Economy Desk',
+    date: 'January 2026',
+    readTime: '6 min read',
+    image: 'https://images.pexels.com/photos/37347/office-freelancer-computer-business-37347.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    excerpt: 'During inflationary periods, local businesses\' agility and relationships become powerful competitive weapons.',
+    content: `
+      <p>High inflation is brutal for businesses of all sizes, but it doesn't apply pressure evenly. Large brands face enormous cost pressures that ripple through long, complex supply chains. Small businesses face the same input cost increases — but often have structural advantages that only become visible under pressure.</p>
+
+      <h2>Why Inflation Creates Unexpected Openings</h2>
+      <p>When input costs rise, large companies typically have three options: raise prices, reduce quality, or shrink margins. Most do some combination of all three — and their customers notice. The resulting reduction in perceived value creates an opening for smaller, more agile competitors who can respond more nimbly.</p>
+      <p>Local and regional businesses often benefit from shorter supply chains — fewer intermediaries means smaller inflation pass-throughs and faster ability to source alternative suppliers. The restaurant owner who can switch protein suppliers in a week has a structural advantage over the national chain that requires six months of procurement approvals to change anything.</p>
+
+      <h2>The Trust Dividend</h2>
+      <p>Inflation also changes the psychology of purchasing. As consumers become more deliberate — scrutinizing value more carefully, reducing discretionary spending, prioritizing relationships over convenience — the local business that has invested in community relationships and genuine service collects a trust dividend that advertising budgets can't easily buy.</p>
+
+      <blockquote>"During COVID and the inflation that followed, our regulars didn't just stay — they spent more, because they wanted us to survive. That's not something a chain can manufacture."<br>— Independent bookstore owner, Portland, OR</blockquote>
+
+      <h2>Practical Strategies That Work During Inflation</h2>
+      <ul>
+        <li><strong>Price in layers, not in one big jump.</strong> Multiple small increases spread over time are easier for customers to absorb than one large shock.</li>
+        <li><strong>Communicate transparently.</strong> Customers who understand the reasons behind price increases are significantly less likely to defect than those who feel blindsided.</li>
+        <li><strong>Reduce menu/product complexity.</strong> Simplifying your offering reduces procurement complexity, waste and operational overhead — all of which compound during inflation.</li>
+        <li><strong>Invest in retention over acquisition.</strong> Keeping existing customers is dramatically cheaper than acquiring new ones, and even more so during downturns.</li>
+      </ul>
+
+      <p>The companies that survive inflationary eras aren't always the ones with the best margins going in. They're the ones with the deepest customer relationships, the most flexible operations — and the willingness to adapt quickly rather than wait for "normal" to return.</p>
+    `
+  },
+
+  /* ---- ADDITIONAL ARTICLES (shown as cards on home) ---- */
+  {
+    id: 'ai-healthcare',
+    hero: false,
+    heroSidebar: false,
+    category: 'AI & Healthcare',
+    label: 'label-teal',
+    title: 'AI in Healthcare: From Diagnosis to Drug Discovery, a New Era Begins',
+    lede: 'Machine learning models are diagnosing cancers earlier, discovering new drug candidates and transforming how hospitals operate — at a pace that is outrunning regulatory frameworks.',
+    author: 'AGN Technology Desk',
+    date: 'March 2026',
+    readTime: '7 min read',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
+    excerpt: 'How AI is accelerating medicine from cancer detection to protein folding and surgical robotics.',
+    content: `
+      <p>The integration of artificial intelligence into healthcare is no longer a distant promise — it is an accelerating present reality. From radiology departments at major hospital systems to biotech startups hunting for novel drug targets, AI is reshaping the pace and economics of medicine in ways that would have seemed implausible just five years ago.</p>
+
+      <h2>Early Detection: Where AI Saves Lives Today</h2>
+      <p>The most immediate impact of AI in healthcare is in diagnostic imaging. Deep learning models trained on millions of scans can now detect certain forms of cancer — particularly breast, lung and skin cancers — with accuracy that matches or exceeds experienced radiologists, and at a fraction of the time and cost.</p>
+      <p>Google's DeepMind demonstrated that its AI model could detect breast cancer in mammograms with <strong>11.5% fewer false positives and 9.4% fewer false negatives</strong> than human radiologists. At scale, those percentage points translate into thousands of lives saved annually.</p>
+
+      <h2>Drug Discovery: Compressing Decades Into Years</h2>
+      <p>Traditional drug development is brutally slow and expensive — an average of 12 years and $2.6 billion from initial research to market approval. AI is attacking that bottleneck at every stage of the pipeline.</p>
+      <p>AlphaFold, DeepMind's protein structure prediction model, essentially solved a 50-year grand challenge in biology in 2021 by accurately predicting the 3D structure of virtually every known protein. That breakthrough unlocks drug target identification that previously took years of laboratory work.</p>
+
+      <div class="callout">
+        <strong>Milestone:</strong> The first AI-discovered drug entered Phase II clinical trials in 2023. Multiple AI-generated drug candidates are now in the pipeline across oncology, rare diseases and antibiotic resistance — one of the most urgent unmet needs in global healthcare.
+      </div>
+
+      <h2>The Operational Revolution in Hospitals</h2>
+      <p>Beyond diagnosis and drug discovery, AI is quietly transforming hospital operations. Predictive models now optimize staffing by forecasting emergency room volumes 24–48 hours in advance. Supply chain AI reduces pharmaceutical waste by improving inventory forecasting. Administrative AI handles prior authorization, coding and billing tasks that consume enormous amounts of clinical staff time.</p>
+      <p>The cumulative effect is significant: McKinsey estimates that AI could generate $100–$150 billion in annual savings for the U.S. healthcare system by 2026, primarily through operational efficiency and improved clinical decision support.</p>
+
+      <h2>The Challenges Ahead</h2>
+      <p>Healthcare AI faces genuine challenges that temper the enthusiasm. Algorithmic bias — where models trained on non-representative data perform worse for certain demographic groups — is a documented problem with real patient safety implications. Regulatory frameworks are still catching up to the pace of deployment. And the healthcare system's famously fragmented, legacy-laden IT infrastructure creates integration challenges that slow adoption dramatically.</p>
+      <p>None of these challenges are insurmountable. But the history of technology in healthcare counsels humility about timelines. The promise of AI in medicine is real — the path to full realization will almost certainly be longer and messier than the most optimistic projections suggest.</p>
+    `
+  },
+
+  {
+    id: 'generative-ai-economy',
+    hero: false,
+    heroSidebar: false,
+    category: 'Economy & Technology',
+    label: 'label-blue',
+    title: 'The Generative AI Economy: Who Is Actually Making Money — and How',
+    lede: 'With billions invested and hype at historic highs, a clearer picture is emerging of where genuine revenue and profit are concentrating in the generative AI value chain.',
+    author: 'AGN Economy Desk',
+    date: 'February 2026',
+    readTime: '8 min read',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+    excerpt: 'Where genuine value is being created in the AI economy — and the surprising winners emerging from the hype.',
+    content: `
+      <p>The generative AI market has attracted over $100 billion in investment since 2022. But amid the unprecedented enthusiasm, a more sober and practical question has begun to dominate boardroom conversations: who is actually making money from AI, and how sustainable are those economics?</p>
+
+      <h2>The Infrastructure Layer: Clear Winners</h2>
+      <p>The clearest financial beneficiaries of the generative AI wave have been infrastructure companies — particularly NVIDIA, whose GPU chips power the vast majority of AI training and inference workloads. NVIDIA's data center revenue grew from roughly $15 billion in fiscal 2023 to over $90 billion in fiscal 2025 — arguably the most rapid revenue expansion of any major company in history.</p>
+      <p>Cloud hyperscalers — Amazon Web Services, Microsoft Azure and Google Cloud — have also been clear winners. They provide the compute, storage and networking infrastructure that AI companies rent by the hour, and they're racing to embed AI capabilities into their existing enterprise services.</p>
+
+      <h2>The Application Layer: More Complex</h2>
+      <p>The economics get murkier as you move up the stack toward AI applications. A few companies have demonstrated genuine product-market fit and revenue sustainability — most notably Salesforce, ServiceNow and other enterprise software incumbents that have embedded AI into existing workflows that customers already pay for.</p>
+      <p>Pure-play AI application startups face a harder road. Many built early businesses on access to frontier models — but as OpenAI, Anthropic and Google lower their API prices and build competing products, the defensibility of applications built on top of those models comes into question.</p>
+
+      <div class="callout">
+        <strong>The "picks and shovels" principle in action:</strong> In every major technology wave, the companies selling the infrastructure to enable the wave have often outperformed the companies building applications on top of it. In the California Gold Rush, Levi Strauss sold more reliable durable goods — pants — than most of the miners who bought them.
+      </div>
+
+      <h2>What This Means for Businesses Adopting AI</h2>
+      <p>For businesses thinking about AI adoption, the competitive and financial dynamics of the AI industry are relevant in a specific, practical way: the tools you need are getting dramatically cheaper, and they will continue to do so. The economics of AI compute follow a consistent deflationary curve — what costs $10,000 today costs $1,000 in two years and $100 in four.</p>
+      <p>This means that waiting to adopt AI — on the theory that better, cheaper tools are coming — is often a reasonable calculation in terms of the cost of the technology. Where it fails is in accounting for the cost of delay: the capabilities your competitors are building now, the workflows they're refining, the customer data they're accumulating. Those advantages compound in ways that cheap tools, when they arrive, may not fully offset.</p>
+    `
+  }
+
+];
+
+/* ================================================================
+   FEEDS CONFIG
+   Add, remove or change RSS feeds here.
+   rss2json.com converts RSS to JSON with a free API key.
+   Get your own free key at rss2json.com for higher rate limits.
+   ================================================================ */
+const RSS_API = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+const FEEDS = {
+  // Home page feed tabs
+  'feed-business-home': { url: 'https://feeds.marketwatch.com/marketwatch/topstories', name: 'MarketWatch', max: 6 },
+  'feed-tech-home':     { url: 'https://feeds.arstechnica.com/arstechnica/technology-lab', name: 'Ars Technica', max: 6 },
+  'feed-world-home':    { url: 'https://feeds.bbci.co.uk/news/world/rss.xml', name: 'BBC World', max: 6 },
+  'feed-alt-home':      { url: 'https://rss.realclearpolitics.com/articles/political_economy/', name: 'RealClearPolitics Econ', max: 6 },
+
+  // Business section
+  'feed-biz-mw':       { url: 'https://feeds.marketwatch.com/marketwatch/topstories', name: 'MarketWatch', max: 6 },
+  'feed-biz-reuters':  { url: 'https://feeds.reuters.com/reuters/businessNews', name: 'Reuters Business', max: 6 },
+  'feed-biz-ft':       { url: 'https://feeds.bloomberg.com/markets/news.rss', name: 'Bloomberg', max: 6 },
+
+  // World section
+  'feed-world-bbc':    { url: 'https://feeds.bbci.co.uk/news/world/rss.xml', name: 'BBC World', max: 6 },
+  'feed-world-reuters':{ url: 'https://feeds.reuters.com/Reuters/worldNews', name: 'Reuters', max: 6 },
+  'feed-world-ap':     { url: 'https://rsshub.app/apnews/topics/world-news', name: 'AP News', max: 6 },
+  'feed-world-rt':     { url: 'https://www.zerohedge.com/fullrss2.xml', name: 'Zero Hedge', max: 6 },
+
+  // U.S. section
+  'feed-us-npr':       { url: 'https://feeds.npr.org/1003/rss.xml', name: 'NPR', max: 6 },
+  'feed-us-axios':     { url: 'https://api.axios.com/feed/', name: 'Axios', max: 6 },
+  'feed-us-hill':      { url: 'https://thehill.com/feed/', name: 'The Hill', max: 6 },
+  'feed-us-reason':    { url: 'https://reason.com/feed/', name: 'Reason', max: 6 },
+
+  // Tech section
+  'feed-tech-ars':     { url: 'https://feeds.arstechnica.com/arstechnica/technology-lab', name: 'Ars Technica', max: 6 },
+  'feed-tech-wired':   { url: 'https://www.wired.com/feed/rss', name: 'Wired', max: 6 },
+  'feed-tech-mit':     { url: 'https://www.technologyreview.com/feed/', name: 'MIT Tech Review', max: 6 },
+  'feed-tech-verge':   { url: 'https://www.theverge.com/rss/index.xml', name: 'The Verge', max: 6 },
+  'feed-tech-zd':      { url: 'https://www.zdnet.com/news/rss.xml', name: 'ZDNet', max: 6 },
+};
+
+/* ================================================================
+   FALLBACK IMAGES BY CATEGORY
+   ================================================================ */
+const FALLBACKS = {
+  default:  'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
+  business: 'https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=600',
+  world:    'https://images.pexels.com/photos/735787/pexels-photo-735787.jpeg?auto=compress&cs=tinysrgb&w=600',
+  us:       'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=600',
+  tech:     'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
+};
+
+/* ================================================================
+   STATE
+   ================================================================ */
+const loadedFeeds = new Set();
+const feedTabGroups = {}; // track which tabs are in each group
+
+/* ================================================================
+   SECTION NAVIGATION
+   ================================================================ */
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  const sec = document.getElementById(id);
+  if (sec) sec.classList.add('active');
+
+  document.querySelectorAll('.nav-link').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.section === id);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Lazy-load feeds for the section that just appeared
+  lazyLoadSectionFeeds(id);
+}
+
+/* ================================================================
+   ARTICLE OPEN / CLOSE
+   ================================================================ */
+function openArticle(id) {
+  const art = ARTICLES.find(a => a.id === id);
+  if (!art) return;
+
+  showSection('home');
+
+  document.getElementById('av-eyebrow').textContent   = art.category.toUpperCase();
+  document.getElementById('av-title').textContent     = art.title;
+  document.getElementById('av-author').textContent    = art.author;
+  document.getElementById('av-date').textContent      = art.date;
+  document.getElementById('av-read').textContent      = art.readTime;
+  document.getElementById('av-img').src               = art.image;
+  document.getElementById('av-img').alt               = art.title;
+  document.getElementById('av-content').innerHTML     = art.content;
+
+  // Related articles
+  const related = ARTICLES.filter(a => a.id !== id).slice(0, 4);
+  document.getElementById('av-related').innerHTML = related.map(r => `
+    <div class="article-strip" onclick="openArticle('${r.id}')">
+      <div class="article-strip-body">
+        <div class="article-strip-cat">${r.category}</div>
+        <div class="article-strip-title">${r.title}</div>
+        <div class="article-strip-meta">${r.date} · ${r.readTime}</div>
+      </div>
+    </div>
+  `).join('');
+
+  // Show article view, scroll to it
+  const av = document.getElementById('article-view');
+  av.classList.add('active');
+  document.getElementById('home-cards-grid').style.display = 'none';
+  document.querySelector('.section-title-bar').style.display = 'none';
+  setTimeout(() => {
+    av.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
+}
+
+function closeArticle() {
+  document.getElementById('article-view').classList.remove('active');
+  document.getElementById('home-cards-grid').style.display = '';
+  document.querySelector('.section-title-bar').style.display = '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ================================================================
+   BUILD HOME PAGE FROM ARTICLES
+   ================================================================ */
+function buildHome() {
+  // --- Hero ---
+  const heroArt = ARTICLES.find(a => a.hero);
+  if (heroArt) {
+    document.getElementById('hero-eyebrow').textContent = heroArt.category;
+    document.getElementById('hero-title').textContent   = heroArt.title;
+    document.getElementById('hero-lede').textContent    = heroArt.lede;
+    document.getElementById('hero-btn').onclick         = () => openArticle(heroArt.id);
+
+    // hero background image
+    document.getElementById('hero-main').style.backgroundImage =
+      `linear-gradient(135deg, rgba(5,8,15,0.97) 0%, rgba(13,20,40,0.9) 50%, rgba(13,20,40,0.7) 100%), url(${heroArt.image})`;
+    document.getElementById('hero-main').style.backgroundSize = 'cover';
+    document.getElementById('hero-main').style.backgroundPosition = 'center';
+  }
+
+  // --- Hero sidebar ---
+  const sideArts = ARTICLES.filter(a => a.heroSidebar);
+  const sidebar = document.getElementById('hero-sidebar');
+  sideArts.forEach(a => {
+    const el = document.createElement('div');
+    el.className = 'hero-side-item';
+    el.onclick = () => openArticle(a.id);
+    el.innerHTML = `
+      <div class="hero-side-tag">${a.category}</div>
+      <div class="hero-side-title">${a.title}</div>
+      <div class="hero-side-meta">${a.date} · ${a.readTime}</div>
+    `;
+    sidebar.appendChild(el);
+  });
+
+  // --- Article cards grid ---
+  const nonHero = ARTICLES.filter(a => !a.hero);
+  const grid = document.getElementById('home-cards-grid');
+  grid.innerHTML = '';
+  nonHero.forEach((art, i) => {
+    const card = document.createElement('div');
+    card.className = 'art-card' + (i === 0 ? ' art-card-lg' : '');
+    card.innerHTML = `
+      <img class="art-card-img" src="${art.image}" alt="${art.title}" loading="lazy" />
+      <div class="art-card-body">
+        <div class="art-card-category">${art.category}</div>
+        <div class="art-card-title" onclick="openArticle('${art.id}')">${art.title}</div>
+        <div class="art-card-excerpt">${art.excerpt}</div>
+        <div class="art-card-meta">${art.date} · ${art.readTime}</div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+
+  // --- Most read sidebar ---
+  const mrList = document.getElementById('most-read-list');
+  mrList.innerHTML = ARTICLES.slice(0, 5).map((a, i) => `
+    <div class="article-strip" onclick="openArticle('${a.id}')">
+      <div class="article-strip-num">${i + 1}</div>
+      <div class="article-strip-body">
+        <div class="article-strip-cat">${a.category}</div>
+        <div class="article-strip-title">${a.title}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ================================================================
+   FEED TABS
+   ================================================================ */
+function switchFeedTab(group, panelId, btnEl) {
+  // hide all panels in this group
+  const allPanels = btnEl.closest('.feed-tabs').nextElementSibling;
+  let el = btnEl.closest('.feed-tabs').nextElementSibling;
+  while (el && el.classList.contains('feed-panel')) {
+    el.classList.remove('active');
+    el = el.nextElementSibling;
+  }
+  // deactivate all tabs in group
+  btnEl.closest('.feed-tabs').querySelectorAll('.feed-tab').forEach(b => b.classList.remove('active'));
+
+  // activate selected
+  const panel = document.getElementById(panelId);
+  if (panel) panel.classList.add('active');
+  btnEl.classList.add('active');
+
+  // load feed if not yet loaded
+  const targetId = panel ? panel.querySelector('[id^="feed-"]') : null;
+  if (targetId && !loadedFeeds.has(targetId.id)) {
+    loadFeed(targetId.id);
+  }
+}
+
+/* ================================================================
+   FEED LOADER
+   ================================================================ */
+function loadFeed(targetId) {
+  const config = FEEDS[targetId];
+  if (!config || loadedFeeds.has(targetId)) return;
+  loadedFeeds.add(targetId);
+
+  const target = document.getElementById(targetId);
+  if (!target) return;
+
+  // Show loading skeleton
+  target.innerHTML = [1,2,3].map(() => `
+    <div class="feed-card-big skeleton" style="min-height:200px; border-radius:12px; background:var(--paper-alt);"></div>
+  `).join('');
+
+  const apiUrl = RSS_API + encodeURIComponent(config.url);
+
+  fetch(apiUrl)
+    .then(r => r.json())
+    .then(data => {
+      if (!data || data.status !== 'ok' || !data.items?.length) {
+        target.innerHTML = `<p style="color:var(--ink-soft); font-size:0.85rem; padding:16px;">Headlines temporarily unavailable. <a href="${config.url}" target="_blank" rel="noopener">Visit ${config.name} directly →</a></p>`;
+        return;
+      }
+      renderFeedBig(target, data.items.slice(0, config.max), config.name, config.url);
+    })
+    .catch(() => {
+      target.innerHTML = `<p style="color:var(--ink-soft); font-size:0.85rem; padding:16px;">Unable to load ${config.name} headlines. <a href="${config.url}" target="_blank" rel="noopener">Visit ${config.name} →</a></p>`;
     });
+}
 
-    function scrollToArticle(id) {
-      showSection('home');
-      const el = document.getElementById(id);
-      if (!el) return;
-      const top = el.getBoundingClientRect().top + window.scrollY - 90;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
+function renderFeedBig(container, items, sourceName, sourceUrl) {
+  container.innerHTML = '';
+  container.className = 'feed-grid-big';
 
-    // Share helpers
-    function shareArticle(platform) {
-      const url = window.location.href;
-      const title = document.title || 'Action Global News';
-      if (platform === 'twitter') {
-        window.open(
-          'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) +
-          '&url=' + encodeURIComponent(url),
-          '_blank', 'noopener'
-        );
-      } else if (platform === 'facebook') {
-        window.open(
-          'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
-          '_blank', 'noopener'
-        );
-      } else if (platform === 'email') {
-        window.location.href =
-          'mailto:?subject=' + encodeURIComponent(title) +
-          '&body=' + encodeURIComponent(url);
-      }
-    }
+  items.forEach(item => {
+    const thumb = item.thumbnail || FALLBACKS.default;
+    const excerpt = getExcerpt(item.description || '', 120);
+    const pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
 
-    function copyLink() {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(window.location.href)
-          .then(() => alert('Link copied to clipboard.'))
-          .catch(() => alert('Unable to copy automatically. Please copy from the address bar.'));
-      } else {
-        alert('Please copy the link from your browser address bar.');
-      }
-    }
+    const card = document.createElement('div');
+    card.className = 'feed-card-big';
+    card.innerHTML = `
+      <div class="feed-card-big-img" style="background-image:url(${thumb});"></div>
+      <div class="feed-card-big-body">
+        <div class="feed-source">${sourceName}</div>
+        <div class="feed-title">${item.title || ''}</div>
+        ${excerpt ? `<div class="feed-excerpt">${excerpt}</div>` : ''}
+        <div style="margin-top:auto; padding-top:8px; display:flex; justify-content:space-between; align-items:center; font-size:0.72rem; color:var(--ink-soft);">
+          <span>${pubDate}</span>
+          <a href="${item.link || sourceUrl}" target="_blank" rel="noopener" class="feed-link" style="margin-left:auto;">Read on ${sourceName} →</a>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
 
-    // Helper: strip HTML and shorten text
-    function getExcerpt(html, maxLen) {
-      const temp = document.createElement('div');
-      temp.innerHTML = html || '';
-      const text = (temp.textContent || temp.innerText || '').trim();
-      if (!text) return '';
-      if (text.length <= maxLen) return text;
-      return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
-    }
+/* ================================================================
+   LAZY LOAD FEEDS FOR SECTION
+   ================================================================ */
+function lazyLoadSectionFeeds(sectionId) {
+  // Load the first (active) feed tab for the section that becomes visible
+  const section = document.getElementById(sectionId);
+  if (!section) return;
 
-    // RSS loader using rss2json
-    function loadFeed(targetId, feedUrl, maxItems, sourceName, gridClass, fallbackImage) {
-      const target = document.getElementById(targetId);
-      if (!target) return;
+  section.querySelectorAll('.feed-panel.active [id^="feed-"]').forEach(el => {
+    if (!loadedFeeds.has(el.id)) loadFeed(el.id);
+  });
+}
 
-      const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl);
+/* ================================================================
+   UTILITIES
+   ================================================================ */
+function getExcerpt(html, maxLen) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  const text = (tmp.textContent || tmp.innerText || '').trim().replace(/\s+/g, ' ');
+  if (!text || text.length <= maxLen) return text;
+  return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
+}
 
-      fetch(apiUrl)
-        .then(res => res.json())
-        .then(data => {
-          if (!data || data.status !== 'ok' || !data.items || !data.items.length) {
-            target.textContent = 'No external headlines available right now.';
-            return;
-          }
-          const items = data.items;
-          const grid = document.createElement('div');
-          grid.className = gridClass || 'feed-grid-side';
+function shareArticle(platform) {
+  const url = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  if (platform === 'twitter') window.open(`https://twitter.com/intent/tweet?text=${title}&url=${url}`, '_blank', 'noopener');
+  else if (platform === 'facebook') window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener');
+  else if (platform === 'email') window.location.href = `mailto:?subject=${title}&body=${url}`;
+}
 
-          const limit = Math.min(maxItems, items.length);
-          for (let i = 0; i < limit; i++) {
-            const item = items[i];
-            const card = document.createElement('article');
-            card.className = 'feed-card';
+function copyLink() {
+  if (navigator.clipboard) navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied!'));
+  else alert('Please copy from the address bar.');
+}
 
-            const thumbDiv = document.createElement('div');
-            thumbDiv.className = 'feed-thumb';
-
-            const thumbUrl = item.thumbnail || fallbackImage || '';
-            if (thumbUrl) {
-              thumbDiv.style.backgroundImage = 'url(' + thumbUrl + ')';
-            } else {
-              thumbDiv.style.display = 'none';
-            }
-
-            const body = document.createElement('div');
-            body.className = 'feed-body';
-
-            const titleEl = document.createElement('div');
-            titleEl.className = 'feed-title';
-            titleEl.textContent = item.title || 'External headline';
-
-            const excerptEl = document.createElement('div');
-            excerptEl.className = 'feed-excerpt';
-            excerptEl.textContent = getExcerpt(item.description || '', 180);
-
-            const metaEl = document.createElement('div');
-            metaEl.className = 'feed-meta';
-
-            const link = document.createElement('a');
-            link.href = item.link || '#';
-            link.target = '_blank';
-            link.rel = 'noopener';
-            link.textContent = 'Read on ' + (sourceName || 'source') + ' →';
-
-            metaEl.appendChild(link);
-
-            body.appendChild(titleEl);
-            if (excerptEl.textContent) body.appendChild(excerptEl);
-            body.appendChild(metaEl);
-
-            card.appendChild(thumbDiv);
-            card.appendChild(body);
-            grid.appendChild(card);
-          }
-
-          target.innerHTML = '';
-          target.appendChild(grid);
-        })
-        .catch(() => {
-          target.textContent = 'Unable to load external headlines right now.';
-        });
-    }
-
-    // Load feeds (Option C style: World/Business big, Tech/US side)
-    const fallbackBusiness = 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800';
-    const fallbackWorld   = 'https://images.pexels.com/photos/735787/pexels-photo-735787.jpeg?auto=compress&cs=tinysrgb&w=800';
-    const fallbackUS      = 'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=800';
-    const fallbackTech    = 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800';
-
-    loadFeed(
-      'business-feed',
-      'https://feeds.marketwatch.com/marketwatch/topstories',
-      6,
-      'MarketWatch',
-      'feed-grid-big',
-      fallbackBusiness
-    );
-
-    loadFeed(
-      'world-feed',
-      'https://feeds.bbci.co.uk/news/world/rss.xml',
-      6,
-      'BBC',
-      'feed-grid-big',
-      fallbackWorld
-    );
-
-    loadFeed(
-      'us-feed',
-      'https://feeds.npr.org/1003/rss.xml',
-      6,
-      'NPR',
-      'feed-grid-side',
-      fallbackUS
-    );
-
-    loadFeed(
-      'tech-feed',
-      'https://feeds.arstechnica.com/arstechnica/technology-lab',
-      6,
-      'Ars Technica',
-      'feed-grid-side',
-      fallbackTech
-    );
-  </script>
+/* ================================================================
+   INIT
+   ================================================================ */
+document.getElementById('year').textContent = new Date().getFullYear();
+buildHome();
+// Load the home page business feed immediately (first active tab)
+loadFeed('feed-business-home');
+</script>
 </body>
 </html>
