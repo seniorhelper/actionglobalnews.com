@@ -4,20 +4,52 @@
   <meta charset="UTF-8" />
   <title>Action Global News | Business • Economy • AI • World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Action Global News covers international headlines, small business, inflation-era survival, AI disruption, and how technology is reshaping the global economy." />
+  <meta name="description" content="Action Global News covers international headlines, small business, AI search, generative engine optimization, and how technology is reshaping the global economy." />
   <meta name="theme-color" content="#05080f" />
+
+  <!-- ===== FAVICONS — all formats for tab + SERP ===== -->
+  <!-- SVG favicon (modern browsers) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌎</text></svg>" />
+  <!-- PNG 32x32 (legacy browsers + SERP) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌎</text></svg>" />
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2305080f'/><text y='.9em' font-size='80' x='10'>🌎</text></svg>" />
+  <!-- Web app manifest meta -->
+  <meta name="application-name" content="Action Global News" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Action Global News | Business • Economy • AI • World" />
+  <meta property="og:description" content="Independent coverage of business, AI, economy and global developments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://actionglobalnews.com" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://actionglobalnews.com/" />
+
+  <!-- JSON-LD Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "Action Global News",
+    "url": "https://actionglobalnews.com",
+    "logo": "https://actionglobalnews.com/favicon.png",
+    "description": "Independent coverage of business, economy, AI and global developments.",
+    "sameAs": []
+  }
+  </script>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561679124556057" crossorigin="anonymous"></script>
 
-  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     /* ============================================================
-       DESIGN TOKENS — edit these to retheme the whole site
+       DESIGN TOKENS
     ============================================================ */
     :root {
       --ink:        #0a0d14;
@@ -27,8 +59,8 @@
       --paper-alt:  #f2f1ed;
       --paper-warm: #ede9e0;
       --rule:       #dddbd4;
-      --accent:     #c8382a;   /* editorial red */
-      --accent-2:   #1a4fc4;   /* deep blue */
+      --accent:     #c8382a;
+      --accent-2:   #1a4fc4;
       --accent-gold:#d4a520;
       --accent-teal:#0a7c6e;
       --night:      #05080f;
@@ -45,11 +77,15 @@
     }
 
     /* ============================================================
-       RESET + BASE
+       RESET + BASE — FIX: overflow-x lock prevents horizontal scroll
     ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden; /* FIX: lock horizontal scroll at root */
+      max-width: 100%;
+    }
 
     body {
       font-family: var(--body-font);
@@ -58,6 +94,9 @@
       line-height: 1.65;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden; /* FIX: belt-and-suspenders for Pixel 9 Pro */
+      width: 100%;
+      position: relative;
     }
 
     a { color: var(--accent-2); text-decoration: none; }
@@ -79,6 +118,7 @@
       display: flex;
       align-items: center;
       white-space: nowrap;
+      width: 100%; /* FIX: explicit width */
     }
 
     .ticker-label {
@@ -130,6 +170,7 @@
       position: sticky;
       top: 0;
       z-index: 200;
+      width: 100%; /* FIX */
     }
 
     .masthead-inner {
@@ -172,7 +213,6 @@
       font-weight: 500;
     }
 
-    /* ---- nav ---- */
     .main-nav {
       display: flex;
       align-items: center;
@@ -200,11 +240,7 @@
     .nav-link:hover { color: #fff; background: rgba(255,255,255,0.07); }
     .nav-link.active { color: #fff; background: var(--accent); }
 
-    .masthead-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .masthead-right { display: flex; align-items: center; gap: 10px; }
 
     .search-btn {
       background: rgba(255,255,255,0.06);
@@ -221,7 +257,7 @@
     .search-btn:hover { color: #fff; border-color: rgba(255,255,255,0.25); }
 
     /* ============================================================
-       SECTIONS — SPA-style show/hide
+       SECTIONS
     ============================================================ */
     .section { display: none; animation: fade-in 0.3s ease; }
     .section.active { display: block; }
@@ -231,9 +267,6 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ============================================================
-       WRAPPER
-    ============================================================ */
     .page-wrap {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -241,7 +274,7 @@
     }
 
     /* ============================================================
-       SECTION HEADERS (the band at top of each section)
+       SECTION HEADERS
     ============================================================ */
     .section-header {
       display: flex;
@@ -267,19 +300,13 @@
       font-style: italic;
     }
 
-    .section-header.light {
-      border-color: var(--night-rule);
-    }
-
+    .section-header.light { border-color: var(--night-rule); }
     .section-header.light h1,
-    .section-header.light h2 {
-      color: #fff;
-    }
-
+    .section-header.light h2 { color: #fff; }
     .section-header.light .section-header-sub { color: #6b7490; }
 
     /* ============================================================
-       EDITORIAL LABEL / PILL
+       EDITORIAL LABEL
     ============================================================ */
     .label {
       display: inline-block;
@@ -299,12 +326,8 @@
     .label-ghost { background: transparent; border: 1px solid var(--rule); color: var(--ink-soft); }
 
     /* ============================================================
-       ===  HOME / TOP STORIES  ===
+       HERO
     ============================================================ */
-
-    /* ---- HERO ---- */
-    /* ✏️ TO CHANGE HERO: edit the #HERO_CONFIG object in the <script> section at the bottom */
-
     .hero-block {
       display: grid;
       grid-template-columns: 1fr 340px;
@@ -322,8 +345,7 @@
       flex-direction: column;
       justify-content: flex-end;
       position: relative;
-      background:
-        linear-gradient(135deg, #05080f 0%, #0d1428 60%, transparent 100%);
+      background: linear-gradient(135deg, #05080f 0%, #0d1428 60%, transparent 100%);
     }
 
     .hero-eyebrow {
@@ -353,11 +375,7 @@
       line-height: 1.7;
     }
 
-    .hero-cta-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+    .hero-cta-row { display: flex; gap: 10px; flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
@@ -377,16 +395,12 @@
 
     .btn-primary { background: var(--accent); color: #fff; }
     .btn-primary:hover { background: #a62d21; text-decoration: none; }
-
     .btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #c4cbe0; }
     .btn-outline:hover { background: rgba(255,255,255,0.08); text-decoration: none; }
-
     .btn-ghost { background: var(--paper-alt); color: var(--ink-mid); }
     .btn-ghost:hover { background: var(--paper-warm); text-decoration: none; }
-
     .btn-sm { padding: 5px 12px; font-size: 0.75rem; }
 
-    /* hero sidebar (secondary stories) */
     .hero-sidebar {
       background: var(--night-soft);
       border-left: 1px solid var(--night-rule);
@@ -433,12 +447,9 @@
       margin-bottom: 4px;
     }
 
-    .hero-side-meta {
-      font-size: 0.72rem;
-      color: #4e5870;
-    }
+    .hero-side-meta { font-size: 0.72rem; color: #4e5870; }
 
-    /* ---- BREAKING NEWS RIBBON ---- */
+    /* BREAKING RIBBON */
     .breaking-ribbon {
       background: var(--accent);
       color: #fff;
@@ -462,7 +473,7 @@
       flex-shrink: 0;
     }
 
-    /* ---- MAIN 3-COL GRID + SIDEBAR ---- */
+    /* MAIN 3-COL GRID + SIDEBAR */
     .home-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 300px;
@@ -477,7 +488,7 @@
       gap: 20px;
     }
 
-    /* ---- ARTICLE CARD ---- */
+    /* ARTICLE CARD */
     .art-card {
       background: #fff;
       border-radius: var(--radius);
@@ -498,6 +509,12 @@
       aspect-ratio: 16 / 9;
       object-fit: cover;
       background: var(--paper-alt);
+    }
+
+    /* FIX: broken image fallback */
+    .art-card-img[src=""], .art-card-img:not([src]) {
+      background: var(--paper-alt);
+      min-height: 160px;
     }
 
     .art-card-body {
@@ -534,17 +551,11 @@
       flex: 1;
     }
 
-    .art-card-meta {
-      font-size: 0.72rem;
-      color: #8892a8;
-      margin-top: 4px;
-    }
-
-    /* large card variant */
+    .art-card-meta { font-size: 0.72rem; color: #8892a8; margin-top: 4px; }
     .art-card-lg .art-card-title { font-size: 1.3rem; }
     .art-card-lg .art-card-excerpt { font-size: 0.88rem; }
 
-    /* ---- SIDEBAR ---- */
+    /* SIDEBAR */
     .sidebar { display: flex; flex-direction: column; gap: 20px; }
 
     .sidebar-widget {
@@ -566,7 +577,6 @@
 
     .widget-body { padding: 14px 16px; }
 
-    /* sponsor widget */
     .sponsor-card {
       background: linear-gradient(135deg, #061432, #0e2260);
       border-radius: var(--radius);
@@ -600,7 +610,7 @@
       line-height: 1.55;
     }
 
-    /* ---- WIDE FEED ROW (for RSS sections) ---- */
+    /* FEED GRID */
     .feed-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -661,15 +671,9 @@
       overflow: hidden;
     }
 
-    .feed-link {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--accent-2);
-    }
-
+    .feed-link { font-size: 0.72rem; font-weight: 600; color: var(--accent-2); }
     .feed-link:hover { text-decoration: underline; }
 
-    /* big grid (for world/business) */
     .feed-grid-big {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -706,13 +710,8 @@
       flex-direction: column;
     }
 
-    .feed-card-big .feed-title {
-      font-size: 0.96rem;
-      margin-bottom: 8px;
-      flex: 1;
-    }
+    .feed-card-big .feed-title { font-size: 0.96rem; margin-bottom: 8px; flex: 1; }
 
-    /* loading skeleton */
     .skeleton { animation: shimmer 1.5s infinite; }
 
     @keyframes shimmer {
@@ -720,17 +719,10 @@
       50%      { opacity: 1; }
     }
 
-    .skel-block {
-      background: var(--paper-alt);
-      border-radius: 4px;
-      height: 14px;
-      margin-bottom: 8px;
-    }
+    .skel-block { background: var(--paper-alt); border-radius: 4px; height: 14px; margin-bottom: 8px; }
 
-    /* ---- ARTICLE FULL-VIEW ---- */
-    .article-view {
-      display: none;
-    }
+    /* ARTICLE FULL VIEW */
+    .article-view { display: none; }
 
     .article-view.active {
       display: grid;
@@ -827,9 +819,7 @@
     }
 
     .article-content ul,
-    .article-content ol {
-      margin: 0 0 18px 22px;
-    }
+    .article-content ol { margin: 0 0 18px 22px; }
 
     .article-content li {
       font-size: 0.97rem;
@@ -865,6 +855,25 @@
 
     .article-content .callout strong { color: var(--accent-2); }
 
+    .article-content .cta-box {
+      background: linear-gradient(135deg, #061432, #0e2260);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 28px 0;
+      color: #fff;
+      border: 1px solid #1e3670;
+    }
+
+    .article-content .cta-box h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .article-content .cta-box p {
+      color: #8b9bc4;
+      margin-bottom: 14px;
+    }
+
     .share-row {
       display: flex;
       align-items: center;
@@ -876,14 +885,9 @@
       border-bottom: 1px solid var(--rule);
     }
 
-    .share-label {
-      font-size: 0.76rem;
-      color: var(--ink-soft);
-      font-weight: 500;
-      margin-right: 4px;
-    }
+    .share-label { font-size: 0.76rem; color: var(--ink-soft); font-weight: 500; margin-right: 4px; }
 
-    /* ---- ARTICLE LIST VIEW (home articles below hero) ---- */
+    /* ARTICLE STRIP */
     .article-strip {
       display: flex;
       gap: 12px;
@@ -894,7 +898,6 @@
     }
 
     .article-strip:last-child { border-bottom: none; }
-
     .article-strip:hover .article-strip-title { color: var(--accent); }
 
     .article-strip-num {
@@ -929,17 +932,9 @@
       transition: color 0.15s;
     }
 
-    .article-strip-meta {
-      font-size: 0.72rem;
-      color: var(--ink-soft);
-    }
+    .article-strip-meta { font-size: 0.72rem; color: var(--ink-soft); }
 
-    /* ---- DIVIDER ---- */
-    .divider {
-      height: 1px;
-      background: var(--rule);
-      margin: 28px 0;
-    }
+    .divider { height: 1px; background: var(--rule); margin: 28px 0; }
 
     .section-title-bar {
       display: flex;
@@ -966,7 +961,6 @@
     .section-title-bar.on-dark h2 { color: #fff; }
     .section-title-bar.on-dark::after { background: var(--night-rule); }
 
-    /* ---- NIGHT PANEL (dark bg panel) ---- */
     .night-panel {
       background: var(--night-mid);
       border-radius: var(--radius-lg);
@@ -977,9 +971,7 @@
     .night-panel .section-header h2 { color: #fff; }
     .night-panel .section-header { border-color: var(--night-rule); }
 
-    /* ============================================================
-       TECH SECTION CARDS
-    ============================================================ */
+    /* TECH HERO CARD */
     .tech-hero-card {
       background: var(--night);
       border-radius: var(--radius-lg);
@@ -1038,43 +1030,14 @@
       opacity: 0.85;
     }
 
-    /* ============================================================
-       FEED SOURCE ROW
-    ============================================================ */
-    .feed-sources-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .feed-source-pill {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 99px;
-      border: 1px solid var(--rule);
-      color: var(--ink-soft);
-      background: #fff;
-    }
-
-    .feed-source-pill.active {
-      background: var(--ink);
-      color: #fff;
-      border-color: var(--ink);
-    }
-
-    /* ============================================================
-       MULTI-FEED TABS (for sections that combine feeds)
-    ============================================================ */
+    /* FEED TABS */
     .feed-tabs {
       display: flex;
       gap: 6px;
       margin-bottom: 20px;
       border-bottom: 2px solid var(--rule);
       padding-bottom: 0;
+      overflow-x: auto; /* FIX: allow horizontal scroll on small screens */
     }
 
     .feed-tab {
@@ -1090,6 +1053,7 @@
       font-family: var(--body-font);
       transition: all 0.15s;
       margin-bottom: -2px;
+      white-space: nowrap;
     }
 
     .feed-tab:hover { color: var(--ink); background: var(--paper-alt); }
@@ -1104,9 +1068,7 @@
     .feed-panel { display: none; }
     .feed-panel.active { display: block; }
 
-    /* ============================================================
-       VIDEO DESK
-    ============================================================ */
+    /* VIDEO DESK */
     .video-feature-grid {
       display: grid;
       grid-template-columns: 1fr 300px;
@@ -1140,27 +1102,12 @@
       overflow: hidden;
     }
 
-    .video-thumb-item iframe {
-      width: 100%;
-      height: 170px;
-      border: 0;
-      display: block;
-    }
+    .video-thumb-item iframe { width: 100%; height: 170px; border: 0; display: block; }
 
-    .video-thumb-caption {
-      padding: 10px 12px;
-      font-size: 0.8rem;
-      color: var(--ink-soft);
-    }
+    .video-thumb-caption { padding: 10px 12px; font-size: 0.8rem; color: var(--ink-soft); }
 
-    /* ============================================================
-       ABOUT SECTION
-    ============================================================ */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 
     .about-card {
       background: #fff;
@@ -1176,15 +1123,9 @@
       margin-bottom: 10px;
     }
 
-    .about-card p {
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-      line-height: 1.7;
-    }
+    .about-card p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.7; }
 
-    /* ============================================================
-       ADSENSE PLACEHOLDERS
-    ============================================================ */
+    /* ADSENSE */
     .adsense-slot {
       background: var(--paper-alt);
       border: 1px dashed var(--rule);
@@ -1202,9 +1143,7 @@
     .adsense-728 { height: 90px; width: 100%; margin: 20px 0; }
     .adsense-300 { height: 250px; width: 100%; margin: 16px 0; }
 
-    /* ============================================================
-       SPONSOR BOXES
-    ============================================================ */
+    /* SPONSOR BAR */
     .sponsor-bar {
       background: #fff;
       border: 1px solid var(--rule);
@@ -1231,39 +1170,17 @@
       color: var(--ink);
     }
 
-    .sponsor-bar p {
-      font-size: 0.84rem;
-      color: var(--ink-soft);
-      margin-bottom: 10px;
-      line-height: 1.55;
-    }
+    .sponsor-bar p { font-size: 0.84rem; color: var(--ink-soft); margin-bottom: 10px; line-height: 1.55; }
 
-    /* compare table */
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-      margin-top: 10px;
-    }
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 10px; }
 
     .compare-table th,
-    .compare-table td {
-      border: 1px solid var(--rule);
-      padding: 6px 10px;
-      text-align: left;
-    }
+    .compare-table td { border: 1px solid var(--rule); padding: 6px 10px; text-align: left; }
 
-    .compare-table th {
-      background: var(--paper-alt);
-      font-weight: 600;
-      color: var(--ink-mid);
-    }
-
+    .compare-table th { background: var(--paper-alt); font-weight: 600; color: var(--ink-mid); }
     .compare-table td:first-child { color: var(--ink-soft); font-size: 0.76rem; }
 
-    /* ============================================================
-       FOOTER
-    ============================================================ */
+    /* FOOTER */
     footer {
       background: var(--night);
       color: #6b7490;
@@ -1271,10 +1188,7 @@
       margin-top: 40px;
     }
 
-    .footer-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-    }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; }
 
     .footer-top {
       display: grid;
@@ -1285,17 +1199,8 @@
       margin-bottom: 20px;
     }
 
-    .footer-brand .logo-name {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .footer-brand p {
-      font-size: 0.83rem;
-      line-height: 1.65;
-      max-width: 260px;
-    }
+    .footer-brand .logo-name { font-size: 1.3rem; margin-bottom: 8px; display: block; }
+    .footer-brand p { font-size: 0.83rem; line-height: 1.65; max-width: 260px; }
 
     .footer-col h4 {
       font-size: 0.65rem;
@@ -1355,6 +1260,8 @@
       .feed-row { grid-template-columns: 1fr; }
       .video-feature-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
+      /* FIX: ensure hero padding correct on mobile */
+      .hero-main { padding: 28px 24px; }
     }
 
     /* ============================================================
@@ -1369,9 +1276,7 @@
 </head>
 <body>
 
-  <!-- ============================================================
-       TICKER
-  ============================================================ -->
+  <!-- TICKER -->
   <div class="ticker-bar">
     <div class="ticker-label">Live</div>
     <div style="overflow:hidden; flex:1; display:flex;">
@@ -1382,6 +1287,8 @@
         <span class="ticker-item"><span>GLOBAL</span> G7 finance ministers meet to discuss AI governance framework</span>
         <span class="ticker-item"><span>AI & TECH</span> OpenAI, Google and Anthropic release joint safety benchmarks</span>
         <span class="ticker-item"><span>BUSINESS</span> Inflation eases in eurozone; ECB signals rate path discussion</span>
+        <span class="ticker-item"><span>SEO</span> AI-powered search now drives over 30% of zero-click queries — AEO strategy now critical</span>
+        <span class="ticker-item"><span>TRADE</span> New tariff packages spark strategic shifts across U.S. small business supply chains</span>
         <span class="ticker-item"><span>AI & TECH</span> Tesla Optimus robot entering mass production trials — factory deployment expected 2026</span>
         <span class="ticker-item"><span>MARKETS</span> S&amp;P 500 holds near record highs despite rate uncertainty</span>
         <span class="ticker-item"><span>ECONOMY</span> Small business optimism index edges higher for third consecutive month</span>
@@ -1392,9 +1299,7 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       MASTHEAD
-  ============================================================ -->
+  <!-- MASTHEAD -->
   <header class="masthead">
     <div class="masthead-inner">
       <div class="logo" onclick="showSection('home'); return false;" style="cursor:pointer;">
@@ -1416,16 +1321,13 @@
     </div>
   </header>
 
-  <!-- ============================================================
-       PAGE CONTENT
-  ============================================================ -->
   <div id="page-root">
 
   <!-- ====== HOME SECTION ====== -->
   <section id="home" class="section active">
     <div class="page-wrap">
 
-      <!-- HERO — controlled by HERO_CONFIG in script -->
+      <!-- HERO -->
       <div class="hero-block" id="hero-block">
         <div class="hero-main" id="hero-main">
           <div class="hero-eyebrow" id="hero-eyebrow">Special Report</div>
@@ -1438,7 +1340,6 @@
         </div>
         <aside class="hero-sidebar" id="hero-sidebar">
           <div class="hero-sidebar-label">More Top Stories</div>
-          <!-- filled by JS -->
         </aside>
       </div>
 
@@ -1456,28 +1357,23 @@
 
       <div class="home-grid">
         <div class="home-grid-main" id="home-cards-grid">
-          <!-- populated by JS from ARTICLES array -->
+          <!-- populated by JS -->
         </div>
         <aside class="sidebar" id="home-sidebar">
-          <!-- Sponsor widget -->
           <div class="sponsor-card">
-            <div class="sponsor-card-label">Sponsored · SearchConverts.com</div>
-            <h3>AI-Optimized Marketing That Actually Converts</h3>
-            <p>Custom AIO+SEO growth plans built for entrepreneurs who care about margin, not vanity metrics.</p>
-            <a href="https://www.searchconverts.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="color:var(--ink); display:inline-flex;">
-              Visit SearchConverts.com →
+            <div class="sponsor-card-label">Sponsored · Eye To Ad Media</div>
+            <h3>Denver's Top AIO + SEO Agency</h3>
+            <p>AI-optimized search strategies that get your business found on Google and AI platforms like ChatGPT and Perplexity.</p>
+            <a href="https://www.eyetoad.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="color:var(--ink); display:inline-flex;">
+              Visit Eye To Ad Media →
             </a>
           </div>
 
-          <!-- Most read widget -->
           <div class="sidebar-widget">
             <div class="widget-header">Most Read</div>
-            <div class="widget-body" id="most-read-list">
-              <!-- filled by JS -->
-            </div>
+            <div class="widget-body" id="most-read-list"></div>
           </div>
 
-          <!-- AdSense 300x250 -->
           <div class="adsense-300">
             <ins class="adsbygoogle"
                  style="display:block;width:300px;height:250px"
@@ -1486,11 +1382,10 @@
             Advertisement
           </div>
 
-          <!-- Sponsor 2 -->
           <div class="sponsor-bar">
             <div class="sponsor-bar-tag">Sponsored · AgingSafelyBaths.com</div>
             <h3>Walk-In Tubs &amp; ADA Showers Nationwide</h3>
-            <p>Safety-focused hydrotherapy tubs for homes and care environments — DIY or professional installation.</p>
+            <p>Safety-focused hydrotherapy tubs and barrier-free shower solutions — professional installation nationwide.</p>
             <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="display:inline-flex;">
               Explore Aging Safely Baths →
             </a>
@@ -1498,7 +1393,7 @@
         </aside>
       </div>
 
-      <!-- ---- FULL ARTICLE VIEW (hidden until clicked) ---- -->
+      <!-- ARTICLE FULL VIEW -->
       <div id="article-view" class="article-view">
         <div class="article-body-wrap">
           <button class="article-back" onclick="closeArticle()">← Back to Top Stories</button>
@@ -1536,7 +1431,7 @@
         </aside>
       </div>
 
-      <!-- ---- LIVE FEEDS (home page) ---- -->
+      <!-- LIVE FEEDS -->
       <div class="divider"></div>
       <div class="section-title-bar mb20"><h2>External Headlines</h2></div>
 
@@ -1544,6 +1439,7 @@
         <button class="feed-tab active" onclick="switchFeedTab('home', 'business-home', this)">Business</button>
         <button class="feed-tab" onclick="switchFeedTab('home', 'tech-home', this)">AI &amp; Tech</button>
         <button class="feed-tab" onclick="switchFeedTab('home', 'world-home', this)">World</button>
+        <button class="feed-tab" onclick="switchFeedTab('home', 'smallbiz-home', this)">Small Business</button>
         <button class="feed-tab" onclick="switchFeedTab('home', 'alt-home', this)">Alternative</button>
       </div>
 
@@ -1560,11 +1456,14 @@
       <div id="world-home" class="feed-panel">
         <div class="feed-grid-big" id="feed-world-home"></div>
       </div>
+      <div id="smallbiz-home" class="feed-panel">
+        <div class="feed-grid-big" id="feed-smallbiz-home"></div>
+      </div>
       <div id="alt-home" class="feed-panel">
         <div class="feed-grid-big" id="feed-alt-home"></div>
       </div>
 
-      <!-- Latest video briefings -->
+      <!-- VIDEO BRIEFINGS -->
       <div class="divider"></div>
       <div class="section-title-bar mb20"><h2>Video Briefings</h2></div>
       <div class="video-feature-grid">
@@ -1582,7 +1481,6 @@
               allowfullscreen loading="lazy"></iframe>
             <div class="video-thumb-caption">Commentary on AI disruption and small business adaptation.</div>
           </div>
-          <!-- ADD MORE VIDEO CLIPS: duplicate .video-thumb-item above and change the YouTube embed ID -->
         </div>
       </div>
 
@@ -1597,7 +1495,6 @@
         <span class="section-header-sub">Inflation · small business · global markets · strategy</span>
       </div>
 
-      <!-- Tech hero card for main business story -->
       <div class="tech-hero-card mb28">
         <div class="tech-hero-body">
           <div class="tech-hero-tag">Feature Analysis</div>
@@ -1610,14 +1507,13 @@
         </div>
       </div>
 
-      <!-- AdSense -->
       <div class="adsense-728">Advertisement</div>
 
-      <!-- Feed tabs -->
       <div class="section-title-bar mb20"><h2>Live Business Headlines</h2></div>
       <div class="feed-tabs">
         <button class="feed-tab active" onclick="switchFeedTab('biz', 'biz-mw', this)">MarketWatch</button>
         <button class="feed-tab" onclick="switchFeedTab('biz', 'biz-reuters', this)">Reuters Business</button>
+        <button class="feed-tab" onclick="switchFeedTab('biz', 'biz-inc', this)">Inc. Magazine</button>
         <button class="feed-tab" onclick="switchFeedTab('biz', 'biz-ft', this)">Bloomberg / Finance</button>
       </div>
       <div id="biz-mw" class="feed-panel active">
@@ -1626,12 +1522,14 @@
       <div id="biz-reuters" class="feed-panel">
         <div class="feed-grid-big" id="feed-biz-reuters"></div>
       </div>
+      <div id="biz-inc" class="feed-panel">
+        <div class="feed-grid-big" id="feed-biz-inc"></div>
+      </div>
       <div id="biz-ft" class="feed-panel">
         <div class="feed-grid-big" id="feed-biz-ft"></div>
       </div>
 
       <div class="divider"></div>
-      <!-- Sponsor -->
       <div class="sponsor-bar">
         <div class="sponsor-bar-tag">Sponsored · SearchConverts.com</div>
         <h3>Search Converts vs. Typical Agency — A Different Kind of Marketing Partner</h3>
@@ -1718,12 +1616,11 @@
         <span class="section-header-sub">Automation · robotics · software · the future of work</span>
       </div>
 
-      <!-- Tech feature hero for Optimus -->
       <div class="tech-hero-card mb28">
         <div class="tech-hero-body">
           <div class="tech-hero-tag">Deep Dive · AI &amp; Robotics</div>
           <div class="tech-hero-title">Tesla Optimus:<br>The Robot That Could Rewrite Work</div>
-          <div class="tech-hero-lede">With mass production on the horizon, Tesla's humanoid robot is poised to transform manufacturing, logistics — and the economics of human labor. What does it mean for businesses and workers?</div>
+          <div class="tech-hero-lede">With mass production on the horizon, Tesla's humanoid robot is poised to transform manufacturing, logistics — and the economics of human labor.</div>
           <button class="btn btn-primary" onclick="openArticle('tesla-optimus')">Read the Full Story</button>
         </div>
         <div class="tech-hero-img">
@@ -1759,10 +1656,10 @@
 
       <div class="divider"></div>
       <div class="sponsor-bar">
-        <div class="sponsor-bar-tag">Sponsored · SearchConverts.com</div>
-        <h3>Need an AI-Powered Technical Partner?</h3>
-        <p>Use automation and AI to create landing pages, content systems and SEO assets that keep working long after launch.</p>
-        <a href="https://www.searchconverts.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Talk with Search Converts →</a>
+        <div class="sponsor-bar-tag">Sponsored · Eye To Ad Media</div>
+        <h3>AI-Powered SEO &amp; Generative Engine Optimization — Get Found on ChatGPT, Google &amp; Beyond</h3>
+        <p>Eye To Ad Media builds AIO and GEO strategies that put Denver businesses inside the answers AI tools give to searchers. The future of search is already here.</p>
+        <a href="https://www.eyetoad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Your Free AIO Audit →</a>
       </div>
     </div>
   </section>
@@ -1774,13 +1671,10 @@
         <h2>Video Desk</h2>
         <span class="section-header-sub">Short briefings · interviews · commentary</span>
       </div>
-      <p class="text-muted text-sm mb28">To update videos, swap the YouTube embed IDs below. No extra scripts required.</p>
-
       <div class="video-feature-grid">
         <div>
           <div class="label mb20" style="display:inline-block;">Featured Video</div>
           <div class="video-embed-wrap">
-            <!--  ✏️ CHANGE FEATURED VIDEO: replace the YouTube ID in src below -->
             <iframe src="https://www.youtube.com/embed/GVrdcmqXJDs"
               title="Featured video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -1788,17 +1682,13 @@
           </div>
         </div>
         <div class="video-sidebar">
-          <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;">Latest Clips &amp; Shorts</div>
-          <!-- ✏️ ADD/CHANGE CLIPS: duplicate .video-thumb-item and swap the YouTube ID -->
+          <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:10px;">Latest Clips</div>
           <div class="video-thumb-item">
             <iframe src="https://www.youtube.com/embed/Q0Ew1Z2K9D8"
               title="Short clip 1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen loading="lazy"></iframe>
-            <div class="video-thumb-caption">Replace with your own description and YouTube link.</div>
-          </div>
-          <div class="video-thumb-item" style="background:var(--paper-alt); border:1px dashed var(--rule); border-radius:var(--radius); padding:16px; font-size:0.8rem; color:var(--ink-soft);">
-            Duplicate a <code>.video-thumb-item</code> block above to add more clips here.
+            <div class="video-thumb-caption">Commentary on AI disruption and small business adaptation.</div>
           </div>
         </div>
       </div>
@@ -1824,8 +1714,10 @@
         <div class="about-card">
           <h3>Partner Destinations</h3>
           <p>
+            <a href="https://www.eyetoad.com" target="_blank" rel="noopener">EyeToAd.com</a> — Denver AIO-SEO &amp; GEO Marketing Agency<br><br>
             <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a> — AIO-SEO Marketing Experts<br><br>
             <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com</a> — Walk-In Tubs &amp; ADA Showers<br><br>
+            <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com</a> — ADA Barrier-Free Shower Kits<br><br>
             <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">RusticBarnwoodFurniture.com</a> — Handcrafted Reclaimed Wood Furniture
           </p>
         </div>
@@ -1839,9 +1731,7 @@
 
   </div><!-- /page-root -->
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-top">
@@ -1860,8 +1750,10 @@
         </div>
         <div class="footer-col">
           <h4>Partners</h4>
+          <a href="https://www.eyetoad.com" target="_blank" rel="noopener">Eye To Ad Media</a>
           <a href="https://www.searchconverts.com" target="_blank" rel="noopener">SearchConverts.com</a>
           <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">AgingSafelyBaths.com</a>
+          <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com</a>
           <a href="https://www.rusticbarnwoodfurniture.com" target="_blank" rel="noopener">RusticBarnwoodFurniture.com</a>
         </div>
         <div class="footer-col">
@@ -1874,33 +1766,363 @@
       </div>
       <div class="footer-bottom">
         <div>© <span id="year"></span> ActionGlobalNews.com. All rights reserved.</div>
-        <div>Powered by <a href="https://www.searchconverts.com" target="_blank" rel="noopener" style="font-weight:600; color:#fff;">Search Converts – AIO-SEO Marketing Experts</a></div>
+        <div>Powered by <a href="https://www.eyetoad.com" target="_blank" rel="noopener" style="font-weight:600; color:#fff;">Eye To Ad Media – Denver SEO &amp; AIO Agency</a></div>
       </div>
     </div>
   </footer>
 
 <script>
 /* ================================================================
-   ✏️ ARTICLE DATABASE
-   To add a new article:
-   1. Copy any existing object in the ARTICLES array below
-   2. Give it a unique `id`
-   3. Fill in all fields
-   4. Set `hero: true` on the one you want featured in the hero
-   5. Set `heroSidebar: true` on 2-3 others to show in hero sidebar
-   ================================================================ */
+   ARTICLE DATABASE
+================================================================ */
 
 const ARTICLES = [
 
-  /* ---- HERO ARTICLE (hero: true) ---- */
+  /* ---- HERO: Eye To Ad Media / AIO / GEO ---- */
+  {
+    id: 'eyetoad-aio-geo',
+    hero: true,
+    heroSidebar: false,
+    category: 'Marketing & AI Search',
+    label: 'label-blue',
+    title: 'Why Denver Businesses Are Losing Customers to AI Search — and What Eye To Ad Media Is Doing About It',
+    lede: 'A new breed of search is here. AIO and Generative Engine Optimization are not optional add-ons — they are the foundation of sustainable customer acquisition in 2025 and beyond. Eye To Ad Media is leading this shift in Denver.',
+    author: 'Zach Wennstedt, Eye To Ad Media',
+    date: 'March 2026',
+    readTime: '10–12 min read',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    excerpt: 'AIO and Generative Engine Optimization are rewriting how customers find businesses. One Denver agency is leading the charge.',
+    content: `
+      <p>Something has changed. If you own a business in Denver — or anywhere in the country — and you rely on search engines to bring you new customers, there is a quiet disruption happening that most business owners haven't caught up with yet. And the gap between those who adapt now and those who wait is widening every single month.</p>
+
+      <p>The disruption is called <strong>AI-powered search</strong>, and it is fundamentally altering the way people find products, services and businesses. Understanding it — and responding to it strategically — is no longer optional. It is the difference between growing your customer base and slowly becoming invisible online.</p>
+
+      <h2>What Is AIO? And Why Does It Matter for Your Business?</h2>
+
+      <p><strong>AIO stands for AI Optimization</strong> — the process of structuring your website, content and online presence so that artificial intelligence systems can read, understand and recommend your business to searchers. If traditional SEO was about optimizing for Google's algorithm, AIO is about optimizing for the AI models that are increasingly sitting between your customer and your website.</p>
+
+      <p>Consider what happens when someone opens ChatGPT and types: "What's the best HVAC company in Denver for emergency service?" Or when a homeowner in Littleton asks their AI assistant to recommend a local contractor for a bathroom remodel. Or when a senior citizen's adult child searches for walk-in tub companies near them using AI search.</p>
+
+      <p>In each of these scenarios, the person asking never opened a traditional search results page. They got an answer directly from an AI system — and that answer either included your business or it didn't. If it didn't, you lost that customer before they ever found you.</p>
+
+      <div class="callout">
+        <strong>The Shift Is Already Happening:</strong> Industry data now shows that AI-assisted queries — on platforms like ChatGPT, Google's AI Overviews, Perplexity, Microsoft Copilot, and others — are growing at a rate that traditional SEO alone cannot address. Businesses that only focus on ranking on page one of Google are missing a rapidly expanding channel.
+      </div>
+
+      <h2>What Is GEO — Generative Engine Optimization?</h2>
+
+      <p><strong>GEO, or Generative Engine Optimization</strong>, is the discipline of making your business, brand and content appear inside the answers that AI systems generate for users. It is distinct from traditional SEO in an important way: search engine optimization focuses on ranking pages in a list. Generative engine optimization focuses on becoming part of the answer itself.</p>
+
+      <p>When Google generates an "AI Overview" above the traditional search results, or when ChatGPT recommends a local service provider, those recommendations are not random. They are based on how well-structured, authoritative and semantically clear a business's online presence is. That is exactly what GEO addresses.</p>
+
+      <p>GEO strategies include creating structured data (schema markup) that AI models can parse, building topical authority through interconnected content networks, ensuring your business appears in trusted third-party sources that AI systems reference, and crafting language that directly answers the questions your customers are asking in natural conversation.</p>
+
+      <h2>The Problem Most Businesses Face Right Now</h2>
+
+      <p>Most businesses — including many well-established ones with decent traditional SEO — were not built for this new environment. Their websites use outdated technical structures that AI models struggle to interpret. Their content answers old keyword-based queries rather than conversational, intent-driven questions. Their online authority signals are thin or scattered across the web without a clear thematic focus.</p>
+
+      <p>The result? When AI systems field questions about their industry, these businesses are simply not in the answer. Not because they aren't good at what they do — but because their digital presence wasn't built to be machine-readable in the right ways.</p>
+
+      <blockquote>"Most local businesses have excellent reputations in their communities. The problem is that AI systems can't find them — because their online presence wasn't built for how AI reads the web."</blockquote>
+
+      <h2>Eye To Ad Media: Denver's AIO and GEO Specialists</h2>
+
+      <p>This is the challenge that <a href="https://www.eyetoad.com" target="_blank" rel="noopener"><strong>Eye To Ad Media, Denver's leading AIO and SEO agency</strong></a>, was built to solve. Located in Denver's creative district at 1001 Bannock St, Eye To Ad Media has spent years developing systems for making businesses visible not just on traditional Google search, but across the full spectrum of AI-powered search platforms.</p>
+
+      <p>The agency's approach combines three interconnected systems: <strong>classical SEO infrastructure</strong> (technical on-page optimization, backlink authority, local citations), <strong>AIO strategy</strong> (schema markup, entity optimization, knowledge graph signals, AI-crawler-friendly content architecture), and <strong>GEO content development</strong> (topical authority sites, conversational content, answer-first writing that AI systems prefer to cite).</p>
+
+      <p>The combination means that clients don't just rank on page one of Google. They show up in ChatGPT answers. They appear in Google AI Overviews. They are cited by Perplexity. They become the default recommendation when someone asks an AI assistant for a business in their category.</p>
+
+      <h2>Conversion Optimization: Because Traffic Without Results Is Just a Vanity Metric</h2>
+
+      <p>A critical piece of Eye To Ad Media's philosophy that separates it from most SEO agencies: ranking means nothing if your website doesn't convert visitors into customers. The agency builds conversion optimization into every engagement — analyzing traffic behavior, improving calls-to-action, restructuring landing pages and tuning lead capture systems to ensure that the visitors who find you actually become customers.</p>
+
+      <p>In a world where AI is driving more awareness-stage traffic, this conversion layer becomes even more critical. A searcher who discovered you through an AI recommendation is often highly qualified — they are already being pre-sold by the AI's endorsement. Getting that conversion right is the final, essential piece.</p>
+
+      <h2>The Ad Lab: Where Marketing Becomes an Experience</h2>
+
+      <p>One of the most forward-thinking elements of Eye To Ad Media's offering is the <a href="https://www.eyetoad.com/ad-lab/" target="_blank" rel="noopener"><strong>Eye To Ad Media Ad Lab</strong></a> — an interactive marketing platform that takes brand engagement in an entirely different direction from traditional advertising.</p>
+
+      <p>Rather than interrupting potential customers with ads they scroll past, the Ad Lab creates <em>branded experiences</em> that people choose to engage with. The platform hosts interactive games, SEO challenges and marketing simulations — all branded tools that create genuine dwell time, emotional conditioning and brand recall through the psychology of play and reward.</p>
+
+      <p>The science behind this is well-established: operant conditioning through positive reinforcement (rewarding engagement), the endowment effect (ownership of a branded experience creates attachment), and the mere exposure effect (repeated positive interaction with a brand increases preference). The Ad Lab applies all of these mechanisms through entertaining, shareable branded content — a form of engagement that builds loyalty and recall that no banner ad can match.</p>
+
+      <p>It's also a remarkable SEO signal: users who spend extended time on a site engaging with interactive content send strong quality signals to both traditional search algorithms and the AI systems that are increasingly factoring engagement into their authority assessments.</p>
+
+      <h2>Why AI Search Is the Future — Not an Option</h2>
+
+      <p>The trajectory of AI search is not speculative. Google has already integrated AI Overviews into billions of searches. Microsoft's Bing now surfaces AI-generated answers for commercial queries. ChatGPT's search mode is growing. Perplexity is becoming a default research tool for tech-forward consumers. Apple Intelligence is integrating AI responses into iOS searches.</p>
+
+      <p>The fundamental truth is this: <strong>AI systems will increasingly be the first interface between your potential customer and the wider web.</strong> If your business isn't built to be visible and credible to those systems, you are handing market share to competitors who are.</p>
+
+      <p>For Denver businesses — local contractors, healthcare providers, legal firms, service companies, e-commerce brands — the window to establish AI-era authority is open right now. The businesses building that authority today will be the ones that AI recommends to customers for years to come. The ones who wait will be playing catch-up in an increasingly expensive and competitive environment.</p>
+
+      <h2>What This Means for Your Business Right Now</h2>
+
+      <p>The practical implication is straightforward. You need a digital strategy that addresses three layers simultaneously: your traditional search presence, your AI search visibility, and your ability to convert the visitors that both channels deliver. Most businesses are only addressing the first, partially.</p>
+
+      <p>The good news: building AIO and GEO authority is not a total rebuild of your online presence. For most businesses, it is a strategic layer added on top of what exists — structured content, schema, entity signals, topical networks and targeted conversion optimization. The right partner can execute this efficiently and with clear ROI focus.</p>
+
+      <div class="cta-box">
+        <h3>Ready to Be Found on AI Search?</h3>
+        <p>Eye To Ad Media offers a complimentary AIO audit for qualifying Denver businesses. Find out where you currently stand in AI-powered search, and what it would take to dominate your category — on Google, ChatGPT, Perplexity and beyond.</p>
+        <a href="https://www.eyetoad.com" target="_blank" rel="noopener" class="btn btn-primary">Get Your Free AIO Audit at EyeToAd.com →</a>
+        <p style="margin-top:12px; font-size:0.85rem;">Or call us directly: <strong><a href="tel:18004818638" style="color:#8b9bc4;">1-800-481-8638</a></strong></p>
+      </div>
+    `
+  },
+
+  /* ---- AI AGENTS ARTICLE ---- */
+  {
+    id: 'ai-agents-small-business',
+    hero: false,
+    heroSidebar: true,
+    category: 'AI & Small Business',
+    label: 'label-teal',
+    title: 'AI Agents Are the Great Equalizer: How Small Businesses Can Now Compete With Corporations',
+    lede: 'The age of the AI agent is here — and it is flipping the competitive landscape. For the first time, a 5-person business can deploy the same operational firepower as a company 100 times its size.',
+    author: 'Action Global News — Technology Desk',
+    date: 'March 2026',
+    readTime: '8–10 min read',
+    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
+    excerpt: 'AI agents are enabling small businesses to delegate, automate and scale — without adding headcount.',
+    content: `
+      <p>For most of business history, scale was everything. Large corporations could afford the research teams, the customer service departments, the marketing analysts, the legal reviewers and the operations managers that small businesses could only dream about. Size created advantages that compounded over time — and the gap between a 5-person company and a Fortune 500 was not just financial. It was operational.</p>
+
+      <p>AI agents are changing that equation in a profound way. And business owners who understand what is happening right now — and act on it — have an opportunity to build competitive advantages that would have been structurally impossible just three years ago.</p>
+
+      <h2>What Is an AI Agent, Exactly?</h2>
+
+      <p>An AI agent is more than a chatbot or a text generator. It is an autonomous software system that can pursue a multi-step goal by planning, taking actions, using tools and adapting to results — all without constant human direction. Where a basic AI tool waits for your input and generates a single output, an agent can take a goal, break it into tasks, execute those tasks in sequence, check the results and iterate toward the objective.</p>
+
+      <p>Think of it this way: asking a basic AI to "write me an email" is using a tool. Tasking an AI agent to "research our three top competitors, identify gaps in their customer service response times, and draft a campaign positioning our faster response as a differentiator" is deploying an agent. The agent will conduct the research, synthesize findings, identify the angle and produce the draft — independently.</p>
+
+      <div class="callout">
+        <strong>Key distinction:</strong> AI tools respond to prompts. AI agents pursue goals. That difference — from reactive to proactive — is what makes agents genuinely transformative for small business operations.
+      </div>
+
+      <h2>The Scale Problem AI Agents Solve</h2>
+
+      <p>The fundamental challenge of running a small business is not usually strategy — it is bandwidth. The owner who understands exactly what needs to be done often cannot do it all, cannot afford to hire everyone needed to do it, and cannot find the time to delegate and train effectively.</p>
+
+      <p>AI agents address this by functioning as highly capable, tireless, low-cost team members who can be deployed across an extraordinary range of business functions:</p>
+
+      <ul>
+        <li><strong>Customer service agents</strong> that handle inquiries, troubleshoot issues, process requests and escalate complex situations — 24 hours a day, without overtime pay</li>
+        <li><strong>Research agents</strong> that monitor competitors, track industry news, analyze market trends and summarize findings in executive-ready briefings</li>
+        <li><strong>Content creation agents</strong> that research topics, draft articles, optimize for search and publish to content management systems on a defined schedule</li>
+        <li><strong>Lead qualification agents</strong> that engage incoming leads via chat or email, ask qualifying questions, score the lead and route it to the right person at the right time</li>
+        <li><strong>Operations agents</strong> that manage scheduling, coordinate vendors, track project milestones and flag exceptions that need human attention</li>
+        <li><strong>Finance monitoring agents</strong> that review transactions, flag anomalies, categorize expenses and prepare summary reports for accounting review</li>
+      </ul>
+
+      <h2>Delegation at Machine Speed</h2>
+
+      <p>The deepest economic value of AI agents is not just that they can do tasks — it is that they can do tasks in parallel, at a speed no human team can match, without the friction of delegation. When you ask a skilled employee to complete a research project, you need to brief them, answer clarifying questions, wait for the output, review it, request revisions and integrate the result into your decision-making process. Days pass.</p>
+
+      <p>An agent receives the task, executes it, returns a structured result — and you move on. For a business owner whose most constrained resource is time, this is not an incremental improvement. It is a structural change in how much can get done per hour of owner attention.</p>
+
+      <blockquote>"What would have taken a team of three people a week to produce, the agent returned in forty minutes. That is not just efficiency — it is a completely different operating model."</blockquote>
+
+      <h2>The Competitive Moat: Moving Before the Competition</h2>
+
+      <p>The opportunity for small businesses right now is time-sensitive. Early adopters of AI agents are building operational capabilities and institutional knowledge of how to deploy these tools effectively. They are also accumulating the data, workflows and refined processes that make each subsequent deployment more valuable.</p>
+
+      <p>A small construction firm that deploys a customer communication agent today is not just saving time on customer service — it is building a customer interaction database, refining response quality through feedback loops and freeing owner capacity for the relationship-building and sales work that drives growth. That is a compounding advantage over competitors who are still manually answering every email.</p>
+
+      <h2>Where to Start: The High-Leverage Deployments</h2>
+
+      <p>For most small business owners, the highest-leverage first deployments are in areas where the cost of inaction is visible and the task is well-defined:</p>
+
+      <ul>
+        <li><strong>After-hours lead response.</strong> Studies consistently show that responding to a lead within five minutes dramatically increases conversion rates. An agent can engage every incoming lead immediately — qualifying, nurturing and scheduling — regardless of what time they submit their information.</li>
+        <li><strong>Content and SEO production.</strong> Regular, high-quality content remains one of the most effective long-term customer acquisition tools. An agent-driven content system can research, write, optimize and stage content at a cadence that would require multiple full-time writers without AI.</li>
+        <li><strong>Review and reputation management.</strong> An agent can monitor reviews across platforms, draft response suggestions and flag negative reviews for immediate human attention — turning reputation management from a neglected chore into a systematic process.</li>
+        <li><strong>Competitive intelligence.</strong> Understanding what competitors are doing, pricing, promoting and changing is valuable intelligence that most small businesses simply don't have time to gather. An agent does this continuously.</li>
+      </ul>
+
+      <h2>The Human Layer: What AI Agents Cannot Replace</h2>
+
+      <p>It is worth being clear about what agents do not change. The relationship-driven elements of small business — the handshake, the trust built over years with a loyal customer, the judgment call that requires deep contextual understanding, the creative vision that differentiates a business in its market — these remain distinctly human advantages.</p>
+
+      <p>The businesses that will win in the AI-agent era are not the ones that replace human judgment with automation. They are the ones that use automation to remove every low-value task from human attention, so that the humans in the business can focus exclusively on the things that genuinely require human presence.</p>
+
+      <p>That is the real competitive advantage: not just having AI agents, but deploying them so skillfully that your team's human capacity is focused on the highest-value, highest-impact activities your business is capable of.</p>
+
+      <h2>The Bottom Line for Small Business Owners</h2>
+
+      <p>AI agents are not a future technology. They are available now, at a cost point accessible to small businesses, and the gap in operational capability between businesses that use them and businesses that don't is already measurable and growing. The question is not whether to adopt — it is how quickly and how strategically to do so.</p>
+
+      <p>The businesses that move deliberately and thoughtfully now will find that AI agents don't just save time. They fundamentally expand what is possible for a small team — making the impossible workload manageable, the unaffordable hire unnecessary, and the scale that once required a much larger company achievable with a lean, agile, AI-assisted operation.</p>
+    `
+  },
+
+  /* ---- HOUSING AFFORDABILITY CRISIS (wildcard article) ---- */
+  {
+    id: 'housing-affordability-crisis-2026',
+    hero: false,
+    heroSidebar: true,
+    category: 'Housing & Economy',
+    label: 'label-gold',
+    title: 'The Housing Affordability Crisis Is Not a Bubble — It\'s a Structural Failure. Here\'s What\'s Actually Driving It.',
+    lede: 'Home prices remain stubbornly high even as mortgage rates have eased. Rents in major metros are at historic peaks. The American dream of homeownership is slipping further from reach for millions. Understanding the real causes — and what could actually fix them — is more important than ever.',
+    author: 'Action Global News — Economy Desk',
+    date: 'March 2026',
+    readTime: '8–10 min read',
+    image: 'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=800',
+    excerpt: 'Home prices and rents remain at historic highs. The causes are structural — and the fixes are harder than any politician wants to admit.',
+    content: `
+      <p>Every few years, someone confidently predicts that the American housing market is about to correct sharply — that prices will fall, affordability will return, and first-time buyers who have been priced out for years will finally get their window. That correction keeps not arriving. And the longer it doesn't arrive, the more important it becomes to understand why the housing affordability crisis is not a cyclical bubble waiting to pop, but a structural problem built from decades of compounding policy failures, supply constraints and demographic pressure.</p>
+
+      <p>Understanding what is actually driving the crisis — rather than the simplified narratives that dominate political debate — is the first step toward realistic expectations about the housing market and realistic solutions to one of the most consequential economic problems facing American families.</p>
+
+      <h2>The Numbers Are Genuinely Alarming</h2>
+
+      <p>The scale of the affordability crisis is not a matter of political interpretation. By virtually every objective measure, housing has become dramatically less affordable over the past two decades — and the deterioration accelerated sharply through the 2020s.</p>
+
+      <p>The standard affordability benchmark used by most housing economists is that households should spend no more than 30% of gross income on housing costs. By 2025, the median American renter was spending approximately <strong>42% of gross income on rent</strong>. For lower-income renters, the figure is often above 50%. These are not statistics at the margins — they describe the lived reality of tens of millions of households.</p>
+
+      <p>For would-be homeowners, the picture is equally stark. The median home price in the United States has roughly doubled since 2019 in inflation-adjusted terms. The combination of elevated prices and higher mortgage rates means that the monthly payment on a median-priced home — assuming a standard 20% down payment — now requires an income approximately <strong>80% higher</strong> than it did in 2019 to remain within the traditional affordability threshold.</p>
+
+      <div class="callout">
+        <strong>The lock-in effect:</strong> Homeowners who refinanced at 2.5–3% mortgage rates between 2020 and 2022 are effectively trapped in their current homes. Selling means trading a historically low rate for a much higher one — dramatically reducing the incentive to move, which in turn removes a significant portion of the existing home supply from the market.
+      </div>
+
+      <h2>Supply: The Root Cause That Politics Avoids</h2>
+
+      <p>The most honest explanation for the housing affordability crisis is also the most uncomfortable for politicians of every ideological stripe: the United States has been dramatically under-building housing for roughly two decades, and the structural forces that prevent adequate supply from reaching the market are deeply embedded in local governance, zoning law and community opposition.</p>
+
+      <p>The National Association of Realtors estimated in 2024 that the U.S. has a structural housing deficit of approximately <strong>5.5 million units</strong> — the gap between the housing stock that exists and the housing stock that would be needed to meet demand at sustainable price levels. That deficit didn't appear overnight. It is the accumulated result of:</p>
+
+      <ul>
+        <li><strong>Restrictive zoning laws</strong> that prohibit multi-family housing in the vast majority of land in most American cities and suburbs, restricting new development to single-family homes on large lots — the least space-efficient form of housing</li>
+        <li><strong>Extended permitting timelines</strong> that add months or years and tens of thousands of dollars to every new housing unit, effectively functioning as a tax on supply</li>
+        <li><strong>NIMBY (Not In My Back Yard) opposition</strong> from existing homeowners who benefit financially from constrained supply and routinely use local planning processes to block new development</li>
+        <li><strong>Construction cost inflation</strong> driven by materials prices, labor shortages and increasingly complex building code requirements</li>
+        <li><strong>Underinvestment in workforce housing</strong> by both the private sector (where margins are thinner) and government (where political will is weakest)</li>
+      </ul>
+
+      <h2>Demand: The Demographics Are Not Going Away</h2>
+
+      <p>The supply problem exists against a backdrop of persistent, demographically driven demand that is not going to moderate on its own. The Millennial generation — the largest in American history — reached peak household formation age (late 20s to mid-30s) between roughly 2015 and 2025. The majority of Millennials want to own homes. The housing market was not prepared to absorb that demand surge, and the resulting competition for a constrained supply has driven prices in a way that rate increases alone cannot fully offset.</p>
+
+      <p>Generation Z is now entering the same life stage, representing a second wave of demand that is only beginning to show up in the data. The structural mismatch between demographics and supply is not a short-term phenomenon.</p>
+
+      <h2>What Remote Work Did to the Map</h2>
+
+      <p>The COVID-era remote work revolution permanently altered the geographic distribution of housing demand in ways that are still reverberating. When millions of knowledge workers were freed from proximity to major employment centers, they moved — to smaller cities, suburban areas, mountain towns, coastal communities that had previously been price-constrained by limited local employment.</p>
+
+      <p>The result was a dramatic demand shock in housing markets that lacked the supply infrastructure to absorb it. Cities like Boise, Austin, Nashville, Tampa, Phoenix and Raleigh saw home prices surge 50–80% between 2020 and 2023 — not because of speculation, but because real buyers with real incomes from high-cost-of-living metros arrived in markets that had been balanced at much lower price levels.</p>
+
+      <p>That geographic redistribution of demand has proven more durable than many analysts predicted. Even as some companies have pushed for return-to-office, the percentage of Americans working remotely full-time or in hybrid arrangements remains dramatically higher than pre-pandemic — and the housing demand patterns it established are correspondingly persistent.</p>
+
+      <h2>What Could Actually Fix It</h2>
+
+      <p>The honest answer is that there is no quick fix. The housing deficit was built over two decades and will take at least a decade of sustained, aggressive supply-side action to meaningfully address. The policy interventions most likely to move the needle are also the most politically difficult:</p>
+
+      <ul>
+        <li><strong>Zoning reform at scale.</strong> Several states — including California, Montana, and Oregon — have passed legislation that restricts the ability of local governments to prohibit multi-family housing near transit and in high-demand areas. These reforms are politically contentious but represent the most direct available lever on supply.</li>
+        <li><strong>Permitting process modernization.</strong> Reducing the time and cost of moving from approved development to construction permits could meaningfully accelerate housing supply without requiring new public expenditure.</li>
+        <li><strong>Inclusionary zoning redesign.</strong> Many well-intentioned affordable housing mandates attached to new development approvals have the perverse effect of making market-rate development economically unviable at the margins, reducing total supply. More nuanced approaches that separate affordability subsidies from market-rate development economics can avoid this trap.</li>
+        <li><strong>Manufactured and modular housing expansion.</strong> Factory-built housing has historically carried a stigma that bore little relationship to its actual quality. Modern modular construction produces homes that are structurally equivalent to or superior to site-built alternatives at significantly lower cost and build time.</li>
+      </ul>
+
+      <h2>What It Means for American Families Right Now</h2>
+
+      <p>For families navigating housing decisions today — whether as first-time buyers, renters evaluating a move, or existing homeowners considering whether to sell — the structural reality has several practical implications.</p>
+
+      <p>Waiting for a dramatic price correction as the primary strategy is a high-risk bet. The conditions that would produce a broad, sustained decline in home prices — a significant recession, a substantial increase in supply, or a dramatic demographic shift — are not on a clear timeline. Markets in specific metros may correct; the national market almost certainly will not collapse to pre-2020 price levels.</p>
+
+      <p>Geographic flexibility remains one of the highest-leverage variables available to individual households. The affordability gap between the most expensive and least expensive U.S. metro areas has never been larger, and remote work has made that gap more actionable for more people than at any previous point in history.</p>
+
+      <p>And for policymakers, the uncomfortable truth is that there is no politically painless path to housing affordability. The only durable solution is more housing — and building more housing requires overriding the preferences of existing homeowners who benefit from scarcity. That is the political problem that every level of American government has been unwilling to fully confront, and it is the reason the crisis has persisted despite years of stated intent to address it.</p>
+    `
+  },
+
+  /* ---- SHOWERS4LESS / AGING SAFELY ARTICLE ---- */
+  {
+    id: 'showers4less-ada-guide',
+    hero: false,
+    heroSidebar: true,
+    category: 'Home Accessibility',
+    label: 'label-teal',
+    title: 'The Complete Guide to ADA-Compliant Barrier-Free Showers: What Families Need to Know',
+    lede: 'For aging adults, people with mobility challenges, and families planning for long-term accessibility, the right shower solution can transform safety, independence and daily quality of life. Here\'s how to choose the right option — and where to find the best products at the lowest cost.',
+    author: 'Action Global News — Health &amp; Home Desk',
+    date: 'March 2026',
+    readTime: '7–8 min read',
+    image: 'https://images.pexels.com/photos/6585599/pexels-photo-6585599.jpeg?auto=compress&cs=tinysrgb&w=800',
+    excerpt: 'Barrier-free showers, ADA-compliant shower kits, and roll-in showers explained — what to look for and where to find affordable options.',
+    content: `
+      <p>Falls are the leading cause of injury-related emergency room visits for adults over 65 in the United States. And a significant portion of those falls happen in one of the most predictable danger zones in the American home: the bathroom. Specifically, the moment of stepping in or out of a traditional shower or bathtub.</p>
+
+      <p>The good news is that this risk is almost entirely preventable with the right accessible bathroom design. The challenge for many families is understanding what the options actually are, what makes a shower truly ADA-compliant versus merely marketed as "accessible," and how to get a quality solution without paying premium prices through the wrong channels.</p>
+
+      <h2>What Is a Barrier-Free Shower?</h2>
+
+      <p>A barrier-free shower — also called a zero-threshold shower or curbless shower — is a shower design that eliminates the raised curb or step that exists at the entry of a traditional shower enclosure. The shower floor is flush with, or just minimally higher than, the surrounding bathroom floor, creating a transition that can be navigated safely with a walker, wheelchair, or for someone with limited leg-lifting ability.</p>
+
+      <p>Barrier-free showers are not just for wheelchair users. They are the gold standard for aging-in-place design, recovery from surgery or injury, families with multiple generations sharing a home, and anyone who wants to future-proof their bathroom against the mobility challenges that come with aging.</p>
+
+      <h2>ADA Compliance: What It Actually Means</h2>
+
+      <p>The Americans with Disabilities Act establishes specific standards for accessible shower design in public and commercial buildings. While private residences are not technically required to meet ADA standards, these specifications have become the benchmark for what genuinely constitutes an accessible shower:</p>
+
+      <ul>
+        <li><strong>Roll-in shower minimum dimensions:</strong> 36" × 36" for transfer-type showers; 60" × 30" minimum for roll-in accessible showers</li>
+        <li><strong>Zero or very low threshold:</strong> ADA specifies no more than ½" threshold height for roll-in showers</li>
+        <li><strong>Grab bars:</strong> Properly anchored into wall studs, not just drywall, at specified heights and locations</li>
+        <li><strong>Shower seat:</strong> Fold-down or built-in, at the correct height for safe transfer from a wheelchair or mobility device</li>
+        <li><strong>Handheld showerhead:</strong> With a flexible hose of at least 59 inches to allow bathing while seated</li>
+        <li><strong>Slip-resistant flooring:</strong> Textured surface throughout the shower floor and approach area</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Key distinction:</strong> Many products marketed as "accessible" or "walk-in" do not meet true ADA specifications. When evaluating options, ask specifically about threshold height, minimum interior dimensions and whether grab bars are included to ADA specifications.
+      </div>
+
+      <h2>Types of Accessible Shower Solutions</h2>
+
+      <h3>Roll-In Showers</h3>
+      <p>The most fully accessible option — designed to allow a wheelchair user to roll directly into the shower without any transfer. Typically the largest footprint option, usually 60" wide minimum. Requires proper floor drainage slope toward the center drain. Ideal for current wheelchair users or those planning for significant future mobility limitations.</p>
+
+      <h3>Low-Profile Barrier-Free Shower Pans</h3>
+      <p>The most practical solution for most aging-in-place conversions. A low-profile shower pan — typically 4" or less in height — provides a dramatic improvement over a standard raised curb while fitting into most existing shower footprints. These pans can often be installed without major plumbing modifications, significantly reducing installation cost and time.</p>
+
+      <h3>One-Day Install Shower Kits</h3>
+      <p>One of the most cost-effective and minimally disruptive options for bathroom accessibility upgrades. Modern one-day shower kits combine a low-profile or barrier-free base with prefabricated wall surround panels that go directly over existing wall surfaces — no demolition, no tile work, no extended construction period. A complete accessible shower can be installed in a single day.</p>
+
+      <h2>Where to Find the Best Products at the Lowest Cost</h2>
+
+      <p>One of the most significant breakthroughs for families navigating accessible shower upgrades in recent years has been the availability of high-quality, ADA-compatible shower components through specialty online retailers — often at a fraction of what traditional bathroom showrooms charge.</p>
+
+      <p><a href="https://www.showers4less.com" target="_blank" rel="noopener"><strong>Showers4Less.com</strong></a> is an excellent resource for families and contractors looking for ADA-compliant barrier-free showers, low-profile shower pans, one-day shower kits, curbed and curbless systems, and accessible shower accessories — all at competitive pricing with nationwide shipping. The site specializes specifically in accessible bathing products, making it a focused, knowledgeable resource rather than a general home improvement catalog where accessible options are buried.</p>
+
+      <p>For families who want professional installation along with the product, <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener"><strong>Aging Safely Baths</strong></a> offers both the products and a <a href="https://www.agingsafelybaths.com/walk-in-tubs/" target="_blank" rel="noopener">walk in tub</a> and shower installation service with nationwide reach. Their team handles the full project — from product selection through professional installation — and specializes exclusively in accessible bathing solutions, which means the guidance you receive comes from specialists rather than generalists.</p>
+
+      <p>You can reach Aging Safely Baths and their accessible bathroom specialists at <a href="tel:18887792284"><strong>1-888-779-2284</strong></a> for a free consultation on which solution is right for your home and situation. They work with a wide range of budgets and can advise on VA grants and other assistance programs that may offset costs for qualifying veterans and homeowners.</p>
+
+      <h2>Planning Your Bathroom Accessibility Upgrade</h2>
+
+      <p>The most common mistake families make when planning an accessible bathroom conversion is waiting until a crisis forces the decision. An emergency installation following a fall or hospitalization means making decisions quickly, under stress, often without time to research products or compare quotes. The result is frequently a more expensive, less optimal solution than would have resulted from thoughtful planning.</p>
+
+      <p>The better approach is to evaluate your bathroom now — before accessibility is urgently needed — and make a measured decision about whether a product-only upgrade (buying the right components and having a local contractor install them), a one-day kit installation, or a full accessible bathroom renovation is the right fit for your home, your budget and your timeline.</p>
+
+      <p>The right accessible shower solution is not just a safety feature. For aging adults and their families, it is a decision that affects daily independence, confidence and quality of life. The good news is that today's options are better, more affordable and easier to install than ever before — and the resources to navigate those options are increasingly accessible too.</p>
+
+      <p>For product guidance, visit <a href="https://www.showers4less.com" target="_blank" rel="noopener">Showers4Less.com</a>. For professional installation support anywhere in the country, contact <a href="https://www.agingsafelybaths.com" target="_blank" rel="noopener">Aging Safely Baths</a> at <a href="tel:18887792284"><strong>1-888-779-2284</strong></a>.</p>
+    `
+  },
+
+  /* ---- EXISTING: TESLA OPTIMUS (hero: false now, featured in sidebar) ---- */
   {
     id: 'tesla-optimus',
-    hero: true,
+    hero: false,
     heroSidebar: false,
     category: 'AI & Robotics',
     label: 'label-teal',
     title: 'Tesla Optimus: The Robot That Could Rewrite Work As We Know It',
-    lede: 'With mass production on the horizon, Tesla\'s humanoid robot is poised to transform manufacturing, logistics — and the economics of human labor. A deep investigation into what\'s coming.',
+    lede: 'With mass production on the horizon, Tesla\'s humanoid robot is poised to transform manufacturing, logistics — and the economics of human labor.',
     author: 'Action Global News — AI & Technology Desk',
     date: 'March 2026',
     readTime: '8–10 min read',
@@ -1925,177 +2147,54 @@ const ARTICLES = [
       <h2>The Economics That Change Everything</h2>
       <p>The critical number is projected cost. Tesla has guided toward a price point of <strong>$20,000–$25,000 per unit</strong> at scale — roughly the annual salary of a minimum-wage worker in the United States. When you factor in no overtime, no benefits, no sick days, 24/7 availability, and consistent performance without fatigue, the economic math for manufacturers becomes overwhelming.</p>
 
-      <p>Consider a mid-sized fulfillment warehouse that currently employs 200 workers on a repetitive picking-and-packing line. At $25,000 per robot and projected maintenance costs of $2,000–$3,000 per year, the break-even point versus human labor could be reached in under three years. After that, the cost structure transforms entirely.</p>
-
       <h3>Industries First in Line</h3>
-      <p>Analysts and supply chain experts have identified the industries most likely to see early mass deployment:</p>
       <ul>
-        <li><strong>Automotive manufacturing</strong> — the first and most obvious market, where Tesla itself is proving the model</li>
-        <li><strong>Warehouse and fulfillment</strong> — Amazon, Walmart and other logistics giants are all watching closely</li>
-        <li><strong>Agriculture</strong> — fruit picking, planting and irrigation tasks in controlled environments</li>
+        <li><strong>Automotive manufacturing</strong> — the first and most obvious market</li>
+        <li><strong>Warehouse and fulfillment</strong> — Amazon, Walmart and logistics giants watching closely</li>
+        <li><strong>Agriculture</strong> — fruit picking, planting and irrigation in controlled environments</li>
         <li><strong>Construction</strong> — material handling, concrete pouring, repetitive finish work</li>
-        <li><strong>Healthcare support</strong> — patient transport, supply restocking, sanitation in hospitals</li>
+        <li><strong>Healthcare support</strong> — patient transport, supply restocking, sanitation</li>
         <li><strong>Retail</strong> — shelf stocking, inventory management, overnight restocking</li>
       </ul>
 
       <h2>What It Means for Workers</h2>
       <p>The honest answer is: it depends enormously on how fast deployment happens, which sectors move first, and whether policy keeps pace with technology. Economic history offers two main templates for automation waves.</p>
 
-      <p>The <strong>optimistic scenario</strong> mirrors what happened with ATMs and bank tellers. Paradoxically, the number of bank tellers <em>increased</em> after ATMs were introduced, because lower operating costs per branch allowed banks to open more branches and hire more human relationship managers. Automation freed workers from repetitive cash-counting to focus on higher-value customer interactions.</p>
+      <p>The <strong>optimistic scenario</strong> mirrors what happened with ATMs and bank tellers — automation can create new categories of work even as it displaces old ones. The <strong>pessimistic scenario</strong> resembles the impact of industrial looms on textile workers in 19th-century England — rapid displacement without adequate transition infrastructure.</p>
 
-      <p>The <strong>pessimistic scenario</strong> resembles the impact of industrial looms on textile workers in 19th-century England — brutal displacement without adequate transition infrastructure. The Luddite movement was not simply technophobia; it was a rational response to rapid economic disruption without social safety nets.</p>
-
-      <p>Humanoid robotics at scale would be the largest automation event in human history. The International Monetary Fund estimated in 2024 that AI and automation could affect up to <strong>40% of global jobs</strong> — and humanoid robots extend that impact to physical labor in ways software alone cannot.</p>
-
-      <h2>Competing Players: Tesla Isn't Alone</h2>
-      <p>Tesla has a significant lead in vertical integration — building its own chips, training its own AI, controlling its own manufacturing — but the race is intensifying:</p>
-      <ul>
-        <li><strong>Figure AI</strong> (backed by Microsoft and OpenAI) has deployed Figure 02 robots at BMW plants</li>
-        <li><strong>Boston Dynamics' Atlas</strong> is now fully electric and performing complex manipulation tasks</li>
-        <li><strong>Agility Robotics' Digit</strong> is operational in Amazon fulfillment centers today</li>
-        <li><strong>Apptronik's Apollo</strong> has signed agreements with NASA and GXO Logistics</li>
-        <li><strong>Unitree and UBTECH</strong> in China are producing robots at dramatically lower price points</li>
-      </ul>
-
-      <div class="callout">
-        <strong>Analyst projection:</strong> Goldman Sachs estimates the humanoid robot market could reach <strong>$38 billion by 2035</strong>, with over 250,000 units deployed annually by the end of the decade. More aggressive forecasts put the market at over $150 billion by 2040.
-      </div>
-
-      <h2>The Business Opportunity: Small and Medium Enterprises</h2>
-      <p>The narrative around humanoid robots tends to focus on Fortune 500 manufacturers. But the more profound — and less discussed — opportunity may be for <strong>small and medium enterprises (SMEs)</strong>.</p>
-
-      <p>Today, a small manufacturing company simply cannot afford to automate a four-person assembly line. Custom industrial robots cost $100,000–$400,000 per unit and require specialized programming, dedicated safety enclosures and expensive maintenance contracts. The economics are reserved for companies with volume that justifies the investment.</p>
-
-      <p>A general-purpose humanoid robot that costs $20,000 and can be retrained via demonstration — rather than reprogrammed by engineers — changes that calculus entirely. The same robot that handles morning assembly tasks could be reassigned to afternoon warehouse work. The flexibility that makes humanoid robots slightly less efficient than purpose-built machines in high-volume settings is actually a <em>feature</em> for SMEs that need versatility.</p>
-
-      <h2>Timeline and What to Watch</h2>
-      <p>Several milestones will signal whether Optimus (and humanoid robotics broadly) are tracking toward the transformative scenario:</p>
-      <ul>
-        <li><strong>2025–2026:</strong> Tesla deploying hundreds of Optimus units internally; first announced commercial sales</li>
-        <li><strong>2026–2027:</strong> External enterprise deployments in automotive and logistics; reliability data becomes public</li>
-        <li><strong>2027–2029:</strong> Price points drop below $20,000; SME deployments begin in earnest</li>
-        <li><strong>2030+:</strong> Mass market, potential regulatory frameworks, labor displacement becomes measurable</li>
-      </ul>
-
-      <p>For businesses of all sizes, the time to begin thinking about humanoid robotics is not when the robots arrive at your door — it's now. Understanding the trajectory, identifying which tasks in your operation are candidates for automation, and thinking through the human capital implications puts you years ahead of competitors who will scramble to respond after the fact.</p>
-
-      <p>The age of the humanoid robot is not science fiction anymore. It's an engineering and economics problem that is being solved in real time. The question is no longer <em>if</em> — only <em>when</em>, and whether your business is positioned to adapt.</p>
+      <p>The International Monetary Fund estimated in 2024 that AI and automation could affect up to <strong>40% of global jobs</strong> — and humanoid robots extend that impact to physical labor in ways software alone cannot. The truth is likely somewhere between the two scenarios — and the policy choices made in the next five years will play a significant role in determining which template prevails.</p>
     `
   },
 
-  /* ---- HERO SIDEBAR ARTICLES (heroSidebar: true, up to 3) ---- */
-  {
-    id: 'ai-advantage',
-    hero: false,
-    heroSidebar: true,
-    category: 'AI & Business',
-    label: 'label-blue',
-    title: 'The AI Advantage: How Small Teams Now Compete With Giants',
-    lede: 'Used strategically, artificial intelligence is the great equalizer — giving lean, focused businesses capabilities once reserved for companies with entire departments dedicated to them.',
-    author: 'Action Global News — Technology Desk',
-    date: 'March 2026',
-    readTime: '6–8 min read',
-    image: 'https://images.pexels.com/photos/6954177/pexels-photo-6954177.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    excerpt: 'How AI tools are letting two-person startups out-execute companies with 200-person teams.',
-    content: `
-      <p>In 2019, a startup founder who wanted to run sophisticated A/B tests, generate professional-grade marketing copy, handle customer service around the clock and analyze competitor pricing data in real time needed either a large budget or a large team — ideally both. In 2026, they need a laptop, a few subscriptions, and an understanding of how to use these tools strategically.</p>
-
-      <p>The artificial intelligence revolution is often discussed in terms of its largest players — the chip companies, the foundation model labs, the trillion-dollar tech giants building AI into every product. But the less glamorous and arguably more consequential story is what AI is doing for <strong>the small operator at the edge of the economy</strong>.</p>
-
-      <h2>The Capability Gap Is Closing Fast</h2>
-      <p>For most of business history, scale conferred durable competitive advantages. Large companies could afford better marketing, more sophisticated data analysis, more customer support agents, more product development capacity. A mid-size competitor simply couldn't match these investments.</p>
-
-      <p>AI is systematically dismantling that advantage in domain after domain. Consider what's now accessible to a solo entrepreneur or small team:</p>
-
-      <ul>
-        <li><strong>Content and copywriting</strong> at near-professional quality, in any volume, on demand</li>
-        <li><strong>24/7 customer service</strong> via AI assistants that handle 80%+ of routine queries</li>
-        <li><strong>Code and software development</strong> — non-technical founders can now build functional tools</li>
-        <li><strong>Data analysis and financial modeling</strong> — weeks of analyst work compressed to hours</li>
-        <li><strong>Video, image and design production</strong> — previously requiring agencies or in-house creative teams</li>
-        <li><strong>SEO and content strategy</strong> — competitive research and optimization at scale</li>
-        <li><strong>Lead research and sales prospecting</strong> — automated enrichment and outreach sequences</li>
-      </ul>
-
-      <h2>The "100x Leverage" Framework</h2>
-      <p>The most useful mental model for thinking about AI in small business is <strong>leverage</strong>. Historically, an operator's productive output was essentially linear — one person working hard could do roughly one person's worth of work. Management and delegation created some multiplier, but the ceiling was relatively low.</p>
-
-      <p>AI changes the ceiling. A skilled operator using AI tools intelligently can produce at 10x, 50x, or in some domains 100x their pre-AI output rate. This isn't about replacing human judgment — it's about removing the bottlenecks around that judgment. When the mechanical, repetitive, templated work is automated, a human's time concentrates almost entirely on the decisions and relationships where humans still hold a genuine edge.</p>
-
-      <blockquote>"We went from needing 12 people to run our content operation to needing 3. The 3 we kept are the ones who could think strategically — everyone else was doing work AI now handles better."<br>— Marketing director, mid-size e-commerce brand</blockquote>
-
-      <h2>Where Small Businesses Have the Real Edge</h2>
-      <p>Counterintuitively, the businesses positioned to benefit most from AI aren't always the largest. Large enterprises face significant friction in AI adoption: legacy systems, compliance overhead, bureaucratic decision-making and cultural resistance slow deployment dramatically.</p>
-
-      <p>Small businesses can move fast. An entrepreneur who decides on Monday to integrate an AI customer service layer can have it running by Thursday. A startup that identifies a productivity tool can test, adopt and scale it within weeks. That speed of adoption creates a window — which may close as enterprise AI infrastructure matures — where lean operators can build genuine advantages over slower-moving incumbents.</p>
-
-      <h3>The High-Value AI Use Cases for Small Business</h3>
-      <p>Based on adoption patterns across industries, the highest-ROI applications for small business AI tend to cluster in a few categories:</p>
-      <ul>
-        <li><strong>Customer communication:</strong> AI-drafted responses, onboarding sequences and follow-ups</li>
-        <li><strong>Proposals and quoting:</strong> Faster, more professional documentation</li>
-        <li><strong>Research and due diligence:</strong> Competitive intelligence, market sizing, supplier evaluation</li>
-        <li><strong>Operations and process documentation:</strong> SOPs, training materials, compliance checklists</li>
-        <li><strong>Financial analysis:</strong> Cash flow modeling, pricing strategy, scenario planning</li>
-      </ul>
-
-      <h2>The Risks Worth Taking Seriously</h2>
-      <p>The AI advantage isn't without its complications. Over-reliance on AI-generated content can erode the authentic voice and personality that often differentiates small businesses from large ones. Customers increasingly recognize — and are put off by — generic AI-generated communications.</p>
-
-      <p>There's also the question of judgment. AI tools are extraordinarily capable at producing plausible, well-structured output — but "plausible" is not the same as "correct." Businesses that deploy AI without maintaining human review processes for consequential decisions expose themselves to confident errors that can be costly to correct.</p>
-
-      <div class="callout">
-        <strong>The rule of thumb:</strong> Use AI to <em>accelerate</em> your thinking, not to <em>replace</em> it. The businesses winning with AI are those where a skilled human is directing the tool, reviewing its output, and adding the judgment, nuance and relationship intelligence that AI still genuinely lacks.
-      </div>
-
-      <h2>Getting Started: A Practical Path</h2>
-      <p>For business owners new to AI tools, the highest-leverage starting point is usually the task that currently consumes the most time relative to the value it creates. Common candidates include email drafting, social media content, customer FAQ responses, and report generation.</p>
-
-      <p>Pick one tool, learn it deeply over 30 days, measure the time saved, then expand. The compounding effect of systematically applying AI across your operations adds up faster than most people expect — and the competitive gap between early adopters and those who wait continues to widen.</p>
-    `
-  },
-
+  /* ---- EXISTING: DOWN ECONOMY ---- */
   {
     id: 'down-economy',
     hero: false,
-    heroSidebar: true,
+    heroSidebar: false,
     category: 'Business & Economy',
-    label: '',
+    label: 'label-blue',
     title: 'Rising in a Down Economy: Why Some Businesses Grow Faster When Markets Fall',
-    lede: 'Recessions don\'t stop markets — they reshuffle them. While headlines dwell on layoffs and shrinking GDP, a smaller group of companies quietly gains market share by moving faster than everyone else.',
+    lede: 'When recessions hit, the companies that move fastest and adapt most fluidly gain ground at everyone else\'s expense.',
     author: 'Action Global News — Business & Economy Desk',
     date: 'February 2026',
     readTime: '7–9 min read',
-    image: 'https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    excerpt: 'When recessions hit, the companies that move fastest and adapt most fluidly gain ground at everyone else\'s expense.',
+    image: 'https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=800',
+    excerpt: 'Recessions reshuffle markets. The companies that move fastest gain ground at everyone else\'s expense.',
     content: `
-      <p>Most headlines during a recession focus on layoffs, shrinking GDP and market fear. Yet when you look closely across past downturns, another pattern is just as clear: while many companies stall or disappear, a smaller group quietly grows faster than ever.</p>
+      <p>The conventional wisdom about recessions runs something like this: hunker down, cut costs, preserve cash and wait for conditions to improve. It is advice that sounds prudent — and for many businesses, it is a reasonable survival strategy. But it describes a fundamentally defensive posture that misses a critical reality about what recessions actually do to competitive landscapes.</p>
 
-      <p>From discount retailers in the 2008 financial crisis, to cloud software during the COVID-19 pandemic, downturns often act as a reset button. Businesses that stay flexible, protect cash and lean into new demand can emerge with more market share than they held in good times.</p>
+      <h2>Recessions Reshuffle, They Don't Simply Shrink</h2>
+      <p>A recession is not just a period of lower economic activity. It is a period of accelerated competitive reshuffling. Total spending contracts — but spending patterns change dramatically. Consumer and business priorities shift. Competitive dynamics in almost every industry rearrange themselves in ways that create both extraordinary risk and extraordinary opportunity, often simultaneously.</p>
+      <p>The companies that emerge from recessions stronger are almost never the ones that merely survived. They are the ones that understood the reshuffle was happening and positioned themselves to benefit from it — while their more reactive competitors were focused on survival.</p>
 
-      <h2>Downturns Don't Stop Markets — They Reshuffle Them</h2>
-      <p>In boom times, easy credit and optimistic forecasts allow many weak business models to survive. Competitors multiply, marketing gets noisy and it's hard for any single company to stand out. A recession reverses those conditions:</p>
+      <h2>The Counter-Cyclical Opportunity</h2>
+      <p>Several well-documented mechanisms explain why certain businesses grow during downturns:</p>
       <ul>
-        <li>Credit tightens and exposes fragile balance sheets</li>
-        <li>Customers scrutinize every purchase more closely</li>
-        <li>Companies that relied on momentum suddenly face resistance</li>
+        <li><strong>Consolidation of customer relationships.</strong> When buyers reduce their vendor count and consolidate spending with trusted suppliers, the businesses with the strongest relationships often see their share of wallet increase even as total industry spending falls.</li>
+        <li><strong>Competitor retreats create space.</strong> When established players cut marketing, freeze hiring and reduce service quality to preserve margin, they create vacuums that more aggressive competitors can fill.</li>
+        <li><strong>Talent becomes accessible.</strong> Recessions release skilled employees into the market at price points that would be unavailable in a boom. Companies willing to hire strategically during a downturn often make their best talent acquisitions in these windows.</li>
+        <li><strong>Marketing efficiency improves.</strong> Advertising costs typically decline during recessions as competitors pull back. The same marketing budget can reach a larger share of the available audience.</li>
       </ul>
-      <p>For resilient firms, this disruption can be an opportunity. Reduced competition, cheaper advertising and clearer customer priorities make it easier to stand out.</p>
-
-      <blockquote>"When the tide goes out, you find out who's been swimming naked." — Warren Buffett</blockquote>
-
-      <h2>Three Patterns That Repeat in Every Recession</h2>
-      <p>While every economic cycle is unique, three patterns keep showing up in post-crisis research and case studies:</p>
-      <ol>
-        <li><strong>Companies that cut waste, not muscle, bounce back faster.</strong> The instinct to slash headcount is understandable but often counterproductive. Companies that surgically remove inefficiency while protecting revenue-generating and customer-facing capacity consistently outperform those that cut indiscriminately.</li>
-        <li><strong>Brands that stay in front of customers during the downturn gain share.</strong> When competitors go quiet — reducing marketing spend, pulling back from customer engagement — the companies that maintain visibility earn a disproportionate share of reduced market attention.</li>
-        <li><strong>Teams that keep shipping new value learn faster.</strong> Downturns concentrate customer feedback brutally. The businesses that keep iterating, even at a slower pace, emerge from recessions with products and services that are genuinely better calibrated to what the market actually wants.</li>
-      </ol>
-
-      <h2>Case Studies: Who Won the Last Recessions</h2>
-      <p>The 2008 financial crisis produced several unexpected winners. Dollar stores grew aggressively as consumers traded down. Netflix accelerated its shift from DVDs to streaming. Airbnb launched in the middle of the crisis, betting that budget-conscious travelers and cash-strapped hosts would find a deal that worked for both.</p>
-
-      <p>The COVID recession of 2020 produced an even more dramatic example. While airlines, hospitality and retail were devastated, cloud software companies, delivery logistics platforms and e-commerce infrastructure businesses compounded faster than they ever had in "normal" times.</p>
 
       <div class="callout">
         <strong>Key insight:</strong> Downturns are less about "no opportunity" and more about <em>different</em> opportunity — often concentrated in value, trust and execution speed. The question isn't whether to act; it's whether you can identify which direction to act faster than your competitors.
@@ -2108,10 +2207,11 @@ const ARTICLES = [
     `
   },
 
+  /* ---- EXISTING: INFLATION SMALL BIZ ---- */
   {
     id: 'inflation-small-biz',
     hero: false,
-    heroSidebar: true,
+    heroSidebar: false,
     category: 'Inflation & Small Business',
     label: 'label-gold',
     title: 'How Small Businesses Survive High-Inflation Eras When Larger Brands Pull Back',
@@ -2126,26 +2226,26 @@ const ARTICLES = [
 
       <h2>Why Inflation Creates Unexpected Openings</h2>
       <p>When input costs rise, large companies typically have three options: raise prices, reduce quality, or shrink margins. Most do some combination of all three — and their customers notice. The resulting reduction in perceived value creates an opening for smaller, more agile competitors who can respond more nimbly.</p>
-      <p>Local and regional businesses often benefit from shorter supply chains — fewer intermediaries means smaller inflation pass-throughs and faster ability to source alternative suppliers. The restaurant owner who can switch protein suppliers in a week has a structural advantage over the national chain that requires six months of procurement approvals to change anything.</p>
+      <p>Local and regional businesses often benefit from shorter supply chains — fewer intermediaries means smaller inflation pass-throughs and faster ability to source alternative suppliers.</p>
 
       <h2>The Trust Dividend</h2>
       <p>Inflation also changes the psychology of purchasing. As consumers become more deliberate — scrutinizing value more carefully, reducing discretionary spending, prioritizing relationships over convenience — the local business that has invested in community relationships and genuine service collects a trust dividend that advertising budgets can't easily buy.</p>
 
       <blockquote>"During COVID and the inflation that followed, our regulars didn't just stay — they spent more, because they wanted us to survive. That's not something a chain can manufacture."<br>— Independent bookstore owner, Portland, OR</blockquote>
 
-      <h2>Practical Strategies That Work During Inflation</h2>
+      <h2>Practical Strategies That Work</h2>
       <ul>
-        <li><strong>Price in layers, not in one big jump.</strong> Multiple small increases spread over time are easier for customers to absorb than one large shock.</li>
-        <li><strong>Communicate transparently.</strong> Customers who understand the reasons behind price increases are significantly less likely to defect than those who feel blindsided.</li>
-        <li><strong>Reduce menu/product complexity.</strong> Simplifying your offering reduces procurement complexity, waste and operational overhead — all of which compound during inflation.</li>
-        <li><strong>Invest in retention over acquisition.</strong> Keeping existing customers is dramatically cheaper than acquiring new ones, and even more so during downturns.</li>
+        <li><strong>Price in layers, not in one big jump.</strong> Multiple small increases spread over time are easier to absorb.</li>
+        <li><strong>Communicate transparently.</strong> Customers who understand the reasons behind price increases are significantly less likely to defect.</li>
+        <li><strong>Reduce complexity.</strong> Simplifying your offering reduces procurement complexity, waste and overhead.</li>
+        <li><strong>Invest in retention over acquisition.</strong> Keeping existing customers is dramatically cheaper than acquiring new ones.</li>
       </ul>
 
-      <p>The companies that survive inflationary eras aren't always the ones with the best margins going in. They're the ones with the deepest customer relationships, the most flexible operations — and the willingness to adapt quickly rather than wait for "normal" to return.</p>
+      <p>The companies that survive inflationary eras aren't always the ones with the best margins going in. They're the ones with the deepest customer relationships, the most flexible operations — and the willingness to adapt quickly.</p>
     `
   },
 
-  /* ---- ADDITIONAL ARTICLES (shown as cards on home) ---- */
+  /* ---- EXISTING: AI HEALTHCARE ---- */
   {
     id: 'ai-healthcare',
     hero: false,
@@ -2164,26 +2264,22 @@ const ARTICLES = [
 
       <h2>Early Detection: Where AI Saves Lives Today</h2>
       <p>The most immediate impact of AI in healthcare is in diagnostic imaging. Deep learning models trained on millions of scans can now detect certain forms of cancer — particularly breast, lung and skin cancers — with accuracy that matches or exceeds experienced radiologists, and at a fraction of the time and cost.</p>
-      <p>Google's DeepMind demonstrated that its AI model could detect breast cancer in mammograms with <strong>11.5% fewer false positives and 9.4% fewer false negatives</strong> than human radiologists. At scale, those percentage points translate into thousands of lives saved annually.</p>
 
       <h2>Drug Discovery: Compressing Decades Into Years</h2>
       <p>Traditional drug development is brutally slow and expensive — an average of 12 years and $2.6 billion from initial research to market approval. AI is attacking that bottleneck at every stage of the pipeline.</p>
-      <p>AlphaFold, DeepMind's protein structure prediction model, essentially solved a 50-year grand challenge in biology in 2021 by accurately predicting the 3D structure of virtually every known protein. That breakthrough unlocks drug target identification that previously took years of laboratory work.</p>
+      <p>AlphaFold, DeepMind's protein structure prediction model, essentially solved a 50-year grand challenge in biology in 2021 by accurately predicting the 3D structure of virtually every known protein.</p>
 
       <div class="callout">
-        <strong>Milestone:</strong> The first AI-discovered drug entered Phase II clinical trials in 2023. Multiple AI-generated drug candidates are now in the pipeline across oncology, rare diseases and antibiotic resistance — one of the most urgent unmet needs in global healthcare.
+        <strong>Milestone:</strong> The first AI-discovered drug entered Phase II clinical trials in 2023. Multiple AI-generated drug candidates are now in the pipeline across oncology, rare diseases and antibiotic resistance.
       </div>
 
-      <h2>The Operational Revolution in Hospitals</h2>
-      <p>Beyond diagnosis and drug discovery, AI is quietly transforming hospital operations. Predictive models now optimize staffing by forecasting emergency room volumes 24–48 hours in advance. Supply chain AI reduces pharmaceutical waste by improving inventory forecasting. Administrative AI handles prior authorization, coding and billing tasks that consume enormous amounts of clinical staff time.</p>
-      <p>The cumulative effect is significant: McKinsey estimates that AI could generate $100–$150 billion in annual savings for the U.S. healthcare system by 2026, primarily through operational efficiency and improved clinical decision support.</p>
-
       <h2>The Challenges Ahead</h2>
-      <p>Healthcare AI faces genuine challenges that temper the enthusiasm. Algorithmic bias — where models trained on non-representative data perform worse for certain demographic groups — is a documented problem with real patient safety implications. Regulatory frameworks are still catching up to the pace of deployment. And the healthcare system's famously fragmented, legacy-laden IT infrastructure creates integration challenges that slow adoption dramatically.</p>
-      <p>None of these challenges are insurmountable. But the history of technology in healthcare counsels humility about timelines. The promise of AI in medicine is real — the path to full realization will almost certainly be longer and messier than the most optimistic projections suggest.</p>
+      <p>Healthcare AI faces genuine challenges that temper the enthusiasm. Algorithmic bias — where models trained on non-representative data perform worse for certain demographic groups — is a documented problem with real patient safety implications. Regulatory frameworks are still catching up to the pace of deployment.</p>
+      <p>The promise of AI in medicine is real — the path to full realization will almost certainly be longer and messier than the most optimistic projections suggest.</p>
     `
   },
 
+  /* ---- EXISTING: GENERATIVE AI ECONOMY ---- */
   {
     id: 'generative-ai-economy',
     hero: false,
@@ -2201,20 +2297,14 @@ const ARTICLES = [
       <p>The generative AI market has attracted over $100 billion in investment since 2022. But amid the unprecedented enthusiasm, a more sober and practical question has begun to dominate boardroom conversations: who is actually making money from AI, and how sustainable are those economics?</p>
 
       <h2>The Infrastructure Layer: Clear Winners</h2>
-      <p>The clearest financial beneficiaries of the generative AI wave have been infrastructure companies — particularly NVIDIA, whose GPU chips power the vast majority of AI training and inference workloads. NVIDIA's data center revenue grew from roughly $15 billion in fiscal 2023 to over $90 billion in fiscal 2025 — arguably the most rapid revenue expansion of any major company in history.</p>
-      <p>Cloud hyperscalers — Amazon Web Services, Microsoft Azure and Google Cloud — have also been clear winners. They provide the compute, storage and networking infrastructure that AI companies rent by the hour, and they're racing to embed AI capabilities into their existing enterprise services.</p>
+      <p>The clearest financial winners in the generative AI economy are the companies selling infrastructure — compute, cloud services and semiconductor hardware. Nvidia's GPU revenue growth has been staggering: data center revenues reaching levels that would have seemed implausible in 2022. Microsoft Azure, Amazon Web Services and Google Cloud are all reporting significant AI-driven revenue growth.</p>
+      <p>This is the picks-and-shovels dynamic that characterized every previous technology gold rush. When everyone is digging for gold, selling the equipment is the most reliable business.</p>
 
-      <h2>The Application Layer: More Complex</h2>
-      <p>The economics get murkier as you move up the stack toward AI applications. A few companies have demonstrated genuine product-market fit and revenue sustainability — most notably Salesforce, ServiceNow and other enterprise software incumbents that have embedded AI into existing workflows that customers already pay for.</p>
-      <p>Pure-play AI application startups face a harder road. Many built early businesses on access to frontier models — but as OpenAI, Anthropic and Google lower their API prices and build competing products, the defensibility of applications built on top of those models comes into question.</p>
+      <h2>Enterprise Software: The Implementation Gap</h2>
+      <p>The second tier of clear financial benefit is enterprise software companies that have successfully integrated AI capabilities into existing products. Salesforce, ServiceNow, Adobe and Microsoft have all reported that AI-enhanced product tiers are commanding meaningful price premiums and driving upgrade cycles.</p>
 
-      <div class="callout">
-        <strong>The "picks and shovels" principle in action:</strong> In every major technology wave, the companies selling the infrastructure to enable the wave have often outperformed the companies building applications on top of it. In the California Gold Rush, Levi Strauss sold more reliable durable goods — pants — than most of the miners who bought them.
-      </div>
-
-      <h2>What This Means for Businesses Adopting AI</h2>
-      <p>For businesses thinking about AI adoption, the competitive and financial dynamics of the AI industry are relevant in a specific, practical way: the tools you need are getting dramatically cheaper, and they will continue to do so. The economics of AI compute follow a consistent deflationary curve — what costs $10,000 today costs $1,000 in two years and $100 in four.</p>
-      <p>This means that waiting to adopt AI — on the theory that better, cheaper tools are coming — is often a reasonable calculation in terms of the cost of the technology. Where it fails is in accounting for the cost of delay: the capabilities your competitors are building now, the workflows they're refining, the customer data they're accumulating. Those advantages compound in ways that cheap tools, when they arrive, may not fully offset.</p>
+      <h2>What This Means for Businesses Adopting AI Now</h2>
+      <p>The practical implication is nuanced. The tools are genuinely improving at a rapid pace, but the competitive advantage from early adoption is real and accumulating. Waiting to adopt on the theory that better, cheaper tools are coming is often a reasonable calculation — but it fails to account for the organizational learning and process refinement that early adopters are building right now.</p>
     `
   }
 
@@ -2222,10 +2312,7 @@ const ARTICLES = [
 
 /* ================================================================
    FEEDS CONFIG
-   Add, remove or change RSS feeds here.
-   rss2json.com converts RSS to JSON with a free API key.
-   Get your own free key at rss2json.com for higher rate limits.
-   ================================================================ */
+================================================================ */
 const RSS_API = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
 const FEEDS = {
@@ -2233,11 +2320,13 @@ const FEEDS = {
   'feed-business-home': { url: 'https://feeds.marketwatch.com/marketwatch/topstories', name: 'MarketWatch', max: 6 },
   'feed-tech-home':     { url: 'https://feeds.arstechnica.com/arstechnica/technology-lab', name: 'Ars Technica', max: 6 },
   'feed-world-home':    { url: 'https://feeds.bbci.co.uk/news/world/rss.xml', name: 'BBC World', max: 6 },
+  'feed-smallbiz-home': { url: 'https://www.score.org/rss.xml', name: 'SCORE Small Business', max: 6 },
   'feed-alt-home':      { url: 'https://rss.realclearpolitics.com/articles/political_economy/', name: 'RealClearPolitics Econ', max: 6 },
 
   // Business section
   'feed-biz-mw':       { url: 'https://feeds.marketwatch.com/marketwatch/topstories', name: 'MarketWatch', max: 6 },
   'feed-biz-reuters':  { url: 'https://feeds.reuters.com/reuters/businessNews', name: 'Reuters Business', max: 6 },
+  'feed-biz-inc':      { url: 'https://www.inc.com/rss/', name: 'Inc. Magazine', max: 6 },
   'feed-biz-ft':       { url: 'https://feeds.bloomberg.com/markets/news.rss', name: 'Bloomberg', max: 6 },
 
   // World section
@@ -2261,8 +2350,10 @@ const FEEDS = {
 };
 
 /* ================================================================
-   FALLBACK IMAGES BY CATEGORY
-   ================================================================ */
+   FALLBACK IMAGES — PER SOURCE to prevent duplicates
+   When RSS feed items lack thumbnails we pick from a pool
+   so multiple cards don't show the same image
+================================================================ */
 const FALLBACKS = {
   default:  'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
   business: 'https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -2271,15 +2362,26 @@ const FALLBACKS = {
   tech:     'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
 };
 
+// Pool of fallback images to rotate through — prevents same image on every card
+const FALLBACK_POOL = [
+  'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/7567447/pexels-photo-7567447.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/735787/pexels-photo-735787.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/37347/office-freelancer-computer-business-37347.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600',
+  'https://images.pexels.com/photos/6585599/pexels-photo-6585599.jpeg?auto=compress&cs=tinysrgb&w=600',
+];
+
 /* ================================================================
    STATE
-   ================================================================ */
+================================================================ */
 const loadedFeeds = new Set();
-const feedTabGroups = {}; // track which tabs are in each group
 
 /* ================================================================
    SECTION NAVIGATION
-   ================================================================ */
+================================================================ */
 function showSection(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   const sec = document.getElementById(id);
@@ -2289,14 +2391,12 @@ function showSection(id) {
     btn.classList.toggle('active', btn.dataset.section === id);
   });
   window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  // Lazy-load feeds for the section that just appeared
   lazyLoadSectionFeeds(id);
 }
 
 /* ================================================================
    ARTICLE OPEN / CLOSE
-   ================================================================ */
+================================================================ */
 function openArticle(id) {
   const art = ARTICLES.find(a => a.id === id);
   if (!art) return;
@@ -2324,7 +2424,6 @@ function openArticle(id) {
     </div>
   `).join('');
 
-  // Show article view, scroll to it
   const av = document.getElementById('article-view');
   av.classList.add('active');
   document.getElementById('home-cards-grid').style.display = 'none';
@@ -2342,25 +2441,23 @@ function closeArticle() {
 }
 
 /* ================================================================
-   BUILD HOME PAGE FROM ARTICLES
-   ================================================================ */
+   BUILD HOME PAGE
+================================================================ */
 function buildHome() {
-  // --- Hero ---
+  // Hero
   const heroArt = ARTICLES.find(a => a.hero);
   if (heroArt) {
     document.getElementById('hero-eyebrow').textContent = heroArt.category;
     document.getElementById('hero-title').textContent   = heroArt.title;
     document.getElementById('hero-lede').textContent    = heroArt.lede;
     document.getElementById('hero-btn').onclick         = () => openArticle(heroArt.id);
-
-    // hero background image
     document.getElementById('hero-main').style.backgroundImage =
       `linear-gradient(135deg, rgba(5,8,15,0.97) 0%, rgba(13,20,40,0.9) 50%, rgba(13,20,40,0.7) 100%), url(${heroArt.image})`;
     document.getElementById('hero-main').style.backgroundSize = 'cover';
     document.getElementById('hero-main').style.backgroundPosition = 'center';
   }
 
-  // --- Hero sidebar ---
+  // Hero sidebar
   const sideArts = ARTICLES.filter(a => a.heroSidebar);
   const sidebar = document.getElementById('hero-sidebar');
   sideArts.forEach(a => {
@@ -2375,15 +2472,18 @@ function buildHome() {
     sidebar.appendChild(el);
   });
 
-  // --- Article cards grid ---
+  // Article cards grid — intersperse with dividers/sponsor strips for visual variety
   const nonHero = ARTICLES.filter(a => !a.hero);
   const grid = document.getElementById('home-cards-grid');
   grid.innerHTML = '';
   nonHero.forEach((art, i) => {
     const card = document.createElement('div');
     card.className = 'art-card' + (i === 0 ? ' art-card-lg' : '');
+
+    // FIX: global onerror fallback on all article card images
     card.innerHTML = `
-      <img class="art-card-img" src="${art.image}" alt="${art.title}" loading="lazy" />
+      <img class="art-card-img" src="${art.image}" alt="${art.title}" loading="lazy"
+           onerror="this.src='${FALLBACK_POOL[i % FALLBACK_POOL.length]}'" />
       <div class="art-card-body">
         <div class="art-card-category">${art.category}</div>
         <div class="art-card-title" onclick="openArticle('${art.id}')">${art.title}</div>
@@ -2394,9 +2494,9 @@ function buildHome() {
     grid.appendChild(card);
   });
 
-  // --- Most read sidebar ---
+  // Most read
   const mrList = document.getElementById('most-read-list');
-  mrList.innerHTML = ARTICLES.slice(0, 5).map((a, i) => `
+  mrList.innerHTML = ARTICLES.slice(0, 6).map((a, i) => `
     <div class="article-strip" onclick="openArticle('${a.id}')">
       <div class="article-strip-num">${i + 1}</div>
       <div class="article-strip-body">
@@ -2409,33 +2509,28 @@ function buildHome() {
 
 /* ================================================================
    FEED TABS
-   ================================================================ */
+================================================================ */
 function switchFeedTab(group, panelId, btnEl) {
-  // hide all panels in this group
-  const allPanels = btnEl.closest('.feed-tabs').nextElementSibling;
   let el = btnEl.closest('.feed-tabs').nextElementSibling;
   while (el && el.classList.contains('feed-panel')) {
     el.classList.remove('active');
     el = el.nextElementSibling;
   }
-  // deactivate all tabs in group
   btnEl.closest('.feed-tabs').querySelectorAll('.feed-tab').forEach(b => b.classList.remove('active'));
 
-  // activate selected
   const panel = document.getElementById(panelId);
   if (panel) panel.classList.add('active');
   btnEl.classList.add('active');
 
-  // load feed if not yet loaded
-  const targetId = panel ? panel.querySelector('[id^="feed-"]') : null;
-  if (targetId && !loadedFeeds.has(targetId.id)) {
-    loadFeed(targetId.id);
+  const targetEl = panel ? panel.querySelector('[id^="feed-"]') : null;
+  if (targetEl && !loadedFeeds.has(targetEl.id)) {
+    loadFeed(targetEl.id);
   }
 }
 
 /* ================================================================
-   FEED LOADER
-   ================================================================ */
+   FEED LOADER — with per-item image fallback rotation
+================================================================ */
 function loadFeed(targetId) {
   const config = FEEDS[targetId];
   if (!config || loadedFeeds.has(targetId)) return;
@@ -2444,7 +2539,6 @@ function loadFeed(targetId) {
   const target = document.getElementById(targetId);
   if (!target) return;
 
-  // Show loading skeleton
   target.innerHTML = [1,2,3].map(() => `
     <div class="feed-card-big skeleton" style="min-height:200px; border-radius:12px; background:var(--paper-alt);"></div>
   `).join('');
@@ -2465,19 +2559,45 @@ function loadFeed(targetId) {
     });
 }
 
+// FIX: per-item image extraction with fallback rotation to prevent same image on every card
+function getBestImage(item, index) {
+  // Try multiple RSS image fields in priority order
+  const candidates = [
+    item.thumbnail,
+    item.enclosure?.link,
+    item['media:content']?.url,
+    item.image,
+  ].filter(Boolean);
+
+  // Return the first valid-looking URL
+  for (const c of candidates) {
+    if (typeof c === 'string' && c.startsWith('http') && !c.includes('pixel') && c.length > 20) {
+      return c;
+    }
+  }
+
+  // Rotate through fallback pool so cards don't all look the same
+  return FALLBACK_POOL[index % FALLBACK_POOL.length];
+}
+
 function renderFeedBig(container, items, sourceName, sourceUrl) {
   container.innerHTML = '';
   container.className = 'feed-grid-big';
 
-  items.forEach(item => {
-    const thumb = item.thumbnail || FALLBACKS.default;
+  items.forEach((item, index) => {
+    const thumb = getBestImage(item, index);
     const excerpt = getExcerpt(item.description || '', 120);
     const pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
 
     const card = document.createElement('div');
     card.className = 'feed-card-big';
+
+    // FIX: onerror on background-image via inline img tag inside the image div
     card.innerHTML = `
-      <div class="feed-card-big-img" style="background-image:url(${thumb});"></div>
+      <div class="feed-card-big-img" id="fimg-${index}-${Date.now()}"
+           style="background-image:url('${thumb}');"
+           onerror="this.style.backgroundImage=''">
+      </div>
       <div class="feed-card-big-body">
         <div class="feed-source">${sourceName}</div>
         <div class="feed-title">${item.title || ''}</div>
@@ -2488,18 +2608,27 @@ function renderFeedBig(container, items, sourceName, sourceUrl) {
         </div>
       </div>
     `;
+
+    // FIX: test image validity and rotate fallback if broken
+    const testImg = new Image();
+    testImg.onload = () => { /* image loads fine */ };
+    testImg.onerror = () => {
+      const fallback = FALLBACK_POOL[(index + 3) % FALLBACK_POOL.length]; // offset to vary
+      const imgDiv = card.querySelector('.feed-card-big-img');
+      if (imgDiv) imgDiv.style.backgroundImage = `url('${fallback}')`;
+    };
+    testImg.src = thumb;
+
     container.appendChild(card);
   });
 }
 
 /* ================================================================
-   LAZY LOAD FEEDS FOR SECTION
-   ================================================================ */
+   LAZY LOAD FEEDS
+================================================================ */
 function lazyLoadSectionFeeds(sectionId) {
-  // Load the first (active) feed tab for the section that becomes visible
   const section = document.getElementById(sectionId);
   if (!section) return;
-
   section.querySelectorAll('.feed-panel.active [id^="feed-"]').forEach(el => {
     if (!loadedFeeds.has(el.id)) loadFeed(el.id);
   });
@@ -2507,7 +2636,7 @@ function lazyLoadSectionFeeds(sectionId) {
 
 /* ================================================================
    UTILITIES
-   ================================================================ */
+================================================================ */
 function getExcerpt(html, maxLen) {
   const tmp = document.createElement('div');
   tmp.innerHTML = html;
@@ -2531,10 +2660,9 @@ function copyLink() {
 
 /* ================================================================
    INIT
-   ================================================================ */
+================================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();
 buildHome();
-// Load the home page business feed immediately (first active tab)
 loadFeed('feed-business-home');
 </script>
 </body>
