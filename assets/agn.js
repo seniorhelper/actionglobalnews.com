@@ -424,6 +424,80 @@
     });
   }
 
+
+  /* ---------------------------------------------------------
+     6. VIDEO WALL
+     Builds from YouTube channel Atom feeds. Thumbnails only
+     until the viewer clicks — no third-party iframe loads, and
+     the page stays fast. Click swaps in the privacy-enhanced
+     player, so views still count for the original creator.
+     --------------------------------------------------------- */
+
+  function ytIdFromLink(link) {
+    var m = /[?&]v=([\w-]{11})/.exec(link || '');
+    return m ? m[1] : null;
+  }
+
+  window.AGN.buildVideoWall = function (opts) {
+    var el = document.getElementById(opts.target);
+    if (!el) return;
+    var sources = opts.sources || [];
+    var limit = opts.limit || 9;
+
+    if (!sources.length) { el.innerHTML = opts.emptyHTML || ''; return; }
+
+    el.innerHTML = '<p class="feed-loading" style="grid-column:1/-1">' +
+      '<span class="feed-skel"></span><span class="feed-skel"></span></p>';
+
+    var collected = [], pending = sources.length;
+
+    sources.forEach(function (src) {
+      fetchFeed('https://www.youtube.com/feeds/videos.xml?channel_id=' + src.id,
+        function (err, items) {
+          if (!err && items) {
+            items.slice(0, src.max || 3).forEach(function (it) {
+              var vid = ytIdFromLink(it.link);
+              if (vid) collected.push({ id: vid, title: it.title,
+                                        src: src.name, date: it.date });
+            });
+          }
+          if (--pending === 0) paint();
+        });
+    });
+
+    function paint() {
+      if (!collected.length) { el.innerHTML = opts.emptyHTML || ''; return; }
+      collected.sort(function (a, b) {
+        return new Date(b.date || 0) - new Date(a.date || 0);
+      });
+      el.innerHTML = collected.slice(0, limit).map(function (v) {
+        return '<article class="vcard">' +
+          '<button class="vthumb" data-vid="' + v.id + '" ' +
+          'aria-label="Play: ' + escapeHTML(v.title) + '">' +
+          '<img loading="lazy" alt="" src="https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg">' +
+          '<span class="vplay"><span><svg viewBox="0 0 24 24" aria-hidden="true">' +
+          '<path d="M8 5v14l11-7z"/></svg></span></span></button>' +
+          '<div class="vmeta"><h4>' + escapeHTML(v.title) + '</h4>' +
+          '<span class="vsrc">' + escapeHTML(v.src) + ' &middot; ' +
+          relTime(v.date) + '</span></div></article>';
+      }).join('');
+
+      Array.prototype.forEach.call(el.querySelectorAll('.vthumb'), function (b) {
+        b.addEventListener('click', function () {
+          var vid = b.getAttribute('data-vid');
+          var f = document.createElement('iframe');
+          f.src = 'https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0';
+          f.title = b.getAttribute('aria-label') || 'Video';
+          f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; ' +
+                    'gyroscope; picture-in-picture';
+          f.allowFullscreen = true;
+          f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+          b.parentNode.replaceChild(f, b);
+        });
+      });
+    }
+  };
+
   /* ---------------------------------------------------------
      Boot
      --------------------------------------------------------- */

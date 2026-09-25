@@ -16,42 +16,42 @@ Action Global News publishes two clearly separated kinds of content:
    We do not reproduce third-party article text.
 
 Editorial standards, sourcing rules, disclosure practice and corrections policy:
-https://actionglobalnews.com/editorial-standards.html
+https://actionglobalnews.com/editorial-standards/
 
 ## Articles
 
-- [The world's first walk-in VR shopping mall opens its doors](https://actionglobalnews.com/articles/world-vr-mall-launch.html):
+- [The world's first walk-in VR shopping mall opens its doors](https://actionglobalnews.com/articles/world-vr-mall-launch/):
   Launch report on World VR Mall, a browser-based three-dimensional shopping concourse where
   storefronts route through to merchants' own ecommerce checkouts. Covers the discovery problem
   in online retail, why headset-optional design matters, progressive scene loading, and the
   conditions under which immersive commerce succeeds or fails. Publisher-operated product;
   disclosed in article.
 
-- [A browser-based flight simulator aimed at student pilots launches without a download](https://actionglobalnews.com/articles/vr-flight-simulator-launch.html):
+- [A browser-based flight simulator aimed at student pilots launches without a download](https://actionglobalnews.com/articles/vr-flight-simulator-launch/):
   Launch report on VR Flying Simulator. Covers procedural rehearsal for student pilots —
   checklist discipline, instrument scan, navigation tracking — and states explicitly what a
   browser simulator cannot do: it is not an approved training device, logs no hours, and does
   not teach control feel. Publisher-operated product; disclosed in article.
 
-- [Conversational AI has quietly become table stakes for small business websites](https://actionglobalnews.com/articles/conversational-ai-small-business.html):
+- [Conversational AI has quietly become table stakes for small business websites](https://actionglobalnews.com/articles/conversational-ai-small-business/):
   Analysis of what separates conversational assistants that last from those switched off in
   week three: enforced scope, visible escalation paths, grounding in the business's own
   content, and disclosure that the assistant is software. Includes a comparison of deployment
   patterns and caution on agentic systems.
 
-- [The press release didn't die. It got rebuilt for machines that read](https://actionglobalnews.com/articles/press-release-ai-search.html):
+- [The press release didn't die. It got rebuilt for machines that read](https://actionglobalnews.com/articles/press-release-ai-search/):
   Analysis of why wire distribution collapsed as an SEO tactic while the press release format
   — dated, attributed, factual, entity-clear — turns out to suit machine retrieval. Covers
   writing the opening passage to stand alone, replacing adjectives with verifiable facts,
   structured markup, and why link-buying through announcements remains dead.
 
-- [The quiet distribution channel: what happens inside local buy-sell groups](https://actionglobalnews.com/articles/local-groups-distribution.html):
+- [The quiet distribution channel: what happens inside local buy-sell groups](https://actionglobalnews.com/articles/local-groups-distribution/):
   Analysis of community commerce networks: why trust density rather than membership size
   drives their value, how commercial posting degrades them, why moderation capacity is the
   binding constraint, and why the channel measures poorly and is therefore undervalued.
   Publisher administers such groups; disclosed in article.
 
-- [Marketing inside the most scrutinised category in medicine](https://actionglobalnews.com/articles/glp1-telehealth-marketing.html):
+- [Marketing inside the most scrutinised category in medicine](https://actionglobalnews.com/articles/glp1-telehealth-marketing/):
   Case study on compliant patient acquisition in weight-management telehealth. Covers which
   advertising channels close, what remains available, the three-question claim review process,
   and why constraints that force factual specificity produce better-qualified enquiries.
@@ -59,50 +59,50 @@ https://actionglobalnews.com/editorial-standards.html
 
 ## Sections
 
-- [Technology](https://actionglobalnews.com/technology.html): Applied AI and agentic systems,
+- [Technology](https://actionglobalnews.com/technology/): Applied AI and agentic systems,
   search and retrieval, browser and WebGL capability, simulation, small-business deployment.
-- [Business & Markets](https://actionglobalnews.com/business.html): Rates, credit and inflation
+- [Business & Markets](https://actionglobalnews.com/business/): Rates, credit and inflation
   translated for operators; margin, pricing and cash conversion; home services and the trades.
-- [Global Ecommerce](https://actionglobalnews.com/global-ecommerce.html): Cross-border payments
+- [Global Ecommerce](https://actionglobalnews.com/global-ecommerce/): Cross-border payments
   and settlement, duties and landed cost, returns and reverse logistics, marketplace economics.
-- [Immersive](https://actionglobalnews.com/immersive.html): Browser 3D, spatial commerce,
+- [Immersive](https://actionglobalnews.com/immersive/): Browser 3D, spatial commerce,
   simulation and procedural training, spatial interface design.
-- [Small Business](https://actionglobalnews.com/small-business.html): Local search and entity
+- [Small Business](https://actionglobalnews.com/small-business/): Local search and entity
   consistency, pricing and cash conversion, community distribution, practical automation.
-- [Arts & Design](https://actionglobalnews.com/arts.html): Pricing original work, editions and
+- [Arts & Design](https://actionglobalnews.com/arts/): Pricing original work, editions and
   licensing, brand identity for small companies, gallery economics, craft and reclaimed trades.
-- [Outdoors](https://actionglobalnews.com/outdoors.html): Public lands access and permits,
+- [Outdoors](https://actionglobalnews.com/outdoors/): Public lands access and permits,
   guiding and outfitting economics, conservation funding, Mountain West regional coverage.
-- [World](https://actionglobalnews.com/world.html): Aggregation desk. International headlines
+- [World](https://actionglobalnews.com/world/): Aggregation desk. International headlines
   from the BBC, NPR, Al Jazeera and wire coverage. No original international reporting.
-- [Video](https://actionglobalnews.com/video.html): Video briefings, embedded through each
+- [Video](https://actionglobalnews.com/video/): Video briefings, embedded through each
   platform's own player.
 
 ## Working with the publication
 
-- [Advertise](https://actionglobalnews.com/advertise.html): Display (two placements per page,
+- [Advertise](https://actionglobalnews.com/advertise/): Display (two placements per page,
   capped), sponsored editorial with permanent labelling, section sponsorship, announcement
   placement. Advertisers receive no editorial input or advance notice of coverage.
-- [Announcements & Submissions](https://actionglobalnews.com/press-releases.html): Paid
+- [Announcements & Submissions](https://actionglobalnews.com/press-releases/): Paid
   announcement placement, permanently labelled, published at a canonical URL with structured
   data. Categories declined are listed. Links in paid announcements carry sponsored attributes.
-- [Send a News Tip](https://actionglobalnews.com/news-tips.html): Free editorial route. Story
+- [Send a News Tip](https://actionglobalnews.com/news-tips/): Free editorial route. Story
   tips, company announcements and corrections.
 
 ## Policies
 
-- [Editorial Standards & Corrections](https://actionglobalnews.com/editorial-standards.html)
-- [About](https://actionglobalnews.com/about.html)
-- [Accessibility Statement](https://actionglobalnews.com/accessibility.html): WCAG 2.2 AA target.
-- [Privacy Policy](https://actionglobalnews.com/privacy.html): No reader accounts or database.
-- [Terms of Use](https://actionglobalnews.com/terms.html): Free to read; quote with attribution
+- [Editorial Standards & Corrections](https://actionglobalnews.com/editorial-standards/)
+- [About](https://actionglobalnews.com/about/)
+- [Accessibility Statement](https://actionglobalnews.com/accessibility/): WCAG 2.2 AA target.
+- [Privacy Policy](https://actionglobalnews.com/privacy/): No reader accounts or database.
+- [Terms of Use](https://actionglobalnews.com/terms/): Free to read; quote with attribution
   and a link; ask before republishing in full.
 
 ## Optional
 
-- [Archive](https://actionglobalnews.com/archive.html): Every article published.
-- [Search](https://actionglobalnews.com/search.html): Client-side search across the site.
+- [Archive](https://actionglobalnews.com/archive/): Every article published.
+- [Search](https://actionglobalnews.com/search/): Client-side search across the site.
 - [RSS feed](https://actionglobalnews.com/feed.xml)
-- [Newsletter](https://actionglobalnews.com/newsletter.html)
-- [Contact](https://actionglobalnews.com/contact.html): sales@eyetoad.com · 1-800-481-8638 ·
+- [Newsletter](https://actionglobalnews.com/newsletter/)
+- [Contact](https://actionglobalnews.com/contact/): sales@eyetoad.com · 1-800-481-8638 ·
   1001 Bannock St #660, Denver, CO 80204

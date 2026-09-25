@@ -22,6 +22,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,500;1,700&family=DM+Sans:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/images/action-global-news-favicon.png">
+<link rel="apple-touch-icon" href="/images/action-global-news-favicon.png">
 <link rel="stylesheet" href="/assets/agn.css">
 <link rel="stylesheet" href="/assets/components.css">
 <link rel="alternate" type="application/rss+xml" title="Action Global News" href="/feed.xml">
@@ -41,11 +43,11 @@
       "foundingDate":"2026",
       "address":{"@type":"PostalAddress","streetAddress":"1001 Bannock St #660","addressLocality":"Denver","addressRegion":"CO","postalCode":"80204","addressCountry":"US"},
       "email":"sales@eyetoad.com",
-      "publishingPrinciples":"https://actionglobalnews.com/editorial-standards.html",
-      "ethicsPolicy":"https://actionglobalnews.com/editorial-standards.html",
-      "correctionsPolicy":"https://actionglobalnews.com/editorial-standards.html",
-      "diversityPolicy":"https://actionglobalnews.com/editorial-standards.html",
-      "actionableFeedbackPolicy":"https://actionglobalnews.com/news-tips.html",
+      "publishingPrinciples":"https://actionglobalnews.com/editorial-standards/",
+      "ethicsPolicy":"https://actionglobalnews.com/editorial-standards/",
+      "correctionsPolicy":"https://actionglobalnews.com/editorial-standards/",
+      "diversityPolicy":"https://actionglobalnews.com/editorial-standards/",
+      "actionableFeedbackPolicy":"https://actionglobalnews.com/news-tips/",
       "knowsAbout":["Business news","Technology","Global ecommerce","Artificial intelligence","Search visibility","Immersive commerce"]
     },
     {
@@ -74,20 +76,21 @@
 
 <!-- ===================== MASTHEAD ===================== -->
 <header class="masthead">
-  <div class="wrap">
-    <div class="mast-top">
-      <a class="logo" href="/" aria-label="Action Global News home">
-        <span class="mark" aria-hidden="true"></span>
-        <span><em>Action</em> Global News</span>
-      </a>
-      <span class="logo-tag hide-sm">Business · Technology · Commerce</span>
-      <span class="mast-spacer"></span>
-      <div class="mast-util">
-        <span class="clock" id="agn-clock"></span>
-        <a class="hide-sm" href="/search.html">Search</a>
-        <a class="hide-sm" href="/news-tips.html">News tips</a>
-        <a class="hide-sm" href="/advertise.html">Advertise</a>
-        <a class="btn-sub" href="/newsletter.html">Newsletter</a>
+  <div class="mast-brandbar">
+    <div class="wrap">
+      <div class="mast-top">
+        <a class="logo" href="/" aria-label="Action Global News home">
+          <img src="/images/action-global-news-logo.png" alt="Action Global News"
+               width="300" height="60" fetchpriority="high">
+        </a>
+        <span class="mast-spacer"></span>
+        <div class="mast-util">
+          <span class="clock" id="agn-clock"></span>
+          <a class="hide-sm" href="/search/">Search</a>
+          <a class="hide-sm" href="/news-tips/">News tips</a>
+          <a class="hide-sm" href="/advertise/">Advertise</a>
+          <a class="btn-sub" href="/newsletter/">Newsletter</a>
+        </div>
       </div>
     </div>
   </div>
@@ -95,20 +98,50 @@
     <div class="wrap">
       <ul>
         <li><a href="/" aria-current="page">Front Page</a></li>
-        <li><a href="/technology.html">Technology</a></li>
-        <li><a href="/business.html">Business</a></li>
-        <li><a href="/global-ecommerce.html">Global Ecommerce</a></li>
-        <li><a href="/immersive.html">Immersive</a></li>
-        <li><a href="/small-business.html">Small Business</a></li>
-        <li><a href="/arts.html">Arts &amp; Design</a></li>
-        <li><a href="/outdoors.html">Outdoors</a></li>
-        <li><a href="/video.html">Video</a></li>
-        <li><a href="/world.html">World</a></li>
-        <li><a href="/archive.html">Archive</a></li>
+        <li><a href="/technology/">Technology</a></li>
+        <li><a href="/business/">Business</a></li>
+        <li><a href="/global-ecommerce/">Global Ecommerce</a></li>
+        <li><a href="/immersive/">Immersive</a></li>
+        <li><a href="/small-business/">Small Business</a></li>
+        <li><a href="/arts/">Arts &amp; Design</a></li>
+        <li><a href="/outdoors/">Outdoors</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/world/">World</a></li>
+        <li><a href="/archive/">Archive</a></li>
       </ul>
     </div>
   </nav>
 </header>
+
+
+<div class="tvtape">
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        {"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},
+        {"proName":"FOREXCOM:DJI","title":"Dow 30"},
+        {"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},
+        {"proName":"FX_IDC:EURUSD","title":"EUR/USD"},
+        {"proName":"TVC:DXY","title":"US Dollar"},
+        {"proName":"TVC:GOLD","title":"Gold"},
+        {"proName":"TVC:USOIL","title":"Crude Oil"},
+        {"proName":"TVC:US10Y","title":"US 10Y"},
+        {"proName":"BITSTAMP:BTCUSD","title":"Bitcoin"}
+      ],
+      "showSymbolLogo": true,
+      "isTransparent": true,
+      "displayMode": "adaptive",
+      "colorTheme": "light",
+      "locale": "en"
+    }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+</div>
 
 <!-- ===================== TICKER ===================== -->
 <div class="ticker" aria-label="Latest headlines">
@@ -120,6 +153,47 @@
   </div>
 </div>
 
+
+<section class="showcase" aria-labelledby="sc-h">
+  <div class="sc-grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sc-inner">
+      <div class="sc-copy">
+        <span class="sc-eyebrow"><i aria-hidden="true"></i>Live intelligence desk</span>
+        <h2 id="sc-h">The economy is being rewritten by <span>machines that read</span>.</h2>
+        <p>Search became answers. Storefronts became spaces. Announcements became
+        structured data. Action Global News covers the businesses building on that shift
+        &mdash; and the ones being quietly reordered by it.</p>
+        <div class="sc-actions">
+          <a class="sc-btn sc-btn-p" href="/articles/world-vr-mall-launch/">
+            Read the lead story &rarr;</a>
+          <a class="sc-btn sc-btn-s" href="/technology/">Technology desk</a>
+        </div>
+      </div>
+
+      <div class="sc-stage" aria-hidden="true">
+        <span class="sc-halo"></span>
+        <div class="sc-globe">
+          <span class="sc-ring"></span><span class="sc-ring"></span><span class="sc-ring"></span>
+          <span class="sc-ring"></span><span class="sc-ring"></span><span class="sc-ring"></span>
+          <span class="sc-lat l1"></span><span class="sc-lat l2"></span>
+          <span class="sc-lat l3"></span><span class="sc-lat l4"></span>
+          <span class="sc-lat l5"></span>
+          <span class="sc-core"></span>
+          <span class="sc-node" style="top:22%;left:30%;animation-delay:.2s"></span>
+          <span class="sc-node" style="top:64%;left:72%;animation-delay:1.1s"></span>
+          <span class="sc-node" style="top:44%;left:14%;animation-delay:2s"></span>
+          <span class="sc-node" style="top:78%;left:42%;animation-delay:.7s"></span>
+          <span class="sc-node" style="top:12%;left:60%;animation-delay:1.6s"></span>
+        </div>
+        <div class="sc-chip c1"><span class="cl">Desks live</span><span class="cv">09</span></div>
+        <div class="sc-chip c2"><span class="cl">Syndicated sources</span><span class="cv">40+</span></div>
+        <div class="sc-chip c3"><span class="cl">Feed failover</span><span class="cv">3-way</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <main id="main">
 <h1 class="vh">Action Global News &mdash; front page: business, technology, global ecommerce and the AI economy</h1>
 <div class="wrap">
@@ -127,7 +201,7 @@
   <!-- ===================== LEAD ===================== -->
   <div class="lead-grid">
     <article class="card card-lead">
-      <a href="/articles/world-vr-mall-launch.html">
+      <a href="/articles/world-vr-mall-launch/">
         <div class="thumb">
           <svg viewBox="0 0 1200 675" role="img" aria-label="Illustration of a virtual shopping concourse" style="width:100%;display:block;background:#0b1020">
             <defs>
@@ -195,28 +269,28 @@
 
     <div class="side-stack">
       <article class="card card-med">
-        <a href="/articles/vr-flight-simulator-launch.html">
+        <a href="/articles/vr-flight-simulator-launch/">
           <span class="kicker blue">Technology</span>
           <h3>A browser-based flight simulator aimed at student pilots launches without a download</h3>
           <p>No install, no headset, no client. The pitch is procedural familiarity before you pay for airtime.</p>
         </a>
       </article>
       <article class="card card-med">
-        <a href="/articles/conversational-ai-small-business.html">
+        <a href="/articles/conversational-ai-small-business/">
           <span class="kicker blue">Technology</span>
           <h3>Conversational AI has quietly become table stakes for small business websites</h3>
           <p>What actually works, what fails in production, and the gap between a demo and a deployment.</p>
         </a>
       </article>
       <article class="card card-med">
-        <a href="/technology.html">
+        <a href="/technology/">
           <span class="kicker slate">Media</span>
           <h3>The press release didn't die. It got rebuilt for machines that read</h3>
           <p>Wire distribution collapsed. The format underneath turns out to suit AI retrieval almost perfectly.</p>
         </a>
       </article>
       <article class="card card-sm">
-        <a href="/articles/local-groups-distribution.html">
+        <a href="/articles/local-groups-distribution/">
           <span class="kicker slate">Small Business</span>
           <h3>The quiet distribution channel: what 200,000 members in local buy-sell groups actually buy</h3>
         </a>
@@ -293,32 +367,32 @@
   <section class="sec">
     <div class="sec-head">
       <h2>Technology</h2>
-      <a class="more" href="/technology.html">All technology &rarr;</a>
+      <a class="more" href="/technology/">All technology &rarr;</a>
     </div>
     <div class="grid-4">
       <article class="card card-sm">
-        <a href="/articles/conversational-ai-small-business.html">
+        <a href="/articles/conversational-ai-small-business/">
           <span class="kicker blue">Analysis</span>
           <h3>Why most small-business chatbots fail in week three</h3>
           <p>Scope creep, no escalation path, and answers nobody verified.</p>
         </a>
       </article>
       <article class="card card-sm">
-        <a href="/articles/press-release-ai-search.html">
+        <a href="/articles/press-release-ai-search/">
           <span class="kicker blue">Search</span>
           <h3>Structured data is becoming the story, not the markup</h3>
           <p>What retrieval systems actually reward in published announcements.</p>
         </a>
       </article>
       <article class="card card-sm">
-        <a href="/articles/vr-flight-simulator-launch.html">
+        <a href="/articles/vr-flight-simulator-launch/">
           <span class="kicker blue">Simulation</span>
           <h3>WebGL has quietly caught up to desktop flight sims</h3>
           <p>What browsers can now render, and where they still fall short.</p>
         </a>
       </article>
       <article class="card card-sm">
-        <a href="/articles/world-vr-mall-launch.html">
+        <a href="/articles/world-vr-mall-launch/">
           <span class="kicker blue">Immersive</span>
           <h3>The case for browsing over searching in online retail</h3>
           <p>Discovery is the weakest link in ecommerce. Spatial UI is one answer.</p>
@@ -348,7 +422,7 @@
   <section class="sec">
     <div class="sec-head">
       <h2>Business &amp; Markets</h2>
-      <a class="more" href="/business.html">All business &rarr;</a>
+      <a class="more" href="/business/">All business &rarr;</a>
     </div>
     <div class="grid-3">
       <div class="feedbox">
@@ -408,22 +482,133 @@
     </div>
   </div>
 
+
+  <!-- ===================== MARKETS ===================== -->
+  <section class="sec">
+    <div class="sec-head">
+      <h2>Markets Dashboard</h2>
+      <a class="more" href="/business/">Business desk &rarr;</a>
+    </div>
+    <div class="grid-2">
+
+      <div class="tvwrap">
+        <div class="tvhead"><span class="src">Market Overview</span>
+          <span class="lv"><i></i>Live</span></div>
+        <div class="tvbody">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+            {
+              "colorTheme":"light","dateRange":"1D","showChart":true,"locale":"en",
+              "largeChartUrl":"","isTransparent":true,"showSymbolLogo":true,
+              "showFloatingTooltip":true,"width":"100%","height":"420",
+              "tabs":[
+                {"title":"Indices","symbols":[
+                  {"s":"FOREXCOM:SPXUSD","d":"S&P 500"},
+                  {"s":"FOREXCOM:NSXUSD","d":"Nasdaq 100"},
+                  {"s":"FOREXCOM:DJI","d":"Dow 30"},
+                  {"s":"INDEX:NKY","d":"Nikkei 225"},
+                  {"s":"FOREXCOM:UKXGBP","d":"FTSE 100"}]},
+                {"title":"Commodities","symbols":[
+                  {"s":"TVC:GOLD","d":"Gold"},
+                  {"s":"TVC:SILVER","d":"Silver"},
+                  {"s":"TVC:USOIL","d":"Crude Oil"},
+                  {"s":"CME:HE1!","d":"Lean Hogs"}]},
+                {"title":"Bonds","symbols":[
+                  {"s":"TVC:US10Y","d":"US 10Y"},
+                  {"s":"TVC:US02Y","d":"US 02Y"},
+                  {"s":"TVC:DE10Y","d":"Germany 10Y"}]}
+              ]
+            }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+      </div>
+
+      <div class="tvwrap">
+        <div class="tvhead"><span class="src">Market News Wire</span>
+          <span class="lv"><i></i>Live</span></div>
+        <div class="tvbody">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+            {
+              "feedMode":"all_symbols","isTransparent":true,"displayMode":"regular",
+              "width":"100%","height":"420","colorTheme":"light","locale":"en"
+            }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+      </div>
+
+    </div>
+    <div class="grid-2" style="margin-top:26px">
+
+      <div class="tvwrap">
+        <div class="tvhead"><span class="src">Economic Calendar</span>
+          <span class="lv"><i></i>Live</span></div>
+        <div class="tvbody">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+            {
+              "colorTheme":"light","isTransparent":true,"width":"100%","height":"420",
+              "locale":"en","importanceFilter":"0,1","countryFilter":"us,eu,gb,jp,cn"
+            }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+      </div>
+
+      <div class="tvwrap">
+        <div class="tvhead"><span class="src">Movers &amp; Actives</span>
+          <span class="lv"><i></i>Live</span></div>
+        <div class="tvbody">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+            {
+              "colorTheme":"light","dateRange":"12M","exchange":"US","showChart":true,
+              "locale":"en","width":"100%","height":"420","isTransparent":true,
+              "showSymbolLogo":true,"showFloatingTooltip":true
+            }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+      </div>
+
+    </div>
+<p class="srcnote" style="margin-top:14px">Market data widgets provided by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a>. Quotes are indicative and may be delayed; they are supplied for context and are not investment advice. See our <a href="/terms/">terms of use</a>.</p>
+  </section>
+
   <!-- ===================== IMMERSIVE + COMMERCE ===================== -->
   <section class="sec">
     <div class="sec-head">
       <h2>Immersive &amp; Global Commerce</h2>
-      <a class="more" href="/global-ecommerce.html">Global ecommerce &rarr;</a>
+      <a class="more" href="/global-ecommerce/">Global ecommerce &rarr;</a>
     </div>
     <div class="grid-2">
       <article class="card card-med">
-        <a href="/articles/world-vr-mall-launch.html">
+        <a href="/articles/world-vr-mall-launch/">
           <span class="kicker">Launch</span>
           <h3>Inside the build: how a walk-in mall gets from concept to browser</h3>
           <p>Spatial navigation, storefront licensing, and the unglamorous problem of making a 3D space load fast enough that nobody leaves.</p>
         </a>
       </article>
       <article class="card card-med">
-        <a href="/global-ecommerce.html">
+        <a href="/global-ecommerce/">
           <span class="kicker">Commerce</span>
           <h3>Cross-border retail is growing faster than the platforms serving it</h3>
           <p>Payments, duties and returns remain the three friction points no marketplace has fully solved.</p>
@@ -448,7 +633,7 @@
   <section class="sec">
     <div class="sec-head">
       <h2>World</h2>
-      <a class="more" href="/world.html">All world &rarr;</a>
+      <a class="more" href="/world/">All world &rarr;</a>
     </div>
     <div class="grid-3">
       <div class="feedbox">
@@ -470,24 +655,37 @@
     <p class="srcnote" style="margin-top:14px">Live headline modules link directly to the originating publisher. Action Global News does not reproduce third-party article text.</p>
   </section>
 
+
+  <!-- ===================== VIDEO ===================== -->
+  <section class="sec">
+    <div class="sec-head">
+      <h2>Video Desk</h2>
+      <a class="more" href="/video/">All video &rarr;</a>
+    </div>
+    <div class="vwall" id="home-vwall"></div>
+    <p class="srcnote" style="margin-top:16px">Videos are embedded through YouTube&rsquo;s
+    privacy-enhanced player and load only when you press play. Views and revenue accrue to the
+    original creator.</p>
+  </section>
+
   <!-- ===================== DESKS ===================== -->
   <section class="sec">
     <div class="sec-head"><h2>More from our desks</h2></div>
     <div class="grid-4">
       <article class="card card-sm">
-        <a href="/arts.html"><span class="kicker slate">Arts &amp; Design</span>
+        <a href="/arts/"><span class="kicker slate">Arts &amp; Design</span>
         <h3>The design desk</h3><p>Craft, commerce and the visual language of small brands.</p></a>
       </article>
       <article class="card card-sm">
-        <a href="/outdoors.html"><span class="kicker slate">Outdoors</span>
+        <a href="/outdoors/"><span class="kicker slate">Outdoors</span>
         <h3>The outdoors desk</h3><p>Trails, gear and the economics of the outdoor economy.</p></a>
       </article>
       <article class="card card-sm">
-        <a href="/video.html"><span class="kicker slate">Video</span>
+        <a href="/video/"><span class="kicker slate">Video</span>
         <h3>Video briefings</h3><p>Short explainers and embedded reporting from across the web.</p></a>
       </article>
       <article class="card card-sm">
-        <a href="/small-business.html"><span class="kicker slate">Small Business</span>
+        <a href="/small-business/"><span class="kicker slate">Small Business</span>
         <h3>Main street</h3><p>Operations, cash flow and the tools that actually move the needle.</p></a>
       </article>
     </div>
@@ -512,35 +710,35 @@
       <div>
         <h4>Sections</h4>
         <ul>
-          <li><a href="/technology.html">Technology</a></li>
-          <li><a href="/business.html">Business</a></li>
-          <li><a href="/global-ecommerce.html">Global Ecommerce</a></li>
-          <li><a href="/immersive.html">Immersive</a></li>
-          <li><a href="/small-business.html">Small Business</a></li>
-          <li><a href="/arts.html">Arts &amp; Design</a></li>
-          <li><a href="/outdoors.html">Outdoors</a></li>
-          <li><a href="/video.html">Video</a></li>
-          <li><a href="/world.html">World</a></li>
+          <li><a href="/technology/">Technology</a></li>
+          <li><a href="/business/">Business</a></li>
+          <li><a href="/global-ecommerce/">Global Ecommerce</a></li>
+          <li><a href="/immersive/">Immersive</a></li>
+          <li><a href="/small-business/">Small Business</a></li>
+          <li><a href="/arts/">Arts &amp; Design</a></li>
+          <li><a href="/outdoors/">Outdoors</a></li>
+          <li><a href="/video/">Video</a></li>
+          <li><a href="/world/">World</a></li>
         </ul>
       </div>
       <div>
         <h4>The Paper</h4>
         <ul>
-          <li><a href="/about.html">About AGN</a></li>
-          <li><a href="/editorial-standards.html">Editorial standards</a></li>
-          <li><a href="/archive.html">Archive</a></li>
-          <li><a href="/search.html">Search</a></li>
-          <li><a href="/newsletter.html">Newsletter</a></li>
+          <li><a href="/about/">About AGN</a></li>
+          <li><a href="/editorial-standards/">Editorial standards</a></li>
+          <li><a href="/archive/">Archive</a></li>
+          <li><a href="/search/">Search</a></li>
+          <li><a href="/newsletter/">Newsletter</a></li>
           <li><a href="/feed.xml">RSS feed</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Work with us</h4>
         <ul>
-          <li><a href="/advertise.html">Advertise</a></li>
-          <li><a href="/press-releases.html">Submit an announcement</a></li>
-          <li><a href="/news-tips.html">Send a news tip</a></li>
+          <li><a href="/advertise/">Advertise</a></li>
+          <li><a href="/press-releases/">Submit an announcement</a></li>
+          <li><a href="/news-tips/">Send a news tip</a></li>
         </ul>
         <h4 style="margin-top:22px">Network</h4>
         <ul>
@@ -553,9 +751,9 @@
     <div class="foot-bot">
       <span>&copy; <span id="yr">2026</span> Action Global News. All rights reserved.</span>
       <span style="display:flex;gap:16px;flex-wrap:wrap">
-        <a href="/accessibility.html">Accessibility</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
+        <a href="/accessibility/">Accessibility</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
       </span>
       <span>Sponsored content is labelled. External links open at the originating publisher.</span>
     </div>
@@ -664,12 +862,64 @@ AGN.loadFeeds({
   'feed-npr':     {url:'https://feeds.npr.org/1001/rss.xml', name:'NPR', site:'https://www.npr.org', max:6}
 });
 
+
+/* ------------------------------------------------------------------
+   VIDEO WALL CONFIGURATION
+   ------------------------------------------------------------------
+   Add YouTube channel IDs below and this wall fills itself from each
+   channel's public Atom feed — newest videos first, thumbnails only
+   until a viewer clicks, then the privacy-enhanced player loads.
+
+   To find a channel ID: open the channel in a browser, view source
+   (Ctrl+U), search for "channelId" — the 24-character value starting
+   with UC is what goes here.
+
+   Example:
+     { id: "UCxxxxxxxxxxxxxxxxxxxxxx", name: "Channel Name", max: 3 }
+   ------------------------------------------------------------------ */
+var VIDEO_SOURCES = [
+  // { id: "UC...", name: "...", max: 3 },
+];
+
+AGN.buildVideoWall({
+  target: 'home-vwall',
+  sources: VIDEO_SOURCES,
+  limit: 6,
+  emptyHTML: "<div style=\"grid-column:1/-1;border:1px dashed var(--rule);padding:30px;text-align:center\"><p style=\"font-size:15px;color:var(--ink-2);margin:0 0 6px\"><strong>The video wall is configured but has no channels yet.</strong></p><p style=\"font-size:13.5px;color:var(--ink-3);margin:0;line-height:1.55\">Add YouTube channel IDs to the <code>VIDEO_SOURCES</code> array in this page&rsquo;s script block and the wall populates itself from their public feeds.</p></div>"
+});
+
+
+/* ------------------------------------------------------------------
+   VIDEO WALL CONFIGURATION
+   ------------------------------------------------------------------
+   Add YouTube channel IDs below and this wall fills itself from each
+   channel's public Atom feed — newest videos first, thumbnails only
+   until a viewer clicks, then the privacy-enhanced player loads.
+
+   To find a channel ID: open the channel in a browser, view source
+   (Ctrl+U), search for "channelId" — the 24-character value starting
+   with UC is what goes here.
+
+   Example:
+     { id: "UCxxxxxxxxxxxxxxxxxxxxxx", name: "Channel Name", max: 3 }
+   ------------------------------------------------------------------ */
+var VIDEO_SOURCES = [
+  // { id: "UC...", name: "...", max: 3 },
+];
+
+AGN.buildVideoWall({
+  target: 'home-vwall',
+  sources: VIDEO_SOURCES,
+  limit: 6,
+  emptyHTML: "<div style=\"grid-column:1/-1;border:1px dashed var(--rule);padding:30px;text-align:center\"><p style=\"font-size:15px;color:var(--ink-2);margin:0 0 6px\"><strong>The video wall is configured but has no channels yet.</strong></p><p style=\"font-size:13.5px;color:var(--ink-3);margin:0;line-height:1.55\">Add YouTube channel IDs to the <code>VIDEO_SOURCES</code> array in this page&rsquo;s script block and the wall populates itself from their public feeds.</p></div>"
+});
+
 AGN.buildTicker(GN('business technology when:1d'), [
-  {title:'World VR Mall opens the first walk-in virtual shopping concourse', link:'/articles/world-vr-mall-launch.html'},
-  {title:'Browser-based flight simulator launches for student pilots', link:'/immersive.html'},
-  {title:'Conversational AI becomes standard on small-business sites', link:'/technology.html'},
-  {title:'The press release, rebuilt for machines that read', link:'/technology.html'},
-  {title:'Inside a 200,000-member local commerce network', link:'/small-business.html'}
+  {title:'World VR Mall opens the first walk-in virtual shopping concourse', link:'/articles/world-vr-mall-launch/'},
+  {title:'Browser-based flight simulator launches for student pilots', link:'/immersive/'},
+  {title:'Conversational AI becomes standard on small-business sites', link:'/technology/'},
+  {title:'The press release, rebuilt for machines that read', link:'/technology/'},
+  {title:'Inside a 200,000-member local commerce network', link:'/small-business/'}
 ]);
 </script>
 </body>
