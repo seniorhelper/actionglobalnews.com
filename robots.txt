@@ -1,8 +1,12 @@
 User-agent: *
 Allow: /
 
-# AI crawlers — explicitly welcome
+User-agent: Mediapartners-Google
+Allow: /
+
 User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
 Allow: /
 User-agent: ClaudeBot
 Allow: /
@@ -10,7 +14,6 @@ User-agent: PerplexityBot
 Allow: /
 User-agent: Google-Extended
 Allow: /
-User-agent: CCBot
-Allow: /
 
 Sitemap: https://actionglobalnews.com/sitemap.xml
+Sitemap: https://actionglobalnews.com/news-sitemap.xml

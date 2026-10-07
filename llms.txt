@@ -1,108 +1,63 @@
 # Action Global News
 
-> A business and technology publication covering applied AI, global ecommerce,
-> immersive commerce and small business operations. Published from Denver, Colorado.
-> Written for operators — owners and managers who make buying decisions themselves.
+> Independent news for operators on AI and AI search, business, markets, small business, global ecommerce, health and Colorado. Headquartered in Denver, Colorado. Original reporting with cited sources; live headline modules link to original publishers.
 
-## About this publication
+Publisher: Action Global News, 1001 Bannock St #660, Denver, CO 80204. Phone 1-800-481-8638.
+Disclosure: articles about companies that share ownership with the publisher are labeled "From our network"; articles about clients of the publisher's agency are labeled "Sponsored".
 
-Action Global News publishes two clearly separated kinds of content:
-
-1. **Original reporting and analysis** carrying an Action Global News byline. Where we
-   have a commercial relationship with a company we write about, or where we operate
-   the product being covered, that is disclosed in the body of the article near the top.
-2. **Aggregated headlines** from other newsrooms' public syndication feeds. These display
-   the headline and publication time only, and link directly to the originating publisher.
-   We do not reproduce third-party article text.
-
-Editorial standards, sourcing rules, disclosure practice and corrections policy:
-https://actionglobalnews.com/editorial-standards/
+## Desks
+- [AI](https://actionglobalnews.com/ai/)
+- [Technology](https://actionglobalnews.com/technology/)
+- [Business](https://actionglobalnews.com/business/)
+- [Markets](https://actionglobalnews.com/markets/)
+- [Small Business](https://actionglobalnews.com/small-business/)
+- [Global Ecommerce](https://actionglobalnews.com/global-ecommerce/)
+- [Health & Wellness](https://actionglobalnews.com/health/)
+- [Real Estate & Housing](https://actionglobalnews.com/real-estate/)
+- [Travel](https://actionglobalnews.com/travel/)
+- [Colorado & Denver](https://actionglobalnews.com/colorado/)
+- [World](https://actionglobalnews.com/world/)
+- [Immersive](https://actionglobalnews.com/immersive/)
+- [Arts & Design](https://actionglobalnews.com/arts/)
+- [Outdoors](https://actionglobalnews.com/outdoors/)
+- [Explainers](https://actionglobalnews.com/explainers/)
+- [Analysis](https://actionglobalnews.com/analysis/)
+- [Video desk](https://actionglobalnews.com/video/)
+- [Live news streams](https://actionglobalnews.com/live/)
 
 ## Articles
-
-- [The world's first walk-in VR shopping mall opens its doors](https://actionglobalnews.com/articles/world-vr-mall-launch/):
-  Launch report on World VR Mall, a browser-based three-dimensional shopping concourse where
-  storefronts route through to merchants' own ecommerce checkouts. Covers the discovery problem
-  in online retail, why headset-optional design matters, progressive scene loading, and the
-  conditions under which immersive commerce succeeds or fails. Publisher-operated product;
-  disclosed in article.
-
-- [A browser-based flight simulator aimed at student pilots launches without a download](https://actionglobalnews.com/articles/vr-flight-simulator-launch/):
-  Launch report on VR Flying Simulator. Covers procedural rehearsal for student pilots —
-  checklist discipline, instrument scan, navigation tracking — and states explicitly what a
-  browser simulator cannot do: it is not an approved training device, logs no hours, and does
-  not teach control feel. Publisher-operated product; disclosed in article.
-
-- [Conversational AI has quietly become table stakes for small business websites](https://actionglobalnews.com/articles/conversational-ai-small-business/):
-  Analysis of what separates conversational assistants that last from those switched off in
-  week three: enforced scope, visible escalation paths, grounding in the business's own
-  content, and disclosure that the assistant is software. Includes a comparison of deployment
-  patterns and caution on agentic systems.
-
-- [The press release didn't die. It got rebuilt for machines that read](https://actionglobalnews.com/articles/press-release-ai-search/):
-  Analysis of why wire distribution collapsed as an SEO tactic while the press release format
-  — dated, attributed, factual, entity-clear — turns out to suit machine retrieval. Covers
-  writing the opening passage to stand alone, replacing adjectives with verifiable facts,
-  structured markup, and why link-buying through announcements remains dead.
-
-- [The quiet distribution channel: what happens inside local buy-sell groups](https://actionglobalnews.com/articles/local-groups-distribution/):
-  Analysis of community commerce networks: why trust density rather than membership size
-  drives their value, how commercial posting degrades them, why moderation capacity is the
-  binding constraint, and why the channel measures poorly and is therefore undervalued.
-  Publisher administers such groups; disclosed in article.
-
-- [Marketing inside the most scrutinised category in medicine](https://actionglobalnews.com/articles/glp1-telehealth-marketing/):
-  Case study on compliant patient acquisition in weight-management telehealth. Covers which
-  advertising channels close, what remains available, the three-question claim review process,
-  and why constraints that force factual specificity produce better-qualified enquiries.
-  Client relationship disclosed in article. Contains no medical claims or advice.
-
-## Sections
-
-- [Technology](https://actionglobalnews.com/technology/): Applied AI and agentic systems,
-  search and retrieval, browser and WebGL capability, simulation, small-business deployment.
-- [Business & Markets](https://actionglobalnews.com/business/): Rates, credit and inflation
-  translated for operators; margin, pricing and cash conversion; home services and the trades.
-- [Global Ecommerce](https://actionglobalnews.com/global-ecommerce/): Cross-border payments
-  and settlement, duties and landed cost, returns and reverse logistics, marketplace economics.
-- [Immersive](https://actionglobalnews.com/immersive/): Browser 3D, spatial commerce,
-  simulation and procedural training, spatial interface design.
-- [Small Business](https://actionglobalnews.com/small-business/): Local search and entity
-  consistency, pricing and cash conversion, community distribution, practical automation.
-- [Arts & Design](https://actionglobalnews.com/arts/): Pricing original work, editions and
-  licensing, brand identity for small companies, gallery economics, craft and reclaimed trades.
-- [Outdoors](https://actionglobalnews.com/outdoors/): Public lands access and permits,
-  guiding and outfitting economics, conservation funding, Mountain West regional coverage.
-- [World](https://actionglobalnews.com/world/): Aggregation desk. International headlines
-  from the BBC, NPR, Al Jazeera and wire coverage. No original international reporting.
-- [Video](https://actionglobalnews.com/video/): Video briefings, embedded through each
-  platform's own player.
-
-## Working with the publication
-
-- [Advertise](https://actionglobalnews.com/advertise/): Display (two placements per page,
-  capped), sponsored editorial with permanent labelling, section sponsorship, announcement
-  placement. Advertisers receive no editorial input or advance notice of coverage.
-- [Announcements & Submissions](https://actionglobalnews.com/press-releases/): Paid
-  announcement placement, permanently labelled, published at a canonical URL with structured
-  data. Categories declined are listed. Links in paid announcements carry sponsored attributes.
-- [Send a News Tip](https://actionglobalnews.com/news-tips/): Free editorial route. Story
-  tips, company announcements and corrections.
+- [The White House renamed AI “Super Intelligence.” Here is what actually changes for business](https://actionglobalnews.com/articles/super-intelligence-executive-order-business/): A terminology order, a federal definition still to come, and a voluntary accord signed by the biggest model builders. The practical footprint is narrower than the headlines, but it is not zero.
+- [More than one in four U.S. workers now fear technology will make their job obsolete](https://actionglobalnews.com/articles/gallup-tech-job-fears-2026/): Gallup’s latest reading is a record, and the worry has moved into groups that used to feel insulated. For employers, the anxiety is now a management problem whether or not the layoffs ever arrive.
+- [AI shopping agents can now complete the purchase. Most small stores are not ready to be chosen](https://actionglobalnews.com/articles/agentic-commerce-small-retailers/): Checkout inside a chat window has been live for a year, and payment platforms have quietly switched agent support on for millions of merchants. The new problem is not access. It is whether an agent can read your store we
+- [The data center backlash has found its issue: the electricity bill](https://actionglobalnews.com/articles/data-center-backlash-electricity-bills/): Local fights over hyperscale facilities used to be about noise and land. Now they are about household power costs, and the opposition no longer sorts neatly by party.
+- [SBA disaster loans, explained for small business owners who have never needed one](https://actionglobalnews.com/articles/sba-disaster-loans-small-business-guide/): After a declared disaster, the federal government’s largest source of recovery money for businesses is a loan, not a grant. Here is how it works, what it covers and why waiting for the insurance check is the most common 
+- [AI search optimization: how a small business gets named inside the answer](https://actionglobalnews.com/articles/ai-search-optimization-small-business/): Search used to send people to a list of links. Increasingly it hands them a finished answer. For local and small businesses, the job has shifted from ranking on a page to being one of the few names an AI system is willin
+- [Rent, buy or subscribe to own: the real cost of a small business website](https://actionglobalnews.com/articles/subscribe-to-own-website-model/): The sticker price of a website tells you very little. What matters is what you pay over the life of the site, what you own at the end of it, and who is accountable when it does not perform.
+- [Bathroom remodeling for elderly parents: the aging-in-place decisions that matter most](https://actionglobalnews.com/articles/bathroom-remodel-for-elderly-parents/): Searches for senior bathroom remodels have jumped this year, and for good reason. The bathroom is where small design decisions have the largest effect on whether someone can keep living at home.
+- [Losing weight on a GLP-1? The muscle you keep matters as much as the pounds you lose](https://actionglobalnews.com/articles/glp1-muscle-loss-protein-strength/): The newest weight-loss medications work. The body-composition data from their trials also shows a cost that is easy to miss on a bathroom scale, and the research on how to limit it is getting clearer.
+- [A press release written for the machines that now decide who gets quoted](https://actionglobalnews.com/articles/machine-readable-press-releases/): Traditional wires sell reach to newsrooms. A newer kind of wire sells something narrower and, for small companies, often more useful: a permanent, dated, attributed record that search engines and AI systems can read with
+- [A free national business directory built on open map data, not scraped listings](https://actionglobalnews.com/articles/usabusinesssearch-free-business-directory/): Most directories either scrape other directories or charge businesses to exist. USABusinessSearch.com starts from open map data, lists businesses free, and lets owners claim and correct their own records.
+- [The world’s first walk-in VR shopping mall opens its doors](https://actionglobalnews.com/articles/world-vr-mall-launch/): World VR Mall lets shoppers walk a three-dimensional concourse and step into storefronts that route through to live ecommerce sites.
+- [A browser-based flight simulator aimed at student pilots launches without a download](https://actionglobalnews.com/articles/vr-flight-simulator-launch/): No install, no headset, no client. The pitch is procedural familiarity before you start paying for airtime.
+- [Conversational AI has quietly become table stakes for small business websites](https://actionglobalnews.com/articles/conversational-ai-small-business/): The demos are easy and the deployments are not. What separates an assistant that earns its place from one that gets switched off.
+- [The press release didn’t die. It got rebuilt for machines that read](https://actionglobalnews.com/articles/press-release-ai-search/): Wire distribution collapsed as an SEO tactic. The format underneath suits machine retrieval almost perfectly.
+- [The quiet distribution channel: what happens inside local buy-sell groups](https://actionglobalnews.com/articles/local-groups-distribution/): Community commerce networks move real volume and almost nobody measures them properly.
+- [Marketing inside the most scrutinized category in medicine](https://actionglobalnews.com/articles/glp1-telehealth-marketing/): What a compliant acquisition strategy looks like when most of the usual channels say no by default.
 
 ## Policies
+- [Editorial standards](https://actionglobalnews.com/editorial-standards/)
+- [Ethics & AI policy](https://actionglobalnews.com/ethics-ai-policy/)
+- [Corrections](https://actionglobalnews.com/corrections/)
+- [Ownership & funding](https://actionglobalnews.com/ownership/)
 
-- [Editorial Standards & Corrections](https://actionglobalnews.com/editorial-standards/)
-- [About](https://actionglobalnews.com/about/)
-- [Accessibility Statement](https://actionglobalnews.com/accessibility/): WCAG 2.2 AA target.
-- [Privacy Policy](https://actionglobalnews.com/privacy/): No reader accounts or database.
-- [Terms of Use](https://actionglobalnews.com/terms/): Free to read; quote with attribution
-  and a link; ask before republishing in full.
+## Work with us
+- [Advertise](https://actionglobalnews.com/advertise/)
+- [Media kit](https://actionglobalnews.com/media-kit/)
+- [Sponsored content](https://actionglobalnews.com/sponsored-content/)
+- [Press release distribution](https://actionglobalnews.com/press-release-distribution/)
 
-## Optional
-
-- [Archive](https://actionglobalnews.com/archive/): Every article published.
-- [Search](https://actionglobalnews.com/search/): Client-side search across the site.
-- [RSS feed](https://actionglobalnews.com/feed.xml)
-- [Newsletter](https://actionglobalnews.com/newsletter/)
-- [Contact](https://actionglobalnews.com/contact/): sales@eyetoad.com · 1-800-481-8638 ·
-  1001 Bannock St #660, Denver, CO 80204
+## Machine-readable
+- [RSS](https://actionglobalnews.com/feed.xml)
+- [JSON Feed](https://actionglobalnews.com/feed.json)
+- [Sitemap](https://actionglobalnews.com/sitemap.xml)
+- [News sitemap](https://actionglobalnews.com/news-sitemap.xml)

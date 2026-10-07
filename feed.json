@@ -1,0 +1,196 @@
+{
+ "version": "https://jsonfeed.org/version/1.1",
+ "title": "Action Global News",
+ "home_page_url": "https://actionglobalnews.com/",
+ "feed_url": "https://actionglobalnews.com/feed.json",
+ "language": "en-US",
+ "items": [
+  {
+   "id": "https://actionglobalnews.com/articles/usabusinesssearch-free-business-directory/",
+   "url": "https://actionglobalnews.com/articles/usabusinesssearch-free-business-directory/",
+   "title": "A free national business directory built on open map data, not scraped listings",
+   "summary": "Most directories either scrape other directories or charge businesses to exist. USABusinessSearch.com starts from open map data, lists businesses free, and lets owners claim and correct their own records.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/usabusinesssearch-free-business-directory.jpg",
+   "tags": [
+    "Small Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/super-intelligence-executive-order-business/",
+   "url": "https://actionglobalnews.com/articles/super-intelligence-executive-order-business/",
+   "title": "The White House renamed AI “Super Intelligence.” Here is what actually changes for business",
+   "summary": "A terminology order, a federal definition still to come, and a voluntary accord signed by the biggest model builders. The practical footprint is narrower than the headlines, but it is not zero.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/super-intelligence-executive-order-business.jpg",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/subscribe-to-own-website-model/",
+   "url": "https://actionglobalnews.com/articles/subscribe-to-own-website-model/",
+   "title": "Rent, buy or subscribe to own: the real cost of a small business website",
+   "summary": "The sticker price of a website tells you very little. What matters is what you pay over the life of the site, what you own at the end of it, and who is accountable when it does not perform.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/subscribe-to-own-website-model.jpg",
+   "tags": [
+    "Small Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/sba-disaster-loans-small-business-guide/",
+   "url": "https://actionglobalnews.com/articles/sba-disaster-loans-small-business-guide/",
+   "title": "SBA disaster loans, explained for small business owners who have never needed one",
+   "summary": "After a declared disaster, the federal government’s largest source of recovery money for businesses is a loan, not a grant. Here is how it works, what it covers and why waiting for the insurance check is the most common mistake.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/sba-disaster-loans-small-business-guide.jpg",
+   "tags": [
+    "Small Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/machine-readable-press-releases/",
+   "url": "https://actionglobalnews.com/articles/machine-readable-press-releases/",
+   "title": "A press release written for the machines that now decide who gets quoted",
+   "summary": "Traditional wires sell reach to newsrooms. A newer kind of wire sells something narrower and, for small companies, often more useful: a permanent, dated, attributed record that search engines and AI systems can read without guessing.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/machine-readable-press-releases.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/glp1-muscle-loss-protein-strength/",
+   "url": "https://actionglobalnews.com/articles/glp1-muscle-loss-protein-strength/",
+   "title": "Losing weight on a GLP-1? The muscle you keep matters as much as the pounds you lose",
+   "summary": "The newest weight-loss medications work. The body-composition data from their trials also shows a cost that is easy to miss on a bathroom scale, and the research on how to limit it is getting clearer.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/glp1-muscle-loss-protein-strength.jpg",
+   "tags": [
+    "Health & Wellness"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/gallup-tech-job-fears-2026/",
+   "url": "https://actionglobalnews.com/articles/gallup-tech-job-fears-2026/",
+   "title": "More than one in four U.S. workers now fear technology will make their job obsolete",
+   "summary": "Gallup’s latest reading is a record, and the worry has moved into groups that used to feel insulated. For employers, the anxiety is now a management problem whether or not the layoffs ever arrive.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/gallup-tech-job-fears-2026.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/data-center-backlash-electricity-bills/",
+   "url": "https://actionglobalnews.com/articles/data-center-backlash-electricity-bills/",
+   "title": "The data center backlash has found its issue: the electricity bill",
+   "summary": "Local fights over hyperscale facilities used to be about noise and land. Now they are about household power costs, and the opposition no longer sorts neatly by party.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/data-center-backlash-electricity-bills.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/bathroom-remodel-for-elderly-parents/",
+   "url": "https://actionglobalnews.com/articles/bathroom-remodel-for-elderly-parents/",
+   "title": "Bathroom remodeling for elderly parents: the aging-in-place decisions that matter most",
+   "summary": "Searches for senior bathroom remodels have jumped this year, and for good reason. The bathroom is where small design decisions have the largest effect on whether someone can keep living at home.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/bathroom-remodel-for-elderly-parents.jpg",
+   "tags": [
+    "Health & Wellness"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/ai-search-optimization-small-business/",
+   "url": "https://actionglobalnews.com/articles/ai-search-optimization-small-business/",
+   "title": "AI search optimization: how a small business gets named inside the answer",
+   "summary": "Search used to send people to a list of links. Increasingly it hands them a finished answer. For local and small businesses, the job has shifted from ranking on a page to being one of the few names an AI system is willing to cite.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/ai-search-optimization-small-business.jpg",
+   "tags": [
+    "AI"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/agentic-commerce-small-retailers/",
+   "url": "https://actionglobalnews.com/articles/agentic-commerce-small-retailers/",
+   "title": "AI shopping agents can now complete the purchase. Most small stores are not ready to be chosen",
+   "summary": "Checkout inside a chat window has been live for a year, and payment platforms have quietly switched agent support on for millions of merchants. The new problem is not access. It is whether an agent can read your store well enough to pick it.",
+   "date_published": "2026-10-06T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/agentic-commerce-small-retailers.jpg",
+   "tags": [
+    "Global Ecommerce"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/world-vr-mall-launch/",
+   "url": "https://actionglobalnews.com/articles/world-vr-mall-launch/",
+   "title": "The world’s first walk-in VR shopping mall opens its doors",
+   "summary": "World VR Mall lets shoppers walk a three-dimensional concourse and step into storefronts that route through to live ecommerce sites.",
+   "date_published": "2026-09-25T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/world-vr-mall-launch.jpg",
+   "tags": [
+    "Immersive"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/vr-flight-simulator-launch/",
+   "url": "https://actionglobalnews.com/articles/vr-flight-simulator-launch/",
+   "title": "A browser-based flight simulator aimed at student pilots launches without a download",
+   "summary": "No install, no headset, no client. The pitch is procedural familiarity before you start paying for airtime.",
+   "date_published": "2026-09-25T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/vr-flight-simulator-launch.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/press-release-ai-search/",
+   "url": "https://actionglobalnews.com/articles/press-release-ai-search/",
+   "title": "The press release didn’t die. It got rebuilt for machines that read",
+   "summary": "Wire distribution collapsed as an SEO tactic. The format underneath suits machine retrieval almost perfectly.",
+   "date_published": "2026-09-25T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/press-release-ai-search.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/local-groups-distribution/",
+   "url": "https://actionglobalnews.com/articles/local-groups-distribution/",
+   "title": "The quiet distribution channel: what happens inside local buy-sell groups",
+   "summary": "Community commerce networks move real volume and almost nobody measures them properly.",
+   "date_published": "2026-09-25T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/local-groups-distribution.jpg",
+   "tags": [
+    "Small Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/glp1-telehealth-marketing/",
+   "url": "https://actionglobalnews.com/articles/glp1-telehealth-marketing/",
+   "title": "Marketing inside the most scrutinized category in medicine",
+   "summary": "What a compliant acquisition strategy looks like when most of the usual channels say no by default.",
+   "date_published": "2026-09-25T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/glp1-telehealth-marketing.jpg",
+   "tags": [
+    "Health & Wellness"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/conversational-ai-small-business/",
+   "url": "https://actionglobalnews.com/articles/conversational-ai-small-business/",
+   "title": "Conversational AI has quietly become table stakes for small business websites",
+   "summary": "The demos are easy and the deployments are not. What separates an assistant that earns its place from one that gets switched off.",
+   "date_published": "2026-09-25T08:00:00-06:00",
+   "image": "https://actionglobalnews.com/images/og/conversational-ai-small-business.jpg",
+   "tags": [
+    "Technology"
+   ]
+  }
+ ]
+}
