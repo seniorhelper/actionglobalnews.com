@@ -1,0 +1,35 @@
+name: Sync press releases
+
+# Republishes announcements routed here by Distribute Press Releases.
+on:
+  schedule:
+    - cron: '41 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-releases
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Republish routed releases
+        run: python .github/scripts/sync_releases.py
+      - name: Commit
+        run: |
+          git config user.name "agn-feed-bot"
+          git config user.email "agn-feed-bot@users.noreply.github.com"
+          git add press-releases
+          git diff --cached --quiet && exit 0
+          git commit -m "Sync announcements from Distribute Press Releases"
+          git pull --rebase origin main
+          git push
