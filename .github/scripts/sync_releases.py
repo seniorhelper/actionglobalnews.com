@@ -80,7 +80,15 @@ def page(tpl, it):
                   head, count=1, flags=re.S)
     head = head.replace('<a href="/" aria-current="page">Front Page</a>', '<a href="/">Front Page</a>')
     contact = x.get('contact') or {}
-    contact_html = '<br>'.join(esc(contact[k]) for k in ('name', 'email', 'phone') if contact.get(k))
+    import base64
+    parts = [esc(contact['name'])] if contact.get('name') else []
+    if contact.get('email') and '@' in contact['email']:
+        u, d = contact['email'].split('@', 1)
+        parts.append('<a href="#" data-mu="%s" data-md="%s">Email the contact</a>'
+                     % (base64.b64encode(u.encode()).decode(), base64.b64encode(d.encode()).decode()))
+    if contact.get('phone'):
+        parts.append(esc(contact['phone']))
+    contact_html = '<br>'.join(parts)
     body = '''<main id="main">
 
 <div class="wrap">
