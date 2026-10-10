@@ -372,3 +372,7 @@ button{font-family:inherit}
   overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 .foot-grid>*{min-width:0}.foot-grid a{overflow-wrap:anywhere}
+
+/* overflow fixes: flexible search input on narrow screens; long URLs wrap in article text */
+.searchbar input{min-width:0}
+.art p{overflow-wrap:break-word}
