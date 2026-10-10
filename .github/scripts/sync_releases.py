@@ -48,7 +48,7 @@ def page(tpl, it):
     url = '%s/press-releases/%s/' % (SITE, slug)
     canon = it['url']
     title = it['title']
-    t_tag = title if len(title) <= 50 else title[:50].rsplit(' ', 1)[0] + '…'
+    t_tag = title if len(title) <= 38 else title[:38].rsplit(' ', 1)[0] + '…'
     t_tag = '%s | Action Global News' % t_tag
     desc = it.get('summary', '')[:158]
     head, rest = tpl.split('<main id="main">', 1)
