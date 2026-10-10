@@ -93,7 +93,7 @@ def page(tpl, it):
 
 <div class="wrap">
   <div class="deskhead"><nav class="crumb" aria-label="Breadcrumb"><a href="/">Front Page</a> <span>/</span> <a href="/press-releases/">Announcements</a> <span>/</span> <span aria-current="page">{company}</span></nav>
-    <span class="kicker">{label}</span>
+    <span class="kicker">Press release &middot; {label}</span>
     <h1>{title}</h1>
     <p class="dek">{summary}</p>
   </div>
@@ -103,13 +103,13 @@ def page(tpl, it):
   <div class="art-wrap" style="padding:0">
     <div class="art" style="padding-top:8px">
       <div class="callout" style="border-left-color:var(--brand)">
-        <strong>{label}</strong>
-        {disclosure} Republished from <a href="{canon}">Distribute Press Releases</a>, where it was first published on {date}. This is the company&rsquo;s own statement, not Action Global News reporting.
+        <strong>Press release &middot; {label}</strong>
+        {disclosure} Republished from <a href="{canon}" rel="sponsored noopener">Distribute Press Releases</a>, where it was first published on {date}. This is the company&rsquo;s own statement, not Action Global News reporting. It was provided by the company and was not written by our newsroom. <a href="/disclosure/">About our labels</a>.
       </div>
 {content}
       <h2>Media contact</h2>
       <p>{contact}</p>
-      <p style="font-size:14px;color:var(--ink-3)">Original release: <a href="{canon}">{canon}</a> &middot; <a href="{receipt}">Distribution receipt</a> &middot; <a href="/press-releases/">All announcements</a></p>
+      <p style="font-size:14px;color:var(--ink-3)">Original release: <a href="{canon}" rel="sponsored noopener">{canon}</a> &middot; <a href="{receipt}">Distribution receipt</a> &middot; <a href="/press-releases/">All announcements</a></p>
     </div>
   </div>
 </div>
