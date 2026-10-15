@@ -79,6 +79,10 @@ def page(tpl, it):
                   lambda m: '<script type="application/ld+json">%s</script>' % json.dumps(graph, ensure_ascii=False),
                   head, count=1, flags=re.S)
     head = head.replace('<a href="/" aria-current="page">Front Page</a>', '<a href="/">Front Page</a>')
+    # Release pages are the company's own promotional text, first published elsewhere:
+    # no Google ads on them, and leave indexing to the original (see /disclosure/).
+    head = re.sub(r'<script async src="https://pagead2\.googlesyndication\.com/[^"]*"[^>]*></script>\n?', '', head)
+    head = re.sub(r'<meta name="robots" content="[^"]*">', '<meta name="robots" content="noindex,follow">', head)
     contact = x.get('contact') or {}
     import base64
     parts = [esc(contact['name'])] if contact.get('name') else []
