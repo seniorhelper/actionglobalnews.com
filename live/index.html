@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
-<link rel="stylesheet" href="/assets/agn.min.css?v=21">
+<link rel="stylesheet" href="/assets/agn.min.css?v=22">
 <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
@@ -74,10 +74,28 @@
   <div class="deskhead"><nav class="crumb" aria-label="Breadcrumb"><a href="/">Front Page</a> <span>/</span> <span aria-current="page">Live TV</span></nav>
     <span class="kicker">Live TV</span>
     <h1>Watch live news free</h1>
-    <p class="dek">Eight official 24/7 news streams from major broadcasters, in one place. Press play on any channel; nothing loads until you do.</p>
+    <p class="dek">Eight official 24/7 news streams from major broadcasters, in one place. The featured screen starts muted; pick any channel to switch, or play several at once below.</p>
   </div>
 </div>
 
+
+<section class="theater" data-theater aria-label="Featured video player">
+  <div class="wrap th-grid">
+    <div class="th-main">
+      <div class="th-screen"><iframe id="th-frame" src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCIALMKvObZNtJ6AmdCLP7Lg&amp;autoplay=1&amp;mute=1&amp;playsinline=1" title="Bloomberg Television live stream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      <div class="th-now">
+        <span class="th-badge" id="th-badge"><i aria-hidden="true"></i>Live</span>
+        <div><h2 id="th-title">Bloomberg Television</h2><p id="th-sub">Now playing muted. Tap the speaker icon in the player for sound.</p></div>
+      </div>
+    </div>
+    <div class="th-side">
+      <h3>Switch channel</h3>
+      <div class="th-chans"><button type="button" class="th-chan on" data-th-live="UCIALMKvObZNtJ6AmdCLP7Lg" data-title="Bloomberg Television" aria-pressed="true"><i aria-hidden="true"></i><span><strong>Bloomberg Television</strong><small>Markets and business, 24/7</small></span></button><button type="button" class="th-chan" data-th-live="UCBi2mrWuNuyYy4gbM6fU18Q" data-title="ABC News" aria-pressed="false"><i aria-hidden="true"></i><span><strong>ABC News</strong><small>ABC News Live, U.S. news</small></span></button><button type="button" class="th-chan" data-th-live="UCeY0bbntWzzVIaj2z3QigXg" data-title="NBC News" aria-pressed="false"><i aria-hidden="true"></i><span><strong>NBC News</strong><small>NBC News NOW</small></span></button><button type="button" class="th-chan" data-th-live="UC8p1vwvWtl6T73JiExfWs1g" data-title="CBS News" aria-pressed="false"><i aria-hidden="true"></i><span><strong>CBS News</strong><small>CBS News 24/7</small></span></button><button type="button" class="th-chan" data-th-live="UCoMdktPbSTixAyNGwb-UYkQ" data-title="Sky News" aria-pressed="false"><i aria-hidden="true"></i><span><strong>Sky News</strong><small>UK and international</small></span></button><button type="button" class="th-chan" data-th-live="UCknLrEdhRCp1aegoMqRaCZg" data-title="DW News" aria-pressed="false"><i aria-hidden="true"></i><span><strong>DW News</strong><small>Germany, in English</small></span></button><button type="button" class="th-chan" data-th-live="UCNye-wNBqNL5ZzHSJj3l8Bg" data-title="Al Jazeera English" aria-pressed="false"><i aria-hidden="true"></i><span><strong>Al Jazeera English</strong><small>Global coverage from Doha</small></span></button><button type="button" class="th-chan" data-th-live="UCQfwfsi5VrQ8yKZ-UWmAEFg" data-title="FRANCE 24 English" aria-pressed="false"><i aria-hidden="true"></i><span><strong>FRANCE 24 English</strong><small>France and the world</small></span></button></div>
+      <h3 class="th-h-next">Just in</h3>
+      <ol class="th-next" id="th-next"><li class="th-empty">The newest uploads from each newsroom appear here and play in the big screen.</li></ol>
+    </div>
+  </div>
+</section>
 <div class="wrap">
   <section class="sec" style="margin-top:22px"><div class="livegrid"><article class="vcard vf"><button class="vf-btn" type="button" data-yt-live="UCBi2mrWuNuyYy4gbM6fU18Q" data-title="ABC News" aria-label="Play ABC News live stream">
 <span class="vf-art" aria-hidden="true"><span class="vf-mono">ABC News</span><span class="vplay"><span></span></span></span><span class="vf-badge live"><i></i>Live</span></button>
@@ -257,7 +275,7 @@
     </svg>
     <span class="nw-lbl">Ask Newsie<small>Find anything here</small></span>
   </button>
-</div><script src="/assets/agn.js?v=20" defer></script>
+</div><script src="/assets/agn.js?v=21" defer></script>
 
 </body>
 </html>

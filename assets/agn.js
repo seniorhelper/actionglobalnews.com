@@ -163,10 +163,67 @@
     f.allowFullscreen = true; f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
     return f;
   }
+  /* Theater: the big player at the top of the video desk and Live TV.
+     Autoplays muted (browsers block autoplay with sound); any click a
+     viewer makes afterwards plays with sound. */
+  var TH = null;
+  function thPlay(kind, id, title, sub) {
+    if (!TH) return false;
+    var f = $('#th-frame'), t = $('#th-title'), s = $('#th-sub'), bd = $('#th-badge');
+    var src = kind === 'live'
+      ? 'https://www.youtube-nocookie.com/embed/live_stream?channel=' + id + '&autoplay=1&playsinline=1'
+      : 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&playsinline=1&rel=0';
+    f.src = src; f.title = title || 'Video';
+    if (t) t.textContent = title || '';
+    if (s) s.textContent = sub || (kind === 'live' ? 'Live stream from the publisher’s official channel.' : 'From the publisher’s official channel.');
+    if (bd) { bd.className = 'th-badge' + (kind === 'live' ? '' : ' vod'); bd.lastChild.textContent = kind === 'live' ? 'Live' : 'Now playing'; }
+    $$('.th-chan', TH).forEach(function (c) { var on = kind === 'live' && c.getAttribute('data-th-live') === id; c.classList.toggle('on', on); c.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    var r = TH.getBoundingClientRect();
+    if (r.top < -40 || r.top > (window.innerHeight * 0.5)) TH.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return true;
+  }
+  function initTheater() {
+    TH = $('[data-theater]'); if (!TH) return;
+    var f = $('#th-frame');
+    try {
+      var last = localStorage.getItem('agn-th');
+      if (last && last !== 'x') {
+        var b = TH.querySelector('[data-th-live="' + last + '"]');
+        if (b) { f.src = f.src.replace(/channel=[^&]+/, 'channel=' + last); $('#th-title').textContent = b.getAttribute('data-title'); $$('.th-chan', TH).forEach(function (c) { var on = c === b; c.classList.toggle('on', on); c.setAttribute('aria-pressed', on ? 'true' : 'false'); }); }
+      }
+    } catch (e) {}
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) f.src = f.src.replace('autoplay=1', 'autoplay=0');
+    $$('.th-chan', TH).forEach(function (c) {
+      c.addEventListener('click', function () {
+        var id = c.getAttribute('data-th-live');
+        thPlay('live', id, c.getAttribute('data-title'));
+        try { localStorage.setItem('agn-th', id); } catch (e) {}
+      });
+    });
+    var list = $('#th-next'); if (!list) return;
+    getJSON('/data/videos.json').then(function (s) {
+      if (!s || !s.videos) return;
+      var keys = ['ap', 'reu', 'pbs', 'abc', 'nbc', 'cbs', 'bbg', 'cnbc', 'dw', 'ajz', 'f24', 'sky', 'wsj', 'yf'], vids = [];
+      keys.forEach(function (k) { (s.videos[k] || []).slice(0, 2).forEach(function (v) { v.k = k; vids.push(v); }); });
+      if (!vids.length) return;
+      vids.sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
+      list.innerHTML = vids.slice(0, 6).map(function (v) {
+        var ch = CHN[v.k] ? CHN[v.k][0] : '';
+        return '<li><button type="button" data-th-vid="' + escapeHTML(v.id) + '" data-title="' + escapeHTML(v.title) + '" data-ch="' + escapeHTML(ch) + '">' +
+          '<img loading="lazy" decoding="async" width="120" height="68" alt="" src="https://i.ytimg.com/vi/' + escapeHTML(v.id) + '/mqdefault.jpg">' +
+          '<span><strong>' + escapeHTML(v.title) + '</strong><small>' + escapeHTML(ch) + ' · ' + relTime(v.date) + '</small></span></button></li>';
+      }).join('');
+      $$('[data-th-vid]', list).forEach(function (b) {
+        b.addEventListener('click', function () { thPlay('vod', b.getAttribute('data-th-vid'), b.getAttribute('data-title'), b.getAttribute('data-ch')); try { localStorage.setItem('agn-th', 'x'); } catch (e) {} });
+      });
+    });
+  }
   function initFacades(root) {
     $$('[data-yt-live],[data-yt-list],[data-vid]', root).forEach(function (b) {
       if (b._agn) return; b._agn = 1;
       b.addEventListener('click', function () {
+        if (TH && b.hasAttribute('data-vid') && thPlay('vod', b.getAttribute('data-vid'), (b.getAttribute('aria-label') || '').replace(/^Play: /, ''), b.getAttribute('data-ch'))) return;
+        if (TH && b.hasAttribute('data-yt-live') && thPlay('live', b.getAttribute('data-yt-live'), b.getAttribute('data-title'))) return;
         var src;
         if (b.hasAttribute('data-yt-live')) src = 'https://www.youtube-nocookie.com/embed/live_stream?channel=' + b.getAttribute('data-yt-live') + '&autoplay=1';
         else if (b.hasAttribute('data-yt-list')) src = 'https://www.youtube-nocookie.com/embed/videoseries?list=' + b.getAttribute('data-yt-list') + '&autoplay=1&rel=0';
@@ -188,7 +245,7 @@
             vids.sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
             el.innerHTML = vids.slice(0, limit).map(function (v) {
               var ch = CHN[v.k] ? CHN[v.k][0] : '';
-              return '<article class="vcard"><button class="vthumb" data-vid="' + escapeHTML(v.id) + '" aria-label="Play: ' + escapeHTML(v.title) + '">' +
+              return '<article class="vcard"><button class="vthumb" data-vid="' + escapeHTML(v.id) + '" data-ch="' + escapeHTML(ch) + '" aria-label="Play: ' + escapeHTML(v.title) + '">' +
                 '<img loading="lazy" decoding="async" width="480" height="360" alt="" src="https://i.ytimg.com/vi/' + escapeHTML(v.id) + '/hqdefault.jpg">' +
                 '<span class="vplay"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></span></button>' +
                 '<div class="vmeta"><h4>' + escapeHTML(v.title) + '</h4><span class="vsrc">' + escapeHTML(ch) + ' \u00b7 ' + relTime(v.date) + '</span></div></article>';
@@ -355,7 +412,7 @@
     var y = $('#yr'); if (y) y.textContent = new Date().getFullYear();
     tickClock(); setInterval(tickClock, 30000);
     initPanel(); initMail(); initForms(); initNewsie(); initArticle(); initSearch();
-    initTicker(); initFeeds(); initVideoWalls(); initTV();
+    initTicker(); initFeeds(); initTheater(); initVideoWalls(); initTV();
   }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', boot); else boot();
 })();
