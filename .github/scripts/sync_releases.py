@@ -146,17 +146,21 @@ def main():
     tpl = open(INDEX, encoding='utf-8').read()
     # the template must not carry the generated list into release pages
     tpl_clean = re.sub(re.escape(A) + '.*?' + re.escape(B), '', tpl, flags=re.S)
-    written = []
+    written, kept = [], []
     for it in items:
         slug, out = page(tpl_clean, it)
         if not slug:
             continue
         path = 'press-releases/%s/index.html' % slug
-        os.makedirs(os.path.dirname(path), exist_ok=True)
         old = open(path, encoding='utf-8').read() if os.path.exists(path) else ''
+        if old and 'Republished from <a href=' not in old:
+            continue  # a native page (or a redirect) owns this slug: never overwrite or list it
+        kept.append(it)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
         if old != out:
             open(path, 'w', encoding='utf-8').write(out)
             written.append(slug)
+    items = kept
     rows = ''.join('<li><a href="/press-releases/{s}/">{t}</a> <span style="color:var(--ink-3);font-size:13px">&middot; {c} &middot; {d} &middot; {l}</span></li>'.format(
         s=esc(it['_dpr']['slug']), t=esc(it['title']), c=esc(it['_dpr'].get('company', '')),
         d=long_date(it.get('date_published', '')), l=esc(it['_dpr'].get('label', ''))) for it in items[:20])
