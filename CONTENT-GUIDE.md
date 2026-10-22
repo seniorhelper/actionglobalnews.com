@@ -165,4 +165,4 @@ and that file exists.
 - Policy pages (about, editorial-standards, ethics-ai-policy, corrections, privacy, terms,
   disclosure, contact) except to correct a fact; they describe how the site works now.
 - `press-releases/` is filled by the `sync-releases` workflow, is noindexed and is not newsroom content.
-- The `headline-snapshot` workflow is disabled on purpose. Do not re-enable it or add feeds back.
+- The `headline-snapshot` workflow still runs hourly and commits `data/feeds.json`, but no page reads that file any more. Never add feed modules back. (Changing workflow files needs a token with the `workflow` scope; Zach can disable it under GitHub, Actions, Refresh headline snapshot, Disable workflow.) Because of these bot commits, always `git pull --rebase` before pushing.
