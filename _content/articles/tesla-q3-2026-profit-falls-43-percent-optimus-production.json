@@ -1,0 +1,56 @@
+{
+ "slug": "tesla-q3-2026-profit-falls-43-percent-optimus-production",
+ "type": "brief",
+ "section": "Business",
+ "kicker": "Business · Earnings",
+ "published": "2026-10-22T00:45:00-06:00",
+ "title": "Tesla Q3 2026: profit falls 43% as Optimus production starts",
+ "h1": "Tesla's profit fell 43% last quarter as it started building Optimus robots and promised Cybercab sales by year-end",
+ "description": "Tesla Q3 2026 net income fell 43% to $787 million on flat revenue. Optimus production began in Fremont and Tesla aims to sell Cybercabs by year-end.",
+ "standfirst": "Revenue was flat at about $28 billion and spending on research jumped. Tesla said the first production-quality Optimus humanoid robots are coming off a converted line in Fremont, California, and executives said they want Cybercabs in customers' hands before 2027.",
+ "keywords": "Tesla Q3 2026 earnings, Tesla profit 43%, Optimus production Fremont, Cybercab sales, Tesla deliveries Q3 2026",
+ "takeaways": [
+  "Tesla reported third-quarter net income of $787 million, down 43% from $1.37 billion a year earlier, on revenue of about $28.04 billion.",
+  "Production of the Optimus humanoid robot has started on a former vehicle line in Fremont, California.",
+  "Executives said Tesla is working to deliver Cybercabs to customers by the end of 2026; unsupervised driving for customer cars has slipped to around mid-2027."
+ ],
+ "body": [
+  "<p>Tesla's third-quarter results, released on October 21, showed a company spending heavily on robots and autonomy while its car business stood still. Revenue was about $28.04 billion, roughly unchanged from a year earlier, and net income fell 43% to $787 million, <a href='https://techcrunch.com/2026/10/21/tesla-stars-optimus-robot-production-in-california-as-profit-falls-43/' target='_blank' rel='noopener nofollow'>TechCrunch reported</a>. Adjusted earnings per share were $0.48, against a consensus estimate of $0.45, according to <a href='https://electrek.co/2026/10/21/tesla-tsla-q3-2026-financial-results/' target='_blank' rel='noopener nofollow'>Electrek</a>.</p>",
+  "<h2>Where did the profit go?</h2>",
+  "<p>Operating income fell 56% to $718 million as research and development spending rose 69% to $2.76 billion, Electrek reported. Tesla delivered 486,532 vehicles in the quarter. Services revenue grew 33% to $4.6 billion, while energy revenue declined. The company ended the quarter with $45.4 billion in cash and generated about $1.5 billion in free cash flow, and it did not give numeric guidance for the year ahead.</p>",
+  "<h2>Optimus and Cybercab</h2>",
+  "<p>The headline for many investors was the robot. Tesla said Optimus production has begun on a converted vehicle line in Fremont. \"The bots coming off this line are the first production-quality bots that we have manufactured,\" the company's shareholder letter said, as quoted by TechCrunch. Elon Musk described the ramp as early and likely to be bumpy, while repeating a goal of 20,000 robots a week by the end of 2027. That is a target, not a forecast backed by disclosed capacity.</p>",
+  "<p>On the earnings call, vice president of vehicle engineering Lars Moravy said Tesla is trying to get Cybercabs to customers by the end of 2026, though Musk said most of the vehicles will remain in Tesla's own robotaxi fleet. Robotaxi rides in Cybercabs began in Austin on September 3, and Tesla said a Dallas launch is next. Unsupervised Full Self-Driving for customer-owned cars has slipped to around the second quarter of 2027.</p>",
+  "<p>For businesses watching autonomy, the practical signal is timing: Tesla is still running its driverless service itself, in a handful of cities, rather than selling the capability broadly.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "TechCrunch",
+   "title": "Tesla starts Optimus robot production in California as profit falls 43%",
+   "date": "October 21, 2026",
+   "url": "https://techcrunch.com/2026/10/21/tesla-stars-optimus-robot-production-in-california-as-profit-falls-43/"
+  },
+  {
+   "publisher": "Electrek",
+   "note": "report on Tesla’s Q3 2026 financial results",
+   "date": "October 21, 2026",
+   "url": "https://electrek.co/2026/10/21/tesla-tsla-q3-2026-financial-results/"
+  },
+  {
+   "publisher": "Tesla North",
+   "title": "Tesla Q3 Earnings Call: Cybercab Hits Dallas, FSD Unsupervised in 2027",
+   "date": "October 21, 2026",
+   "url": "https://teslanorth.com/2026/10/21/tesla-q3-2026-call-takeaways/"
+  }
+ ],
+ "faq": [
+  {
+   "q": "How much did Tesla earn in Q3 2026?",
+   "a": "Tesla reported net income of $787 million on revenue of about $28.04 billion, with adjusted earnings of $0.48 per share."
+  },
+  {
+   "q": "Can customers buy a Cybercab yet?",
+   "a": "Not yet. Tesla executives said on October 21 that they are working to deliver Cybercabs to customers by the end of 2026; so far all Cybercabs have gone to Tesla's own robotaxi fleet."
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "slug": "meta-ordered-to-pay-25-billion-new-mexico-privacy-verdict",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-10-22T00:40:00-06:00",
+ "title": "Meta ordered to pay $25 billion in New Mexico privacy case",
+ "h1": "A New Mexico judge ordered Meta to pay $25 billion after a jury found it misled Facebook users about their data",
+ "description": "A New Mexico judge set a $25 billion penalty against Meta after a jury found it misled users about data privacy. Meta says it will appeal.",
+ "standfirst": "The penalty, set on October 21, follows a September jury verdict that Meta made misleading statements about how much control Facebook users had over their data. The money would go to New Mexico schools. Meta says it expects to win on appeal.",
+ "keywords": "Meta $25 billion, New Mexico Meta verdict, Facebook privacy penalty, Raúl Torrez Meta, Cambridge Analytica",
+ "takeaways": [
+  "State District Judge Francis Mathew ordered Meta to pay $25 billion on October 21, 2026, after a jury found 26 of 29 statements by the company to be misleading.",
+  "The judge said a penalty above $219 billion could be justified under the law but set it at $25 billion. The money is directed to New Mexico's education system.",
+  "Meta says it does not sell user data, argued no consumer was shown to be misled, and plans to appeal."
+ ],
+ "body": [
+  "<p>A state judge in New Mexico has ordered Meta to pay $25 billion over misleading statements about Facebook users' privacy, one of the largest penalties a state court has imposed on a technology company. Judge Francis Mathew issued the order on Wednesday, October 21, according to <a href='https://www.nbcnews.com/tech/tech-news/meta-ordered-pay-25-billion-new-mexico-consumers-data-privacy-rcna604864' target='_blank' rel='noopener nofollow'>Reuters reporting published by NBC News</a>.</p>",
+  "<h2>What did the jury find?</h2>",
+  "<p>In a verdict reached in September, jurors concluded that 26 of 29 public statements by Meta and its leadership were misleading. They counted more than 43 million violations of New Mexico's consumer-protection law, a figure based on how many users or residents each statement reached. The law allows penalties of up to $5,000 per violation, so the theoretical maximum was far higher than the final number. Judge Mathew wrote that a penalty of more than $219 billion would be warranted, then reduced it to $25 billion. Reuters noted the order does not explain how he arrived at that figure.</p>",
+  "<p>\"Facebook promised users that they (the users) controlled their data. This was false,\" the judge wrote, as quoted by <a href='https://www.aljazeera.com/news/2026/10/21/judge-orders-meta-to-pay-25bn-in-fines-for-facebook-privacy-violations' target='_blank' rel='noopener nofollow'>Al Jazeera</a>, which described the penalty as the largest ever imposed on the company.</p>",
+  "<h2>What do the two sides say?</h2>",
+  "<p>Attorney General Raúl Torrez, whose office filed the lawsuit in 2021, called the result one of the largest state verdicts against a company in U.S. history. At an October 1 hearing, the state had asked for $35 billion to $40 billion. Meta had asked the court to cap penalties at $3.45 billion, saying it does not sell user data and that the state never proved any consumer was actually misled. Chief legal officer CJ Mahoney said the company is confident it will win on appeal.</p>",
+  "<h2>Why it matters beyond New Mexico</h2>",
+  "<p>The case grew partly out of the Cambridge Analytica scandal, in which a political consulting firm obtained data from up to 87 million Facebook users. Meta has already paid a $5 billion Federal Trade Commission penalty over that episode. A state-court award of this size, built on a per-statement, per-user counting method, gives other attorneys general a template for consumer-protection claims against platforms. The figure is likely to change: appeals of large penalties often take years and frequently reduce them.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "NBC News (Reuters)",
+   "title": "Meta ordered to pay $25 billion to New Mexico after jury finds company misled consumers about data privacy",
+   "date": "October 21, 2026",
+   "url": "https://www.nbcnews.com/tech/tech-news/meta-ordered-pay-25-billion-new-mexico-consumers-data-privacy-rcna604864"
+  },
+  {
+   "publisher": "Al Jazeera",
+   "title": "Judge orders Meta to pay $25bn in fines for Facebook privacy violations",
+   "date": "October 21, 2026",
+   "url": "https://www.aljazeera.com/news/2026/10/21/judge-orders-meta-to-pay-25bn-in-fines-for-facebook-privacy-violations"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Does Meta have to pay the $25 billion now?",
+   "a": "Meta has said it will appeal, and large penalties are often reduced or delayed while appeals proceed. The order directs the money to New Mexico's education system if it stands."
+  },
+  {
+   "q": "Is this the Cambridge Analytica case?",
+   "a": "It is a separate New Mexico consumer-protection lawsuit, filed in 2021, that grew partly out of the Cambridge Analytica scandal. The Federal Trade Commission fined Facebook $5 billion over that scandal in 2019."
+  }
+ ]
+}

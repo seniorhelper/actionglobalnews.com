@@ -1,0 +1,63 @@
+{
+ "slug": "nigeria-confirms-first-ebola-case-abuja-bundibugyo",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-10-22T01:05:00-06:00",
+ "title": "Nigeria confirms first Ebola case as outbreak reaches fifth country",
+ "h1": "Nigeria has confirmed its first Ebola case, a traveler from Uganda, as the Bundibugyo outbreak reaches a fifth country",
+ "description": "Nigeria confirmed its first Bundibugyo Ebola case in Abuja on October 20, 2026. Contact tracing, case totals by country and what the CDC is reporting.",
+ "standfirst": "The patient, a woman who arrived in Abuja on an international flight from Uganda, is in isolation and 44 contacts are being traced. The outbreak that began in the Democratic Republic of Congo in May has now produced more than 9,600 confirmed cases.",
+ "keywords": "Nigeria Ebola case, Bundibugyo Ebola Abuja, Ebola outbreak October 2026, Ebola cases by country, CDC Ebola situation",
+ "takeaways": [
+  "Laboratory tests confirmed Nigeria's first case on October 20; the patient had arrived from Uganda and is isolated in Abuja.",
+  "The strain is Bundibugyo, for which there is no licensed vaccine or treatment.",
+  "As of October 20 the CDC counted 9,668 confirmed cases and 4,649 deaths across five countries, almost all in Congo."
+ ],
+ "body": [
+  "<p>Nigeria confirmed its first case of Ebola on Tuesday, October 20, making it the fifth country to detect the Bundibugyo strain since the outbreak in the Democratic Republic of Congo began in May, according to <a href='https://abcnews.com/Health/nigeria-confirms-1st-ebola-case-kenya-reports-9th/story?id=137443202' target='_blank' rel='noopener nofollow'>ABC News</a>, citing the World Health Organization. The patient is a woman who arrived in Abuja on an international flight from Uganda and was admitted to a private hospital. She is now in isolation.</p>",
+  "<p>Health Minister Muhammad Ali Pate said 44 contacts are being traced, <a href='https://www.aljazeera.com/news/2026/10/20/kenya-confirms-ninth-ebola-case' target='_blank' rel='noopener nofollow'>Al Jazeera</a> reported. The patient's symptoms began on October 7 and she was admitted on October 11. The Nigeria Centre for Disease Control has activated its incident management system.</p>",
+  "<h2>How big is the outbreak?</h2>",
+  "<table class='dtable'><caption>Confirmed Ebola (Bundibugyo) cases and deaths, as of October 20, 2026</caption><thead><tr><th>Country</th><th>Cases</th><th>Deaths</th></tr></thead><tbody><tr><td>DR Congo</td><td>9,637</td><td>4,646</td></tr><tr><td>Uganda</td><td>20</td><td>2</td></tr><tr><td>Kenya</td><td>9</td><td>1</td></tr><tr><td>Nigeria</td><td>1</td><td>0</td></tr><tr><td>France</td><td>1</td><td>0</td></tr><tr><td><strong>Total</strong></td><td><strong>9,668</strong></td><td><strong>4,649</strong></td></tr></tbody></table>",
+  "<p><em>Source: <a href='https://www.cdc.gov/ebola/situation-summary/index.html' target='_blank' rel='noopener nofollow'>U.S. Centers for Disease Control and Prevention</a>. Uganda also reports one probable case and one probable death. No cases have been reported in the United States.</em></p>",
+  "<p>Kenya confirmed its ninth case on October 20, a relative of its first patient, and all of its cases belong to one cluster. The European Centre for Disease Prevention and Control describes the epidemic as the second-largest Ebola outbreak on record. The WHO has declared it a public health emergency of international concern.</p>",
+  "<h2>Why the strain matters</h2>",
+  "<p>The vaccines used against earlier outbreaks target the Zaire species of Ebola, not Bundibugyo, so response teams depend on isolation and contact tracing. For background on how the Congo outbreak grew, see our earlier explainer on <a href='/articles/congo-ebola-outbreak-9000-cases-bundibugyo/'>the outbreak passing 9,000 cases</a>. Travelers can check current guidance on the CDC page cited below.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "ABC News",
+   "title": "Nigeria confirms its 1st Ebola case as Kenya reports 9th infection",
+   "date": "October 21, 2026",
+   "url": "https://abcnews.com/Health/nigeria-confirms-1st-ebola-case-kenya-reports-9th/story?id=137443202"
+  },
+  {
+   "publisher": "Al Jazeera",
+   "title": "Nigeria confirms first Ebola case amid concerns about continental spread",
+   "date": "October 20, 2026",
+   "url": "https://www.aljazeera.com/news/2026/10/20/kenya-confirms-ninth-ebola-case"
+  },
+  {
+   "publisher": "U.S. Centers for Disease Control and Prevention",
+   "title": "Ebola Outbreak: Current Situation",
+   "date": "data as of October 20, 2026",
+   "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+  },
+  {
+   "publisher": "WHO Regional Office for Africa",
+   "note": "Ebola disease outbreak page",
+   "date": "accessed October 22, 2026",
+   "url": "https://www.afro.who.int/health-topics/ebola-disease/outbreak-drc-26"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Is there a vaccine for Bundibugyo Ebola?",
+   "a": "No licensed vaccine or treatment exists for the Bundibugyo strain, according to ABC News reporting on the outbreak."
+  },
+  {
+   "q": "Are there Ebola cases in the United States?",
+   "a": "The CDC reported no U.S. cases as of October 20, 2026."
+  }
+ ]
+}

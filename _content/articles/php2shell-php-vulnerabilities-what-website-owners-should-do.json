@@ -1,0 +1,166 @@
+{
+ "slug": "php2shell-php-vulnerabilities-what-website-owners-should-do",
+ "type": "explainer",
+ "section": "Technology",
+ "kicker": "Technology · Explainer",
+ "published": "2026-10-22T01:25:00-06:00",
+ "title": "PHP2Shell explained: the PHP flaws and what site owners should do",
+ "h1": "Two critical PHP flaws sent governments scrambling to take websites offline. What PHP2Shell is, who is exposed, and what to do if you run a site",
+ "description": "PHP2Shell explained: CVE-2026-109618 and CVE-2026-109619, the fixed PHP versions, who is exposed, how AI found the bugs, and a step-by-step checklist for website owners.",
+ "standfirst": "On October 21 the PHP project shipped fixes for two remote code execution flaws in the language that runs most of the web. Within hours, attack attempts were counted in the millions, government sites in Europe went dark as a precaution, and security agencies told anyone who could not patch to unplug. Here is what happened, in plain terms, and the checklist a small business with a WordPress or other PHP site should work through this week.",
+ "keywords": "PHP2Shell, CVE-2026-109618, CVE-2026-109619, PHP security update October 2026, PHP 8.4.27, PHP 8.3.36, WordPress PHP vulnerability, update PHP version",
+ "takeaways": [
+  "PHP released 8.5.12, 8.4.27, 8.3.36 and 8.2.35 on October 21, 2026 to fix two critical flaws, CVE-2026-109618 and CVE-2026-109619, each rated 9.2 on CVSS v4.0.",
+  "Both allow an unauthenticated attacker to run code on a server, and researchers showed working attacks against default installs of WordPress, Drupal and Joomla.",
+  "CISA says to patch internet-facing systems first, and to take systems offline if they cannot be updated or run PHP 8.1 or older.",
+  "W3Techs data suggests roughly half of PHP websites run a version line the PHP project no longer supports.",
+  "If a host manages your server, confirm in writing that it has patched; if you manage it, update PHP and restart every worker."
+ ],
+ "body": [
+  "<h2>What happened?</h2>",
+  "<p>On Tuesday, October 20, the PHP project posted an unusual notice on <a href='https://www.php.net/' target='_blank' rel='noopener nofollow'>php.net</a>: a critical security release would ship the next day at 14:00 UTC. On Wednesday, October 21, it published the fixes alongside a <a href='https://www.php.net/archive/2026.php#2026-10-21-5' target='_blank' rel='noopener nofollow'>security advisory</a> headed with an instruction to update now. The advisory covers two vulnerabilities, each scored 9.2 out of 10 on the CVSS v4.0 scale, and each allowing remote code execution by an attacker who does not need to log in.</p>",
+  "<p>The security firm Wiz, which found both issues and has published a <a href='https://www.wiz.io/blog/php2shell-php-rce' target='_blank' rel='noopener nofollow'>technical write-up</a>, named the pair PHP2Shell. The name stuck in government advisories and news coverage within hours.</p>",
+  "<h2>What are the two flaws?</h2>",
+  "<p>Both live in PHP's core engine rather than in any particular website's code, which is what makes them unusual. A bug in a plugin affects sites that use that plugin. A bug in the engine affects, potentially, everything built on it.</p>",
+  "<ul><li><strong>CVE-2026-109618</strong> is a memory corruption problem triggered when PHP runs out of memory partway through setting up a request. The advisory explains that cleanup code can then treat half-initialized data as valid.</li><li><strong>CVE-2026-109619</strong> involves stale state: data that belongs to one request can survive after its memory is released and then be used by a later request on the same worker process.</li></ul>",
+  "<p>Wiz says it demonstrated unauthenticated code execution against the current official container images of WordPress, Drupal and Joomla, and also showed that worker memory could be read remotely. That second point matters for small businesses because server memory can hold passwords, API keys and session tokens. Wiz says even a minimal application can be vulnerable, because the attack happens before application code runs. The PHP advisory says Apache's mod_php is the highest-risk setup, and lists PHP-FPM, php-cgi, FrankenPHP and LiteSpeed among exposed configurations. <a href='https://blog.qualys.com/vulnerabilities-threat-research/2026/10/20/php-announces-critical-security-release-for-two-vulnerabilities' target='_blank' rel='noopener nofollow'>Qualys</a> notes that PHP-FPM blocks one of the out-of-memory paths at startup, but PHP still validated an attack against FPM through the session lifecycle.</p>",
+  "<table class='dtable'><caption>Fixed PHP releases, October 21, 2026</caption><thead><tr><th>Branch</th><th>Fixed in</th><th>Project support status</th></tr></thead><tbody><tr><td>8.5</td><td>8.5.12</td><td>Active support to Dec. 31, 2027; security fixes to Dec. 31, 2029</td></tr><tr><td>8.4</td><td>8.4.27</td><td>Active support to Dec. 31, 2026; security fixes to Dec. 31, 2028</td></tr><tr><td>8.3</td><td>8.3.36</td><td>Security fixes only, to Dec. 31, 2027</td></tr><tr><td>8.2</td><td>8.2.35</td><td>Security fixes only, ends Dec. 31, 2026</td></tr><tr><td>8.1 and older</td><td>No official release</td><td>End of life; the PHP security team published minimal source backports for 7.4, 8.0 and 8.1</td></tr></tbody></table>",
+  "<p><em>Sources: <a href='https://www.php.net/archive/2026.php#2026-10-21-5' target='_blank' rel='noopener nofollow'>PHP security advisory</a> and <a href='https://www.php.net/supported-versions.php' target='_blank' rel='noopener nofollow'>php.net supported versions</a>. The 8.6.0 release candidate RC4 also contains the fixes.</em></p>",
+  "<h2>How did AI come into it?</h2>",
+  "<p>This is one of the first critical, internet-wide vulnerabilities where AI tools are credited with a central role in the discovery. Wiz says it found both flaws using its own platform together with Google's Gemini 4 Argon and OpenAI's GPT-5.6 Sol models, and that the models helped with discovery, exploit development and checking the patches. Wiz also says the flaws had existed for more than a decade. Those are the company's own descriptions of its work.</p>",
+  "<p>According to <a href='https://www.aljazeera.com/news/2026/10/22/world-leaders-warn-against-security-flaw-found-in-php-computer-programming' target='_blank' rel='noopener nofollow'>Al Jazeera</a>, the security firm Calif, working with OpenAI, reported the first flaw to PHP's maintainers on August 11, and Wiz reported the second on August 24. Wiz's own timeline says it found the first bug on August 19 and confirmed working attacks on Drupal and WordPress the following two days. OpenAI says the disclosure was coordinated through its Patch the Planet program, with the PHP maintainers leading the fix and companies including Cloudflare and Wiz contributing, according to coverage of its announcement by <a href='https://ppc.land/openai-says-gpt-5-6-sol-found-a-php-flaw-before-attackers-did/' target='_blank' rel='noopener nofollow'>PPC Land</a>. OpenAI also said it expects findings like this to rise sharply in the coming months.</p>",
+  "<p>The same tools cut the other way. The security firm watchTowr told <a href='https://therecord.media/php-script-vulnerabilities-warnings' target='_blank' rel='noopener nofollow'>The Record</a> it had seen in-the-wild exploitation attempts using proof-of-concept code, some of it apparently written with AI help, though it had not seen a successful attack at that point. Amazon's threat intelligence team recorded an attempt against its honeypot sensors on October 17, four days before the public disclosure, and does not know how the attacker obtained the details, <a href='https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/' target='_blank' rel='noopener nofollow'>Help Net Security</a> reported.</p>",
+  "<h2>Why were websites taken offline?</h2>",
+  "<p>Security agencies on several continents gave unusually blunt advice. The U.S. Cybersecurity and Infrastructure Security Agency's <a href='https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching' target='_blank' rel='noopener nofollow'>alert</a> tells organizations to inventory every PHP system, including PHP embedded inside other products, to patch internet-facing systems first, and to take systems offline if they cannot be updated or are running PHP 8.1 or older. CISA said it had not observed exploitation as of its publication. The European Union's cybersecurity team, <a href='https://cert.europa.eu/publications/security-advisories/2026-018/' target='_blank' rel='noopener nofollow'>CERT-EU</a>, said proof-of-concept code was circulating, which raises the chance of exploitation.</p>",
+  "<p>Many public bodies took the cautious route. A <a href='https://www.globalbankingandfinance.com/factbox-websites-taken-offline-over-php-risks/' target='_blank' rel='noopener nofollow'>Reuters factbox</a> listed preventive takedowns of sites run by Germany's federal IT provider, French prefectures, Belgium's foreign ministry, Finnish government services, a Czech government site, and in the Netherlands the Port of Rotterdam, the national government portal and many hospital sites, along with some Wikimedia Foundation systems. Several of those organizations said they had seen no attacks. The University of Washington published a <a href='https://it.uw.edu/help/servicestatus/php-cves/' target='_blank' rel='noopener nofollow'>status page</a> explaining that it deliberately took many sites offline while it patched.</p>",
+  "<h2>How many sites could be affected?</h2>",
+  "<p>PHP is the most widely used server-side language on the web. <a href='https://w3techs.com/technologies/overview/programming_language' target='_blank' rel='noopener nofollow'>W3Techs</a> reported on October 22 that PHP is used by 69.3% of the websites whose server-side language it can identify, far ahead of the next most common at 8.1%. That figure covers WordPress, the most common way small businesses run a website, along with Drupal, Joomla, most online stores built on PHP platforms, and countless custom sites.</p>",
+  "<figure class='chart'><h3>Which PHP versions websites run</h3><p class='cs'>Share of websites using PHP, by major version, as reported by W3Techs on October 22, 2026</p><svg viewBox='0 0 720 158' role='img' aria-label='Share of PHP websites by major version: PHP 8 65.3%; PHP 7 26.9%; PHP 5 7.7%; PHP 4 0.1%'><line x1='170' y1='12' x2='170' y2='152' stroke='#9aa6b4'/><text x='160' y='33' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>PHP 8</text><rect x='170' y='18' width='438.4' height='22' rx='3' fill='#b3000f'/><text x='616.4' y='34' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>65.3%</text><text x='160' y='67' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>PHP 7</text><rect x='170' y='52' width='180.6' height='22' rx='3' fill='#5d6b7a'/><text x='358.6' y='68' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>26.9%</text><text x='160' y='101' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>PHP 5</text><rect x='170' y='86' width='51.7' height='22' rx='3' fill='#5d6b7a'/><text x='229.7' y='102' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>7.7%</text><text x='160' y='135' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>PHP 4</text><rect x='170' y='120' width='0.7' height='22' rx='3' fill='#5d6b7a'/><text x='178.7' y='136' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>0.1%</text></svg><figcaption>Source: <a href='https://w3techs.com/technologies/details/pl-php' target='_blank' rel='noopener nofollow'>W3Techs</a>. PHP 7 and PHP 5 receive no fixes from the PHP project.</figcaption></figure>",
+  "<p>The version data is where the risk concentrates. Every PHP 7 and PHP 5 site is on a line the PHP project stopped supporting years ago, and within PHP 8, branches 8.0 and 8.1 are also past end of life.</p>",
+  "<figure class='chart'><h3>Inside PHP 8: the minor versions</h3><p class='cs'>Share of PHP 8 websites by release, W3Techs, October 22, 2026</p><svg viewBox='0 0 720 226' role='img' aria-label='Share of PHP 8 websites by release: 8.3 34.8%; 8.2 27.7%; 8.1 15.2%; 8.4 12.1%; 8.0 5.8%; 8.5 4.4%'><line x1='170' y1='12' x2='170' y2='220' stroke='#9aa6b4'/><text x='160' y='33' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>8.3</text><rect x='170' y='18' width='408.9' height='22' rx='3' fill='#b3000f'/><text x='586.9' y='34' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>34.8%</text><text x='160' y='67' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>8.2</text><rect x='170' y='52' width='325.5' height='22' rx='3' fill='#5d6b7a'/><text x='503.5' y='68' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>27.7%</text><text x='160' y='101' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>8.1</text><rect x='170' y='86' width='178.6' height='22' rx='3' fill='#5d6b7a'/><text x='356.6' y='102' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>15.2%</text><text x='160' y='135' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>8.4</text><rect x='170' y='120' width='142.2' height='22' rx='3' fill='#5d6b7a'/><text x='320.2' y='136' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>12.1%</text><text x='160' y='169' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>8.0</text><rect x='170' y='154' width='68.1' height='22' rx='3' fill='#5d6b7a'/><text x='246.1' y='170' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>5.8%</text><text x='160' y='203' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>8.5</text><rect x='170' y='188' width='51.7' height='22' rx='3' fill='#5d6b7a'/><text x='229.7' y='204' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>4.4%</text></svg><figcaption>Source: <a href='https://w3techs.com/technologies/details/pl-php/8' target='_blank' rel='noopener nofollow'>W3Techs</a>. Branches 8.0 and 8.1 are past end of life.</figcaption></figure>",
+  "<p>Combining those two W3Techs breakdowns, our own arithmetic puts roughly 48% of PHP websites on branches that receive no official fix: all of PHP 7 and older, plus PHP 8.0 and 8.1. That is an estimate from survey data, not a count of vulnerable servers; many hosts backport security patches to older versions. GoDaddy, for example, <a href='https://www.godaddy.com/resources/news/important-php-security-update-what-website-owners-need-to-do' target='_blank' rel='noopener nofollow'>says</a> cPanel has backported the fixes to PHP 7.4, 8.0 and 8.1. Palo Alto Networks put the number of potentially vulnerable exposed instances at more than 22.6 million, according to TechTarget.</p>",
+  "<div class='pullquote'>The flaw is in the engine, not your site. That means the fix is also at the engine level: your PHP version, not your plugins.</div>",
+  "<h2>What should a small business with a website do?</h2>",
+  "<p>Most small businesses do not run their own servers. The question is who does, and whether they have finished patching. Work through this list in order.</p>",
+  "<ol class='steps'><li><strong>Find out who runs your PHP.</strong> If you use a hosted platform such as managed WordPress, the host patches the server. If you have a VPS, a dedicated server or a cPanel account you administer yourself, you or your developer are responsible.</li><li><strong>Check the version.</strong> In WordPress, Tools, then Site Health, then Info, then Server shows the PHP version. In cPanel, the MultiPHP Manager shows it. You want 8.5.12, 8.4.27, 8.3.36 or 8.2.35 or later, or a vendor build your host confirms includes the backported fix.</li><li><strong>If a host manages it, get confirmation in writing.</strong> Many large hosts posted status pages on October 21 and 22. GoDaddy, for instance, said its managed WordPress and Windows hosting were patched and that VPS customers must update their own servers through EasyApache 4.</li><li><strong>If you manage it, update and restart.</strong> Install the patched packages from your Linux distribution or control panel, then restart every PHP worker, PHP-FPM pool and web server. The fix does not protect a process that is still running old code.</li><li><strong>If you cannot update today,</strong> the PHP advisory lists interim settings, such as disabling session upload progress and tightening request size limits, and says they are not a substitute for updating. CISA's advice for systems that cannot be patched is to take them offline. A web application firewall from your host or a CDN can block known attack patterns in the meantime.</li><li><strong>Plan the upgrade off old PHP.</strong> If your site runs PHP 7 or 8.1, this is the moment to schedule the move to a supported version. Test themes and plugins on a staging copy first.</li><li><strong>Rotate secrets if you were exposed.</strong> Because one flaw can leak memory, sites that were reachable and unpatched should change database passwords, API keys and admin passwords after patching, and check for unfamiliar admin accounts or files.</li></ol>",
+  "<h2>What happens next?</h2>",
+  "<p>The immediate risk window is now, while automated scanning is at its peak. Over the next weeks, expect more products that embed PHP, from appliances to hosting panels, to ship their own updates; CERT-EU points administrators to a repository maintained by the Dutch national cyber security center that tracks third-party products. PHP 8.2 reaches its end of security support on December 31, 2026, so sites on that branch have a second deadline coming. And if OpenAI and Wiz are right that AI-assisted research will surface more bugs of this kind, the practical lesson for small businesses is simple: know who patches your server, and how fast.</p>",
+  "<p>For the policy backdrop on AI-driven security research, see our earlier coverage of <a href='/articles/ftc-probe-rogue-ai-agents/'>the FTC's probe into rogue AI agents</a> and <a href='/articles/windows-10-security-updates-2027-small-business/'>what small businesses should know about Windows 10 security updates</a>.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "The PHP Group",
+   "title": "Security advisory: Critical remote code execution vulnerabilities, update now",
+   "date": "October 21, 2026",
+   "url": "https://www.php.net/archive/2026.php#2026-10-21-5"
+  },
+  {
+   "publisher": "The PHP Group",
+   "title": "Supported Versions",
+   "date": "accessed October 22, 2026",
+   "url": "https://www.php.net/supported-versions.php"
+  },
+  {
+   "publisher": "CISA",
+   "title": "Critical Vulnerabilities in PHP Require Immediate Patching",
+   "date": "October 21, 2026",
+   "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching"
+  },
+  {
+   "publisher": "CERT-EU",
+   "note": "Security Advisory 2026-018 on the PHP vulnerabilities",
+   "date": "October 21, 2026",
+   "url": "https://cert.europa.eu/publications/security-advisories/2026-018/"
+  },
+  {
+   "publisher": "Wiz",
+   "note": "technical write-up on PHP2Shell",
+   "date": "October 21, 2026",
+   "url": "https://www.wiz.io/blog/php2shell-php-rce"
+  },
+  {
+   "publisher": "Qualys",
+   "note": "analysis of PHP’s critical security release",
+   "date": "October 20, 2026",
+   "url": "https://blog.qualys.com/vulnerabilities-threat-research/2026/10/20/php-announces-critical-security-release-for-two-vulnerabilities"
+  },
+  {
+   "publisher": "Help Net Security",
+   "note": "report on the patched PHP2Shell vulnerabilities, updated October 22",
+   "date": "October 21, 2026",
+   "url": "https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/"
+  },
+  {
+   "publisher": "The Record",
+   "note": "reporting on exploitation attempts and government warnings",
+   "date": "October 21, 2026",
+   "url": "https://therecord.media/php-script-vulnerabilities-warnings"
+  },
+  {
+   "publisher": "Al Jazeera",
+   "note": "reporting on government warnings about the PHP flaws",
+   "date": "October 22, 2026",
+   "url": "https://www.aljazeera.com/news/2026/10/22/world-leaders-warn-against-security-flaw-found-in-php-computer-programming"
+  },
+  {
+   "publisher": "Global Banking & Finance Review (Reuters)",
+   "note": "Reuters factbox on websites taken offline over PHP risks",
+   "date": "October 21, 2026",
+   "url": "https://www.globalbankingandfinance.com/factbox-websites-taken-offline-over-php-risks/"
+  },
+  {
+   "publisher": "PPC Land",
+   "note": "coverage of OpenAI’s Patch the Planet disclosure",
+   "date": "October 21, 2026",
+   "url": "https://ppc.land/openai-says-gpt-5-6-sol-found-a-php-flaw-before-attackers-did/"
+  },
+  {
+   "publisher": "GoDaddy",
+   "note": "PHP security update guidance for website owners",
+   "date": "updated October 22, 2026",
+   "url": "https://www.godaddy.com/resources/news/important-php-security-update-what-website-owners-need-to-do"
+  },
+  {
+   "publisher": "University of Washington IT",
+   "note": "service status page on the PHP vulnerabilities",
+   "date": "October 2026",
+   "url": "https://it.uw.edu/help/servicestatus/php-cves/"
+  },
+  {
+   "publisher": "W3Techs",
+   "title": "Usage statistics of PHP for websites",
+   "date": "October 22, 2026",
+   "url": "https://w3techs.com/technologies/details/pl-php"
+  },
+  {
+   "publisher": "W3Techs",
+   "title": "Usage statistics of PHP version 8 for websites",
+   "date": "October 22, 2026",
+   "url": "https://w3techs.com/technologies/details/pl-php/8"
+  },
+  {
+   "publisher": "W3Techs",
+   "title": "Usage statistics of server-side programming languages for websites",
+   "date": "October 22, 2026",
+   "url": "https://w3techs.com/technologies/overview/programming_language"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Which PHP versions fix PHP2Shell?",
+   "a": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, released October 21, 2026, fix both CVE-2026-109618 and CVE-2026-109619. PHP 8.1 and older get no official release; some hosts and vendors have backported the fixes."
+  },
+  {
+   "q": "Is my WordPress site affected?",
+   "a": "Possibly, because the flaws are in PHP itself rather than in WordPress. Researchers demonstrated attacks on default WordPress installs. Check your PHP version under Tools, Site Health, Info, Server, and confirm with your host that it has patched."
+  },
+  {
+   "q": "Does updating WordPress plugins fix it?",
+   "a": "No. The fix is a PHP engine update on the server, followed by a restart of PHP workers. Plugin and core updates are still good practice but do not address these flaws."
+  },
+  {
+   "q": "What if I cannot update PHP right away?",
+   "a": "The PHP advisory lists temporary configuration changes and says they do not replace updating. CISA advises taking systems offline if they cannot be patched or run PHP 8.1 or older; a web application firewall can reduce risk in the meantime."
+  }
+ ]
+}

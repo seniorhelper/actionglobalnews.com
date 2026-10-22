@@ -1,0 +1,57 @@
+{
+ "slug": "faa-certifies-boeing-737-max-10",
+ "type": "brief",
+ "section": "Travel",
+ "kicker": "Travel · Brief",
+ "published": "2026-10-22T01:00:00-06:00",
+ "title": "FAA certifies the Boeing 737 MAX 10 after years of delays",
+ "h1": "The FAA has certified Boeing's 737 MAX 10, the largest 737, clearing the way for deliveries of more than 1,500 ordered jets",
+ "description": "The FAA certified the Boeing 737 MAX 10 on October 20, 2026. What changed, how many are on order, and when airlines expect deliveries.",
+ "standfirst": "The approval completes certification of all four 737 MAX models. The plane also brings a new angle-of-attack safety system that will become standard across the family.",
+ "keywords": "737 MAX 10 certification, FAA Boeing MAX 10, 737-10 deliveries, enhanced angle of attack system",
+ "takeaways": [
+  "The FAA issued the amended type certificate for the 737-10 on October 20, 2026.",
+  "Boeing has 1,555 orders for the model from more than 30 customers, over 30% of its MAX backlog.",
+  "Boeing says deliveries will begin in the coming months."
+ ],
+ "body": [
+  "<p>The Federal Aviation Administration certified the Boeing 737 MAX 10 on October 20, ending a delay of several years for the largest version of the best-selling jet family. The FAA issued an amended type certificate and an updated production record, Boeing said in its <a href='https://www.prnewswire.com/news-releases/us-faa-certifies-boeing-737-10-largest-member-of-737-max-family-302914559.html' target='_blank' rel='noopener nofollow'>announcement</a>. With the smaller MAX 7 approved earlier this year, all four MAX variants are now certified.</p>",
+  "<h2>What is different about this plane?</h2>",
+  "<p>The MAX 10 seats up to 230 passengers, or 185 to 210 in a typical two-class layout, with a range of up to 3,100 nautical miles. It is the first commercial airplane certified under the full requirements of the 2020 Aircraft Certification, Safety, and Accountability Act, the law Congress passed after two fatal MAX 8 crashes. It adds an enhanced angle-of-attack system that will become standard on all MAX models. Certification testing included nearly 1,000 test flights and more than 2,000 flight hours, according to Boeing.</p>",
+  "<p>\"The FAA's decision follows a thorough review of the aircraft's design and safety requirements,\" FAA Administrator Bryan Bedford said, as reported by <a href='https://avweb.com/aviation-news/faa-certifies-boeing-737-max-10/' target='_blank' rel='noopener nofollow'>AVweb</a>. Transportation Secretary Sean Duffy called it a win for American manufacturing.</p>",
+  "<h2>Who is waiting for it?</h2>",
+  "<p>Boeing has 1,555 orders for the MAX 10 from more than 30 customers, more than 30% of the MAX backlog, <a href='https://www.foxbusiness.com/markets/boeings-largest737-max-jet-wins-faa-certification-clearing-way-deliveries-1555-ordered-planes' target='_blank' rel='noopener nofollow'>Fox Business</a> reported. The MAX family has about 7,350 orders in total, with nearly 2,500 delivered through September. Boeing says deliveries will start in the coming months.</p>",
+  "<h2>What comes next</h2>",
+  "<p>New 737s must carry the enhanced angle-of-attack and crew-alerting protections from October 2027, and existing MAX jets must be retrofitted by October 2029. For travelers, the MAX 10 means more seats per departure on busy domestic routes once airlines take delivery.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "Boeing (PR Newswire)",
+   "title": "U.S. FAA certifies Boeing 737-10, largest member of 737 MAX family",
+   "date": "October 20, 2026",
+   "url": "https://www.prnewswire.com/news-releases/us-faa-certifies-boeing-737-10-largest-member-of-737-max-family-302914559.html"
+  },
+  {
+   "publisher": "AVweb",
+   "title": "FAA Certifies Boeing 737 MAX 10",
+   "date": "October 20, 2026",
+   "url": "https://avweb.com/aviation-news/faa-certifies-boeing-737-max-10/"
+  },
+  {
+   "publisher": "Fox Business",
+   "note": "report on the 737 MAX 10 certification and its order book",
+   "date": "October 21, 2026",
+   "url": "https://www.foxbusiness.com/markets/boeings-largest737-max-jet-wins-faa-certification-clearing-way-deliveries-1555-ordered-planes"
+  }
+ ],
+ "faq": [
+  {
+   "q": "When will airlines fly the 737 MAX 10?",
+   "a": "Boeing says deliveries will begin in the coming months after the FAA certified the model on October 20, 2026."
+  },
+  {
+   "q": "How many passengers does the 737 MAX 10 carry?",
+   "a": "Up to 230, or 185 to 210 in a typical two-class layout, according to Boeing."
+  }
+ ]
+}

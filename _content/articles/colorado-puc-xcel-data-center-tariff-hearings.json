@@ -1,0 +1,50 @@
+{
+ "slug": "colorado-puc-xcel-data-center-tariff-hearings",
+ "type": "brief",
+ "section": "Colorado",
+ "kicker": "Colorado · Brief",
+ "published": "2026-10-22T01:20:00-06:00",
+ "title": "Colorado PUC weighs Xcel's data center tariff: what's proposed",
+ "h1": "Colorado regulators are hearing Xcel's plan to make data centers pay their own way on the grid. Here is what is in it",
+ "description": "Colorado PUC hearings on Xcel Energy's large-load data center tariff began October 21, 2026. The contract terms, the speed-to-market fight and what it means for bills.",
+ "standfirst": "Xcel proposes minimum bills, long contracts and collateral for new loads of 50 megawatts or more. Consumer and environmental groups say a fast-track option for confidential deals could undercut those protections.",
+ "keywords": "Xcel data center tariff, Colorado PUC data centers, large load tariff Colorado, data center electricity bills Colorado",
+ "takeaways": [
+  "The tariff would apply to new customers of 50 megawatts or more, with 15-year contracts and minimum bills covering at least 80% of projected use.",
+  "A 500-megawatt data center would face a minimum bill of about $22 million a month under Xcel's example.",
+  "Critics focus on a fast-track custom contract path that could bypass some safeguards."
+ ],
+ "body": [
+  "<p>Colorado's Public Utilities Commission began several days of hearings on October 21 on how Xcel Energy should charge data centers and other very large new customers, <a href='https://coloradosun.com/2026/10/21/xcel-data-centers-energy-colorado-puc/' target='_blank' rel='noopener nofollow'>The Colorado Sun</a> reported. Xcel filed the tariff in April at the commission's direction, with the stated aim of keeping the cost of serving these loads off ordinary customers' bills. No decision date has been set.</p>",
+  "<h2>What does Xcel propose?</h2>",
+  "<ul><li><strong>Who it covers:</strong> new loads of 50 megawatts or more, with a $120,000 application fee.</li><li><strong>Cost assignment:</strong> Xcel would study the grid costs each project creates and assign new generation and transmission costs to it.</li><li><strong>Contract length:</strong> 15 years. PUC staff argue for 20; the Data Center Coalition wants 10.</li><li><strong>Minimum bills:</strong> customers would pay for at least 80% of projected electricity use. In Xcel's example, a 500-megawatt data center would owe about $22 million a month at minimum.</li><li><strong>Collateral and exit:</strong> roughly 60 months of minimum bills as collateral, and an exit fee equal to the remaining payments on the contract.</li></ul>",
+  "<h2>Where is the disagreement?</h2>",
+  "<p>The sharpest fight is over a speed-to-market path, now called custom contracts, that would allow confidential deals with quick approval and might not include every safeguard. Parties would have 120 days to review each one. The state's Office of the Utility Consumer Advocate says confidentiality and short windows make outside review difficult, and clean energy groups warn the option could undercut the tariff. The Colorado Energy Office wants new gas-fired generation for these loads barred unless it has a path to zero emissions. Xcel calls its plan a balanced middle ground and says gas-heavy custom contracts are extremely unlikely.</p>",
+  "<h2>Why it matters for household and business bills</h2>",
+  "<p>Xcel serves about 1.6 million customers in Colorado and expects to need about 2 gigawatts of new generation for data centers by 2030, against just over 7 gigawatts of current capacity. If those costs are not assigned to the data centers, they show up in everyone else's rates. Our earlier report on <a href='/articles/data-center-backlash-electricity-bills/'>the data center backlash over electricity bills</a> explains why this question has become political in several states.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "The Colorado Sun",
+   "title": "Colorado utility regulators to decide whether Xcel's data center tariff proposal protects customers",
+   "date": "October 21, 2026",
+   "url": "https://coloradosun.com/2026/10/21/xcel-data-centers-energy-colorado-puc/"
+  },
+  {
+   "publisher": "Earthjustice",
+   "note": "press release on groups seeking to intervene in the Xcel tariff case",
+   "date": "May 21, 2026",
+   "url": "https://earthjustice.org/press/2026/public-interest-groups-seek-intervention-in-xcel-energy-data-center-tariff-proceeding"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Will Xcel's data center tariff lower my bill?",
+   "a": "It is designed to keep the cost of new generation and transmission for very large customers from being spread to other ratepayers. Whether it does depends on the final terms the PUC approves."
+  },
+  {
+   "q": "When will the Colorado PUC decide?",
+   "a": "Hearings began October 21, 2026 and run several days. No decision date had been announced."
+  }
+ ]
+}
