@@ -115,7 +115,7 @@ function registry() {
     const published = g(/<meta property="article:published_time" content="([^"]+)"/);
     if (!h1 || !published) continue;
     out.push({
-      slug, url: `/articles/${slug}/`, h1: strip(h1), title: strip(g(/<title>([\s\S]*?)<\/title>/)),
+      slug, url: `/articles/${slug}/`, image: g(/<meta property="og:image" content="([^"]+)"/), h1: strip(h1), title: strip(g(/<title>([\s\S]*?)<\/title>/)),
       description: unesc(g(/<meta name="description" content="([^"]*)"/)),
       standfirst: strip(g(/<p class="art-standfirst">([\s\S]*?)<\/p>/)),
       section: unesc(g(/<meta property="article:section" content="([^"]*)"/)),
@@ -353,7 +353,7 @@ function buildFeeds(list) {
   const items = list.slice(0, 40);
   write('feed.xml', `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Action Global News</title><link>${SITE}/</link><atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml"/><description>Independent news on AI, business, markets, small business and global ecommerce.</description><language>en-us</language><lastBuildDate>${rfc822(list[0].published)}</lastBuildDate>${items.map(a => `<item><title>${esc(a.h1)}</title><link>${SITE}${a.url}</link><guid isPermaLink="true">${SITE}${a.url}</guid><pubDate>${rfc822(a.published)}</pubDate><category>${esc(a.section)}</category><description>${esc(a.standfirst || a.description)}</description></item>`).join('')}</channel></rss>\n`);
   write('feed.json', JSON.stringify({ version: 'https://jsonfeed.org/version/1.1', title: 'Action Global News', home_page_url: `${SITE}/`, feed_url: `${SITE}/feed.json`, language: 'en-US',
-    items: items.map(a => ({ id: SITE + a.url, url: SITE + a.url, title: a.h1, summary: a.standfirst || a.description, date_published: a.published, date_modified: a.modified, tags: [a.section] })) }, null, 1) + '\n');
+    items: items.map(a => ({ id: SITE + a.url, url: SITE + a.url, title: a.h1, summary: a.standfirst || a.description, date_published: a.published, date_modified: a.modified, ...(a.image ? { image: a.image } : {}), tags: [a.section] })) }, null, 1) + '\n');
 }
 
 function buildSearch(list) {
