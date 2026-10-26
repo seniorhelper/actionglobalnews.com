@@ -1,0 +1,62 @@
+{
+ "slug": "ai-voice-assistants-speed-to-lead-home-service-consent",
+ "type": "brief",
+ "section": "Small Business",
+ "kicker": "Small Business · From our network",
+ "published": "2026-10-26T11:36:00-06:00",
+ "title": "AI voice tools target slow lead response, with consent rules",
+ "h1": "Small contractors are turning to AI voice assistants to answer leads in minutes, and federal consent rules decide how far they can go",
+ "description": "Businesses took 42 hours on average to answer web leads in an HBR audit. AI voice tools promise a one-minute callback, but FCC rules require consent.",
+ "standfirst": "Research going back to 2011 shows most businesses answer web inquiries slowly. A new wave of AI voice tools, including one launched this month by a Denver firm that shares ownership with Action Global News, promises a callback within a minute, but federal rules treat those voices as artificial and require the caller's consent.",
+ "keywords": "speed to lead, lead response time, AI voice assistant, AI calls TCPA consent, FCC AI voice ruling, home service leads, contractor lead follow-up",
+ "takeaways": [
+  "In a Harvard Business Review audit of 2,241 U.S. companies, 37% answered a web lead within an hour and 23% never answered.",
+  "The FCC ruled on February 8, 2024, that AI-generated voices count as artificial voices under the TCPA, so calls using them need the called party's prior express consent.",
+  "Federal rules bar these calls to homes before 8 a.m. or after 9 p.m. in the called party's local time."
+ ],
+ "body": [
+  "<p>Disclosure: this brief describes a service from Eye To Ad Media, which shares ownership with Action Global News. For a roofer, remodeler or HVAC company, the first business to call back a quote request often wins the job. Research has long shown that most do not call back fast. In an audit of 2,241 U.S. companies for the <a href='https://scholarsarchive.byu.edu/facpub/9711' target='_blank' rel='noopener nofollow'>Harvard Business Review article &ldquo;The Short Life of Online Sales Leads&rdquo;</a>, researchers James Oldroyd, Kristina McElheran and David Elkington found that 37% answered a web lead within an hour, 16% within a day, 24% took longer and 23% never answered, <a href='https://www.smartcompany.com.au/marketing/20110704-are-you-letting-online-leads-go-cold/' target='_blank' rel='noopener nofollow'>SmartCompany reported</a>. Companies that did respond took 42 hours on average. A companion analysis of 1.25 million leads found firms that made contact within an hour were nearly seven times as likely to qualify the lead as those that waited an hour longer.</p>",
+  "<h2>What are AI speed-to-lead tools?</h2>",
+  "<p>A growing set of services answers new web leads automatically with a text, an email or a synthetic-voice phone call. One launched this month is <a href='https://aispeedtoleads.com/' target='_blank' rel='noopener sponsored'>AI Speed to Leads</a>, from Denver's Eye To Ad Media. Its site says it emails each new lead within seconds and, for leads who checked a consent box, places a call from an assistant that identifies itself as an AI within about 60 seconds. It limits calls to 8 a.m. to 8 p.m. in the lead's time zone and says it does not dial lists.</p>",
+  "<h2>What do the rules require?</h2>",
+  "<p>On February 8, 2024, the Federal Communications Commission unanimously ruled that AI-generated voices are artificial voices under the Telephone Consumer Protection Act, <a href='https://www.mayerbrown.com/en/insights/publications/2024/02/fcc-declares-authority-and-intent-to-regulate-ai-generated-calls-under-the-tcpa' target='_blank' rel='noopener nofollow'>Mayer Brown wrote</a> in an analysis of the ruling. Such calls need the called party's prior express consent and must identify the business behind them, and telemarketing messages must offer an opt-out. Separately, <a href='https://www.law.cornell.edu/cfr/text/47/64.1200' target='_blank' rel='noopener nofollow'>FCC rule 47 CFR 64.1200</a> bars these calls to residential lines before 8 a.m. or after 9 p.m. at the called party's location.</p>",
+  "<h2>What owners should check</h2>",
+  "<p>Before switching on any automated caller, owners should confirm that their web forms collect clear consent, that the tool keeps a record of it, that opt-outs take effect immediately, and that the call states who is calling. Consent wording is worth a review by the business's own attorney.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "BYU ScholarsArchive (Harvard Business Review)",
+   "title": "The Short Life of Online Sales Leads",
+   "date": "March 2011",
+   "url": "https://scholarsarchive.byu.edu/facpub/9711"
+  },
+  {
+   "publisher": "SmartCompany",
+   "note": "summary of the Harvard Business Review lead-response audit",
+   "date": "July 1, 2011",
+   "url": "https://www.smartcompany.com.au/marketing/20110704-are-you-letting-online-leads-go-cold/"
+  },
+  {
+   "publisher": "Mayer Brown",
+   "title": "FCC Declares Authority and Intent to Regulate AI-Generated Calls under the TCPA",
+   "date": "February 27, 2024",
+   "url": "https://www.mayerbrown.com/en/insights/publications/2024/02/fcc-declares-authority-and-intent-to-regulate-ai-generated-calls-under-the-tcpa"
+  },
+  {
+   "publisher": "Legal Information Institute, Cornell Law School",
+   "note": "47 CFR 64.1200, delivery restrictions",
+   "date": "accessed October 26, 2026",
+   "url": "https://www.law.cornell.edu/cfr/text/47/64.1200"
+  }
+ ],
+ "faq": [
+  {
+   "q": "How fast do businesses answer web leads?",
+   "a": "In a Harvard Business Review audit of 2,241 U.S. companies, 37% answered within an hour, 23% never answered, and those that did respond took 42 hours on average."
+  },
+  {
+   "q": "Is it legal for an AI voice to call a customer?",
+   "a": "Under a February 2024 FCC ruling, AI-generated voices count as artificial voices under the TCPA, so the call needs the person's prior express consent and must identify the business. Check consent wording with an attorney."
+  }
+ ]
+}

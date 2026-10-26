@@ -6,6 +6,18 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/ai-voice-assistants-speed-to-lead-home-service-consent/",
+   "url": "https://actionglobalnews.com/articles/ai-voice-assistants-speed-to-lead-home-service-consent/",
+   "title": "Small contractors are turning to AI voice assistants to answer leads in minutes, and federal consent rules decide how far they can go",
+   "summary": "Research going back to 2011 shows most businesses answer web inquiries slowly. A new wave of AI voice tools, including one launched this month by a Denver firm that shares ownership with Action Global News, promises a callback within a minute, but federal rules treat those voices as artificial and require the caller's consent.",
+   "date_published": "2026-10-26T11:36:00-06:00",
+   "date_modified": "2026-10-26T11:36:00-06:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Small Business"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/php2shell-php-vulnerabilities-what-website-owners-should-do/",
    "url": "https://actionglobalnews.com/articles/php2shell-php-vulnerabilities-what-website-owners-should-do/",
    "title": "Two critical PHP flaws sent governments scrambling to take websites offline. What PHP2Shell is, who is exposed, and what to do if you run a site",
@@ -471,18 +483,6 @@
    "image": "https://actionglobalnews.com/images/og/smart-glasses-overtake-vr-headsets-idc-2026.jpg",
    "tags": [
     "Immersive"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/nea-funding-fiscal-2027-what-it-means-for-arts/",
-   "url": "https://actionglobalnews.com/articles/nea-funding-fiscal-2027-what-it-means-for-arts/",
-   "title": "The arts endowment's budget is in limbo again. What the fiscal 2027 fight means for local arts groups",
-   "summary": "The federal government's main arts grant-maker starts another fiscal year without a final budget. The White House wants to wind it down, a House committee would cut it by about a third, and the Senate has not yet acted. Much of the money reaches communities through state arts agencies.",
-   "date_published": "2026-10-10T15:00:00-06:00",
-   "date_modified": "2026-10-10T15:00:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/nea-funding-fiscal-2027-what-it-means-for-arts.jpg",
-   "tags": [
-    "Arts & Design"
    ]
   }
  ]
