@@ -1,0 +1,38 @@
+{
+ "slug": "marvell-to-buy-lumentum-115-billion-ai-optical-deal",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-03T00:04:00-07:00",
+ "title": "Marvell agrees to buy Lumentum in a $115 billion all-stock deal",
+ "h1": "Marvell agreed to buy laser maker Lumentum for about $115 billion in stock, betting that AI data centers will move to light",
+ "description": "Marvell will buy Lumentum in an all-stock deal valued at about $115 billion, announced November 2, 2026. The terms, the AI optics rationale and the timeline.",
+ "standfirst": "The chipmaker is paying 4.5 of its shares for each Lumentum share to own the lasers and optical parts that move data inside AI data centers. Both stocks fell, and the deal is not expected to close until 2028.",
+ "keywords": "Marvell Lumentum acquisition, Marvell buys Lumentum, $115 billion chip deal, AI optical connectivity, MRVL LITE merger",
+ "takeaways": [
+  "Lumentum holders get 4.5 Marvell shares per share, a 23.9% premium to the October 28 close.",
+  "Marvell holders will own about 67% of the combined company and Lumentum holders about 33%.",
+  "The companies expect the deal to close in the first half of 2028, pending shareholder and regulatory approval."
+ ],
+ "body": [
+  "<p>Marvell Technology said on Monday, November 2, that it will buy Lumentum Holdings in an all-stock deal valued at about $115 billion including debt, which <a href='https://www.cbsnews.com/news/marvell-lumentum-acquisition-ai-connectivity/' target='_blank' rel='noopener nofollow'>CBS News</a> called one of the largest technology deals on record. Marvell designs data infrastructure chips. Lumentum makes lasers, optical circuit switches and other parts used inside data centers.</p>",
+  "<h2>What are Lumentum shareholders getting?</h2>",
+  "<p>Each Lumentum share converts into 4.5 Marvell shares, a premium of about 23.9% over Lumentum's closing price on October 28, the last trading day before reports of a deal surfaced, according to <a href='https://www.investing.com/news/stock-market-news/marvell-agrees-115-billion-allstock-deal-to-buy-lumentum-4991232' target='_blank' rel='noopener nofollow'>Investing.com</a>. Marvell shareholders would own about 67% of the combined company on a fully diluted basis. Both boards approved the deal unanimously. Matt Murphy stays chairman and chief executive, and three Lumentum directors, including CEO Michael Hurlston, join Marvell's board.</p>",
+  "<h2>Why does a chipmaker want a laser company?</h2>",
+  "<p>Marvell is betting that AI data centers will rely more on optical links between chips and servers. \"AI infrastructure is undergoing a fundamental architectural shift toward optical connectivity,\" Murphy said in remarks reported by CBS News. The companies expect more than $1 billion in yearly cost savings at full run rate and say the deal will add to Marvell's adjusted earnings per share in its first year, according to a <a href='https://finance.yahoo.com/markets/stocks/articles/marvell-agrees-buy-lumentum-115-142705385.html' target='_blank' rel='noopener nofollow'>GuruFocus report carried by Yahoo Finance</a>, which also said Nvidia invested $2 billion in each company earlier this year. Lumentum guided to fiscal second-quarter revenue of $1.58 billion to $1.63 billion, above analysts' estimates.</p>",
+  "<h2>How did investors react?</h2>",
+  "<p>Not well. By late morning Lumentum was down about 10.3% and Marvell about 5.3%, amid a wider selloff in chip stocks, <a href='https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026' target='_blank' rel='noopener nofollow'>TheStreet</a> reported. The Nasdaq closed down 1.07%.</p>",
+  "<h2>What happens next</h2>",
+  "<p>The deal needs approval from both companies' shareholders and from regulators, and the companies are targeting a close in the first half of 2028. For businesses buying AI capacity, the more immediate signal is that the largest suppliers are consolidating the optical parts that data centers depend on.</p>"
+ ],
+ "sources": [
+  {"publisher": "CBS News", "title": "Marvell Technology to buy Lumentum in $115 billion AI connectivity deal", "date": "November 2, 2026", "url": "https://www.cbsnews.com/news/marvell-lumentum-acquisition-ai-connectivity/"},
+  {"publisher": "Investing.com", "title": "Marvell agrees $115 billion all-stock deal to buy Lumentum", "date": "November 2, 2026", "url": "https://www.investing.com/news/stock-market-news/marvell-agrees-115-billion-allstock-deal-to-buy-lumentum-4991232"},
+  {"publisher": "Yahoo Finance (GuruFocus)", "title": "Marvell Agrees to Buy Lumentum in $115 Billion All-Stock Deal", "date": "November 2, 2026", "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-agrees-buy-lumentum-115-142705385.html"},
+  {"publisher": "TheStreet", "title": "Stock Market Today (Nov. 2, 2026)", "date": "November 2, 2026", "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"}
+ ],
+ "faq": [
+  {"q": "How much is Marvell paying for Lumentum?", "a": "About $115 billion including debt, paid entirely in stock: 4.5 Marvell shares for each Lumentum share."},
+  {"q": "When will the Marvell and Lumentum deal close?", "a": "The companies expect it to close in the first half of 2028, subject to shareholder and regulatory approval."}
+ ]
+}

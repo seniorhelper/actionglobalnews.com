@@ -6,6 +6,66 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/crypto-exchange-hacks-explained-binance-custody-what-to-check/",
+   "url": "https://actionglobalnews.com/articles/crypto-exchange-hacks-explained-binance-custody-what-to-check/",
+   "title": "The $6.3 billion Binance theft is the largest crypto hack on record. How exchange hacks happen, who is behind them, and what holders and businesses can check",
+   "summary": "Each of the last three record-setting crypto thefts has been attributed by the FBI to North Korea. The pattern matters to anyone who keeps coins on an exchange, accepts crypto from customers, or holds it on a company balance sheet.",
+   "date_published": "2026-11-03T00:05:00-07:00",
+   "date_modified": "2026-11-03T00:05:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/marvell-to-buy-lumentum-115-billion-ai-optical-deal/",
+   "url": "https://actionglobalnews.com/articles/marvell-to-buy-lumentum-115-billion-ai-optical-deal/",
+   "title": "Marvell agreed to buy laser maker Lumentum for about $115 billion in stock, betting that AI data centers will move to light",
+   "summary": "The chipmaker is paying 4.5 of its shares for each Lumentum share to own the lasers and optical parts that move data inside AI data centers. Both stocks fell, and the deal is not expected to close until 2028.",
+   "date_published": "2026-11-03T00:04:00-07:00",
+   "date_modified": "2026-11-03T00:04:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/apple-q4-2026-results-record-fiscal-year/",
+   "url": "https://actionglobalnews.com/articles/apple-q4-2026-results-record-fiscal-year/",
+   "title": "Apple's revenue rose 12% to $114.5 billion last quarter, closing its biggest year ever, with tariff refunds adding to the margin",
+   "summary": "iPhone and Mac drove the September quarter, while iPad and wearables shrank. Apple said refunds of tariffs it had paid added about a point to its gross margin.",
+   "date_published": "2026-11-03T00:03:00-07:00",
+   "date_modified": "2026-11-03T00:03:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/binance-resumes-withdrawals-after-6-3-billion-hack/",
+   "url": "https://actionglobalnews.com/articles/binance-resumes-withdrawals-after-6-3-billion-hack/",
+   "title": "Binance reopened withdrawals after a $6.3 billion theft the FBI blames on North Korea, and customers pulled out $3.6 billion on the first day",
+   "summary": "The exchange says it has bought back 90% of the stolen tokens with its own money. The rest are harder to source, and only some coins and networks were reopened at first.",
+   "date_published": "2026-11-03T00:02:00-07:00",
+   "date_modified": "2026-11-03T00:02:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/colorado-election-day-2026-ballots-due-7pm-count-timeline/",
+   "url": "https://actionglobalnews.com/articles/colorado-election-day-2026-ballots-due-7pm-count-timeline/",
+   "title": "It is Election Day in Colorado. Ballots must reach election officials by 7 p.m., and certified results are not due until late November",
+   "summary": "Mail is no longer a safe way to return a ballot. Drop boxes and voter service and polling centers are open until 7 p.m., and the first results posted tonight will be unofficial.",
+   "date_published": "2026-11-03T00:01:00-07:00",
+   "date_modified": "2026-11-03T00:01:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/ai-voice-assistants-speed-to-lead-home-service-consent/",
    "url": "https://actionglobalnews.com/articles/ai-voice-assistants-speed-to-lead-home-service-consent/",
    "title": "Small contractors are turning to AI voice assistants to answer leads in minutes, and federal consent rules decide how far they can go",
@@ -416,73 +476,13 @@
   {
    "id": "https://actionglobalnews.com/articles/gemini-4-argon-rollout-business-pricing/",
    "url": "https://actionglobalnews.com/articles/gemini-4-argon-rollout-business-pricing/",
-   "title": "Google's Gemini 4 Argon reached paying subscribers this week. What businesses get, what it costs, and when the price doubles",
+   "title": "Google's Gemini 4 Argon reached paying subscribers in mid-October. What businesses get, what it costs, and when the price doubles",
    "summary": "Google opened its new frontier model to AI Pro and Ultra subscribers and API customers on October 13. Here is who can use it, what it costs, what Google disclosed about its flaws, and how to test it.",
    "date_published": "2026-10-14T08:30:00-06:00",
    "date_modified": "2026-10-14T08:30:00-06:00",
    "image": "https://actionglobalnews.com/images/og/gemini-4-argon-rollout-business-pricing.jpg",
    "tags": [
     "AI"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/denver-airport-express-pay-parking-fall-travel-tips/",
-   "url": "https://actionglobalnews.com/articles/denver-airport-express-pay-parking-fall-travel-tips/",
-   "title": "Denver's airport now reads your license plate and skips the parking kiosk. What Express Pay changes, and what else to know before flying out of DEN this fall",
-   "summary": "Denver International Airport rolled out license plate-based parking payments in the middle of a fall break rush TSA expects to top 965,000 passengers. Here is how to enroll, what parking costs and how ID and PreCheck rules are shifting.",
-   "date_published": "2026-10-13T14:00:00-06:00",
-   "date_modified": "2026-10-13T14:00:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/denver-airport-express-pay-parking-fall-travel-tips.jpg",
-   "tags": [
-    "Travel"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/imf-world-economic-outlook-october-2026-forecast/",
-   "url": "https://actionglobalnews.com/articles/imf-world-economic-outlook-october-2026-forecast/",
-   "title": "The IMF lifted its 2026 world growth forecast to 3.1%, but says only 32 economies are doing most of the growing",
-   "summary": "Released at the Annual Meetings in Bangkok, the IMF's October outlook says AI investment is offsetting a war-driven energy shock, but the gains are concentrated and inflation is running higher than expected.",
-   "date_published": "2026-10-13T10:15:00-06:00",
-   "date_modified": "2026-10-13T10:15:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/imf-world-economic-outlook-october-2026-forecast.jpg",
-   "tags": [
-    "World"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/nobel-economics-2026-hall-woodford-stabilization/",
-   "url": "https://actionglobalnews.com/articles/nobel-economics-2026-hall-woodford-stabilization/",
-   "title": "The economics Nobel goes to Robert Hall and Michael Woodford, whose models taught central banks to steer with expectations",
-   "summary": "The Stanford and Columbia economists share the 12 million kronor prize for grounding economic stabilization policy in how households and firms actually decide, an approach behind modern forward guidance.",
-   "date_published": "2026-10-12T09:40:00-06:00",
-   "date_modified": "2026-10-12T09:40:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/nobel-economics-2026-hall-woodford-stabilization.jpg",
-   "tags": [
-    "Science"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/meta-connect-2026-glasses-vr-what-was-announced/",
-   "url": "https://actionglobalnews.com/articles/meta-connect-2026-glasses-vr-what-was-announced/",
-   "title": "Meta's Connect 2026 put glasses first and pushed its next VR device to 2027. What was announced, and what it costs",
-   "summary": "The company that sells most of the world's smart glasses used its annual developer conference to widen that lead: a cheaper audio-only pair, a pricier third generation of its camera glasses, a hearing-assistance feature, and a tethered VR device that will not arrive until next spring.",
-   "date_published": "2026-10-10T16:00:00-06:00",
-   "date_modified": "2026-10-10T16:00:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/meta-connect-2026-glasses-vr-what-was-announced.jpg",
-   "tags": [
-    "Immersive"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/smart-glasses-overtake-vr-headsets-idc-2026/",
-   "url": "https://actionglobalnews.com/articles/smart-glasses-overtake-vr-headsets-idc-2026/",
-   "title": "Smart glasses are now most of the XR market. The latest shipment data shows how fast headsets lost ground",
-   "summary": "For a decade, virtual and augmented reality meant a headset. The latest quarterly figures from IDC show glasses, most without full displays, now account for the large majority of devices shipped, and one company accounts for most of those.",
-   "date_published": "2026-10-10T15:30:00-06:00",
-   "date_modified": "2026-10-10T15:30:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/smart-glasses-overtake-vr-headsets-idc-2026.jpg",
-   "tags": [
-    "Immersive"
    ]
   }
  ]

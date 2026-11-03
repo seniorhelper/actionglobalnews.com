@@ -1,0 +1,35 @@
+{
+ "slug": "binance-resumes-withdrawals-after-6-3-billion-hack",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-03T00:02:00-07:00",
+ "title": "Binance restarts withdrawals after record $6.3 billion hack",
+ "h1": "Binance reopened withdrawals after a $6.3 billion theft the FBI blames on North Korea, and customers pulled out $3.6 billion on the first day",
+ "description": "Binance resumed withdrawals on November 1, 2026 after a record $6.3 billion hack the FBI tied to North Korea. What it is covering and what users saw.",
+ "standfirst": "The exchange says it has bought back 90% of the stolen tokens with its own money. The rest are harder to source, and only some coins and networks were reopened at first.",
+ "keywords": "Binance hack, Binance withdrawals resume, Binance $6.3 billion, North Korea TraderTraitor, FBI Binance, crypto exchange hack 2026",
+ "takeaways": [
+  "The FBI said on October 31 that North Korea was responsible for the theft on or about October 29.",
+  "Withdrawals restarted in phases on November 1, beginning with bitcoin, ether, BNB and XRP.",
+  "Binance said it set aside more than $6.34 billion and replaced 90% of the stolen assets."
+ ],
+ "body": [
+  "<p>The cryptocurrency exchange Binance began letting customers withdraw funds again on Sunday, November 1, after hackers took about $6.3 billion from it late on October 29. The blockchain analytics firm Elliptic called it \"almost certainly the single largest known theft of any kind,\" Reuters reported in a story carried by the <a href='https://www.staradvertiser.com/2026/10/30/breaking-news/north-korean-hackers-blamed-for-6-3b-heist-from-crypto-firm-binance/' target='_blank' rel='noopener nofollow'>Honolulu Star-Advertiser</a>.</p>",
+  "<h2>Who does the FBI say did it?</h2>",
+  "<p>On October 31 the FBI said North Korea was responsible and named a hacking operation it calls TraderTraitor, the same group it blamed for the $1.5 billion Bybit theft in February 2025, <a href='https://www.cbsnews.com/news/binance-crypto-heist-withdrawals/' target='_blank' rel='noopener nofollow'>CBS News</a> reported. The bureau said it had seen the stolen assets being converted into ether and expected more laundering through decentralized finance and instant-swap services. Binance co-CEO Richard Teng described a complex attack involving a compromised laptop and malware built to erase evidence, in which the attackers manipulated the system that approves transfers out of an internet-connected hot wallet.</p>",
+  "<h2>What did customers see when withdrawals reopened?</h2>",
+  "<p>The first phase restored withdrawals for bitcoin, ether, BNB, XRP and Dogecoin and for the Base and Optimism networks, with other assets to follow as security checks finish. Between 06:00 and 15:30 GMT on November 1, Binance processed $4.65 billion in withdrawals and $1.01 billion in deposits, a net outflow of $3.64 billion, or about 2.1% of the assets it manages, <a href='https://www.euronews.com/2026/11/02/binance-resumes-withdrawals-after-billions-stolen-in-hack' target='_blank' rel='noopener nofollow'>Euronews</a> reported. The company said it had set aside more than $6.34 billion of its own funds and had already bought tokens to replace 90% of what was stolen. It said the remaining 10% is in less liquid assets that will take longer to source.</p>",
+  "<h2>What happens next</h2>",
+  "<p>Stablecoin issuers froze about half of the stolen value, including nearly $1.57 billion by Tether and more than $800 million by Circle, according to Reuters. Watch for the rest of the asset restorations and for any recoveries. Our <a href='/articles/crypto-exchange-hacks-explained-binance-custody-what-to-check/'>explainer on exchange hacks and crypto custody</a> covers what holders can check.</p>"
+ ],
+ "sources": [
+  {"publisher": "Honolulu Star-Advertiser (Reuters)", "title": "North Korean hackers blamed for $6.3B heist from crypto firm Binance", "date": "October 30, 2026", "url": "https://www.staradvertiser.com/2026/10/30/breaking-news/north-korean-hackers-blamed-for-6-3b-heist-from-crypto-firm-binance/"},
+  {"publisher": "CBS News", "title": "Binance resumes withdrawals for some major cryptocurrencies after $6 billion heist", "date": "November 1, 2026", "url": "https://www.cbsnews.com/news/binance-crypto-heist-withdrawals/"},
+  {"publisher": "Euronews", "title": "Binance resumes withdrawals after billions stolen in hack", "date": "November 2, 2026", "url": "https://www.euronews.com/2026/11/02/binance-resumes-withdrawals-after-billions-stolen-in-hack"}
+ ],
+ "faq": [
+  {"q": "Can Binance customers withdraw their crypto now?", "a": "Binance began restoring withdrawals in phases on November 1, 2026, starting with bitcoin, ether, BNB, XRP and Dogecoin; other assets follow as security checks finish."},
+  {"q": "Who hacked Binance?", "a": "The FBI said on October 31, 2026 that North Korea was responsible, naming the TraderTraitor operation."}
+ ]
+}
