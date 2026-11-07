@@ -6,6 +6,42 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/airbnb-q3-2026-results-12-billion-buyback/",
+   "url": "https://actionglobalnews.com/articles/airbnb-q3-2026-results-12-billion-buyback/",
+   "title": "Airbnb's third-quarter revenue grew 19% to $4.9 billion, and the company added up to $12 billion in buybacks",
+   "summary": "The home-sharing company's bookings and profit grew in the summer quarter, according to its shareholder letter. It also guided to 16% to 18% growth for the fourth quarter and said its own AI trip-planning agent is coming in 2027.",
+   "date_published": "2026-11-07T08:59:00-07:00",
+   "date_modified": "2026-11-07T08:59:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/new-zealand-election-2026-too-close-to-call-national-labour-tied/",
+   "url": "https://actionglobalnews.com/articles/new-zealand-election-2026-too-close-to-call-national-labour-tied/",
+   "title": "New Zealand's election is too close to call, with National and Labour level on the party vote",
+   "summary": "Prime Minister Christopher Luxon says his National Party has a path to keep governing, but Labour has not conceded. Hundreds of thousands of special votes still need counting, and the new Opportunity Party is headed into Parliament.",
+   "date_published": "2026-11-07T08:57:00-07:00",
+   "date_modified": "2026-11-07T08:57:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "World"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/lakewood-police-agent-nicholas-graham-killed-rtd-bus-shooting/",
+   "url": "https://actionglobalnews.com/articles/lakewood-police-agent-nicholas-graham-killed-rtd-bus-shooting/",
+   "title": "Lakewood police name Agent Nicholas Graham, 33, as the officer killed in a shootout on an RTD bus",
+   "summary": "A Lakewood police agent died and three others were wounded Thursday evening when a man they approached on an RTD bus opened fire. The suspect was killed when officers shot back, and an outside team is investigating.",
+   "date_published": "2026-11-07T08:55:00-07:00",
+   "date_modified": "2026-11-07T08:55:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/tesla-to-end-cybertruck-production-mid-2027-cybercab/",
    "url": "https://actionglobalnews.com/articles/tesla-to-end-cybertruck-production-mid-2027-cybercab/",
    "title": "Elon Musk says Tesla will wind down Cybertruck production in Texas by mid-2027 to build more Cybercabs",
@@ -447,42 +483,6 @@
    "image": "https://actionglobalnews.com/images/og/big-bank-earnings-q3-2026-small-business-credit.jpg",
    "tags": [
     "Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/prime-big-deal-days-results-holiday-shipping-costs/",
-   "url": "https://actionglobalnews.com/articles/prime-big-deal-days-results-holiday-shipping-costs/",
-   "title": "Prime Big Deal Days drew $9.86 billion online. Now the holiday shipping surcharges and fee changes arrive for sellers",
-   "summary": "October's Amazon deal event grew 8.5% as shoppers chased low-priced basics. Holiday forecasts point to steady online growth, but carrier surcharges, platform fee changes and hotter inflation will decide how much of it sellers keep.",
-   "date_published": "2026-10-14T13:00:00-06:00",
-   "date_modified": "2026-10-14T13:00:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/prime-big-deal-days-results-holiday-shipping-costs.jpg",
-   "tags": [
-    "Global Ecommerce"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/september-2026-cpi-inflation-gas-prices-small-business/",
-   "url": "https://actionglobalnews.com/articles/september-2026-cpi-inflation-gas-prices-small-business/",
-   "title": "Inflation hit 3.7% in September as gas jumped 9%. The hotter core number is what puts another Fed hike in play",
-   "summary": "Consumer prices rose 3.7% over the past year, led by a 9.1% monthly jump in gasoline. Core inflation also beat forecasts, lifting the odds of a second Federal Reserve rate increase on October 28.",
-   "date_published": "2026-10-14T10:30:00-06:00",
-   "date_modified": "2026-10-14T10:30:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/september-2026-cpi-inflation-gas-prices-small-business.jpg",
-   "tags": [
-    "Markets"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/north-korean-it-workers-laptop-farms-employers/",
-   "url": "https://actionglobalnews.com/articles/north-korean-it-workers-laptop-farms-employers/",
-   "title": "Federal agents raided more than 40 North Korean laptop farms in Texas. The FBI says employers hiring remote workers are the front line",
-   "summary": "An Ohio indictment and Texas raids exposed a scheme that put North Korean operatives on the payrolls of more than 70 U.S. companies. The FBI's new alert explains how the scheme is changing and how employers can check their own remote hires.",
-   "date_published": "2026-10-14T10:15:00-06:00",
-   "date_modified": "2026-10-14T10:15:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/north-korean-it-workers-laptop-farms-employers.jpg",
-   "tags": [
-    "Technology"
    ]
   }
  ]
