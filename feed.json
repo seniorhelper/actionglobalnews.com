@@ -6,6 +6,54 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/tesla-to-end-cybertruck-production-mid-2027-cybercab/",
+   "url": "https://actionglobalnews.com/articles/tesla-to-end-cybertruck-production-mid-2027-cybercab/",
+   "title": "Elon Musk says Tesla will wind down Cybertruck production in Texas by mid-2027 to build more Cybercabs",
+   "summary": "The pickup that Tesla once expected to sell by the hundreds of thousands is being phased out. Musk says the floor space will go to the driverless Cybercab, while sales data point to weak demand.",
+   "date_published": "2026-11-07T00:26:00-07:00",
+   "date_modified": "2026-11-07T00:26:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/kenya-cult-leader-mackenzie-sentenced-200-years-shakahola/",
+   "url": "https://actionglobalnews.com/articles/kenya-cult-leader-mackenzie-sentenced-200-years-shakahola/",
+   "title": "A Kenyan court sentenced cult leader Paul Mackenzie to 200 years in prison over the Shakahola starvation deaths",
+   "summary": "The sentence follows Mackenzie's October conviction for 191 murders tied to his Good News International Church. Prosecutors had sought the death penalty, and his lawyer says he will appeal.",
+   "date_published": "2026-11-07T00:24:00-07:00",
+   "date_modified": "2026-11-07T00:24:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "World"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/colorado-amendment-87-passes-graduated-income-tax/",
+   "url": "https://actionglobalnews.com/articles/colorado-amendment-87-passes-graduated-income-tax/",
+   "title": "Colorado voters approved Amendment 87, replacing the 4.4% flat income tax with graduated rates starting in 2027",
+   "summary": "Colorado will return to a graduated income tax for the first time since 1986. Rates fall on the first $100,000 of income and rise on income above roughly $500,000.",
+   "date_published": "2026-11-07T00:22:00-07:00",
+   "date_modified": "2026-11-07T00:22:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/october-2026-jobs-report-165000-unemployment-4-1-percent/",
+   "url": "https://actionglobalnews.com/articles/october-2026-jobs-report-165000-unemployment-4-1-percent/",
+   "title": "U.S. employers added 165,000 jobs in October, far more than forecast, and unemployment slipped to 4.1%",
+   "summary": "Hiring in October came in well above what economists expected, and earlier months were revised higher. The stronger numbers add to expectations that the Federal Reserve could raise rates in December.",
+   "date_published": "2026-11-07T00:20:00-07:00",
+   "date_modified": "2026-11-07T00:20:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/crypto-exchange-hacks-explained-binance-custody-what-to-check/",
    "url": "https://actionglobalnews.com/articles/crypto-exchange-hacks-explained-binance-custody-what-to-check/",
    "title": "The $6.3 billion Binance theft is the largest crypto hack on record. How exchange hacks happen, who is behind them, and what holders and businesses can check",
@@ -435,54 +483,6 @@
    "image": "https://actionglobalnews.com/images/og/north-korean-it-workers-laptop-farms-employers.jpg",
    "tags": [
     "Technology"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/colorado-ski-resort-opening-dates-2026-27-first-storm/",
-   "url": "https://actionglobalnews.com/articles/colorado-ski-resort-opening-dates-2026-27-first-storm/",
-   "title": "The first real storm hits Colorado's ski country, and Keystone is already selling tickets for Oct. 24. Where the race to open stands after a record-bad winter",
-   "summary": "Colorado's high country is getting its first significant snow of the season as resorts wait for cold enough nights to make snow. After a winter with the lowest skier visits since 1991-92, the timing of opening day carries extra weight.",
-   "date_published": "2026-10-14T08:45:00-06:00",
-   "date_modified": "2026-10-14T08:45:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/colorado-ski-resort-opening-dates-2026-27-first-storm.jpg",
-   "tags": [
-    "Outdoors"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/mortgage-rates-7-percent-pending-home-sales-2014-low/",
-   "url": "https://actionglobalnews.com/articles/mortgage-rates-7-percent-pending-home-sales-2014-low/",
-   "title": "Mortgage rates hit 7.4% and pending home sales fell to their lowest since 2014. Here is what the slowdown means for buyers, sellers and Denver",
-   "summary": "The 30-year mortgage rate reached 7.40%, its highest since November 2023, and new contracts fell to a 12-year low in September. Existing-home sales rose slightly, but NAR expects fourth-quarter closings to drop.",
-   "date_published": "2026-10-14T08:45:00-06:00",
-   "date_modified": "2026-10-14T08:45:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/mortgage-rates-7-percent-pending-home-sales-2014-low.jpg",
-   "tags": [
-    "Real Estate"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/congo-ebola-outbreak-9000-cases-bundibugyo/",
-   "url": "https://actionglobalnews.com/articles/congo-ebola-outbreak-9000-cases-bundibugyo/",
-   "title": "Congo's Ebola outbreak has passed 9,000 confirmed cases, and there is still no approved vaccine for this strain. Where it stands",
-   "summary": "The Bundibugyo virus outbreak is now the largest in Congo's history and second only to West Africa's 2014–2016 epidemic. Conflict, mistrust and shortages are slowing the response, while vaccine trials are still being prepared.",
-   "date_published": "2026-10-14T08:30:00-06:00",
-   "date_modified": "2026-10-14T08:30:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/congo-ebola-outbreak-9000-cases-bundibugyo.jpg",
-   "tags": [
-    "Health"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/gemini-4-argon-rollout-business-pricing/",
-   "url": "https://actionglobalnews.com/articles/gemini-4-argon-rollout-business-pricing/",
-   "title": "Google's Gemini 4 Argon reached paying subscribers in mid-October. What businesses get, what it costs, and when the price doubles",
-   "summary": "Google opened its new frontier model to AI Pro and Ultra subscribers and API customers on October 13. Here is who can use it, what it costs, what Google disclosed about its flaws, and how to test it.",
-   "date_published": "2026-10-14T08:30:00-06:00",
-   "date_modified": "2026-10-14T08:30:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/gemini-4-argon-rollout-business-pricing.jpg",
-   "tags": [
-    "AI"
    ]
   }
  ]
