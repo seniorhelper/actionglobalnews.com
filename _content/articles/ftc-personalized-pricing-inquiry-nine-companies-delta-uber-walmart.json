@@ -1,0 +1,58 @@
+{
+ "slug": "ftc-personalized-pricing-inquiry-nine-companies-delta-uber-walmart",
+ "type": "brief",
+ "section": "Business",
+ "kicker": "Business · Analysis",
+ "published": "2026-11-08T03:00:00-07:00",
+ "title": "FTC orders 9 firms to explain personalized pricing and pay",
+ "h1": "FTC orders Delta, Uber, Walmart and six other companies to explain how personal data shapes prices and worker pay",
+ "description": "On Oct. 28 the FTC sent 6(b) orders to nine firms, including Delta, Uber, DoorDash and Walmart, on personalized pricing. What the study is and is not.",
+ "standfirst": "The Federal Trade Commission has started a study of whether airlines, ride-share and delivery apps and two big retailers charge different people different prices, or pay different workers different rates, based on personal data. It is a study, not a lawsuit. Responses are due within 45 days of receipt.",
+ "keywords": "FTC personalized pricing, surveillance pricing, FTC 6(b) orders, Delta United JetBlue Uber Lyft DoorDash Instacart Target Walmart, algorithmic pricing, gig worker pay",
+ "takeaways": [
+  "On Oct. 28, 2026 the FTC issued Section 6(b) orders to nine companies: Delta, United, JetBlue, Lyft, Uber, DoorDash, Instacart, Target and Walmart.",
+  "Each company has 45 days from receipt to respond. The Commission voted 2-0 to launch the inquiry.",
+  "A 6(b) study has no specific law enforcement purpose and does not by itself find wrongdoing."
+ ],
+ "body": [
+  "<p>The Federal Trade Commission said on October 28, 2026 that it has ordered nine companies to hand over information about how they set prices and pay. The <a href='https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-launches-personalized-pricing-compensation-inquiry' target='_blank' rel='noopener nofollow'>agency's release</a> names Delta, United and JetBlue; Lyft and Uber; DoorDash and Instacart; and Target and Walmart. The release describes the group as airlines, ride-share companies and food-delivery firms, though Target and Walmart do not fit those labels.</p>",
+  "<h2>What is the FTC asking?</h2>",
+  "<p>The orders come under Section 6(b) of the FTC Act. The release says that section lets the Commission run wide-ranging studies that do not have a specific law enforcement purpose. If a company does not answer, the Commission can ask a federal court to compel it.</p>",
+  "<p>The study looks at whether the price of a ticket, a ride, a delivery or another product differs from person to person based on factors such as loyalty-program participation or analysis of personal data. The release describes that analysis as done by &ldquo;superintelligence algorithms.&rdquo; For ride-share and delivery companies, it also asks whether worker compensation is personalized using personal data. The orders ask each company to document the inputs, tools and procedures used to set or adjust prices and pay.</p>",
+  "<p>The vote was 2-0. Chairman Andrew N. Ferguson said, according to the release, &ldquo;Consumers deserve to know whether companies use their web surfing habits&rdquo; to set prices. The release gives each recipient 45 days from the day it receives the order to respond.</p>",
+  "<h2>Is this new?</h2>",
+  "<p>Partly. The FTC began a related study in July 2024, when it sent 6(b) orders to eight companies that sell pricing tools and services. In a <a href='https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-surveillance-pricing-study-indicates-wide-range-personal-data-used-set-individualized-consumer' target='_blank' rel='noopener nofollow'>January 17, 2025 release</a>, FTC staff described early findings. They said such intermediaries could use details such as precise location, browser history, demographics, shopping history, mouse movements on a page and items left in an online cart. Staff added that search and purchase activity could lead to higher-priced products being shown first. The agency called those findings interim and said its review of the documents was still ongoing.</p>",
+  "<p>The new orders go to the businesses that sell to the public, which the 2024 study did not cover. The October release says that earlier work looked at consulting and software middlemen, not the companies setting prices. It also says the Commission sought public comment in August on a proposed enforcement policy statement about personalized pricing.</p>",
+  "<table class='dtable'><caption>Who received the FTC's October 28, 2026 orders</caption><thead><tr><th>Group</th><th>Companies</th></tr></thead><tbody><tr><td>Airlines</td><td>Delta, United, JetBlue</td></tr><tr><td>Ride-share</td><td>Lyft, Uber</td></tr><tr><td>Food delivery</td><td>DoorDash, Instacart</td></tr><tr><td>Retail</td><td>Target, Walmart</td></tr></tbody></table>",
+  "<p><em>Source: Federal Trade Commission press release, October 28, 2026.</em></p>",
+  "<h2>What does it mean for small businesses and shoppers?</h2>",
+  "<p>For now, nothing is required of anyone outside the nine companies. The FTC has not said any of them did anything wrong, and the release lists no allegations. Small businesses that use dynamic or loyalty-based pricing may still want to review how they explain discounts to customers, because the Commission has shown it is looking at the topic. That is our reading, not a statement from the agency.</p>",
+  "<p>Shoppers can take a few simple steps. Compare a price while logged in and logged out, or on two devices. Check whether a loyalty discount is actually lower than the posted price at another store. Screenshot a quote before you buy. If you think a price was deceptive, you can report it to your state attorney general or the FTC.</p>",
+  "<h2>What happens next?</h2>",
+  "<p>The 45-day clock runs from each company's receipt, so responses would land in mid-December at the earliest, depending on delivery dates. The Commission has not said when it will publish findings. We will update this story if the FTC releases results or the companies comment.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "Federal Trade Commission",
+   "title": "FTC Launches Personalized Pricing and Compensation Inquiry",
+   "date": "October 28, 2026",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-launches-personalized-pricing-compensation-inquiry"
+  },
+  {
+   "publisher": "Federal Trade Commission",
+   "title": "FTC Surveillance Pricing Study Indicates Wide Range of Personal Data Used to Set Individualized Consumer Prices",
+   "date": "January 17, 2025",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-surveillance-pricing-study-indicates-wide-range-personal-data-used-set-individualized-consumer"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Is the FTC suing Delta, Uber or Walmart?",
+   "a": "No. The October 28, 2026 release describes a Section 6(b) study, which the FTC says has no specific law enforcement purpose. It makes no allegations against the companies."
+  },
+  {
+   "q": "How long do the companies have to respond?",
+   "a": "Each has 45 days from the date it receives the order, according to the FTC release."
+  }
+ ]
+}

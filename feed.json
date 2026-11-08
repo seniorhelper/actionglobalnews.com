@@ -6,6 +6,42 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/ftc-personalized-pricing-inquiry-nine-companies-delta-uber-walmart/",
+   "url": "https://actionglobalnews.com/articles/ftc-personalized-pricing-inquiry-nine-companies-delta-uber-walmart/",
+   "title": "FTC orders Delta, Uber, Walmart and six other companies to explain how personal data shapes prices and worker pay",
+   "summary": "The Federal Trade Commission has started a study of whether airlines, ride-share and delivery apps and two big retailers charge different people different prices, or pay different workers different rates, based on personal data. It is a study, not a lawsuit. Responses are due within 45 days of receipt.",
+   "date_published": "2026-11-08T03:00:00-07:00",
+   "date_modified": "2026-11-08T03:00:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/google-shared-ai-training-control-robots-txt-aipref/",
+   "url": "https://actionglobalnews.com/articles/google-shared-ai-training-control-robots-txt-aipref/",
+   "title": "Google says it will honor one shared robots.txt signal for AI training opt-outs, but not until 2027",
+   "summary": "Google announced on October 30 that it plans to support a shared, machine-readable way for websites to say no to AI training. The signal lives in robots.txt and comes from an IETF draft. It is not live yet, and today's controls, including Google-Extended, stay in place.",
+   "date_published": "2026-11-08T02:55:00-07:00",
+   "date_modified": "2026-11-08T02:55:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/ftc-toast-riverside-payments-small-business-fees-cancellation/",
+   "url": "https://actionglobalnews.com/articles/ftc-toast-riverside-payments-small-business-fees-cancellation/",
+   "title": "Two FTC cases in five days target payment-processing fees and hard-to-cancel contracts for small businesses",
+   "summary": "The Federal Trade Commission filed two actions against payment companies that sell to small businesses. One is a lawsuit against restaurant-software maker Toast that Colorado joined. The other is a settlement with a Washington processor. Both turn on the same question: what a business agrees to when it signs up, and what it costs to leave.",
+   "date_published": "2026-11-08T02:50:00-07:00",
+   "date_modified": "2026-11-08T02:50:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Small Business"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/airbnb-q3-2026-results-12-billion-buyback/",
    "url": "https://actionglobalnews.com/articles/airbnb-q3-2026-results-12-billion-buyback/",
    "title": "Airbnb's third-quarter revenue grew 19% to $4.9 billion, and the company added up to $12 billion in buybacks",
@@ -447,42 +483,6 @@
    "image": "https://actionglobalnews.com/images/og/eye-to-ad-media-fall-2026-launches-ai-agents-allofus.jpg",
    "tags": [
     "Small Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/nexgen-lead-groups-colorado-free-referral-groups-open/",
-   "url": "https://actionglobalnews.com/articles/nexgen-lead-groups-colorado-free-referral-groups-open/",
-   "title": "A free referral network opens seats in Denver, Colorado Springs and Fort Collins, with a 45-minute weekly format and no dues",
-   "summary": "NexGen Lead Groups, a referral network operated by the publisher of this site, began accepting members on October 14 for its first three Colorado groups. Here is how the format works, and how any owner can judge whether a referral group is worth the hour.",
-   "date_published": "2026-10-14T18:30:00-06:00",
-   "date_modified": "2026-10-14T18:30:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/nexgen-lead-groups-colorado-free-referral-groups-open.jpg",
-   "tags": [
-    "Small Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/colorado-amendment-87-proposition-136-income-tax-explained/",
-   "url": "https://actionglobalnews.com/articles/colorado-amendment-87-proposition-136-income-tax-explained/",
-   "title": "Colorado voters face two income tax measures written to collide. What Amendment 87 and Proposition 136 would mean for households and business owners",
-   "summary": "A graduated income tax that would cut rates for most filers and nearly double the top rate is on the Nov. 3 ballot alongside a measure to cap the flat 4.4% rate. The governor has weighed in, and outside money is pouring in.",
-   "date_published": "2026-10-14T17:30:00-06:00",
-   "date_modified": "2026-10-14T17:30:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/colorado-amendment-87-proposition-136-income-tax-explained.jpg",
-   "tags": [
-    "Colorado"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/big-bank-earnings-q3-2026-small-business-credit/",
-   "url": "https://actionglobalnews.com/articles/big-bank-earnings-q3-2026-small-business-credit/",
-   "title": "Big banks opened earnings season with rising loans and lower card losses. Their CEOs are bracing for higher rates anyway",
-   "summary": "JPMorgan, Wells Fargo, Citi, Goldman Sachs and Bank of America reported higher loan balances and mostly steady credit in the third quarter. Executives still flagged rates, oil and inflation as risks, and JPMorgan is tightening credit slightly.",
-   "date_published": "2026-10-14T13:00:00-06:00",
-   "date_modified": "2026-10-14T13:00:00-06:00",
-   "image": "https://actionglobalnews.com/images/og/big-bank-earnings-q3-2026-small-business-credit.jpg",
-   "tags": [
-    "Business"
    ]
   }
  ]

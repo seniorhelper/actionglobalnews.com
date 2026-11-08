@@ -1,0 +1,42 @@
+{
+ "slug": "google-shared-ai-training-control-robots-txt-aipref",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Analysis",
+ "published": "2026-11-08T02:55:00-07:00",
+ "title": "Google backs a shared AI training opt-out in robots.txt",
+ "h1": "Google says it will honor one shared robots.txt signal for AI training opt-outs, but not until 2027",
+ "description": "Google said Oct. 30 it will support a shared AI-training control in robots.txt in 2027. Here is what site owners can do now and what it will not change.",
+ "standfirst": "Google announced on October 30 that it plans to support a shared, machine-readable way for websites to say no to AI training. The signal lives in robots.txt and comes from an IETF draft. It is not live yet, and today's controls, including Google-Extended, stay in place.",
+ "keywords": "Google-Extended, robots.txt AI training, AIPREF, IETF AI preferences, opt out of AI training, __usage_ai-training, Google Search Central",
+ "takeaways": [
+  "Google's Oct. 30, 2026 post says it aims to support a shared AI-training signal in robots.txt in 2027, alongside other AI providers.",
+  "If a site opts out with the new token and says nothing about Google-Extended, Google says it will treat that as a Google-Extended disallow.",
+  "Google's documentation says Google-Extended does not affect inclusion in Google Search and is not a ranking signal."
+ ],
+ "body": [
+  "<p>Google said on October 30, 2026 that it plans to honor a shared robots.txt signal that lets a website owner opt out of AI training in one place. The announcement, <a href='https://developers.google.com/search/blog/2026/10/ai-training-control' target='_blank' rel='noopener nofollow'>posted on the Google Search Central blog</a> by Search Advocate John Mueller, does not turn anything on today. Google says it aims to support the control, alongside other AI providers, in 2027.</p>",
+  "<h2>What is the new signal?</h2>",
+  "<p>Today, a site that wants to limit AI training has to name each company's crawler token one by one. Google's token for this is Google-Extended. Other firms publish their own. The new idea is a single token that any participating AI provider could read.</p>",
+  "<p>The proposal comes from an <a href='https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/' target='_blank' rel='noopener nofollow'>Internet-Draft titled &ldquo;Machine-Readable Training Preference Signal&rdquo;</a>, version 00, dated October 30, 2026. It lets a site write an ordinary robots.txt group with the token <code>__usage_ai-training</code> in the user-agent line. A group that disallows paths states a preference against AI training on those paths, and an allow rule states a preference in favor. The draft adds no new directive names and leaves the existing robots.txt rules from RFC 9309 unchanged. For example, it shows <code>Disallow: /</code> with <code>Allow: /press-kit/</code>.</p>",
+  "<p>Two cautions. The IETF page says the document is an individual submission that is not endorsed by the IETF, so it is not a standard yet. And the page lists Kevin Kelley of Anthropic as author. Anthropic makes the Claude AI models; we note the connection so readers can weigh it.</p>",
+  "<h2>How would it work with Google-Extended?</h2>",
+  "<p>Google says the shared signal builds on Google-Extended, which it has offered since 2023. The two will run side by side. If a site uses the new token to opt out of training and does not explicitly mention Google-Extended, Google says it will treat the site as if Google-Extended were disallowed. A site that allows Google-Extended stays eligible to appear in, and get clicks from, Gemini Apps grounding responses, according to the post.</p>",
+  "<p>Google's <a href='https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers' target='_blank' rel='noopener nofollow'>crawler documentation</a> describes Google-Extended as a standalone token that controls whether content Google crawls can be used to train future Gemini models. It also covers grounding, where Search index content is given to the model at prompt time. The page states that the token &ldquo;does not impact a site's inclusion in Google Search&rdquo; and is not a ranking signal. The same page says Google intends to support the training preference signal in early 2027.</p>",
+  "<h2>What should a small business do now?</h2>",
+  "<p>For most local businesses, nothing urgent. The new token does not exist in Google's systems yet, and the draft could change before then. Still, there are practical steps:</p>",
+  "<ol class='steps'><li>Open yourdomain.com/robots.txt and read it. Many site builders and plugins edit it without telling you.</li><li>Decide your position on AI training for your own pages. Some owners want maximum exposure; publishers with paid or original reporting may not.</li><li>If you opt out today, use the company-specific tokens each provider documents. Blocking Googlebot itself is a different matter and can keep pages out of Search.</li><li>Keep a note of the date and the change, so you can compare traffic and referrals later.</li><li>Check back when Google publishes support documentation in 2027.</li></ol>",
+  "<h2>What this does not do</h2>",
+  "<p>A robots.txt rule is a request, not a lock. Responsible crawlers follow it. Others may not, and the file cannot remove content that has already been collected. The signal also says nothing about licensing, payment or credit. Google's post says the proposal reflects feedback from publishers, civil society and regulators, and that it is consistent with the EU Code of Practice for General Purpose AI Model Providers, which recognizes robots.txt as a way to express machine-readable preferences.</p>",
+  "<p>The open questions are how many other AI providers sign on, and whether the IETF's working group adopts the draft or changes it. Google gave a 2027 target, not an exact date. We will update this report when either answer changes.</p>"
+ ],
+ "sources": [
+  {"publisher": "Google Search Central Blog", "title": "Supporting a shared AI training control for websites", "date": "October 30, 2026", "url": "https://developers.google.com/search/blog/2026/10/ai-training-control"},
+  {"publisher": "IETF Datatracker", "title": "Machine-Readable Training Preference Signal (draft-kelley-aipref-training-preference-signal-00)", "date": "October 30, 2026", "url": "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/"},
+  {"publisher": "Google for Developers", "title": "Google's common crawlers", "note": "Crawler documentation page describing Google-Extended", "date": "Accessed November 8, 2026", "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"}
+ ],
+ "faq": [
+  {"q": "Will blocking AI training in robots.txt hurt my Google rankings?", "a": "Google's documentation says Google-Extended does not impact a site's inclusion in Google Search and is not used as a ranking signal."},
+  {"q": "When will Google support the shared AI training signal?", "a": "Google's October 30, 2026 post says it aims to support the control in 2027, alongside other AI providers. No exact date was given."}
+ ]
+}
