@@ -1,0 +1,30 @@
+{
+ "slug": "nvidia-board-investigates-jensen-huang-alleged-chinese-spy",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-09T08:12:00-07:00",
+ "title": "Nvidia board opens probe of Jensen Huang's tie to alleged spy",
+ "h1": "Nvidia's board opens an independent investigation after reports that CEO Jensen Huang was targeted by a suspected Chinese intelligence asset",
+ "description": "Nvidia's board said November 8, 2026 that independent directors will investigate reports Jensen Huang was a foreign spy target; Huang admitted an affair.",
+ "standfirst": "Nvidia's directors say they have no reason to think company or national security secrets leaked, but they will review the reports anyway. Huang, who told staff he had an affair with the woman at the center of the reports, says he will stay on as CEO.",
+ "keywords": "Nvidia investigation Jensen Huang, Jensen Huang Alice Huang, Nvidia board statement, Megaspeed Nvidia, Nvidia China spy reports",
+ "takeaways": [
+  "A committee of independent Nvidia directors, working with outside counsel, will oversee the review, the board said November 8, 2026.",
+  "House Republican committee chairs have asked Huang to attend a closed-door briefing on November 18.",
+  "Nvidia reports third-quarter earnings on November 17."
+ ],
+ "body": [
+  "<p>Nvidia's board of directors has opened an independent investigation into reports that chief executive Jensen Huang was the target of a foreign intelligence effort, the company said on Sunday, November 8. The review follows reporting by The New York Times and the Financial Times that U.S. intelligence agencies believe a businesswoman named Alice Huang, who is not related to the CEO, has been passing information to Beijing, <a href='https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html' target='_blank' rel='noopener nofollow'>CNBC reported</a>.</p>",
+  "<h2>What did Nvidia and Huang say?</h2>",
+  "<p>In its <a href='https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-email-board-of-directors-statement.html' target='_blank' rel='noopener nofollow'>statement, published in full by CNBC</a>, the board said a committee of independent directors will run the inquiry with outside independent counsel. The board said it has \"no reason to believe that either national security or NVIDIA secrets were compromised,\" but that it will look at all available information. It also said it has confidence in Huang, who has agreed to cooperate.</p>",
+  "<p>In an email to employees the same day, Huang said he had been unfaithful to his wife, apologized to his family and staff, and said he takes full responsibility. A company spokesperson told CNBC that Huang intends to keep leading Nvidia without interruption. The email and the board statement did not name the directors on the committee or the outside law firm.</p>",
+  "<h2>Why the reports matter</h2>",
+  "<p>Alice Huang is linked to Megaspeed, an Nvidia customer that has been accused of helping restricted Chinese companies obtain Nvidia AI chips, according to CNBC. Nvidia has said Megaspeed was already investigated over export controls. The U.S. bars exports of Nvidia's most advanced AI chips to China, and Huang has argued publicly for wider sales there.</p>",
+  "<p>The timing adds pressure. Three House Republican committee chairs wrote to Huang on November 5 asking him to attend a closed-door briefing with lawmakers on November 18, CNBC reported. Nvidia is scheduled to report third-quarter earnings on November 17 and plans a large conference in Washington, D.C., at the end of the month. None of the intelligence claims about Alice Huang have been confirmed publicly, and the reporting relies on unnamed officials.</p>"
+ ],
+ "sources": [
+  {"publisher": "CNBC", "title": "Nvidia investigates CEO Jensen Huang's relationship with alleged Chinese spy", "date": "November 8, 2026", "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html"},
+  {"publisher": "CNBC", "title": "Read Huang's email to his staff and statement from Nvidia's board of directors", "date": "November 8, 2026", "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-email-board-of-directors-statement.html"}
+ ]
+}
