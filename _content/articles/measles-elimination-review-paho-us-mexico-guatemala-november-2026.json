@@ -1,0 +1,37 @@
+{
+ "slug": "measles-elimination-review-paho-us-mexico-guatemala-november-2026",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-11-12T07:08:00-07:00",
+ "title": "Health panel weighs U.S. measles elimination status this week",
+ "h1": "A regional health panel is deciding this week whether the U.S., Mexico and Guatemala keep their measles elimination status",
+ "description": "A Pan American Health Organization commission meets November 10-13, 2026 to review measles status across the Americas after 57,666 confirmed cases this year.",
+ "standfirst": "The closed meeting ends Friday. The Americas have recorded more than 57,000 confirmed measles cases and 81 deaths so far in 2026, and Canada already lost its status a year ago.",
+ "keywords": "measles elimination status United States, PAHO measles commission November 2026, measles cases Americas 2026, Mexico measles, Guatemala measles outbreak, measles re-verification",
+ "takeaways": [
+  "The Pan American Health Organization's re-verification commission is meeting November 10 to 13, 2026, reviewing data for 2025 and the first half of 2026.",
+  "The region logged 57,666 confirmed measles cases and 81 deaths in 17 countries and territories through October 31, 2026.",
+  "A country loses elimination status when one chain of the same virus strain keeps spreading for 12 months or longer."
+ ],
+ "body": [
+  "<p>An expert commission that advises the Pan American Health Organization is meeting this week to decide which countries in the Americas still qualify as having eliminated measles. The closed technical meeting runs from November 10 to 13 and reviews national reports covering 2025 and the first half of 2026, the organization <a href='https://www.paho.org/en/news/14-10-2026-measles-and-rubella-elimination-regional-monitoring-and-re-verification-commission' target='_blank' rel='noopener nofollow'>said when it announced the session</a>.</p>",
+  "<p>The United States, Mexico, Guatemala, Peru and Bolivia are the countries at risk, <a href='https://www.aljazeera.com/news/2026/11/12/why-the-us-mexico-and-guatemala-may-lose-their-measles-free-status' target='_blank' rel='noopener nofollow'>Al Jazeera reported</a> on Thursday. Canada lost its status in November 2025 and is the only country in the region now classed as having endemic measles.</p>",
+  "<h2>How large is the outbreak?</h2>",
+  "<p>The health organization's <a href='https://www.paho.org/en/documents/situation-report-15-measles-americas-region-6-november-2026' target='_blank' rel='noopener nofollow'>latest situation report</a>, dated November 6, counts 57,666 confirmed cases and 81 deaths in 17 countries and territories from the start of the year through October 31. That is 4.7 times the number for the same period of 2025. Guatemala reported 34,748 cases, Mexico 13,761, the United States 4,852, Peru 2,862 and Canada 1,126. Of the deaths, 53 were in Guatemala, 23 in Mexico and three in the United States.</p>",
+  "<h2>How does a country lose its status?</h2>",
+  "<p>Endemic transmission is considered re-established when a chain of infections involving the same genotype and lineage of the virus continues for 12 months or longer, the organization said. Cases brought in by travelers do not count on their own. The commission also weighs vaccination coverage, surveillance, laboratory evidence and outbreak response, and no single piece of evidence decides the outcome.</p>",
+  "<p>The United States eliminated endemic measles in 2000 and has had sustained outbreaks since January 2025, according to Al Jazeera. Losing the label brings no automatic penalty. Matt Ferrari, who directs Pennsylvania State University's Center for Infectious Disease Dynamics, told Al Jazeera, \"It would be a disappointment, not a shock.\"</p>",
+  "<h2>What happens next</h2>",
+  "<p>The commission sends its conclusions to the organization's director, Jarbas Barbosa, who makes the final decision. An announcement is expected early next week, Al Jazeera reported. Brazil lost its status in 2019 and won it back in 2024 after a vaccination campaign. For background, see our earlier explainer on <a href='/articles/measles-elimination-status-us-2026-explained/'>how measles elimination status works</a>. Vaccine guidance is available from the Centers for Disease Control and Prevention and from state and local health departments.</p>"
+ ],
+ "sources": [
+  {"publisher": "Pan American Health Organization", "title": "Measles and Rubella Elimination Regional Monitoring and Re-Verification Commission to hold sixth annual meeting in November", "date": "October 14, 2026", "url": "https://www.paho.org/en/news/14-10-2026-measles-and-rubella-elimination-regional-monitoring-and-re-verification-commission"},
+  {"publisher": "Pan American Health Organization", "title": "Situation Report #15: Measles in the Americas Region. 6 November 2026", "date": "November 6, 2026", "url": "https://www.paho.org/en/documents/situation-report-15-measles-americas-region-6-november-2026"},
+  {"publisher": "Al Jazeera", "title": "Why the US, Mexico and Guatemala may lose their measles-free status", "date": "November 12, 2026", "url": "https://www.aljazeera.com/news/2026/11/12/why-the-us-mexico-and-guatemala-may-lose-their-measles-free-status"}
+ ],
+ "faq": [
+  {"q": "When will the measles elimination decision be announced?", "a": "The commission's meeting ends November 13, 2026. Its recommendations go to the Pan American Health Organization's director, and an announcement is expected early the following week, Al Jazeera reported."},
+  {"q": "How many measles cases have the Americas had in 2026?", "a": "The Pan American Health Organization counted 57,666 confirmed cases and 81 deaths in 17 countries and territories from January through October 31, 2026."}
+ ]
+}
