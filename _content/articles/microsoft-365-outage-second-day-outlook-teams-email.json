@@ -1,0 +1,35 @@
+{
+ "slug": "microsoft-365-outage-second-day-outlook-teams-email",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-13T12:05:00-07:00",
+ "title": "Microsoft 365 outage enters second day; email slowly recovers",
+ "h1": "A Microsoft 365 outage that knocked out Outlook email for businesses, police and governments has stretched into a second day",
+ "description": "A Microsoft 365 outage that began November 12, 2026 disrupted Outlook and Teams into a second day. Microsoft says service is improving and sees no attack.",
+ "standfirst": "The disruption began around midday Thursday and reached companies, sheriff's offices, city halls and universities. Microsoft says recovery is under way but has not yet named the root cause.",
+ "keywords": "Microsoft 365 outage November 2026, Outlook email down, Exchange Online outage, Microsoft Teams outage, Arapahoe County bond payments, Microsoft outage cause",
+ "takeaways": [
+  "The outage began around noon on Thursday, November 12, and was still listed as a service degradation on Friday morning.",
+  "Microsoft said a process that sets up secure connections was overwhelmed and servers stopped responding; it found no evidence of malicious activity.",
+  "Email may still arrive late. In Colorado, the Arapahoe County Sheriff's Office said online bond payments were disrupted."
+ ],
+ "body": [
+  "<p>A Microsoft 365 outage that began around noon on Thursday, November 12, continued into Friday, delaying email and disrupting Outlook, Teams and other services for businesses, police agencies and governments, <a href='https://gizmodo.com/microsoft-outage-knocks-out-email-for-businesses-police-and-hospitals-2000839696' target='_blank' rel='noopener nofollow'>Gizmodo reported</a>. Microsoft's status page still listed both the business and consumer versions of Microsoft 365 as degraded on Friday morning.</p>",
+  "<h2>What went wrong?</h2>",
+  "<p>Microsoft said a large number of servers unexpectedly became unavailable, which strained the rest of its systems, according to Gizmodo. The company later found that a process responsible for setting up secure connections had been overwhelmed, causing servers to stop responding. It has released a patch meant to improve stability but has not established the underlying cause. Microsoft said it found no evidence of malicious activity.</p>",
+  "<p>A <a href='https://its.gmu.edu/unplanned-outages/issues-with-accessing-or-using-multiple-microsoft-365-services' target='_blank' rel='noopener nofollow'>running notice from George Mason University's IT office</a> said Microsoft had identified services that work with Exchange Online, its email system, as the main source of trouble. The notice listed problems reaching email on the web, desktop and phones, along with failures in Copilot, Teams calendars and meeting scheduling, Planner and To Do. Basic Teams messaging and meetings kept working, it said.</p>",
+  "<h2>Who was affected?</h2>",
+  "<p>Shipping company Maersk warned customers that emails and notifications could be late, and Workhorse Group postponed its third-quarter earnings release to next week, Gizmodo reported. The Los Angeles County Sheriff's Department said its email was disrupted, and City of Austin employees could not send or receive email on Thursday. Japanese government ministries posted paper notices to tell reporters about schedules.</p>",
+  "<p>In Colorado, the Arapahoe County Sheriff's Office said online bond payments were disrupted and had to be made in person, according to Gizmodo.</p>",
+  "<h2>What happens next</h2>",
+  "<p>Recovery is uneven. \"Some users may still experience intermittent access issues or delayed email delivery as recovery continues,\" Microsoft said in a post on X quoted by Gizmodo. George Mason's 10:15 a.m. update on Friday said email queues were approaching normal levels but the issue was not resolved. Microsoft executive Charles Lamanna told Gizmodo that teams are reviewing what happened and how to prevent a repeat.</p>"
+ ],
+ "sources": [
+  {"publisher": "Gizmodo", "title": "Microsoft Outage Knocks Out Email for Businesses, Police, and Hospitals", "date": "November 13, 2026", "url": "https://gizmodo.com/microsoft-outage-knocks-out-email-for-businesses-police-and-hospitals-2000839696"},
+  {"publisher": "George Mason University Information Technology Services", "title": "Issues with accessing, or using, multiple Microsoft 365 services", "date": "November 13, 2026", "url": "https://its.gmu.edu/unplanned-outages/issues-with-accessing-or-using-multiple-microsoft-365-services"}
+ ],
+ "faq": [
+  {"q": "What caused the Microsoft 365 outage in November 2026?", "a": "Microsoft said a process that sets up secure connections became overwhelmed and servers stopped responding. It has not established the underlying cause and said it found no evidence of malicious activity, Gizmodo reported."}
+ ]
+}

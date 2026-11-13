@@ -6,6 +6,54 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/who-global-tuberculosis-report-2026-deaths-down-donor-funding-falls/",
+   "url": "https://actionglobalnews.com/articles/who-global-tuberculosis-report-2026-deaths-down-donor-funding-falls/",
+   "title": "Tuberculosis deaths have fallen 35% since 2015, the WHO says, but donor funding dropped 14% last year",
+   "summary": "The world has hit its first target for cutting tuberculosis deaths, five years late. Governments spent more of their own money in 2025 as international aid shrank.",
+   "date_published": "2026-11-13T12:07:00-07:00",
+   "date_modified": "2026-11-13T12:07:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Health"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/knowles-fire-entrapment-report-four-firefighters-colorado/",
+   "url": "https://actionglobalnews.com/articles/knowles-fire-entrapment-report-four-firefighters-colorado/",
+   "title": "A 102-page federal report says understaffed dispatch and a two-hour gap in air oversight preceded the Colorado burnover that killed four firefighters",
+   "summary": "Investigators found no single failure behind the June 27 deaths west of Grand Junction. They describe an overloaded dispatch center, crowded radio traffic and crews who wrongly believed an aircraft was watching the fire.",
+   "date_published": "2026-11-13T12:06:00-07:00",
+   "date_modified": "2026-11-13T12:06:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/microsoft-365-outage-second-day-outlook-teams-email/",
+   "url": "https://actionglobalnews.com/articles/microsoft-365-outage-second-day-outlook-teams-email/",
+   "title": "A Microsoft 365 outage that knocked out Outlook email for businesses, police and governments has stretched into a second day",
+   "summary": "The disruption began around midday Thursday and reached companies, sheriff's offices, city halls and universities. Microsoft says recovery is under way but has not yet named the root cause.",
+   "date_published": "2026-11-13T12:05:00-07:00",
+   "date_modified": "2026-11-13T12:05:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/october-2026-ppi-wholesale-prices-6-5-percent-annual/",
+   "url": "https://actionglobalnews.com/articles/october-2026-ppi-wholesale-prices-6-5-percent-annual/",
+   "title": "U.S. wholesale prices rose 0.3% in October, lifting the annual rate to 6.5%, the highest since late 2022",
+   "summary": "The monthly gain was smaller than forecast and far below September's jump. The 12-month rate still climbed to its highest level in nearly four years, three weeks before the Federal Reserve meets.",
+   "date_published": "2026-11-13T12:04:00-07:00",
+   "date_modified": "2026-11-13T12:04:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/colorado-competitiveness-roadmap-49-recommendations-amendment-87/",
    "url": "https://actionglobalnews.com/articles/colorado-competitiveness-roadmap-49-recommendations-amendment-87/",
    "title": "A Colorado business council has 49 ideas to make the state more competitive, and a new income tax and a budget gap stand in the way",
@@ -435,54 +483,6 @@
    "image": "https://actionglobalnews.com/images/agn-og.jpg",
    "tags": [
     "Health"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/faa-certifies-boeing-737-max-10/",
-   "url": "https://actionglobalnews.com/articles/faa-certifies-boeing-737-max-10/",
-   "title": "The FAA has certified Boeing's 737 MAX 10, the largest 737, clearing the way for deliveries of more than 1,500 ordered jets",
-   "summary": "The approval completes certification of all four 737 MAX models. The plane also brings a new angle-of-attack safety system that will become standard across the family.",
-   "date_published": "2026-10-22T01:00:00-06:00",
-   "date_modified": "2026-10-22T01:00:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Travel"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/ebay-cuts-9-percent-of-jobs-comcast-layoffs-reported/",
-   "url": "https://actionglobalnews.com/articles/ebay-cuts-9-percent-of-jobs-comcast-layoffs-reported/",
-   "title": "eBay is cutting about 9% of its staff in its second round of layoffs this year, and Comcast is reported to be planning cuts of its own",
-   "summary": "eBay's chief executive told employees the company's strategy is working and that it wants to move resources to its fastest-growing areas. Separately, Bloomberg reported that Comcast is preparing a significant number of job cuts.",
-   "date_published": "2026-10-22T00:55:00-06:00",
-   "date_modified": "2026-10-22T00:55:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/united-southwest-cut-2026-profit-outlook-jet-fuel/",
-   "url": "https://actionglobalnews.com/articles/united-southwest-cut-2026-profit-outlook-jet-fuel/",
-   "title": "United and Southwest both posted record revenue, then cut their profit outlooks because jet fuel is eating the gains",
-   "summary": "Both airlines say travelers are still booking at higher fares. The problem is the cost of flying them: fuel prices well above what the carriers planned for in the summer.",
-   "date_published": "2026-10-22T00:50:00-06:00",
-   "date_modified": "2026-10-22T00:50:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Markets"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/tesla-q3-2026-profit-falls-43-percent-optimus-production/",
-   "url": "https://actionglobalnews.com/articles/tesla-q3-2026-profit-falls-43-percent-optimus-production/",
-   "title": "Tesla's profit fell 43% last quarter as it started building Optimus robots and promised Cybercab sales by year-end",
-   "summary": "Revenue was flat at about $28 billion and spending on research jumped. Tesla said the first production-quality Optimus humanoid robots are coming off a converted line in Fremont, California, and executives said they want Cybercabs in customers' hands before 2027.",
-   "date_published": "2026-10-22T00:45:00-06:00",
-   "date_modified": "2026-10-22T00:45:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Business"
    ]
   }
  ]

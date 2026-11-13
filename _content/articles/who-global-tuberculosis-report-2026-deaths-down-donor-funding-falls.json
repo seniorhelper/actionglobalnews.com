@@ -1,0 +1,37 @@
+{
+ "slug": "who-global-tuberculosis-report-2026-deaths-down-donor-funding-falls",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-11-13T12:07:00-07:00",
+ "title": "WHO: TB deaths down 35% since 2015 as donor funding drops",
+ "h1": "Tuberculosis deaths have fallen 35% since 2015, the WHO says, but donor funding dropped 14% last year",
+ "description": "The WHO's 2026 tuberculosis report, published November 12, estimates 10.6 million cases and 1.1 million deaths in 2025. Donor funding fell 14% in a year.",
+ "standfirst": "The world has hit its first target for cutting tuberculosis deaths, five years late. Governments spent more of their own money in 2025 as international aid shrank.",
+ "keywords": "WHO global tuberculosis report 2026, TB deaths 2025, tuberculosis funding cuts, drug-resistant TB six-month regimen, End TB Strategy milestone, M72 vaccine trial",
+ "takeaways": [
+  "An estimated 10.6 million people developed tuberculosis in 2025 and about 1.1 million died, the WHO said November 12.",
+  "Domestic TB funding rose 14% to $5.6 billion while donor funding fell 14% to $0.94 billion; the 2027 target is $22 billion a year.",
+  "About 2.2 million people with TB were not diagnosed or reported in 2025."
+ ],
+ "body": [
+  "<p>An estimated 10.6 million people fell ill with tuberculosis in 2025 and 1.1 million died, the World Health Organization said in its <a href='https://www.who.int/teams/global-programme-on-tuberculosis-and-lung-health/tb-reports/global-tuberculosis-report-2026' target='_blank' rel='noopener nofollow'>Global tuberculosis report 2026</a>, published Thursday, November 12. Deaths are down 35% since 2015. That meets the first milestone of the agency's End TB Strategy five years later than planned, according to the <a href='https://www.who.int/news/item/12-11-2026-amid-challenges-countries-increase-domestic-investment-to-protect-progress-against-tuberculosis' target='_blank' rel='noopener nofollow'>WHO's news release</a>.</p>",
+  "<p>The rate of new cases has fallen 14% since 2015, well short of the 50% target set for 2025. Tuberculosis remains the leading cause of death from a single infectious agent, the WHO said. The report draws on data from 187 countries and areas.</p>",
+  "<h2>What is happening with funding?</h2>",
+  "<p>Governments raised their own spending on tuberculosis by 14% between 2024 and 2025, to $5.6 billion, partly making up for a drop of similar size in international money, the WHO said. Donor funding fell 14%, from $1.1 billion to $0.94 billion, <a href='https://www.cidrap.umn.edu/tuberculosis/who-funding-cuts-threaten-global-progress-against-tb' target='_blank' rel='noopener nofollow'>CIDRAP reported</a>. Total funding of $6.6 billion is far below the $22 billion a year that United Nations member states set as a goal for 2027.</p>",
+  "<p>\"Many governments have dug deeper into their own budgets to protect the gains they have made,\" WHO Director-General Tedros Adhanom Ghebreyesus said in the release.</p>",
+  "<h2>Where are the gaps?</h2>",
+  "<p>Of the 10.6 million people who developed the disease, 8.4 million were diagnosed, leaving about 2.2 million undiagnosed or unreported. Thirty countries accounted for 88% of cases. In the Americas, the rate of new cases rose for a fifth straight year and is 13% above its 2015 level.</p>",
+  "<p>About 370,000 people developed tuberculosis resistant to the drug rifampicin, and 42% of them received treatment. Among those treated, use of a six-month regimen recommended by the WHO rose from 18% to 42% in a year.</p>",
+  "<h2>What happens next</h2>",
+  "<p>Sixteen vaccine candidates are in development, CIDRAP reported. A late-stage trial of one, called M72, is expected to show by 2028 whether it protects older children and adults. The strategy's 2035 goal is a 90% cut in deaths from 2015 levels.</p>"
+ ],
+ "sources": [
+  {"publisher": "World Health Organization", "title": "Global tuberculosis report 2026", "date": "November 12, 2026", "url": "https://www.who.int/teams/global-programme-on-tuberculosis-and-lung-health/tb-reports/global-tuberculosis-report-2026"},
+  {"publisher": "World Health Organization", "title": "Amid challenges, countries increase domestic investment to protect progress against tuberculosis", "date": "November 12, 2026", "url": "https://www.who.int/news/item/12-11-2026-amid-challenges-countries-increase-domestic-investment-to-protect-progress-against-tuberculosis"},
+  {"publisher": "CIDRAP, University of Minnesota", "title": "WHO: Funding cuts threaten global progress against TB", "date": "November 12, 2026", "url": "https://www.cidrap.umn.edu/tuberculosis/who-funding-cuts-threaten-global-progress-against-tb"}
+ ],
+ "faq": [
+  {"q": "How many people died of tuberculosis in 2025?", "a": "About 1.1 million people died of tuberculosis in 2025 and an estimated 10.6 million developed the disease, according to the World Health Organization's Global tuberculosis report 2026."}
+ ]
+}
