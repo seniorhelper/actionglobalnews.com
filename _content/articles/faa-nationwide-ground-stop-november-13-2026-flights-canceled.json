@@ -1,0 +1,38 @@
+{
+ "slug": "faa-nationwide-ground-stop-november-13-2026-flights-canceled",
+ "type": "brief",
+ "section": "Travel",
+ "kicker": "Travel · Brief",
+ "published": "2026-11-14T10:46:00-07:00",
+ "title": "FAA ground stop lifted; thousands of flights still canceled",
+ "h1": "The FAA has lifted a nationwide ground stop that halted every U.S. departure for hours, but cancellations are running into the weekend",
+ "description": "The FAA halted all U.S. departures around 4 p.m. ET on November 13, 2026 after a communications failure. More than 9,000 flights were canceled on Friday alone.",
+ "standfirst": "Officials blame overloaded routers in an aging communications network, not a cyberattack. Airlines spent Saturday moving planes and crews back into place, less than two weeks before Thanksgiving.",
+ "keywords": "FAA ground stop November 13 2026, nationwide ground stop, flights canceled, air traffic control outage, L3Harris FTI network, Sean Duffy, Denver International Airport delays",
+ "takeaways": [
+  "The FAA stopped all U.S. departures around 4 p.m. ET on Friday, November 13. The halt lasted between four and five hours.",
+  "FlightAware counted 9,159 cancellations and 7,190 delays on Friday, and more than 3,800 cancellations on Saturday morning.",
+  "Officials say routers in an old communications network were overloaded. They say there is no sign of a cyberattack."
+ ],
+ "body": [
+  "<p>The Federal Aviation Administration stopped every departing flight in the United States on Friday, November 13, after a communications failure hit its air traffic control centers. Departures were halted around 4 p.m. Eastern, <a href='https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html' target='_blank' rel='noopener nofollow'>CNBC reported</a>. The agency said it acted \"due to extraordinary circumstances and for reasons of safety,\" according to an <a href='https://coloradosun.com/2026/11/13/faa-halts-flights-across-us/' target='_blank' rel='noopener nofollow'>Associated Press report carried by The Colorado Sun</a>.</p>",
+  "<p>CNBC put the length of the halt at more than four hours; <a href='https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/' target='_blank' rel='noopener nofollow'>CBS News</a> said about five. It was the second nationwide ground stop since the September 11, 2001 attacks and the first since January 2023, the AP reported.</p>",
+  "<h2>What caused it?</h2>",
+  "<p>Transportation Secretary Sean Duffy said the trouble followed updates to a communications system managed by L3Harris Technologies. Routers became overloaded with data and sent inconsistent information to control centers, he said, according to CNBC. FAA Administrator Bryan Bedford said no facilities went dark and that flights were grounded because information feeds were unstable.</p>",
+  "<p>Homeland Security Secretary Markwayne Mullin said there was no cyberattack and no link to this week's <a href='/articles/microsoft-365-outage-second-day-outlook-teams-email/'>Microsoft 365 outage</a>, CBS reported. Senior government sources told CBS that a preliminary review points to routers made between 2001 and 2006, and that the faulty equipment has been isolated. L3Harris did not immediately respond to the network's request for comment.</p>",
+  "<h2>How many flights were affected?</h2>",
+  "<p>About 3,100 aircraft bound for U.S. airports were in the air when the stop began, CBS reported, citing Flightradar24. Mullin said all landed safely. FlightAware counted 9,159 cancellations and 7,190 delays on Friday; CNBC noted that bad weather accounted for some. On Saturday morning there were more than 3,800 cancellations and more than 2,000 delays.</p>",
+  "<p>At Denver International Airport, more than 600 flights were delayed and more than 350 canceled as of 7 p.m. Friday, according to FlightAware figures in the AP report.</p>",
+  "<h2>What happens next</h2>",
+  "<p>\"Operations are slowly returning to normal this morning,\" Duffy wrote on social media Saturday, while warning of more delays and cancellations as airlines reposition crews. American and other carriers said they would rebook affected customers without change fees or fare differences, CNBC reported.</p>",
+  "<p>Duffy and Mullin urged Congress to fund a replacement of the air traffic control system, which Mullin estimated would cost $50 billion. Travelers should check flight status with their airline before leaving for the airport.</p>"
+ ],
+ "sources": [
+  {"publisher": "CBS News", "title": "FAA lifts nationwide ground stop that disrupted thousands of flights; White House says no indication of \"nefarious act\"", "date": "November 14, 2026", "url": "https://www.cbsnews.com/news/faa-issues-nationwide-ground-stop/"},
+  {"publisher": "CNBC", "title": "Ground stop followed updates to older L3Harris communication system: DOT's Duffy", "date": "November 14, 2026", "url": "https://www.cnbc.com/2026/11/14/faa-ground-stop-flights-resume-delays.html"},
+  {"publisher": "The Associated Press via The Colorado Sun", "title": "Federal Aviation Administration says airplane departures can resume following nationwide ground stop", "date": "November 13, 2026", "url": "https://coloradosun.com/2026/11/13/faa-halts-flights-across-us/"}
+ ],
+ "faq": [
+  {"q": "Why did the FAA ground all U.S. flights on November 13, 2026?", "a": "Officials said routers in an aging FAA communications network were overloaded after system updates and sent inconsistent information to air traffic control centers. They said there was no sign of a cyberattack."}
+ ]
+}

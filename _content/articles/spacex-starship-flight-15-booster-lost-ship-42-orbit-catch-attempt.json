@@ -1,0 +1,36 @@
+{
+ "slug": "spacex-starship-flight-15-booster-lost-ship-42-orbit-catch-attempt",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-14T10:48:00-07:00",
+ "title": "SpaceX Starship Flight 15 reaches orbit, but booster is lost",
+ "h1": "SpaceX's 15th Starship flight reached orbit and released 26 satellites, but the booster was lost after an aborted catch",
+ "description": "Starship Flight 15 lifted off from Texas at 4:47 p.m. CST on November 13, 2026. The booster catch was aborted; the ship is due to attempt a return on Saturday.",
+ "standfirst": "The company wanted to catch both halves of the rocket at its Texas launch site for the first time. The first half of that plan failed. The second half is scheduled for Saturday afternoon.",
+ "keywords": "Starship Flight 15, SpaceX Starship launch November 2026, Super Heavy Booster 22, Ship 42, Starlink V3 satellites, Starbase ship catch, Starship booster explosion",
+ "takeaways": [
+  "Starship lifted off from Starbase, Texas, at 4:47 p.m. CST on Friday, November 13.",
+  "The Super Heavy booster aborted its tower catch, diverted offshore and exploded. The upper stage reached orbit and released 26 Starlink satellites.",
+  "The ship is scheduled to return to the launch site around 3:20 p.m. CST on Saturday, November 14."
+ ],
+ "body": [
+  "<p>SpaceX launched its Starship rocket for the 15th time on Friday, November 13, lifting off from the company's Starbase site in South Texas at 4:47 p.m. Central time. The upper stage reached orbit. The booster did not make it home, <a href='https://www.cnbc.com/2026/11/13/spacex-launches-starship-in-key-test-flight-of-massive-rocket.html' target='_blank' rel='noopener nofollow'>CNBC reported</a>.</p>",
+  "<p>The flight was the first on which SpaceX set out to catch both the booster and the upper stage back at the launch site, and CNBC called it the most ambitious Starship mission so far.</p>",
+  "<h2>What happened to the booster?</h2>",
+  "<p>The Super Heavy booster, known as Booster 22, was supposed to fly back to the launch tower about six and a half minutes after liftoff, according to <a href='https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/' target='_blank' rel='noopener nofollow'>Spaceflight Now</a>. Instead, the rocket's guidance system triggered an automated abort and steered it to a splashdown zone offshore in the Gulf, where it exploded. SpaceX has caught three earlier boosters with the tower, but none of the newer Version 3 design, Spaceflight Now reported.</p>",
+  "<h2>What did the upper stage do?</h2>",
+  "<p>The upper stage, Ship 42, reached orbit and released 26 Version 3 Starlink internet satellites, matching the number carried on the previous flight. SpaceX says one Starship can carry up to 60 of the satellites, CNBC reported. The company's network has more than 11,000 active satellites in low Earth orbit.</p>",
+  "<p>Analysts at William Blair wrote that SpaceX \"is likely a full decade ahead of peers on this front,\" according to CNBC.</p>",
+  "<h2>What happens next</h2>",
+  "<p>The ship was expected to circle Earth up to 14 times. If its systems stay healthy, it is scheduled to return to Starbase about 22.5 hours after launch, around 3:20 p.m. Central on Saturday, November 14, on a path that crosses Mexico and South Texas, Spaceflight Now reported. SpaceX can end the mission early with a splashdown off Hawaii or Chile if a landing at the launch site looks unsafe.</p>",
+  "<p>The Federal Aviation Administration authorized the flight earlier on Friday. Hours later the agency ordered a <a href='/articles/faa-nationwide-ground-stop-november-13-2026-flights-canceled/'>nationwide ground stop</a> for airline departures over a communications failure. An FAA spokesperson told CNBC the stoppage did not affect SpaceX's license.</p>"
+ ],
+ "sources": [
+  {"publisher": "CNBC", "title": "SpaceX launches Starship in key test flight of massive rocket", "date": "November 13, 2026", "url": "https://www.cnbc.com/2026/11/13/spacex-launches-starship-in-key-test-flight-of-massive-rocket.html"},
+  {"publisher": "Spaceflight Now", "title": "Starship in orbit ahead of catch attempt, booster diverts to explosive splashdown", "date": "November 13, 2026", "url": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/"}
+ ],
+ "faq": [
+  {"q": "Did Starship Flight 15 succeed?", "a": "Partly. The upper stage reached orbit and released 26 Starlink satellites, but the Super Heavy booster aborted its tower catch and exploded offshore. The ship's return to Starbase was scheduled for Saturday, November 14, 2026."}
+ ]
+}

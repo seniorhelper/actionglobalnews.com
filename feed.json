@@ -6,6 +6,54 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/nvidia-jensen-huang-resigns-colette-kress-interim-ceo/",
+   "url": "https://actionglobalnews.com/articles/nvidia-jensen-huang-resigns-colette-kress-interim-ceo/",
+   "title": "Jensen Huang has resigned as Nvidia's chief executive, and the stock has closed below a $4 trillion market value",
+   "summary": "He left immediately, four days after the board opened an investigation. Nvidia named its first board chair and will report quarterly results on Tuesday as planned.",
+   "date_published": "2026-11-14T10:49:00-07:00",
+   "date_modified": "2026-11-14T10:49:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/spacex-starship-flight-15-booster-lost-ship-42-orbit-catch-attempt/",
+   "url": "https://actionglobalnews.com/articles/spacex-starship-flight-15-booster-lost-ship-42-orbit-catch-attempt/",
+   "title": "SpaceX's 15th Starship flight reached orbit and released 26 satellites, but the booster was lost after an aborted catch",
+   "summary": "The company wanted to catch both halves of the rocket at its Texas launch site for the first time. The first half of that plan failed. The second half is scheduled for Saturday afternoon.",
+   "date_published": "2026-11-14T10:48:00-07:00",
+   "date_modified": "2026-11-14T10:48:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/lauren-boebert-loses-4th-district-eileen-laubacher-ap-call/",
+   "url": "https://actionglobalnews.com/articles/lauren-boebert-loses-4th-district-eileen-laubacher-ap-call/",
+   "title": "Rep. Lauren Boebert has lost Colorado's 4th Congressional District to Democrat Eileen Laubacher, the Associated Press says",
+   "summary": "The call came 10 days after Election Day in the district considered the most Republican in Colorado. Boebert has not conceded, and the margin is too wide for an automatic recount.",
+   "date_published": "2026-11-14T10:47:00-07:00",
+   "date_modified": "2026-11-14T10:47:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/faa-nationwide-ground-stop-november-13-2026-flights-canceled/",
+   "url": "https://actionglobalnews.com/articles/faa-nationwide-ground-stop-november-13-2026-flights-canceled/",
+   "title": "The FAA has lifted a nationwide ground stop that halted every U.S. departure for hours, but cancellations are running into the weekend",
+   "summary": "Officials blame overloaded routers in an aging communications network, not a cyberattack. Airlines spent Saturday moving planes and crews back into place, less than two weeks before Thanksgiving.",
+   "date_published": "2026-11-14T10:46:00-07:00",
+   "date_modified": "2026-11-14T10:46:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Travel"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/who-global-tuberculosis-report-2026-deaths-down-donor-funding-falls/",
    "url": "https://actionglobalnews.com/articles/who-global-tuberculosis-report-2026-deaths-down-donor-funding-falls/",
    "title": "Tuberculosis deaths have fallen 35% since 2015, the WHO says, but donor funding dropped 14% last year",
@@ -435,54 +483,6 @@
    "image": "https://actionglobalnews.com/images/agn-og.jpg",
    "tags": [
     "World"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/putin-agrees-resume-ukraine-talks-stephen-hubbard-freed/",
-   "url": "https://actionglobalnews.com/articles/putin-agrees-resume-ukraine-talks-stephen-hubbard-freed/",
-   "title": "Putin agreed in principle to resume three-way talks on Ukraine after November 10, and freed a jailed American, as strikes hit Kyiv",
-   "summary": "The Kremlin set no date, and earlier rounds this year produced little beyond prisoner exchanges. The same night, Russian strikes killed civilians in Kyiv and near Kharkiv.",
-   "date_published": "2026-10-22T01:14:00-06:00",
-   "date_modified": "2026-10-22T01:14:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "World"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/pope-leo-no-further-treatment-lung-cancer-surgery/",
-   "url": "https://actionglobalnews.com/articles/pope-leo-no-further-treatment-lung-cancer-surgery/",
-   "title": "Pope Leo XIV needs no further treatment after surgery for an early lung cancer, his doctors say",
-   "summary": "Final tests confirmed a localized adenocarcinoma, the most common type of lung cancer, and found no spread. His doctors say nothing medical stands in the way of a South America trip next month.",
-   "date_published": "2026-10-22T01:12:00-06:00",
-   "date_modified": "2026-10-22T01:12:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "World"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/new-world-screwworm-texas-elk-new-mexico-cow/",
-   "url": "https://actionglobalnews.com/articles/new-world-screwworm-texas-elk-new-mexico-cow/",
-   "title": "Screwworm has been found in U.S. wildlife for the first time, and in a beef cow in southern New Mexico",
-   "summary": "The flesh-eating parasite, eradicated from the United States decades ago, has been moving north through Mexico. Officials announced both detections on October 21 and are widening surveillance and fly trapping.",
-   "date_published": "2026-10-22T01:10:00-06:00",
-   "date_modified": "2026-10-22T01:10:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Science"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/nigeria-confirms-first-ebola-case-abuja-bundibugyo/",
-   "url": "https://actionglobalnews.com/articles/nigeria-confirms-first-ebola-case-abuja-bundibugyo/",
-   "title": "Nigeria has confirmed its first Ebola case, a traveler from Uganda, as the Bundibugyo outbreak reaches a fifth country",
-   "summary": "The patient, a woman who arrived in Abuja on an international flight from Uganda, is in isolation and 44 contacts are being traced. The outbreak that began in the Democratic Republic of Congo in May has now produced more than 9,600 confirmed cases.",
-   "date_published": "2026-10-22T01:05:00-06:00",
-   "date_modified": "2026-10-22T01:05:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Health"
    ]
   }
  ]
