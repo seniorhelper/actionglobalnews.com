@@ -1,0 +1,35 @@
+{
+ "slug": "us-flu-season-early-start-cdc-seven-states-high-activity",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-11-15T10:40:00-07:00",
+ "title": "Flu season starts early: CDC counts 7 states with high activity",
+ "h1": "The U.S. flu season is off to an early start, with seven states already reporting high activity, CDC data show",
+ "description": "CDC data posted November 13, 2026 show flu-like illness at 3.2% of doctor visits, above the 2.9% baseline, with high activity in seven states in the South and West.",
+ "standfirst": "Flu is spreading earlier than usual this fall, led by states in the South and West. Federal health officials estimate at least 2.6 million illnesses so far, and doctors expect more after Thanksgiving travel.",
+ "keywords": "flu season 2026, CDC FluView week 44, flu activity by state, H1N1 flu 2026, early flu season, flu hospitalizations, Louisiana flu",
+ "takeaways": [
+  "Flu-like illness made up 3.2% of outpatient visits in the week ending November 7, above the 2.9% national baseline, the CDC reported on November 13, 2026.",
+  "Seven states had high or very high activity, up from two a week earlier: California, Louisiana, Oregon, South Carolina, Tennessee, Texas and Washington.",
+  "The CDC estimates at least 2.6 million illnesses, 36,000 hospitalizations and 2,100 deaths so far this season."
+ ],
+ "body": [
+  "<p>The flu season has started early in the United States. In its <a href='https://www.cdc.gov/fluview/surveillance/2026-week-44.html' target='_blank' rel='noopener nofollow'>weekly surveillance report posted Friday, November 13</a>, the Centers for Disease Control and Prevention said 3.2% of visits to doctors' offices in the week ending November 7 were for flu-like illness. That is above the national baseline of 2.9% and higher than the week before.</p>",
+  "<p>Seven states reported high or very high activity, up from two a week earlier, <a href='https://www.pbs.org/newshour/health/the-u-s-flu-season-is-off-to-a-very-early-start-its-hitting-the-south-and-west-now' target='_blank' rel='noopener nofollow'>the Associated Press reported</a>: California, Louisiana, Oregon, South Carolina, Tennessee, Texas and Washington. Louisiana has been hit hardest so far.</p>",
+  "<h2>How bad is it so far?</h2>",
+  "<p>The CDC estimates at least 2.6 million illnesses, 36,000 hospitalizations and 2,100 deaths from flu so far this season. Five children have died, including three deaths reported in the latest week. Clinical labs found flu in 11.3% of specimens tested that week.</p>",
+  "<p>The agency still rates the season's severity as low across all age groups, and the AP reported that it is not clear whether this season will end up worse than others. Last winter's season did not surge until late December. The CDC later estimated it caused at least 32 million illnesses, 380,000 hospitalizations and 24,000 deaths, according to the AP.</p>",
+  "<h2>Which virus is spreading?</h2>",
+  "<p>Nearly all of the influenza A viruses that labs subtyped in the latest week, 455 of 460, were the A(H1N1) strain, the CDC report shows. The AP reported that the version in circulation carries mutations that could help it get past the immune system's defenses. A Johns Hopkins University expert told the AP that data so far suggest this year's vaccine can recognize the virus, though officials will not know for months how well the shot is working.</p>",
+  "<h2>What happens next</h2>",
+  "<p>Doctors expect flu and other respiratory viruses to spread faster as people travel and gather for Thanksgiving, the AP reported. CDC forecasts point to a likely national rise in flu hospital admissions through the week ending November 28. Readers with questions about vaccination or treatment should check CDC guidance or talk with their own doctor or pharmacist.</p>"
+ ],
+ "sources": [
+  {"publisher": "Centers for Disease Control and Prevention", "title": "Weekly US Influenza Surveillance Report: Key Updates for Week 44, ending November 7, 2026", "date": "November 13, 2026", "url": "https://www.cdc.gov/fluview/surveillance/2026-week-44.html"},
+  {"publisher": "Associated Press via PBS News", "title": "The U.S. flu season is off to a very early start. It's hitting the South and West now", "date": "November 14, 2026", "url": "https://www.pbs.org/newshour/health/the-u-s-flu-season-is-off-to-a-very-early-start-its-hitting-the-south-and-west-now"}
+ ],
+ "faq": [
+  {"q": "Which states have high flu activity right now?", "a": "For the week ending November 7, 2026, the states with high or very high flu activity were California, Louisiana, Oregon, South Carolina, Tennessee, Texas and Washington, according to CDC data reported by the Associated Press."}
+ ]
+}

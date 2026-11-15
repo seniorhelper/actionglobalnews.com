@@ -6,6 +6,54 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/jeffco-schools-5a-passing-327-votes-recount-november-24/",
+   "url": "https://actionglobalnews.com/articles/jeffco-schools-5a-passing-327-votes-recount-november-24/",
+   "title": "Jeffco Public Schools' $73 million tax measure 5A has flipped to passing by 327 votes and now goes to a recount",
+   "summary": "The teacher pay measure trailed for more than a week after Election Day before late ballots pushed it ahead. The margin is small enough that Colorado law requires a recount before the result is final.",
+   "date_published": "2026-11-15T10:43:00-07:00",
+   "date_modified": "2026-11-15T10:43:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/trump-xi-putin-three-way-meeting-apec-shenzhen-nuclear-talks/",
+   "url": "https://actionglobalnews.com/articles/trump-xi-putin-three-way-meeting-apec-shenzhen-nuclear-talks/",
+   "title": "Trump, Xi and Putin plan their first three-way meeting this week on the sidelines of the APEC summit in Shenzhen",
+   "summary": "The leaders of the three biggest nuclear powers have never met together. U.S. officials say the talks will center on nuclear weapons and that no agreement is expected.",
+   "date_published": "2026-11-15T10:42:00-07:00",
+   "date_modified": "2026-11-15T10:42:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "World"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/tesla-cybercab-orders-open-29990-299-monthly-subscription/",
+   "url": "https://actionglobalnews.com/articles/tesla-cybercab-orders-open-29990-299-monthly-subscription/",
+   "title": "Tesla has opened Cybercab orders to select customers at $29,990, with a $299 monthly fee needed to make the car drive",
+   "summary": "The two-seat car has no steering wheel or pedals, so it only runs inside the areas where Tesla already operates its robotaxi service. Federal regulators have not yet ruled on whether it meets safety standards.",
+   "date_published": "2026-11-15T10:41:00-07:00",
+   "date_modified": "2026-11-15T10:41:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/us-flu-season-early-start-cdc-seven-states-high-activity/",
+   "url": "https://actionglobalnews.com/articles/us-flu-season-early-start-cdc-seven-states-high-activity/",
+   "title": "The U.S. flu season is off to an early start, with seven states already reporting high activity, CDC data show",
+   "summary": "Flu is spreading earlier than usual this fall, led by states in the South and West. Federal health officials estimate at least 2.6 million illnesses so far, and doctors expect more after Thanksgiving travel.",
+   "date_published": "2026-11-15T10:40:00-07:00",
+   "date_modified": "2026-11-15T10:40:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Health"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/nvidia-jensen-huang-resigns-colette-kress-interim-ceo/",
    "url": "https://actionglobalnews.com/articles/nvidia-jensen-huang-resigns-colette-kress-interim-ceo/",
    "title": "Jensen Huang has resigned as Nvidia's chief executive, and the stock has closed below a $4 trillion market value",
@@ -435,54 +483,6 @@
    "image": "https://actionglobalnews.com/images/agn-og.jpg",
    "tags": [
     "Small Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/php2shell-php-vulnerabilities-what-website-owners-should-do/",
-   "url": "https://actionglobalnews.com/articles/php2shell-php-vulnerabilities-what-website-owners-should-do/",
-   "title": "Two critical PHP flaws sent governments scrambling to take websites offline. What PHP2Shell is, who is exposed, and what to do if you run a site",
-   "summary": "On October 21 the PHP project shipped fixes for two remote code execution flaws in the language that runs most of the web. Within hours, attack attempts were counted in the millions, government sites in Europe went dark as a precaution, and security agencies told anyone who could not patch to unplug. Here is what happened, in plain terms, and the checklist a small business with a WordPress or other PHP site should work through this week.",
-   "date_published": "2026-10-22T01:25:00-06:00",
-   "date_modified": "2026-10-22T01:25:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Technology"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/colorado-puc-xcel-data-center-tariff-hearings/",
-   "url": "https://actionglobalnews.com/articles/colorado-puc-xcel-data-center-tariff-hearings/",
-   "title": "Colorado regulators are hearing Xcel's plan to make data centers pay their own way on the grid. Here is what is in it",
-   "summary": "Xcel proposes minimum bills, long contracts and collateral for new loads of 50 megawatts or more. Consumer and environmental groups say a fast-track option for confidential deals could undercut those protections.",
-   "date_published": "2026-10-22T01:20:00-06:00",
-   "date_modified": "2026-10-22T01:20:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Colorado"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/denver-judge-rejects-bid-to-block-colorado-amendment-87/",
-   "url": "https://actionglobalnews.com/articles/denver-judge-rejects-bid-to-block-colorado-amendment-87/",
-   "title": "A Denver judge rejected a last-minute bid to knock Amendment 87, Colorado's graduated income tax measure, off the ballot",
-   "summary": "The challenge argued that signatures gathered by improperly registered petition circulators should be thrown out. The judge ruled the law does not allow that remedy. Ballots are already in voters' hands.",
-   "date_published": "2026-10-22T01:18:00-06:00",
-   "date_modified": "2026-10-22T01:18:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Colorado"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/us-orders-staff-out-of-saudi-arabia-dammam-airport-attack/",
-   "url": "https://actionglobalnews.com/articles/us-orders-staff-out-of-saudi-arabia-dammam-airport-attack/",
-   "title": "The U.S. ordered non-emergency staff and families out of Saudi Arabia as an attack on Dammam's airport killed one person",
-   "summary": "Saudi aviation authorities said an attack on King Fahd International Airport killed one person and injured eight. It follows deadly attacks on Riyadh's main airport earlier this month.",
-   "date_published": "2026-10-22T01:16:00-06:00",
-   "date_modified": "2026-10-22T01:16:00-06:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "World"
    ]
   }
  ]
