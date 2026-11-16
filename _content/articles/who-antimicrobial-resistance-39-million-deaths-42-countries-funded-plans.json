@@ -1,0 +1,36 @@
+{
+ "slug": "who-antimicrobial-resistance-39-million-deaths-42-countries-funded-plans",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-11-16T08:44:00-07:00",
+ "title": "WHO: drug-resistant infections could kill 39 million in 25 years",
+ "h1": "Drug-resistant infections could kill 39 million people over 25 years, and few countries have funded plans, WHO warns",
+ "description": "WHO officials said on November 16, 2026 that antimicrobial resistance could cause 39 million deaths in 25 years. Only 42 countries have a funded, monitored plan.",
+ "standfirst": "The World Health Organization says the world is moving too slowly against infections that no longer respond to antibiotics. Most countries now have a plan on paper, but fewer than one in five has one that is paid for and tracked.",
+ "keywords": "antimicrobial resistance, WHO AMR warning 2026, drug-resistant infections, antibiotic resistance deaths, superbugs, national action plans AMR, antibiotic testing",
+ "takeaways": [
+  "Antimicrobial resistance could cause 39 million deaths over the next 25 years, WHO officials said on November 16, 2026, according to Al Jazeera.",
+  "Nearly nine in 10 of 183 countries reviewed have a national action plan, but only 42 have one that is financed, carried out and monitored.",
+  "In 2023, about one in six lab-confirmed bacterial infections worldwide resisted antibiotic treatment, WHO surveillance data show."
+ ],
+ "body": [
+  "<p>Infections that no longer respond to medicines could kill 39 million people over the next 25 years, senior World Health Organization officials warned on Monday, November 16. Speaking at the agency's annual online media forum on antimicrobial resistance, they said work on prevention, testing and careful antibiotic use is moving too slowly to meet global targets, <a href='https://www.aljazeera.com/news/2026/11/16/un-health-agency-sounds-alarm-on-antimicrobial-resistance-threat' target='_blank' rel='noopener nofollow'>Al Jazeera reported</a>.</p>",
+  "<p>Antimicrobial resistance, often shortened to AMR, happens when bacteria and other germs change so that the drugs used against them stop working. Jean-Pierre Nyemazi, acting director of the WHO's AMR department, said the problem puts modern medicine at risk. Officials warned that routine surgery and childbirth could become dangerous if common antibiotics fail.</p>",
+  "<h2>How big is the problem now?</h2>",
+  "<p>Drug-resistant infections directly caused more than one million deaths in 2021 and played a part in about 4.7 million, according to WHO figures cited by Al Jazeera.</p>",
+  "<p>Resistance is also spreading. In 2023, about one in six laboratory-confirmed bacterial infections worldwide resisted antibiotic treatment, the WHO said in <a href='https://www.who.int/news/item/13-10-2025-who-warns-of-widespread-resistance-to-common-antibiotics-worldwide' target='_blank' rel='noopener nofollow'>its most recent global surveillance report</a>. Between 2018 and 2023, resistance rose in more than 40% of the germ and drug pairings the agency tracks.</p>",
+  "<h2>Are countries acting?</h2>",
+  "<p>Mostly on paper. A review of 183 countries found that nearly nine in 10 now have a national action plan, up from about four in 10 in 2017, Al Jazeera reported. But only 42 countries, fewer than one in five, have a plan that is funded, carried out and monitored.</p>",
+  "<p>Testing is a weak point, because without a lab result doctors have to guess which antibiotic will work. The WHO released two new tools aimed at that gap: a list of the tests that should be available at each level of a health system, from local clinics to referral hospitals, and a set of 73 laboratory procedures covering steps from collecting samples to checking which drugs still work.</p>",
+  "<h2>What happens next</h2>",
+  "<p>WHO officials said countries need to speed up to reach targets set for 2030. The agency points to infection prevention, vaccination, clean water and sanitation, and appropriate antibiotic use as the main defenses. Readers with questions about their own treatment should talk with their doctor or pharmacist.</p>"
+ ],
+ "sources": [
+  {"publisher": "Al Jazeera", "title": "Antimicrobial resistance could kill 39 million people over 25 years: WHO", "date": "November 16, 2026", "url": "https://www.aljazeera.com/news/2026/11/16/un-health-agency-sounds-alarm-on-antimicrobial-resistance-threat"},
+  {"publisher": "World Health Organization", "title": "WHO warns of widespread resistance to common antibiotics worldwide", "date": "October 13, 2025", "url": "https://www.who.int/news/item/13-10-2025-who-warns-of-widespread-resistance-to-common-antibiotics-worldwide"}
+ ],
+ "faq": [
+  {"q": "What is antimicrobial resistance?", "a": "Antimicrobial resistance happens when bacteria and other germs change so that the medicines used to treat them stop working. WHO officials said on November 16, 2026 that it could cause 39 million deaths over the next 25 years."}
+ ]
+}
