@@ -1,0 +1,51 @@
+{
+ "slug": "nvidia-national-security-export-control-oversight-committee",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-17T07:30:00-07:00",
+ "title": "Nvidia board creates export control oversight committee",
+ "h1": "Nvidia's board created a three-member committee to oversee export controls and national security after its CEO's exit",
+ "description": "Nvidia said November 17, 2026 its board formed a national security and export control committee chaired by Suzanne Nora Johnson after Jensen Huang quit.",
+ "standfirst": "The new board committee will oversee how Nvidia follows U.S. export rules and manages national security risk. It comes after Jensen Huang's resignation and questions about chip sales to a Singapore data center firm.",
+ "keywords": "Nvidia export control committee, Nvidia National Security and Export Control Oversight Committee, Suzanne Nora Johnson Nvidia, Nvidia China chips, Megaspeed Singapore Nvidia, Colette Kress interim CEO",
+ "takeaways": [
+  "Nvidia announced the National Security and Export Control Oversight Committee on Tuesday, November 17, 2026.",
+  "Director Suzanne Nora Johnson chairs it, with Stephen C. Neal and John O. Dabiri; it will meet at least quarterly and can hire outside experts.",
+  "Nvidia's National Security Team and Global Trade Compliance Team will report to the committee and to interim CEO Colette Kress."
+ ],
+ "body": [
+  "<p>Nvidia's board has set up a new committee to watch over the chipmaker's export compliance and national security policies, the company said in a <a href='https://nvidianews.nvidia.com/news/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee' target='_blank' rel='noopener nofollow'>news release</a> on Tuesday, November 17. It is called the National Security and Export Control Oversight Committee.</p>",
+  "<h2>Who sits on it, and what will it do?</h2>",
+  "<p>Director Suzanne Nora Johnson chairs the panel, and directors Stephen C. Neal and John O. Dabiri are the other members. Nvidia said the committee will oversee its national security policies, its compliance with export controls and how it manages global trade risk. It will meet at least once a quarter, including sessions without management present, and may hire outside specialists in law, national security and trade compliance.</p>",
+  "<p>Nvidia's internal National Security Team and Global Trade Compliance Team will report directly to the committee, and to interim chief executive Colette Kress for daily work. Board chairman Harvey Jones said in the release that the company wants to work with government and industry on a framework using \"every tool at our disposal to safeguard national security.\"</p>",
+  "<h2>Why now?</h2>",
+  "<p>The move follows <a href='/articles/nvidia-jensen-huang-resigns-colette-kress-interim-ceo/'>Jensen Huang's resignation as CEO</a> last week. <a href='https://www.cbsnews.com/news/nvidia-export-control-committee-china-chips/' target='_blank' rel='noopener nofollow'>CBS News reported</a> that a woman suspected of being a Chinese spy once worked for Megaspeed, a Singapore data center company that bought billions of dollars' worth of Nvidia chips. Those dealings raised concern that China could reach advanced chips by renting computing power in Southeast Asia. The U.S. already bars sales of Nvidia's top AI chips to China, and CBS said the Commerce Department issued an interim rule on Monday limiting other countries' access to advanced AI chips.</p>",
+  "<h2>What comes next?</h2>",
+  "<p>The release did not set a date for the committee's first meeting or say whether it will report its findings publicly. Nvidia's National Security Team and Global Trade Compliance Team now answer to the committee as well as to Kress, so the board will have a direct line into how the company handles chip sales abroad.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "NVIDIA",
+   "title": "NVIDIA Board of Directors Establishes National Security and Export Control Oversight Committee",
+   "date": "November 17, 2026",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-board-of-directors-establishes-national-security-and-export-control-oversight-committee"
+  },
+  {
+   "publisher": "CBS News",
+   "title": "Nvidia's board forms export oversight panel after scrutiny over China chip sales",
+   "date": "November 17, 2026",
+   "url": "https://www.cbsnews.com/news/nvidia-export-control-committee-china-chips/"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Who chairs Nvidia's new export control committee?",
+   "a": "Director Suzanne Nora Johnson chairs it. Stephen C. Neal and John O. Dabiri are the other members."
+  },
+  {
+   "q": "Why did Nvidia form the committee?",
+   "a": "It follows Jensen Huang's resignation and scrutiny of chip sales to Singapore-based Megaspeed, amid concern that China could reach advanced chips through Southeast Asian data centers."
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "slug": "chase-software-bug-bank-outages-zelle-delays-november-16",
+ "type": "brief",
+ "section": "Business",
+ "kicker": "Business · Brief",
+ "published": "2026-11-17T07:25:00-07:00",
+ "title": "Chase software bug slowed payments at U.S. banks on Monday",
+ "h1": "A Chase software bug slowed transactions at several U.S. banks on Monday, and services were back to normal by Tuesday",
+ "description": "A JPMorgan Chase software bug delayed transfers and Zelle payments on November 16, 2026. Chase says it was not a cyberattack; service recovered Tuesday.",
+ "standfirst": "Customers of Chase, Bank of America, U.S. Bank, Wells Fargo and others reported trouble with balances, transfers and Zelle payments. Chase blamed a bug in its own on-premise hardware systems, and the disruption followed several other major outages in a single week.",
+ "keywords": "Chase outage November 16 2026, bank outage Zelle delays, JPMorgan Chase software bug, Wells Fargo outage, U.S. Bank Zelle delay, Downdetector bank outage",
+ "takeaways": [
+  "Chase said a software bug in on-premise hardware systems slowed some transactions on Monday, November 16, and that there was no evidence of a cyberattack.",
+  "Downdetector showed nearly 4,800 Chase problem reports as of 2 p.m. ET Monday; reports also rose for Bank of America, U.S. Bank, Wells Fargo, Capital One and Truist.",
+  "Chase said Monday night transactions were processing normally, and Downdetector showed banks and Zelle back to normal early Tuesday."
+ ],
+ "body": [
+  "<p>Customers at several of the largest U.S. banks had trouble checking balances, moving money and sending Zelle payments on Monday, November 16. JPMorgan Chase told <a href='https://abcnews.com/Business/us-banks-reporting-technical-issues-online-transactions/story?id=138187551' target='_blank' rel='noopener nofollow'>ABC News</a> the cause was a software bug in its on-premise hardware systems and said there was no evidence the problem was cyber-related.</p>",
+  "<h2>Which banks were affected?</h2>",
+  "<p>Reports on the outage tracker Downdetector began Monday morning and climbed through the afternoon, <a href='https://www.cbsnews.com/news/banks-online-service-outages-jpmorgan-chase-bank-of-america-wells-fargo/' target='_blank' rel='noopener nofollow'>CBS News reported</a>. By 2 p.m. Eastern time Chase had nearly 4,800 reports, more than any other bank. Users also flagged problems at Bank of America, U.S. Bank and Wells Fargo, with smaller spikes for Capital One and Truist.</p>",
+  "<p>Chase said that when it was part of a transaction with another bank, that bank could also see delays, but it called the issue not systemic. U.S. Bank said its own systems were not directly hit, though Zelle payments to or from other banks could be slow. Capital One said it was operating normally, and Bank of America said its systems ran normally throughout. Zelle said its network was not down. The Federal Reserve said its systems, including ACH transfers between banks, were working normally, ABC reported.</p>",
+  "<h2>Is it over?</h2>",
+  "<p>Chase said Monday night that transactions were processing normally and that customers kept access to their accounts and funds. Downdetector showed the banks and Zelle back to normal early Tuesday, according to CBS.</p>",
+  "<p>The disruption came days after a <a href='/articles/microsoft-365-outage-second-day-outlook-teams-email/'>Microsoft 365 outage</a> and the <a href='/articles/faa-nationwide-ground-stop-november-13-2026-flights-canceled/'>FAA's nationwide ground stop</a>. Experts quoted by CBS advised customers to keep screenshots of failed transactions, ask banks to reverse any outage-related fees and watch for scammers posing as their bank.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "ABC News",
+   "title": "JPMorgan Chase reporting technical issue, delays with transactions",
+   "date": "November 16, 2026",
+   "url": "https://abcnews.com/Business/us-banks-reporting-technical-issues-online-transactions/story?id=138187551"
+  },
+  {
+   "publisher": "CBS News",
+   "title": "Widespread service outages at major U.S. banks appear to be over",
+   "date": "November 17, 2026",
+   "url": "https://www.cbsnews.com/news/banks-online-service-outages-jpmorgan-chase-bank-of-america-wells-fargo/"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What caused the Chase outage on November 16, 2026?",
+   "a": "Chase said a software bug in its on-premise hardware systems slowed some transactions and that there was no evidence it was cyber-related."
+  },
+  {
+   "q": "Was Zelle down?",
+   "a": "Zelle said its network was not down, but problems at participating banks delayed some Zelle payments. Downdetector showed Zelle back to normal early Tuesday."
+  }
+ ]
+}
