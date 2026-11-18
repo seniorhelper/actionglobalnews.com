@@ -1,0 +1,104 @@
+{
+ "slug": "business-email-compromise-payment-fraud-controls-small-business",
+ "type": "explainer",
+ "section": "Small Business",
+ "kicker": "Small Business · Explainer",
+ "published": "2026-11-17T09:20:00-07:00",
+ "title": "Business email compromise: how fake-invoice scams work and how to stop them",
+ "h1": "Fake invoices cost businesses $3 billion last year. How business email compromise works, and the controls that stop it",
+ "description": "Business email compromise explained: FBI IC3 2025 losses, how fake-invoice and payment-change scams work, the callback and dual-approval controls that stop them, what to do after a fraudulent transfer, and Nacha's 2026 fraud monitoring rules.",
+ "standfirst": "Business email compromise was the second-costliest crime reported to the FBI in 2025, with more than $3 billion in losses. It often needs no sophisticated hacking, and the defenses that work best cost very little.",
+ "keywords": "business email compromise, BEC scam, fake invoice scam, vendor payment fraud, FBI IC3 2025 report, Financial Fraud Kill Chain, Nacha fraud monitoring rule 2026, payment callback verification",
+ "takeaways": [
+  "The FBI's IC3 logged 24,768 business email compromise complaints and $3.05 billion in adjusted losses in 2025, second only to investment fraud.",
+  "Most BEC is a request to change where money goes. A callback to a phone number already on file defeats it.",
+  "Dual approval above a set threshold and multi-factor authentication on email and banking are the other core controls.",
+  "After a fraudulent transfer, call your bank immediately and file at ic3.gov. The FBI froze $679 million in 2025, a 58% success rate.",
+  "Nacha's fraud monitoring rules now cover businesses that originate ACH payments, with Phase 2 in effect since June 19, 2026."
+ ],
+ "body": [
+  "<h2>How big is the problem?</h2>",
+  "<p>Big enough to rank second among every type of cybercrime the FBI tracks. The bureau's Internet Crime Complaint Center (IC3) recorded 1,008,597 complaints and $20.877 billion in reported losses in its <a href='https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf' target='_blank' rel='noopener nofollow'>2025 Internet Crime Report</a>, released on April 6, 2026, according to the law firm <a href='https://www.alstonprivacy.com/cybercrime-trends-to-watch-takeaways-from-the-fbis-2025-ic3-annual-report/' target='_blank' rel='noopener nofollow'>Alston &amp; Bird</a>. <a href='https://cyberscoop.com/fbi-internet-crime-complaint-center-annual-cybercrime-report/' target='_blank' rel='noopener nofollow'>CyberScoop</a> reported that total losses rose 26% from 2024. Business email compromise, known as BEC, accounted for 24,768 complaints and $3,046,598,558 in adjusted losses, behind only investment fraud.</p>",
+  "<figure class='chart'><h3>Business email compromise was the second-costliest crime reported to the FBI in 2025</h3><p class='cs'>Reported losses by crime type, 2025, in billions of U.S. dollars</p><svg viewBox='0 0 720 186' role='img' aria-label='Reported losses by crime type in 2025, FBI IC3: investment fraud 8.65 billion dollars; business email compromise 3.05 billion; tech and customer support scams 2.13 billion; personal data breach 1.31 billion; confidence and romance scams 0.93 billion'><line x1='210' y1='8' x2='210' y2='178' stroke='#9aa6b4'/><text x='200' y='28' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Investment fraud</text><rect x='210' y='12' width='400.0' height='22' rx='3' fill='#5d6b7a'/><text x='618.0' y='28' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$8.65B</text><text x='200' y='62' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Business email compromise</text><rect x='210' y='46' width='140.9' height='22' rx='3' fill='#b3000f'/><text x='358.9' y='62' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$3.05B</text><text x='200' y='96' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Tech/customer support</text><rect x='210' y='80' width='98.7' height='22' rx='3' fill='#5d6b7a'/><text x='316.7' y='96' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$2.13B</text><text x='200' y='130' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Personal data breach</text><rect x='210' y='114' width='60.8' height='22' rx='3' fill='#5d6b7a'/><text x='278.8' y='130' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$1.31B</text><text x='200' y='164' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Confidence/romance</text><rect x='210' y='148' width='43.0' height='22' rx='3' fill='#5d6b7a'/><text x='261.0' y='164' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$0.93B</text></svg><figcaption>Source: <a href='https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf' target='_blank' rel='noopener nofollow'>FBI Internet Crime Complaint Center, 2025 Internet Crime Report</a>. Figures are losses reported by complainants.</figcaption></figure>",
+  "<p>Divide those losses by the number of complaints and the average reported BEC case comes to roughly $123,000, by our arithmetic. Averages hide wide variation, but the figure explains why a single fake invoice can be an existential event for a small company.</p>",
+  "<h2>How does business email compromise work?</h2>",
+  "<p>The FBI's report describes BEC as a scam that targets businesses or individuals working with suppliers. Fraudsters compromise email accounts and other channels, including phone numbers and virtual meeting apps, through social engineering or computer intrusion, in order to make unauthorized transfers of funds. In practice it tends to take a few familiar shapes:</p>",
+  "<ul><li><strong>The changed bank details.</strong> A message that appears to come from a real supplier, often in a real email thread, says the supplier has a new bank account and asks that the next invoice be paid there.</li><li><strong>The urgent request from the boss.</strong> Someone posing as an owner or executive asks an employee to send a wire or buy gift cards quickly and quietly.</li><li><strong>The hijacked mailbox.</strong> An attacker who gets into a real employee's or supplier's mailbox can send requests from inside genuine conversations, which makes them far harder to spot.</li></ul>",
+  "<p>The FBI's Phoenix field office lists <a href='https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-business-email-compromise-bec-fraud' target='_blank' rel='noopener nofollow'>warning signs</a> that apply across these patterns: email addresses that look similar to, but not the same as, the real ones; pressure to act quickly; requests for gift cards or for gift card numbers and PINs; and odd phrasing. Its central advice is short: do not rely on email alone, and contact the person or company directly to confirm any payment change.</p>",
+  "<h2>Why doesn't spam filtering stop it?</h2>",
+  "<p>Because many BEC messages are not technically suspicious. A message from a compromised supplier mailbox is genuinely from that supplier. A message from a look-alike domain passes its own authentication checks. Email authentication still matters, because a domain with a DMARC enforcement policy is much harder to forge exactly, and our explainer on <a href='/articles/spf-dkim-dmarc-email-authentication-small-business-2026/'>SPF, DKIM and DMARC</a> walks through setting it up. But the reliable defenses are in how a business moves money, not in its inbox.</p>",
+  "<h2>Which controls actually stop it?</h2>",
+  "<p>Nacha, the organization that governs the ACH payment network, publishes a <a href='https://www.nacha.org/system/files/2024-07/Business%20Email%20Compromise%20Action%20Plan.pdf' target='_blank' rel='noopener nofollow'>BEC action plan</a> for businesses. Its prevention steps, combined with the FBI's, make a short list that any company can adopt:</p>",
+  "<ol class='steps'><li><strong>Call back on a number you already have.</strong> Nacha's plan says to verify any request to change account or payment details by calling the requester on a known phone number, found in your own records or a public directory, never one supplied in the message.</li><li><strong>Require two people for big payments.</strong> Nacha recommends multi-layer review for transactions above set thresholds and dual approval for certain payments, with a named backup when an approver is away.</li><li><strong>Turn on multi-factor authentication</strong> for email, banking and accounting accounts, and do not switch it off. Both the FBI and Nacha recommend it.</li><li><strong>Treat urgency as a red flag.</strong> Both the FBI and Nacha single out pressure to act quickly.</li><li><strong>Write the rule down.</strong> A one-page policy that says bank details are never changed on the strength of an email gives an employee permission to slow down, even when the request appears to come from the owner.</li></ol>",
+  "<p>For a small business, the callback rule does most of the work. It costs a phone call, and it defeats the changed-bank-details scam regardless of how convincing the email looks.</p>",
+  "<h2>What if the money has already gone?</h2>",
+  "<p>Speed matters more than anything else. The IC3 report says that if you discover a fraudulent transfer, time is of the essence: contact your financial institution immediately to request a recall of the funds, and file a complaint at ic3.gov regardless of the amount lost, with full transaction details. Nacha's plan adds asking the bank to freeze the receiving account, contacting local law enforcement, and notifying your insurance carrier.</p>",
+  "<p>Recovery is possible when the report is fast. The IC3's Recovery Asset Team works with banks through what the FBI calls the Financial Fraud Kill Chain. In 2025 it handled 3,900 incidents involving $1,163,919,846 in attempted theft and froze $679,013,183, which the <a href='https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf' target='_blank' rel='noopener nofollow'>report</a> puts at a 58% success rate.</p>",
+  "<p>Nacha's plan also lists clean-up steps that are easy to skip in the panic: scan systems for intrusions, check email accounts for forwarding rules an attacker may have added, have employees change passwords, and preserve every related message and record.</p>",
+  "<h2>The new payment rules that apply to businesses, not just banks</h2>",
+  "<p>Nacha rules that took effect in 2026 extend fraud-monitoring duties beyond banks. According to <a href='https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-1' target='_blank' rel='noopener nofollow'>Nacha</a>, Phase 1 took effect on March 20, 2026, for all banks that originate ACH payments and for businesses and payment processors that originated 6 million or more ACH entries in 2023. Phase 2 took effect on June 19, 2026, for all remaining non-consumer originators, a group that includes businesses that send payroll or vendor payments by ACH.</p>",
+  "<p>Covered parties must establish and implement risk-based processes reasonably designed to identify entries that are unauthorized or sent under false pretenses, and review them at least once a year. Nacha defines false pretenses as inducing a payment by misrepresenting a person's identity, a person's association with or authority to act for someone else, or the ownership of the account being credited. That is a description of business email compromise. The rules do not require screening every entry individually. Nacha's own BEC action plan recommends callbacks and dual approval, which makes them natural parts of such a process. If your business originates ACH payments, ask your bank what it expects from you under the rule.</p>",
+  "<h2>A checklist to adopt this week</h2>",
+  "<ol class='steps'><li>Write a one-paragraph rule: no change to bank details without a callback to a number already on file.</li><li>Set a dollar threshold above which every payment needs a second approver.</li><li>Turn on multi-factor authentication for email, banking and accounting logins.</li><li>Publish a DMARC record for your domain and plan the move to enforcement.</li><li>Save your bank's fraud line and the IC3 complaint site where the person who pays bills can find them.</li><li>Check your mailbox settings for forwarding rules you did not create.</li><li>Ask your insurer whether your policy covers social engineering fraud.</li><li>If you originate ACH payments, document the procedures above as your risk-based fraud monitoring process.</li></ol>"
+ ],
+ "sources": [
+  {
+   "publisher": "FBI Internet Crime Complaint Center",
+   "title": "2025 Internet Crime Report",
+   "date": "April 2026",
+   "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf"
+  },
+  {
+   "publisher": "CyberScoop",
+   "title": "Cybercrime losses jumped 26% to $20.9 billion in 2025",
+   "date": "April 7, 2026",
+   "url": "https://cyberscoop.com/fbi-internet-crime-complaint-center-annual-cybercrime-report/"
+  },
+  {
+   "publisher": "Alston & Bird Privacy, Cyber & Data Strategy Blog",
+   "title": "Cybercrime Trends to Watch: Takeaways from the FBI's 2025 IC3 Annual Report",
+   "date": "April 10, 2026",
+   "url": "https://www.alstonprivacy.com/cybercrime-trends-to-watch-takeaways-from-the-fbis-2025-ic3-annual-report/"
+  },
+  {
+   "publisher": "Nacha",
+   "title": "Business Email Compromise Action Plan",
+   "date": "2024",
+   "url": "https://www.nacha.org/system/files/2024-07/Business%20Email%20Compromise%20Action%20Plan.pdf"
+  },
+  {
+   "publisher": "Nacha",
+   "title": "Risk Management Topics: Fraud Monitoring, Phase 1",
+   "date": "accessed November 17, 2026",
+   "url": "https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-1"
+  },
+  {
+   "publisher": "FBI Phoenix Field Office",
+   "title": "FBI Tech Tuesday: Business Email Compromise (BEC) Fraud",
+   "date": "accessed November 17, 2026",
+   "url": "https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-business-email-compromise-bec-fraud"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is business email compromise?",
+   "a": "The FBI describes it as a scam that targets businesses or individuals working with suppliers, in which fraudsters compromise email or other communication channels through social engineering or intrusion to make unauthorized transfers of funds."
+  },
+  {
+   "q": "How much did business email compromise cost in 2025?",
+   "a": "The FBI's IC3 recorded 24,768 BEC complaints with $3,046,598,558 in adjusted losses in 2025, the second-highest loss total of any crime type after investment fraud."
+  },
+  {
+   "q": "What should I do if we paid a fake invoice?",
+   "a": "Contact your bank immediately to request a recall and a freeze on the receiving account, then file a complaint at ic3.gov with the full transaction details. The IC3 report says time is of the essence."
+  },
+  {
+   "q": "What is the single best control against BEC?",
+   "a": "Verify every request to change payment details by calling the requester on a phone number you already have, never one given in the message. Nacha and the FBI both recommend it."
+  },
+  {
+   "q": "Do Nacha's 2026 fraud monitoring rules apply to my business?",
+   "a": "If your business originates ACH entries, such as payroll or vendor payments, Phase 2 of the rules has applied since June 19, 2026. Covered parties need risk-based processes to identify payments that are unauthorized or sent under false pretenses, reviewed at least annually."
+  }
+ ]
+}

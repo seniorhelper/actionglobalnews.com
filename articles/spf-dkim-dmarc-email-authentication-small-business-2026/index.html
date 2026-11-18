@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPF, DKIM and DMARC explained: email rules small businesses must meet</title>
+<meta name="description" content="What SPF, DKIM and DMARC do, what Gmail, Yahoo and Outlook.com require in 2026, the new DMARC standard RFC 9989, and a step-by-step setup plan for small businesses.">
+<link rel="canonical" href="https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Action Global News">
+<meta property="og:title" content="SPF, DKIM and DMARC explained: email rules small businesses must meet">
+<meta property="og:description" content="What SPF, DKIM and DMARC do, what Gmail, Yahoo and Outlook.com require in 2026, the new DMARC standard RFC 9989, and a step-by-step setup plan for small businesses.">
+<meta property="og:url" content="https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/">
+<meta property="og:image" content="https://actionglobalnews.com/images/agn-og.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-11-17T09:10:00-07:00">
+<meta property="article:modified_time" content="2026-11-17T09:10:00-07:00">
+<meta property="article:section" content="Technology">
+<meta property="article:author" content="https://actionglobalnews.com/authors/staff/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SPF, DKIM and DMARC explained: email rules small businesses must meet">
+<meta name="twitter:description" content="What SPF, DKIM and DMARC do, what Gmail, Yahoo and Outlook.com require in 2026, the new DMARC standard RFC 9989, and a step-by-step setup plan for small businesses.">
+<meta name="twitter:image" content="https://actionglobalnews.com/images/agn-og.jpg">
+<meta name="theme-color" content="#16181c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/agn.min.css?v=23">
+<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Action Global News" href="/feed.xml">
+<link rel="alternate" type="application/feed+json" title="Action Global News (JSON)" href="/feed.json">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561679124556057" crossorigin="anonymous"></script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "NewsMediaOrganization",
+   "@id": "https://actionglobalnews.com/#org",
+   "name": "Action Global News",
+   "alternateName": "AGN",
+   "url": "https://actionglobalnews.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://actionglobalnews.com/images/agn-logo-600.png",
+    "width": 600,
+    "height": 211
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1001 Bannock St #660",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": "80204",
+    "addressCountry": "US"
+   },
+   "publishingPrinciples": "https://actionglobalnews.com/editorial-standards/",
+   "ethicsPolicy": "https://actionglobalnews.com/ethics-ai-policy/",
+   "correctionsPolicy": "https://actionglobalnews.com/corrections/",
+   "ownershipFundingInfo": "https://actionglobalnews.com/ownership/",
+   "actionableFeedbackPolicy": "https://actionglobalnews.com/news-tips/",
+   "masthead": "https://actionglobalnews.com/about/",
+   "founder": {
+    "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://actionglobalnews.com/#website",
+   "url": "https://actionglobalnews.com/",
+   "name": "Action Global News",
+   "publisher": {
+    "@id": "https://actionglobalnews.com/#org"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "Person",
+   "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person",
+   "name": "Zach Wennstedt",
+   "jobTitle": "Publisher and Editor",
+   "url": "https://actionglobalnews.com/authors/zach-wennstedt/",
+   "worksFor": {
+    "@id": "https://actionglobalnews.com/#org"
+   }
+  },
+  {
+   "@type": "NewsArticle",
+   "@id": "https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/#article",
+   "headline": "SPF, DKIM and DMARC explained: the email authentication rules a small business now has to meet",
+   "description": "What SPF, DKIM and DMARC do, what Gmail, Yahoo and Outlook.com require in 2026, the new DMARC standard RFC 9989, and a step-by-step setup plan for small businesses.",
+   "url": "https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/",
+   "mainEntityOfPage": "https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/",
+   "datePublished": "2026-11-17T09:10:00-07:00",
+   "dateModified": "2026-11-17T09:10:00-07:00",
+   "articleSection": "Technology",
+   "inLanguage": "en-US",
+   "wordCount": 1437,
+   "isAccessibleForFree": true,
+   "image": [
+    "https://actionglobalnews.com/images/agn-og.jpg"
+   ],
+   "publisher": {
+    "@id": "https://actionglobalnews.com/#org"
+   },
+   "author": {
+    "@type": "Organization",
+    "name": "Action Global News Staff",
+    "url": "https://actionglobalnews.com/authors/staff/"
+   },
+   "editor": {
+    "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person"
+   },
+   "keywords": "SPF DKIM DMARC explained, email authentication small business, Gmail sender requirements, Yahoo bulk sender requirements, Outlook 550 5.7.515, DMARC RFC 9989, SPF lookup limit, one-click unsubscribe",
+   "citation": [
+    "https://support.google.com/mail/answer/81126?hl=en",
+    "https://support.google.com/a/answer/14229414?hl=en",
+    "https://senders.yahooinc.com/best-practices",
+    "https://techcommunity.microsoft.com/blog/outlook/strengthening-email-security-outlook-new-requirements-for-high-volume-senders/4399730",
+    "https://redsift.com/blog/dmarc-rfc-9989",
+    "https://www.mailhardener.com/blog/spf-lookup-limit-explained"
+   ],
+   "genre": "Explainer"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Front Page",
+     "item": "https://actionglobalnews.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Technology",
+     "item": "https://actionglobalnews.com/technology/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "SPF, DKIM and DMARC explained: the email authentication rules a small business now has to meet",
+     "item": "https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do I need DMARC if I send only a few emails a day?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gmail and Yahoo require only SPF or DKIM from senders below the bulk threshold, but a DMARC record is what stops others from forging your exact domain, so it is worth publishing at any volume."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the Gmail bulk sender threshold?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Google defines a bulk sender as one that sends close to 5,000 messages or more to personal Gmail accounts in 24 hours. Once a domain meets that threshold, the status is permanent, and subdomain mail counts toward the primary domain."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does Outlook error 550 5.7.515 mean?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Microsoft uses it to reject mail from high-volume senders whose domain does not meet Outlook.com's authentication requirements: passing SPF and DKIM, and a DMARC policy of at least p=none aligned with one of them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is p=none enough?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It satisfies the minimum Gmail, Yahoo and Outlook.com set for bulk senders, but it only monitors. To block forgeries, move to quarantine and then reject once your reports show all legitimate mail passing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What changed with RFC 9989?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "RFC 9989, published in May 2026, replaces RFC 7489 as the DMARC standard. It removes the pct tag, adds a t tag for testing mode, and replaces the public suffix list with a DNS tree walk. Existing records keep working."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWK0S9KPBE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HWK0S9KPBE');</script>
+<script>(function(){function s(n,p){try{gtag('event',n,p)}catch(e){}}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a)s('phone_click',{phone_number:a.getAttribute('href').slice(4),link_text:(a.textContent||'').trim().slice(0,60)})},true);document.addEventListener('submit',function(e){var f=e.target;if(!f||f.getAttribute('role')==='search'||/search/i.test(f.id+' '+f.className+' '+(f.action||'')))return;var id=f.id||f.getAttribute('name')||f.className||'form';if(/estimat|calc/i.test(id+' '+(f.action||'')))s('estimator_use',{form_id:id});s('generate_lead',{form_id:id})},true);window.etAB=function(n,v){var k='etab_'+n,x;try{x=localStorage.getItem(k)}catch(e){}if(!x||v.indexOf(x)<0){x=v[Math.floor(Math.random()*v.length)];try{localStorage.setItem(k,x)}catch(e){}}s('ab_view',{experiment:n,variant:x});try{gtag('set','user_properties',{['ab_'+n]:x})}catch(e){}document.documentElement.setAttribute('data-ab-'+n,x);return x}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="mast-brandbar">
+    <div class="wrap">
+      <div class="mast-top">
+        <a class="logo" href="/" aria-label="Action Global News home">
+          <picture><source type="image/webp" srcset="/images/agn-logo-340.webp 340w, /images/agn-logo-600.webp 600w" sizes="(max-width:520px) 172px, (max-width:860px) 210px, 300px">
+          <img src="/images/agn-logo-600.png" alt="Action Global News" width="300" height="106" fetchpriority="high" decoding="async"></picture>
+        </a>
+        <span class="mast-spacer"></span>
+        <div class="mast-util">
+          <span class="clock" id="agn-clock" aria-live="off"></span>
+          <form class="mast-search hide-sm" action="/search/" role="search"><label class="vh" for="mq">Search Action Global News</label><input id="mq" name="q" type="search" placeholder="Search the paper" autocomplete="off"><button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></form>
+          <a class="hide-sm" href="/news-tips/">News tips</a>
+          <a class="hide-sm" href="/advertise/">Advertise</a>
+          <a class="btn-sub" href="/newsletter/">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="mainnav" aria-label="Main">
+    <div class="wrap nav-row">
+      <ul><li><a href="/">Front Page</a></li><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/health/">Health</a></li><li><a href="/colorado/">Colorado</a></li><li><a href="/world/">World</a></li></ul>
+      <button class="nav-all" id="nav-all" aria-expanded="false" aria-controls="sec-panel"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>All sections</span></button>
+    </div>
+    <div class="sec-panel" id="sec-panel" hidden>
+      <div class="wrap sec-panel-grid"><div><h3>News desks</h3><ul><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/world/">World</a></li><li><a href="/science/">Science</a></li><li><a href="/colorado/">Colorado &amp; Denver</a></li></ul></div><div><h3>Life &amp; culture</h3><ul><li><a href="/health/">Health &amp; Wellness</a></li><li><a href="/travel/">Travel</a></li><li><a href="/outdoors/">Outdoors</a></li></ul></div><div><h3>Formats</h3><ul><li><a href="/latest/">Latest</a></li><li><a href="/explainers/">Explainers</a></li><li><a href="/analysis/">Analysis</a></li><li><a href="/archive/">Archive</a></li><li><a href="/topics/">Topics A&ndash;Z</a></li></ul></div><div><h3>Work with us</h3><ul><li><a href="/advertise/">Advertise</a></li><li><a href="/media-kit/">Media kit</a></li><li><a href="/sponsored-content/">Sponsored content</a></li><li><a href="/newsletter-sponsorship/">Newsletter sponsorship</a></li><li><a href="/business-spotlight/">Business spotlight</a></li><li><a href="/press-release-distribution/">Press release distribution</a></li><li><a href="/news-tips/">Send a news tip</a></li></ul></div>
+        <form class="panel-search" action="/search/" role="search"><label for="pq">Search</label><input id="pq" name="q" type="search" placeholder="Topics, companies, places"><button type="submit">Search</button></form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<div class="art-wrap">
+  <article class="art">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Front Page</a> <span>/</span> <a href="/technology/">Technology</a></nav>
+    <div class="art-hero">
+      <span class="kicker">Technology · Explainer</span>
+      <h1>SPF, DKIM and DMARC explained: the email authentication rules a small business now has to meet</h1>
+      <p class="art-standfirst">Gmail, Yahoo and Outlook.com now treat email authentication as a condition of delivery, and Gmail has been ramping up rejections since November 2025. Here is what the three records do, what each provider demands, and how to set them up without breaking your own mail.</p>
+    </div>
+    <div class="art-byline">
+      <span class="byline-av" aria-hidden="true">AGN</span>
+      <span class="byline-txt"><strong><a href="/authors/staff/">Action Global News Staff</a></strong>
+      <span>Edited by <a href="/authors/zach-wennstedt/">Zach Wennstedt</a> &middot; Published <time datetime="2026-11-17T09:10:00-07:00">November 17, 2026</time> &middot; 6 min read</span></span>
+    </div>
+    <div class="sharebar" aria-label="Share this article"><button type="button" data-copy>Copy link</button><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fspf-dkim-dmarc-email-authentication-small-business-2026%2F" target="_blank" rel="noopener nofollow">LinkedIn</a><a href="https://x.com/intent/post?url=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fspf-dkim-dmarc-email-authentication-small-business-2026%2F" target="_blank" rel="noopener nofollow">X</a><a href="mailto:?subject=SPF%2C%20DKIM%20and%20DMARC%20explained%3A%20the%20email%20authentication%20rules%20a%20small%20business%20now%20has%20to%20meet&amp;body=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fspf-dkim-dmarc-email-authentication-small-business-2026%2F">Email</a></div>
+    
+    <section class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>Gmail has required SPF or DKIM from every sender since February 1, 2024; senders of about 5,000 a day also need DMARC, alignment and one-click unsubscribe.</li><li>Gmail began ramping up enforcement in November 2025, including temporary and permanent rejections of non-compliant mail.</li><li>Outlook.com has rejected non-compliant high-volume mail since May 5, 2025, with error 550 5.7.515.</li><li>Google treats bulk sender status as permanent, and counts subdomain mail toward the primary domain.</li><li>DMARC was republished as RFC 9989 in May 2026; existing records keep working, but the pct tag is gone.</li></ul></section>
+
+<h2>Why is this suddenly a small business problem?</h2>
+
+<p>For years, email authentication was something big senders and IT departments worried about. That changed when the three largest consumer mailbox providers turned it into a condition of delivery. Google's <a href='https://support.google.com/mail/answer/81126?hl=en' target='_blank' rel='noopener nofollow'>email sender guidelines</a> have required every sender to Gmail personal accounts to use SPF or DKIM since February 1, 2024. Yahoo publishes matching <a href='https://senders.yahooinc.com/best-practices' target='_blank' rel='noopener nofollow'>sender requirements</a>. Microsoft began rejecting non-compliant high-volume mail to Outlook.com, Hotmail and Live addresses on <a href='https://techcommunity.microsoft.com/blog/outlook/strengthening-email-security-outlook-new-requirements-for-high-volume-senders/4399730' target='_blank' rel='noopener nofollow'>May 5, 2025</a>.</p>
+
+<p>Enforcement is tightening, not easing. Google's <a href='https://support.google.com/a/answer/14229414?hl=en' target='_blank' rel='noopener nofollow'>sender FAQ</a> says that starting in November 2025 Gmail began ramping up enforcement on non-compliant traffic, including temporary and permanent rejections, and that the ramp-up is gradual and progressive. For a small business, the risk is not abstract. Quotes, invoices, booking confirmations and password resets that land in spam, or never arrive, cost money and customers.</p>
+
+<h2>What do SPF, DKIM and DMARC actually do?</h2>
+
+<p>All three live in your domain's DNS settings, the same place your website address is configured. Each answers a different question a receiving mail server asks.</p>
+
+<ul><li><strong>SPF (Sender Policy Framework)</strong> answers: is this server allowed to send mail for this domain? It is a single DNS text record listing the services that may send as you.</li><li><strong>DKIM (DomainKeys Identified Mail)</strong> answers: was this message really signed by the domain, and has it been altered? Your mail service signs each message with a private key and publishes the matching public key in DNS. Google requires DKIM keys of at least 1,024 bits for mail to personal Gmail accounts.</li><li><strong>DMARC (Domain-based Message Authentication, Reporting and Conformance)</strong> ties the other two to the address your customers see. It tells receivers what to do when a message claiming to be from your domain fails the checks, and it can send you reports on who is sending mail in your name.</li></ul>
+
+<p>The key DMARC idea is alignment. Google's guidelines say that to pass DMARC, a message must be authenticated by SPF or DKIM, or both, and for direct mail the domain in the visible From: address must match the domain that passed SPF or DKIM. A newsletter sent through a marketing platform can pass that platform's own SPF check and still fail DMARC for your domain if it is not set up to sign as you.</p>
+
+<h2>What exactly do Gmail, Yahoo and Outlook.com require?</h2>
+
+<p>The rules come in two tiers. Every sender has a short list; senders of roughly 5,000 or more messages a day face a longer one.</p>
+
+<table class='dtable'><caption>Sender requirements at the three largest consumer mailbox providers</caption><thead><tr><th>Requirement</th><th>Gmail</th><th>Yahoo</th><th>Outlook.com</th></tr></thead><tbody><tr><td>All senders: authentication</td><td>SPF or DKIM</td><td>SPF or DKIM at a minimum</td><td>Rules apply to high-volume senders</td></tr><tr><td>All senders: spam complaint rate</td><td>Below 0.3%; Google advises staying under 0.10%</td><td>Below 0.3%</td><td>Not specified</td></tr><tr><td>All senders: valid forward and reverse DNS</td><td>Yes</td><td>Yes</td><td>Not specified</td></tr><tr><td>High-volume threshold</td><td>About 5,000 a day to personal Gmail accounts</td><td>Bulk senders</td><td>More than 5,000 a day</td></tr><tr><td>High-volume: SPF and DKIM</td><td>Both</td><td>Both</td><td>Both must pass</td></tr><tr><td>High-volume: DMARC</td><td>Required; policy may be none</td><td>Valid policy, at least p=none; must pass</td><td>At least p=none, aligned with SPF or DKIM</td></tr><tr><td>High-volume: one-click unsubscribe</td><td>Required for marketing and subscribed messages</td><td>Required; honor unsubscribes within 2 days</td><td>Working unsubscribe link recommended</td></tr><tr><td>What happens to failing mail</td><td>Possible rejection or spam folder</td><td>Not specified on the requirements page</td><td>Rejected with error 550 5.7.515</td></tr></tbody></table>
+
+<p><em>Sources: <a href='https://support.google.com/mail/answer/81126?hl=en' target='_blank' rel='noopener nofollow'>Google email sender guidelines</a>, <a href='https://support.google.com/a/answer/14229414?hl=en' target='_blank' rel='noopener nofollow'>Google sender guidelines FAQ</a>, <a href='https://senders.yahooinc.com/best-practices' target='_blank' rel='noopener nofollow'>Yahoo Sender Hub</a> and <a href='https://techcommunity.microsoft.com/blog/outlook/strengthening-email-security-outlook-new-requirements-for-high-volume-senders/4399730' target='_blank' rel='noopener nofollow'>Microsoft Outlook blog</a>, accessed November 17, 2026.</em></p>
+
+<p>Two details in Google's FAQ catch small businesses out. First, bulk sender status is permanent: a domain that hits the threshold even once is treated as a bulk sender from then on. Second, volume is counted by primary domain, so mail sent from a subdomain such as news.yourcompany.com counts toward yourcompany.com's total. A single holiday promotion to a large list can move a business into the stricter tier for good.</p>
+
+<h2>Did the DMARC standard just change?</h2>
+
+<p>Yes, though existing records keep working. According to the email security firm <a href='https://redsift.com/blog/dmarc-rfc-9989' target='_blank' rel='noopener nofollow'>Red Sift</a>, the Internet Engineering Task Force published DMARC as RFC 9989 in May 2026, with companion documents RFC 9990 for aggregate reports and RFC 9991 for failure reports. RFC 9989 replaces the older RFC 7489 as the authoritative definition. The changes that matter most to small senders: the <code>pct</code> tag, which let domains apply a policy to only a percentage of mail, is gone, and a new <code>t</code> tag marks a policy as being in testing mode. Red Sift says existing DMARC records do not need to be republished, but recommends removing <code>pct</code> and reconsidering a policy of <code>p=none</code> for domains that have sat in monitoring mode indefinitely.</p>
+
+<h2>How should a small business set this up?</h2>
+
+<p>The work is mostly an inventory problem. Most small businesses send mail as their domain from more places than they realize: the main mailbox service, the website's contact form, a customer relationship manager, an invoicing or accounting tool, a booking system, a newsletter platform and sometimes a phone system that emails voicemails. Each one has to be authorized.</p>
+
+<ol class='steps'><li><strong>List every service that sends as your domain.</strong> Search your sent mail and your vendors' settings pages for anything that uses your address.</li><li><strong>Publish one SPF record</strong> that includes each authorized service. Keep it within SPF's lookup limit (below).</li><li><strong>Turn on DKIM in every service that offers it,</strong> using your own domain rather than the vendor's. Each service will give you DNS records to add.</li><li><strong>Publish a DMARC record with a policy of none</strong> and a reporting address, so you can see who is sending as you without blocking anything.</li><li><strong>Read the reports for a few weeks.</strong> Fix any legitimate service that fails. A DMARC reporting tool can turn the raw XML reports into readable summaries.</li><li><strong>Move to enforcement in stages.</strong> Microsoft's guidance suggests moving gradually from none to quarantine to reject.</li><li><strong>If you send marketing mail,</strong> confirm your platform supports one-click unsubscribe and that unsubscribes are processed within two days.</li></ol>
+
+<p>One technical limit trips up many growing businesses. SPF allows no more than 10 terms that require DNS lookups, as the email security firm <a href='https://www.mailhardener.com/blog/spf-lookup-limit-explained' target='_blank' rel='noopener nofollow'>Mailhardener explains</a>, and each <code>include</code> for a vendor counts toward that total, with nested includes adding more. Past the limit, a receiving server must stop and return a permanent error, and what it does next varies: some reject the mail, others treat SPF as failed or neutral. If your record is long, a DNS checking tool will count the lookups for you.</p>
+
+<h2>What does this have to do with fraud?</h2>
+
+<p>A great deal. Without DMARC enforcement, anyone can send mail that shows your exact domain in the From: line, and some receivers will deliver it. That is the raw material for invoice fraud aimed at your customers and vendors. A DMARC policy of quarantine or reject tells participating receivers to stop accepting those forgeries.</p>
+
+<p>It does not stop look-alike domains, which differ from yours by a letter or a hyphen and pass their own checks. That is why authentication is one layer in a defense against payment fraud, not the whole of it. Our explainer on <a href='/articles/business-email-compromise-payment-fraud-controls-small-business/'>business email compromise</a> covers the payment controls that catch what DNS cannot.</p>
+
+<h2>Signs your setup needs attention</h2>
+
+<ul><li>Customers say your quotes or invoices went to spam.</li><li>Messages to Outlook.com or Hotmail addresses bounce with a 550 5.7.515 error.</li><li>Your newsletter's open rate dropped sharply without a change in content.</li><li>You receive bounce messages for mail you never sent, a sign someone is spoofing your domain.</li><li>The Authentication-Results header on a message you sent to yourself shows SPF, DKIM or DMARC as failing.</li></ul>
+
+<p>None of this requires an IT department. It does require someone to own it, because each new tool that sends email on your behalf has to be added to the list.</p>
+
+    <section class="sources"><h2>Sources</h2><ol><li><a href="https://support.google.com/mail/answer/81126?hl=en" target="_blank" rel="noopener nofollow">Google, &ldquo;Email sender guidelines,&rdquo; accessed November 17, 2026</a></li><li><a href="https://support.google.com/a/answer/14229414?hl=en" target="_blank" rel="noopener nofollow">Google, &ldquo;Email sender guidelines FAQ,&rdquo; accessed November 17, 2026</a></li><li><a href="https://senders.yahooinc.com/best-practices" target="_blank" rel="noopener nofollow">Yahoo, &ldquo;Sender Hub: Best practices,&rdquo; accessed November 17, 2026</a></li><li><a href="https://techcommunity.microsoft.com/blog/outlook/strengthening-email-security-outlook-new-requirements-for-high-volume-senders/4399730" target="_blank" rel="noopener nofollow">Microsoft, &ldquo;Strengthening Email Ecosystem: Outlook's New Requirements for High-Volume Senders,&rdquo; April 2, 2025, updated April 30, 2025</a></li><li><a href="https://redsift.com/blog/dmarc-rfc-9989" target="_blank" rel="noopener nofollow">Red Sift, &ldquo;DMARC RFC 9989,&rdquo; May 21, 2026</a></li><li><a href="https://www.mailhardener.com/blog/spf-lookup-limit-explained" target="_blank" rel="noopener nofollow">Mailhardener, &ldquo;SPF lookup limit explained,&rdquo; accessed November 17, 2026</a></li></ol>
+    <p class="srcnote">Written by Action Global News from the sources above; quotations are attributed to the outlet that published them. See our <a href="/editorial-standards/">editorial standards</a> and <a href="/corrections/">corrections policy</a>.</p></section>
+    <section class="faq-block"><h2>Frequently asked</h2><details class="faq-item"><summary>Do I need DMARC if I send only a few emails a day?</summary><p>Gmail and Yahoo require only SPF or DKIM from senders below the bulk threshold, but a DMARC record is what stops others from forging your exact domain, so it is worth publishing at any volume.</p></details><details class="faq-item"><summary>What is the Gmail bulk sender threshold?</summary><p>Google defines a bulk sender as one that sends close to 5,000 messages or more to personal Gmail accounts in 24 hours. Once a domain meets that threshold, the status is permanent, and subdomain mail counts toward the primary domain.</p></details><details class="faq-item"><summary>What does Outlook error 550 5.7.515 mean?</summary><p>Microsoft uses it to reject mail from high-volume senders whose domain does not meet Outlook.com's authentication requirements: passing SPF and DKIM, and a DMARC policy of at least p=none aligned with one of them.</p></details><details class="faq-item"><summary>Is p=none enough?</summary><p>It satisfies the minimum Gmail, Yahoo and Outlook.com set for bulk senders, but it only monitors. To block forgeries, move to quarantine and then reject once your reports show all legitimate mail passing.</p></details><details class="faq-item"><summary>What changed with RFC 9989?</summary><p>RFC 9989, published in May 2026, replaces RFC 7489 as the DMARC standard. It removes the pct tag, adds a t tag for testing mode, and replaces the public suffix list with a DNS tree walk. Existing records keep working.</p></details></section>
+  </article>
+  <aside class="rail">
+    <div class="rail-sec"><h4>Latest from AGN</h4>
+      <div class="rail-item"><span class="n">01</span><a href="/articles/business-email-compromise-payment-fraud-controls-small-business/"><h5>Fake invoices cost businesses $3 billion last year. How business email compromise works, and the controls that stop it</h5></a></div><div class="rail-item"><span class="n">02</span><a href="/articles/stop-form-spam-bots-small-business-website/"><h5>Bots now outnumber people online. How a small business can keep them out of its contact forms</h5></a></div><div class="rail-item"><span class="n">03</span><a href="/articles/boyd-family-buying-snowy-range-ski-area-wyoming/"><h5>The Boyd family, who sold Peak Resorts to Vail in 2019, is buying Wyoming's small Snowy Range ski area</h5></a></div><div class="rail-item"><span class="n">04</span><a href="/articles/nvidia-national-security-export-control-oversight-committee/"><h5>Nvidia's board created a three-member committee to oversee export controls and national security after its CEO's exit</h5></a></div><div class="rail-item"><span class="n">05</span><a href="/articles/chase-software-bug-bank-outages-zelle-delays-november-16/"><h5>A Chase software bug slowed transactions at several U.S. banks on Monday, and services were back to normal by Tuesday</h5></a></div>
+      <div class="rail-item"><span class="n">&rarr;</span><a href="/technology/"><h5>All Technology coverage</h5></a></div>
+    </div>
+    <div class="rail-sec"><h4>The AGN Dispatch</h4><p style="font-size:14px;color:var(--ink-2);line-height:1.55">One email a week with the stories operators need. <a href="/newsletter/" style="color:var(--accent);font-weight:600">Subscribe free</a></p></div>
+    <div class="rail-sec"><h4>Got a story?</h4><p style="font-size:14px;color:var(--ink-2);line-height:1.55">Seeing a shift we should cover, or an error we should fix? <a href="/news-tips/" style="color:var(--accent);font-weight:600">Send the desk a tip</a></p></div>
+  </aside>
+</div>
+</main>
+<!--buy-block:start-->
+<section class="bb" aria-label="Prices and packages">
+<style>.bb{padding:40px 16px;background:#FFF7ED;border-top:1px solid #FED7AA;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#101828}.bb-in{max-width:1100px;margin:0 auto}.bb-lab{margin:0 0 8px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#667085}.bb h2{margin:0 0 8px;font:800 clamp(1.5rem,3vw,2.2rem)/1.15 Inter,system-ui,sans-serif;letter-spacing:-.02em;color:#101828}.bb p.bb-p{margin:0 0 18px;font-size:1.05rem;line-height:1.5;color:#344054;max-width:64ch}.bb-a{display:flex;flex-wrap:wrap;gap:10px}.bb-a a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:10px;font:800 .98rem/1.1 Inter,system-ui,sans-serif;text-decoration:none!important}.bb-1{background:#F97316;color:#fff!important}.bb-1:hover{background:#EA580C}.bb-2{background:#fff;color:#101828!important;border:2px solid #101828}.bb-call{background:#101828;color:#fff!important}.bb-t{margin:14px 0 0;font-size:.9rem;color:#475467}.bb-t a{color:#1D4ED8}@media (max-width:600px){.bb-a a{flex:1 1 100%}}</style>
+<div class="bb-in"><p class="bb-lab">Advertisement &middot; Eye To Ad Media</p><h2>Grow your business in 2027.</h2><p class="bb-p">SEO packages from $100, websites from $99 a month and TV-quality commercials, all with published prices.</p>
+<div class="bb-a"><a class="bb-1" href="https://eyetoad.com/denver-seo-pricing/?utm_source=actionglobalnews&utm_medium=referral&utm_campaign=buy-block">See prices &rarr;</a><a class="bb-2" href="https://eyetoad.com/seo-packages/?utm_source=actionglobalnews&utm_medium=referral&utm_campaign=buy-block">SEO packages</a><a class="bb-call" href="tel:18004818638">Call 1-800-481-8638</a></div>
+<p class="bb-t"><a href="https://share.google/t4wEpsdoJFyFEWa4H" target="_blank" rel="noopener">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 on Google, 60 reviews</a> &middot; <a href="https://www.bbb.org/us/co/denver/profile/advertising-agencies/search-converts-llc-1296-90228702/#sealclick" target="_blank" rel="nofollow noopener">A+ BBB accredited</a> &middot; Founder-led since 2012</p>
+</div></section>
+<!--buy-block:end-->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid foot-grid-5">
+      <div>
+        <a class="foot-logo" href="/" aria-label="Action Global News home"><span><em>Action</em> Global News</span></a>
+        <p class="foot-blurb">Independent coverage of business, technology, global commerce and the AI economy, written for operators rather than analysts. Headquartered in Denver, reporting on businesses everywhere.</p>
+        <p class="foot-blurb" style="margin-top:12px">1001 Bannock St #660, Denver, CO 80204<br>
+        <a href="#" data-mu="aW5mbw==" data-md="ZXlldG9hZC5jb20=">Email the desk</a><br>
+        <a href="tel:18004818638">1-800-481-8638</a></p>
+      </div>
+      <div><h4>Sections</h4><ul class="two-col"><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/health/">Health</a></li><li><a href="/travel/">Travel</a></li><li><a href="/colorado/">Colorado</a></li><li><a href="/world/">World</a></li><li><a href="/outdoors/">Outdoors</a></li></ul></div>
+      <div>
+        <h4>Read</h4>
+        <ul>
+          <li><a href="/latest/">Latest</a></li>
+          
+          
+          <li><a href="/explainers/">Explainers</a></li>
+          <li><a href="/analysis/">Analysis</a></li>
+          <li><a href="/archive/">Archive</a></li>
+          <li><a href="/topics/">Topics A&ndash;Z</a></li>
+          <li><a href="/feed.xml">RSS feed</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The paper</h4>
+        <ul>
+          <li><a href="/about/">About AGN</a></li>
+          <li><a href="/editorial-standards/">Editorial standards</a></li>
+          <li><a href="/ethics-ai-policy/">Ethics &amp; AI policy</a></li>
+          <li><a href="/corrections/">Corrections</a></li>
+          <li><a href="/ownership/">Ownership &amp; funding</a></li>
+          <li><a href="/disclosure/">Disclosures</a></li>
+          <li><a href="/newsletter/">Newsletter</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Work with us</h4>
+        <ul>
+          <li><a href="/advertise/">Advertise</a></li>
+          <li><a href="/media-kit/">Media kit</a></li>
+          <li><a href="/sponsored-content/">Sponsored content</a></li>
+          <li><a href="/newsletter-sponsorship/">Newsletter sponsorship</a></li>
+          <li><a href="/business-spotlight/">Business spotlight</a></li>
+          <li><a href="/press-release-distribution/">Press release distribution</a></li>
+          <li><a href="/news-tips/">Send a news tip</a></li>
+        </ul>
+        <h4 style="margin-top:20px">Network</h4>
+        <ul>
+          <li><a href="https://eyetoad.com/" target="_blank" rel="noopener sponsored">Eye To Ad Media</a></li>
+          <li><a href="https://pressreleaseforbusiness.com/" target="_blank" rel="noopener sponsored">PressReleaseForBusiness.com</a></li>
+          <li><a href="https://usabusinesssearch.com/" target="_blank" rel="noopener sponsored">USABusinessSearch.com</a></li>
+          <li><a href="https://www.searchconverts.com/" target="_blank" rel="noopener sponsored">Search Converts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; <span id="yr">2026</span> Action Global News. All rights reserved.</span>
+      <span class="foot-legal"><a href="/accessibility/">Accessibility</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></span>
+      <span>Sponsored and partner content is labeled. External links open at the originating publisher.</span>
+    </div>
+  </div>
+  <div class="heartline"><a href="https://eyetoad.com/" target="_blank" rel="noopener sponsored"><span class="sig-heart" aria-hidden="true"></span><span>Need a website?</span></a></div>
+</footer>
+<div id="newsie-root">
+  <div id="newsie-panel" role="dialog" aria-label="Newsie reading assistant">
+    <div class="nw-head">
+      <svg class="nw-face" viewBox="0 0 100 100" role="img" aria-label="Newsie, the AGN assistant">
+        <g>
+          
+          <path d="M26 30h48l6 6v34H26z" fill="#f4f1e8" stroke="#2b2f36" stroke-width="2.4"/>
+          <path d="M74 30l6 6h-6z" fill="#d9d4c4" stroke="#2b2f36" stroke-width="2.4"/>
+          <g stroke="#9a958a" stroke-width="1.6">
+            <path d="M32 44h16M32 50h16M32 56h16M56 44h16M56 50h16M56 56h10"/>
+          </g>
+          <rect x="32" y="35" width="40" height="5" fill="#2b2f36"/>
+          
+          <circle cx="50" cy="20" r="13" fill="#f4f1e8" stroke="#2b2f36" stroke-width="2.4"/>
+          
+          <path d="M37 15q13-13 26 0z" fill="#2b2f36"/>
+          <path d="M35 15h30q2 0 2 2h-34q0-2 2-2z" fill="#2b2f36"/>
+          
+          <circle cx="44" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+          <circle cx="56" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M49.2 21h1.6" stroke="#2b2f36" stroke-width="2"/>
+          <circle cx="44" cy="21" r="1.7" fill="#2b2f36"/>
+          <circle cx="56" cy="21" r="1.7" fill="#2b2f36"/>
+          
+          <path d="M45 28q5 3.5 10 0" fill="none" stroke="#2b2f36" stroke-width="2" stroke-linecap="round"/>
+          
+          <path d="M42 70v14M58 70v14" stroke="#2b2f36" stroke-width="2.6" stroke-linecap="round"/>
+          
+          <path d="M42 84h-8q-4 0-4 4t4 4h11q2 0 2-2v-6z" fill="#7a4a24" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M58 84h8q4 0 4 4t-4 4H55q-2 0-2-2v-6z" fill="#7a4a24" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M31 89h14M55 89h14" stroke="#5c3518" stroke-width="1.4"/>
+          
+          <path d="M26 42q-8 6-6 16" fill="none" stroke="#2b2f36" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M74 42q8 6 6 16" fill="none" stroke="#2b2f36" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div>
+        <strong>Newsie</strong>
+        <span><i aria-hidden="true"></i>Reading assistant</span>
+      </div>
+    </div>
+    <div id="newsie-log"></div>
+    <div class="nw-chips">
+      <button data-nw-chip="Show me the latest news">Latest</button><button data-nw-chip="Show me explainers">Explainers</button>
+      <button data-nw-chip="How do I advertise">Advertise</button>
+      <button data-nw-chip="I want to send a news tip">News tip</button>
+      <button data-nw-chip="How do I publish a press release">Press release</button>
+    </div>
+    <form id="newsie-form">
+      <input id="newsie-input" type="text" placeholder="Ask Newsie where to find something…"
+             autocomplete="off" aria-label="Ask Newsie">
+      <button type="submit" aria-label="Send">&rarr;</button>
+    </form>
+    <p class="nw-foot">Newsie is a navigational helper, not a reporter. It points to pages on this site.</p>
+  </div>
+
+  <button id="newsie-toggle" aria-expanded="false" aria-controls="newsie-panel">
+    <span id="newsie-badge"></span>
+    <svg class="nw-face" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M26 30h48l6 6v34H26z" fill="#f4f1e8" stroke="#fff" stroke-width="2.4"/>
+      <rect x="32" y="35" width="40" height="5" fill="#2b2f36"/>
+      <g stroke="#9a958a" stroke-width="1.6"><path d="M32 46h16M32 53h16M56 46h16M56 53h10"/></g>
+      <circle cx="50" cy="20" r="13" fill="#f4f1e8" stroke="#fff" stroke-width="2.4"/>
+      <path d="M37 15q13-13 26 0z" fill="#2b2f36"/>
+      <path d="M35 15h30q2 0 2 2h-34q0-2 2-2z" fill="#2b2f36"/>
+      <circle cx="44" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+      <circle cx="56" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+      <path d="M49.2 21h1.6" stroke="#2b2f36" stroke-width="2"/>
+      <circle cx="44" cy="21" r="1.7" fill="#2b2f36"/><circle cx="56" cy="21" r="1.7" fill="#2b2f36"/>
+      <path d="M45 28q5 3.5 10 0" fill="none" stroke="#2b2f36" stroke-width="2" stroke-linecap="round"/>
+      <path d="M42 70v13M58 70v13" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M42 83h-8q-4 0-4 4t4 4h11q2 0 2-2v-6z" fill="#7a4a24" stroke="#fff" stroke-width="1.8"/>
+      <path d="M58 83h8q4 0 4 4t-4 4H55q-2 0-2-2v-6z" fill="#7a4a24" stroke="#fff" stroke-width="1.8"/>
+    </svg>
+    <span class="nw-lbl">Ask Newsie<small>Find anything here</small></span>
+  </button>
+</div><script src="/assets/agn.js?v=23" defer></script>
+
+</body>
+</html>

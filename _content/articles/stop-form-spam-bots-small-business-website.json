@@ -1,0 +1,115 @@
+{
+ "slug": "stop-form-spam-bots-small-business-website",
+ "type": "explainer",
+ "section": "Technology",
+ "kicker": "Technology · Explainer",
+ "published": "2026-11-17T09:00:00-07:00",
+ "title": "How to stop form spam and bot sign-ups on a small business website",
+ "h1": "Bots now outnumber people online. How a small business can keep them out of its contact forms",
+ "description": "A practical guide to stopping form spam, fake sign-ups and SMS pumping on a small business website: honeypots, rate limits, Cloudflare Turnstile vs reCAPTCHA, and the server-side check most sites miss.",
+ "standfirst": "More than half of all web traffic is now automated, and contact forms are among the first things bots find. The fixes are mostly cheap. The one most sites get wrong is invisible to the owner.",
+ "keywords": "form spam, stop contact form spam, bot sign-ups, honeypot field, Cloudflare Turnstile, reCAPTCHA free tier, SMS pumping, small business website security",
+ "takeaways": [
+  "Imperva says automated traffic made up more than 53% of all web traffic in 2025, up from 51% a year earlier.",
+  "Layer cheap defenses first: a hidden honeypot field, a minimum-time check, server-side validation and rate limits.",
+  "Cloudflare Turnstile's free plan allows unlimited challenges; Google reCAPTCHA Essentials is free up to 10,000 assessments a month per organization.",
+  "A challenge widget does nothing unless its token is verified on a server. Cloudflare says the widget alone does not protect a form.",
+  "Any form that sends text messages can be abused for SMS pumping fraud, billed to the business. Restrict countries and turn on fraud screening."
+ ],
+ "body": [
+  "<h2>Why does a small website get so much junk?</h2>",
+  "<p>Because most of the traffic reaching it is not human. The bot-defense company Imperva, part of Thales, says in its <a href='https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age/' target='_blank' rel='noopener nofollow'>2026 Bad Bot Report</a> that automated traffic accounted for more than 53% of all web traffic in 2025, up from 51% the year before, leaving people at 47%. The report also says 27% of bot attacks targeted API endpoints, the machine-to-machine doors behind many forms, and that AI-driven bots have surged, though it does not put a number on that last point.</p>",
+  "<p>Much of that traffic is not aimed at any one business. They crawl the web looking for anything that accepts input: a contact form, a quote request, a newsletter box, a sign-up page, a comment field. A five-person plumbing company gets hit for the same reason a national retailer does. The form is there, and it answers.</p>",
+  "<p>The cost shows up in small, irritating ways. Sales staff waste time on fake leads. A customer database fills with junk names that later skew reports and email lists. Automatic replies go out to addresses a bot typed in, which can produce bounces and complaints that mailbox providers watch closely (our explainer on <a href='/articles/spf-dkim-dmarc-email-authentication-small-business-2026/'>SPF, DKIM and DMARC</a> covers the spam-rate limits Gmail, Yahoo and Outlook.com now enforce). And some attacks cost real money, as the section on text messages below explains.</p>",
+  "<h2>What are the bots actually trying to do?</h2>",
+  "<p>The security community has a vocabulary for this. The Open Worldwide Application Security Project (OWASP) keeps a catalog of <a href='https://wiki.owasp.org/index.php/Category:Automated_Threat' target='_blank' rel='noopener nofollow'>automated threats to web applications</a>, each with an identifier. Four of them map neatly onto what small business owners see in their inboxes:</p>",
+  "<ul><li><strong>Spamming (OAT-017):</strong> pushing unwanted content, usually links, through forms and comment boxes.</li><li><strong>Account Creation (OAT-019):</strong> registering fake accounts in bulk, often to abuse a free trial, a referral reward or a listing.</li><li><strong>Credential Stuffing (OAT-008):</strong> trying stolen username and password pairs against a login page.</li><li><strong>Carding (OAT-001):</strong> testing stolen payment card numbers through a checkout or donation form.</li></ul>",
+  "<p>The names matter because they tell you which defense fits. A honeypot field can stop crude form spam. It will do little against credential stuffing, which needs login rate limits and multi-factor authentication, or against carding, which your payment processor's fraud tools are built for.</p>",
+  "<h2>Why can a phone number field cost money?</h2>",
+  "<p>Any form that sends a text message, such as a one-time passcode, an appointment confirmation or an app download link, can be turned into a billing attack. Twilio, one of the largest SMS providers, <a href='https://static1.twilio.com/docs/glossary/what-is-sms-pumping-fraud' target='_blank' rel='noopener nofollow'>describes SMS pumping fraud</a> as what happens when fraudsters take advantage of a phone number input field, causing messages to be sent without the account owner's intent. The texts go to number ranges controlled by a single mobile network operator, and the fraudsters take a share of the revenue those messages generate. The business pays for every message.</p>",
+  "<p>Twilio's own prevention advice is practical for any SMS setup: turn off sending to countries you do not serve, use its fraud screening features, and check the line type of a number before texting it so you only send to mobile numbers. If your website can trigger a text, those settings deserve ten minutes this week.</p>",
+  "<h2>What should a small business put in place?</h2>",
+  "<p>No single tool stops everything, and the most effective setups stack cheap layers so each one removes a different slice of junk. Roughly in order of cost and effort:</p>",
+  "<ol class='steps'><li><strong>A honeypot field.</strong> Add a field that is hidden from people with CSS and labeled so screen readers skip it. Real visitors leave it empty; many simple bots fill in every field. Reject any submission where it has a value.</li><li><strong>A timing check.</strong> Record when the form loaded and reject submissions that arrive impossibly fast, such as within two or three seconds.</li><li><strong>Server-side validation.</strong> Check that an email address is shaped like one, that a phone number has the right number of digits, and that free-text fields do not contain long lists of links. Anything checked only in the browser can be skipped.</li><li><strong>Rate limits.</strong> Cap how many submissions one IP address or one email address can make in an hour. Many hosting platforms, firewalls and form services offer this.</li><li><strong>A challenge service</strong> such as Cloudflare Turnstile or Google reCAPTCHA, verified on the server (see below).</li><li><strong>Confirmation for sign-ups.</strong> For newsletters and accounts, send a confirmation link and only add the address once it is clicked. This keeps bot-entered addresses off your list.</li></ol>",
+  "<h2>Turnstile or reCAPTCHA?</h2>",
+  "<p>Both are widely used, and both have no-cost tiers that cover most small sites. Cloudflare says Turnstile <a href='https://developers.cloudflare.com/turnstile/get-started' target='_blank' rel='noopener nofollow'>can be used on any website</a>, whether or not the site is proxied through Cloudflare's network. Its <a href='https://developers.cloudflare.com/turnstile/plans' target='_blank' rel='noopener nofollow'>free plan</a> allows up to 20 widgets with 10 hostnames each and unlimited challenges. Google's <a href='https://docs.cloud.google.com/recaptcha/docs/compare-tiers' target='_blank' rel='noopener nofollow'>reCAPTCHA tiers page</a> lists an Essentials tier that is free up to 10,000 assessments per calendar month. That allowance is counted per organization across all of its sites. Above it, the Premium tier charges an $8 flat fee for 10,001 to 100,000 assessments a month and $1 per 1,000 beyond that.</p>",
+  "<table class='dtable'><caption>No-cost tiers of two common form-protection services</caption><thead><tr><th>Service</th><th>No-cost allowance</th><th>Next step up</th></tr></thead><tbody><tr><td>Cloudflare Turnstile (Free)</td><td>Unlimited challenges; up to 20 widgets, 10 hostnames per widget; 7 days of analytics</td><td>Enterprise plan: unlimited widgets, up to 200 hostnames per widget, 30 days of analytics</td></tr><tr><td>Google reCAPTCHA (Essentials)</td><td>Up to 10,000 assessments per calendar month, per organization</td><td>Premium: $8 flat fee for 10,001 to 100,000 a month; $1 per 1,000 above 100,000</td></tr></tbody></table>",
+  "<p><em>Sources: <a href='https://developers.cloudflare.com/turnstile/plans' target='_blank' rel='noopener nofollow'>Cloudflare Turnstile plans</a> and <a href='https://docs.cloud.google.com/recaptcha/docs/compare-tiers' target='_blank' rel='noopener nofollow'>Google Cloud reCAPTCHA tier comparison</a>, accessed November 17, 2026. Prices and limits change; check both pages before you choose.</em></p>",
+  "<p>For a typical small business site the choice comes down to which ecosystem you already use and how much traffic your forms see. A busy site with several forms can pass 10,000 reCAPTCHA assessments a month faster than its owner expects, because the count is of verification requests, not of real leads.</p>",
+  "<h2>The mistake that makes a challenge useless</h2>",
+  "<p>Putting the widget on the page is only half the job. Cloudflare's documentation is blunt about it: <q>The client-side widget alone does not protect your forms.</q> The site must send the token the widget produces to Cloudflare's Siteverify API from the server and act on the answer. Without that check, the <a href='https://developers.cloudflare.com/turnstile/get-started/server-side-validation/' target='_blank' rel='noopener nofollow'>documentation warns</a>, an attacker can submit any string to your form endpoint without completing a challenge. Each Turnstile token is valid for 300 seconds and is intended for single use.</p>",
+  "<p>The gap is easy to miss on sites assembled from templates and plugins, and on static sites that post forms directly to a third-party inbox service. If your form provider offers its own spam screening, turn it on, and ask whether it validates challenge tokens on its side. If you cannot confirm that someone checks the token on a server, assume nobody does.</p>",
+  "<h2>What about real customers?</h2>",
+  "<p>Every extra hurdle costs some genuine inquiries, so it is worth measuring. Watch the ratio of real leads to total submissions before and after each change. Prefer invisible or low-friction checks over puzzles, and make sure any challenge works with a keyboard and a screen reader. If a customer cannot get past your form, offer a visible phone number or email address as a fallback.</p>",
+  "<p>Privacy is the other trade-off. Challenge services load code from a third party and send it information about the visitor's browser. That does not rule them out, but your privacy policy should name the service, and if you serve visitors in places with consent rules, your cookie or consent setup should account for it.</p>",
+  "<h2>A one-hour checklist</h2>",
+  "<ol class='steps'><li>List every form on your site, including old landing pages and pop-ups, and note where each one sends its data.</li><li>Add a honeypot field and a minimum-time check to each form.</li><li>Add a challenge service to forms that still attract junk, and confirm that the token is verified on a server.</li><li>Turn on rate limiting in your host, firewall or form provider.</li><li>If any form sends text messages, restrict destination countries and enable your SMS provider's fraud protection.</li><li>Switch newsletter and account sign-ups to confirmed opt-in.</li><li>Update your privacy policy to name any new third-party service.</li><li>Check results after two weeks: fewer junk submissions, and no drop in real leads.</li></ol>",
+  "<p>Form spam will not go to zero. The goal is to make your forms more expensive to abuse than the next site's, which, for automated traffic hunting for easy targets, is usually enough.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "Imperva (Thales)",
+   "title": "Bad Bot Report 2026: Bots in the Agentic Age",
+   "date": "April 29, 2026",
+   "url": "https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age/"
+  },
+  {
+   "publisher": "Cloudflare",
+   "title": "Turnstile: Server-side validation",
+   "date": "accessed November 17, 2026",
+   "url": "https://developers.cloudflare.com/turnstile/get-started/server-side-validation/"
+  },
+  {
+   "publisher": "Cloudflare",
+   "title": "Turnstile: Get started",
+   "date": "accessed November 17, 2026",
+   "url": "https://developers.cloudflare.com/turnstile/get-started"
+  },
+  {
+   "publisher": "Cloudflare",
+   "title": "Turnstile: Plans",
+   "date": "accessed November 17, 2026",
+   "url": "https://developers.cloudflare.com/turnstile/plans"
+  },
+  {
+   "publisher": "Google Cloud",
+   "title": "Compare features between reCAPTCHA tiers",
+   "date": "last updated November 13, 2026",
+   "url": "https://docs.cloud.google.com/recaptcha/docs/compare-tiers"
+  },
+  {
+   "publisher": "OWASP",
+   "title": "Category: Automated Threat",
+   "date": "accessed November 17, 2026",
+   "url": "https://wiki.owasp.org/index.php/Category:Automated_Threat"
+  },
+  {
+   "publisher": "Twilio",
+   "title": "What is SMS Pumping Fraud?",
+   "date": "accessed November 17, 2026",
+   "url": "https://static1.twilio.com/docs/glossary/what-is-sms-pumping-fraud"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is the easiest way to stop contact form spam?",
+   "a": "Start with a hidden honeypot field and a minimum-time check, then add server-side validation and rate limits. If junk still gets through, add a challenge service such as Cloudflare Turnstile or Google reCAPTCHA and verify its token on the server."
+  },
+  {
+   "q": "Is Cloudflare Turnstile free?",
+   "a": "Cloudflare's free Turnstile plan allows unlimited challenges, up to 20 widgets and 10 hostnames per widget, and it works on sites that are not proxied through Cloudflare."
+  },
+  {
+   "q": "How many free reCAPTCHA checks do I get?",
+   "a": "Google lists reCAPTCHA Essentials as free up to 10,000 assessments per calendar month, counted per organization across all of its sites. Premium charges an $8 flat fee from 10,001 to 100,000 a month."
+  },
+  {
+   "q": "Why is spam still getting through my CAPTCHA?",
+   "a": "The most common reason is that the token from the widget is never verified on the server. Cloudflare's documentation says the client-side widget alone does not protect a form; without the server check, an attacker can submit any string."
+  },
+  {
+   "q": "What is SMS pumping?",
+   "a": "Twilio describes it as fraud in which attackers use a phone number field to trigger text messages to number ranges controlled by one mobile operator, taking a share of the revenue. The business that sends the texts pays for them."
+  }
+ ]
+}

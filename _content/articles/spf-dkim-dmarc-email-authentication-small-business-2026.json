@@ -1,0 +1,105 @@
+{
+ "slug": "spf-dkim-dmarc-email-authentication-small-business-2026",
+ "type": "explainer",
+ "section": "Technology",
+ "kicker": "Technology · Explainer",
+ "published": "2026-11-17T09:10:00-07:00",
+ "title": "SPF, DKIM and DMARC explained: email rules small businesses must meet",
+ "h1": "SPF, DKIM and DMARC explained: the email authentication rules a small business now has to meet",
+ "description": "What SPF, DKIM and DMARC do, what Gmail, Yahoo and Outlook.com require in 2026, the new DMARC standard RFC 9989, and a step-by-step setup plan for small businesses.",
+ "standfirst": "Gmail, Yahoo and Outlook.com now treat email authentication as a condition of delivery, and Gmail has been ramping up rejections since November 2025. Here is what the three records do, what each provider demands, and how to set them up without breaking your own mail.",
+ "keywords": "SPF DKIM DMARC explained, email authentication small business, Gmail sender requirements, Yahoo bulk sender requirements, Outlook 550 5.7.515, DMARC RFC 9989, SPF lookup limit, one-click unsubscribe",
+ "takeaways": [
+  "Gmail has required SPF or DKIM from every sender since February 1, 2024; senders of about 5,000 a day also need DMARC, alignment and one-click unsubscribe.",
+  "Gmail began ramping up enforcement in November 2025, including temporary and permanent rejections of non-compliant mail.",
+  "Outlook.com has rejected non-compliant high-volume mail since May 5, 2025, with error 550 5.7.515.",
+  "Google treats bulk sender status as permanent, and counts subdomain mail toward the primary domain.",
+  "DMARC was republished as RFC 9989 in May 2026; existing records keep working, but the pct tag is gone."
+ ],
+ "body": [
+  "<h2>Why is this suddenly a small business problem?</h2>",
+  "<p>For years, email authentication was something big senders and IT departments worried about. That changed when the three largest consumer mailbox providers turned it into a condition of delivery. Google's <a href='https://support.google.com/mail/answer/81126?hl=en' target='_blank' rel='noopener nofollow'>email sender guidelines</a> have required every sender to Gmail personal accounts to use SPF or DKIM since February 1, 2024. Yahoo publishes matching <a href='https://senders.yahooinc.com/best-practices' target='_blank' rel='noopener nofollow'>sender requirements</a>. Microsoft began rejecting non-compliant high-volume mail to Outlook.com, Hotmail and Live addresses on <a href='https://techcommunity.microsoft.com/blog/outlook/strengthening-email-security-outlook-new-requirements-for-high-volume-senders/4399730' target='_blank' rel='noopener nofollow'>May 5, 2025</a>.</p>",
+  "<p>Enforcement is tightening, not easing. Google's <a href='https://support.google.com/a/answer/14229414?hl=en' target='_blank' rel='noopener nofollow'>sender FAQ</a> says that starting in November 2025 Gmail began ramping up enforcement on non-compliant traffic, including temporary and permanent rejections, and that the ramp-up is gradual and progressive. For a small business, the risk is not abstract. Quotes, invoices, booking confirmations and password resets that land in spam, or never arrive, cost money and customers.</p>",
+  "<h2>What do SPF, DKIM and DMARC actually do?</h2>",
+  "<p>All three live in your domain's DNS settings, the same place your website address is configured. Each answers a different question a receiving mail server asks.</p>",
+  "<ul><li><strong>SPF (Sender Policy Framework)</strong> answers: is this server allowed to send mail for this domain? It is a single DNS text record listing the services that may send as you.</li><li><strong>DKIM (DomainKeys Identified Mail)</strong> answers: was this message really signed by the domain, and has it been altered? Your mail service signs each message with a private key and publishes the matching public key in DNS. Google requires DKIM keys of at least 1,024 bits for mail to personal Gmail accounts.</li><li><strong>DMARC (Domain-based Message Authentication, Reporting and Conformance)</strong> ties the other two to the address your customers see. It tells receivers what to do when a message claiming to be from your domain fails the checks, and it can send you reports on who is sending mail in your name.</li></ul>",
+  "<p>The key DMARC idea is alignment. Google's guidelines say that to pass DMARC, a message must be authenticated by SPF or DKIM, or both, and for direct mail the domain in the visible From: address must match the domain that passed SPF or DKIM. A newsletter sent through a marketing platform can pass that platform's own SPF check and still fail DMARC for your domain if it is not set up to sign as you.</p>",
+  "<h2>What exactly do Gmail, Yahoo and Outlook.com require?</h2>",
+  "<p>The rules come in two tiers. Every sender has a short list; senders of roughly 5,000 or more messages a day face a longer one.</p>",
+  "<table class='dtable'><caption>Sender requirements at the three largest consumer mailbox providers</caption><thead><tr><th>Requirement</th><th>Gmail</th><th>Yahoo</th><th>Outlook.com</th></tr></thead><tbody><tr><td>All senders: authentication</td><td>SPF or DKIM</td><td>SPF or DKIM at a minimum</td><td>Rules apply to high-volume senders</td></tr><tr><td>All senders: spam complaint rate</td><td>Below 0.3%; Google advises staying under 0.10%</td><td>Below 0.3%</td><td>Not specified</td></tr><tr><td>All senders: valid forward and reverse DNS</td><td>Yes</td><td>Yes</td><td>Not specified</td></tr><tr><td>High-volume threshold</td><td>About 5,000 a day to personal Gmail accounts</td><td>Bulk senders</td><td>More than 5,000 a day</td></tr><tr><td>High-volume: SPF and DKIM</td><td>Both</td><td>Both</td><td>Both must pass</td></tr><tr><td>High-volume: DMARC</td><td>Required; policy may be none</td><td>Valid policy, at least p=none; must pass</td><td>At least p=none, aligned with SPF or DKIM</td></tr><tr><td>High-volume: one-click unsubscribe</td><td>Required for marketing and subscribed messages</td><td>Required; honor unsubscribes within 2 days</td><td>Working unsubscribe link recommended</td></tr><tr><td>What happens to failing mail</td><td>Possible rejection or spam folder</td><td>Not specified on the requirements page</td><td>Rejected with error 550 5.7.515</td></tr></tbody></table>",
+  "<p><em>Sources: <a href='https://support.google.com/mail/answer/81126?hl=en' target='_blank' rel='noopener nofollow'>Google email sender guidelines</a>, <a href='https://support.google.com/a/answer/14229414?hl=en' target='_blank' rel='noopener nofollow'>Google sender guidelines FAQ</a>, <a href='https://senders.yahooinc.com/best-practices' target='_blank' rel='noopener nofollow'>Yahoo Sender Hub</a> and <a href='https://techcommunity.microsoft.com/blog/outlook/strengthening-email-security-outlook-new-requirements-for-high-volume-senders/4399730' target='_blank' rel='noopener nofollow'>Microsoft Outlook blog</a>, accessed November 17, 2026.</em></p>",
+  "<p>Two details in Google's FAQ catch small businesses out. First, bulk sender status is permanent: a domain that hits the threshold even once is treated as a bulk sender from then on. Second, volume is counted by primary domain, so mail sent from a subdomain such as news.yourcompany.com counts toward yourcompany.com's total. A single holiday promotion to a large list can move a business into the stricter tier for good.</p>",
+  "<h2>Did the DMARC standard just change?</h2>",
+  "<p>Yes, though existing records keep working. According to the email security firm <a href='https://redsift.com/blog/dmarc-rfc-9989' target='_blank' rel='noopener nofollow'>Red Sift</a>, the Internet Engineering Task Force published DMARC as RFC 9989 in May 2026, with companion documents RFC 9990 for aggregate reports and RFC 9991 for failure reports. RFC 9989 replaces the older RFC 7489 as the authoritative definition. The changes that matter most to small senders: the <code>pct</code> tag, which let domains apply a policy to only a percentage of mail, is gone, and a new <code>t</code> tag marks a policy as being in testing mode. Red Sift says existing DMARC records do not need to be republished, but recommends removing <code>pct</code> and reconsidering a policy of <code>p=none</code> for domains that have sat in monitoring mode indefinitely.</p>",
+  "<h2>How should a small business set this up?</h2>",
+  "<p>The work is mostly an inventory problem. Most small businesses send mail as their domain from more places than they realize: the main mailbox service, the website's contact form, a customer relationship manager, an invoicing or accounting tool, a booking system, a newsletter platform and sometimes a phone system that emails voicemails. Each one has to be authorized.</p>",
+  "<ol class='steps'><li><strong>List every service that sends as your domain.</strong> Search your sent mail and your vendors' settings pages for anything that uses your address.</li><li><strong>Publish one SPF record</strong> that includes each authorized service. Keep it within SPF's lookup limit (below).</li><li><strong>Turn on DKIM in every service that offers it,</strong> using your own domain rather than the vendor's. Each service will give you DNS records to add.</li><li><strong>Publish a DMARC record with a policy of none</strong> and a reporting address, so you can see who is sending as you without blocking anything.</li><li><strong>Read the reports for a few weeks.</strong> Fix any legitimate service that fails. A DMARC reporting tool can turn the raw XML reports into readable summaries.</li><li><strong>Move to enforcement in stages.</strong> Microsoft's guidance suggests moving gradually from none to quarantine to reject.</li><li><strong>If you send marketing mail,</strong> confirm your platform supports one-click unsubscribe and that unsubscribes are processed within two days.</li></ol>",
+  "<p>One technical limit trips up many growing businesses. SPF allows no more than 10 terms that require DNS lookups, as the email security firm <a href='https://www.mailhardener.com/blog/spf-lookup-limit-explained' target='_blank' rel='noopener nofollow'>Mailhardener explains</a>, and each <code>include</code> for a vendor counts toward that total, with nested includes adding more. Past the limit, a receiving server must stop and return a permanent error, and what it does next varies: some reject the mail, others treat SPF as failed or neutral. If your record is long, a DNS checking tool will count the lookups for you.</p>",
+  "<h2>What does this have to do with fraud?</h2>",
+  "<p>A great deal. Without DMARC enforcement, anyone can send mail that shows your exact domain in the From: line, and some receivers will deliver it. That is the raw material for invoice fraud aimed at your customers and vendors. A DMARC policy of quarantine or reject tells participating receivers to stop accepting those forgeries.</p>",
+  "<p>It does not stop look-alike domains, which differ from yours by a letter or a hyphen and pass their own checks. That is why authentication is one layer in a defense against payment fraud, not the whole of it. Our explainer on <a href='/articles/business-email-compromise-payment-fraud-controls-small-business/'>business email compromise</a> covers the payment controls that catch what DNS cannot.</p>",
+  "<h2>Signs your setup needs attention</h2>",
+  "<ul><li>Customers say your quotes or invoices went to spam.</li><li>Messages to Outlook.com or Hotmail addresses bounce with a 550 5.7.515 error.</li><li>Your newsletter's open rate dropped sharply without a change in content.</li><li>You receive bounce messages for mail you never sent, a sign someone is spoofing your domain.</li><li>The Authentication-Results header on a message you sent to yourself shows SPF, DKIM or DMARC as failing.</li></ul>",
+  "<p>None of this requires an IT department. It does require someone to own it, because each new tool that sends email on your behalf has to be added to the list.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "Google",
+   "title": "Email sender guidelines",
+   "date": "accessed November 17, 2026",
+   "url": "https://support.google.com/mail/answer/81126?hl=en"
+  },
+  {
+   "publisher": "Google",
+   "title": "Email sender guidelines FAQ",
+   "date": "accessed November 17, 2026",
+   "url": "https://support.google.com/a/answer/14229414?hl=en"
+  },
+  {
+   "publisher": "Yahoo",
+   "title": "Sender Hub: Best practices",
+   "date": "accessed November 17, 2026",
+   "url": "https://senders.yahooinc.com/best-practices"
+  },
+  {
+   "publisher": "Microsoft",
+   "title": "Strengthening Email Ecosystem: Outlook's New Requirements for High-Volume Senders",
+   "date": "April 2, 2025, updated April 30, 2025",
+   "url": "https://techcommunity.microsoft.com/blog/outlook/strengthening-email-security-outlook-new-requirements-for-high-volume-senders/4399730"
+  },
+  {
+   "publisher": "Red Sift",
+   "title": "DMARC RFC 9989",
+   "date": "May 21, 2026",
+   "url": "https://redsift.com/blog/dmarc-rfc-9989"
+  },
+  {
+   "publisher": "Mailhardener",
+   "title": "SPF lookup limit explained",
+   "date": "accessed November 17, 2026",
+   "url": "https://www.mailhardener.com/blog/spf-lookup-limit-explained"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Do I need DMARC if I send only a few emails a day?",
+   "a": "Gmail and Yahoo require only SPF or DKIM from senders below the bulk threshold, but a DMARC record is what stops others from forging your exact domain, so it is worth publishing at any volume."
+  },
+  {
+   "q": "What is the Gmail bulk sender threshold?",
+   "a": "Google defines a bulk sender as one that sends close to 5,000 messages or more to personal Gmail accounts in 24 hours. Once a domain meets that threshold, the status is permanent, and subdomain mail counts toward the primary domain."
+  },
+  {
+   "q": "What does Outlook error 550 5.7.515 mean?",
+   "a": "Microsoft uses it to reject mail from high-volume senders whose domain does not meet Outlook.com's authentication requirements: passing SPF and DKIM, and a DMARC policy of at least p=none aligned with one of them."
+  },
+  {
+   "q": "Is p=none enough?",
+   "a": "It satisfies the minimum Gmail, Yahoo and Outlook.com set for bulk senders, but it only monitors. To block forgeries, move to quarantine and then reject once your reports show all legitimate mail passing."
+  },
+  {
+   "q": "What changed with RFC 9989?",
+   "a": "RFC 9989, published in May 2026, replaces RFC 7489 as the DMARC standard. It removes the pct tag, adds a t tag for testing mode, and replaces the public suffix list with a DNS tree walk. Existing records keep working."
+  }
+ ]
+}

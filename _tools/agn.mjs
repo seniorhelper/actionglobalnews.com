@@ -344,7 +344,9 @@ function buildSitemaps(list) {
   for (const loc of [`${SITE}/authors/zach-wennstedt/`, `${SITE}/authors/staff/`]) map.set(loc, { loc, lastmod: top, pri: '0.5' });
   for (const d of new Set(list.map(a => deskOf(a.section)))) { const loc = SITE + d; if (map.has(loc)) map.get(loc).lastmod = list.find(a => deskOf(a.section) === d).modified.slice(0, 10); }
   const arts = list.map(a => ({ loc: SITE + a.url, lastmod: a.modified.slice(0, 10), pri: '0.8' }));
-  const all = [map.get(`${SITE}/`), ...arts, ...[...map.values()].filter(u => u.loc !== `${SITE}/`)];
+  // never list a page that tells search engines not to index it (thin desks, hubs, redirect stubs)
+  const noindex = loc => { const rel = loc.slice(SITE.length); const f = P(rel.endsWith('/') ? rel + 'index.html' : rel); return fs.existsSync(f) && /<meta name="robots" content="noindex/.test(fs.readFileSync(f, 'utf8').slice(0, 4000)); };
+  const all = [map.get(`${SITE}/`), ...arts, ...[...map.values()].filter(u => u.loc !== `${SITE}/` && !noindex(u.loc))];
   write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${all.map(u => `<url><loc>${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}${u.pri ? `<priority>${u.pri}</priority>` : ''}</url>`).join('')}</urlset>\n`);
 
   const newest = new Date(list[0].published).getTime();

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to stop form spam and bot sign-ups on a small business website</title>
+<meta name="description" content="A practical guide to stopping form spam, fake sign-ups and SMS pumping on a small business website: honeypots, rate limits, Cloudflare Turnstile vs reCAPTCHA, and the server-side check most sites miss.">
+<link rel="canonical" href="https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Action Global News">
+<meta property="og:title" content="How to stop form spam and bot sign-ups on a small business website">
+<meta property="og:description" content="A practical guide to stopping form spam, fake sign-ups and SMS pumping on a small business website: honeypots, rate limits, Cloudflare Turnstile vs reCAPTCHA, and the server-side check most sites miss.">
+<meta property="og:url" content="https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/">
+<meta property="og:image" content="https://actionglobalnews.com/images/agn-og.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-11-17T09:00:00-07:00">
+<meta property="article:modified_time" content="2026-11-17T09:00:00-07:00">
+<meta property="article:section" content="Technology">
+<meta property="article:author" content="https://actionglobalnews.com/authors/staff/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to stop form spam and bot sign-ups on a small business website">
+<meta name="twitter:description" content="A practical guide to stopping form spam, fake sign-ups and SMS pumping on a small business website: honeypots, rate limits, Cloudflare Turnstile vs reCAPTCHA, and the server-side check most sites miss.">
+<meta name="twitter:image" content="https://actionglobalnews.com/images/agn-og.jpg">
+<meta name="theme-color" content="#16181c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/agn.min.css?v=23">
+<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Action Global News" href="/feed.xml">
+<link rel="alternate" type="application/feed+json" title="Action Global News (JSON)" href="/feed.json">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561679124556057" crossorigin="anonymous"></script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "NewsMediaOrganization",
+   "@id": "https://actionglobalnews.com/#org",
+   "name": "Action Global News",
+   "alternateName": "AGN",
+   "url": "https://actionglobalnews.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://actionglobalnews.com/images/agn-logo-600.png",
+    "width": 600,
+    "height": 211
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1001 Bannock St #660",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": "80204",
+    "addressCountry": "US"
+   },
+   "publishingPrinciples": "https://actionglobalnews.com/editorial-standards/",
+   "ethicsPolicy": "https://actionglobalnews.com/ethics-ai-policy/",
+   "correctionsPolicy": "https://actionglobalnews.com/corrections/",
+   "ownershipFundingInfo": "https://actionglobalnews.com/ownership/",
+   "actionableFeedbackPolicy": "https://actionglobalnews.com/news-tips/",
+   "masthead": "https://actionglobalnews.com/about/",
+   "founder": {
+    "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://actionglobalnews.com/#website",
+   "url": "https://actionglobalnews.com/",
+   "name": "Action Global News",
+   "publisher": {
+    "@id": "https://actionglobalnews.com/#org"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "Person",
+   "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person",
+   "name": "Zach Wennstedt",
+   "jobTitle": "Publisher and Editor",
+   "url": "https://actionglobalnews.com/authors/zach-wennstedt/",
+   "worksFor": {
+    "@id": "https://actionglobalnews.com/#org"
+   }
+  },
+  {
+   "@type": "NewsArticle",
+   "@id": "https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/#article",
+   "headline": "Bots now outnumber people online. How a small business can keep them out of its contact forms",
+   "description": "A practical guide to stopping form spam, fake sign-ups and SMS pumping on a small business website: honeypots, rate limits, Cloudflare Turnstile vs reCAPTCHA, and the server-side check most sites miss.",
+   "url": "https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/",
+   "mainEntityOfPage": "https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/",
+   "datePublished": "2026-11-17T09:00:00-07:00",
+   "dateModified": "2026-11-17T09:00:00-07:00",
+   "articleSection": "Technology",
+   "inLanguage": "en-US",
+   "wordCount": 1562,
+   "isAccessibleForFree": true,
+   "image": [
+    "https://actionglobalnews.com/images/agn-og.jpg"
+   ],
+   "publisher": {
+    "@id": "https://actionglobalnews.com/#org"
+   },
+   "author": {
+    "@type": "Organization",
+    "name": "Action Global News Staff",
+    "url": "https://actionglobalnews.com/authors/staff/"
+   },
+   "editor": {
+    "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person"
+   },
+   "keywords": "form spam, stop contact form spam, bot sign-ups, honeypot field, Cloudflare Turnstile, reCAPTCHA free tier, SMS pumping, small business website security",
+   "citation": [
+    "https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age/",
+    "https://developers.cloudflare.com/turnstile/get-started/server-side-validation/",
+    "https://developers.cloudflare.com/turnstile/get-started",
+    "https://developers.cloudflare.com/turnstile/plans",
+    "https://docs.cloud.google.com/recaptcha/docs/compare-tiers",
+    "https://wiki.owasp.org/index.php/Category:Automated_Threat",
+    "https://static1.twilio.com/docs/glossary/what-is-sms-pumping-fraud"
+   ],
+   "genre": "Explainer"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Front Page",
+     "item": "https://actionglobalnews.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Technology",
+     "item": "https://actionglobalnews.com/technology/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Bots now outnumber people online. How a small business can keep them out of its contact forms",
+     "item": "https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is the easiest way to stop contact form spam?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start with a hidden honeypot field and a minimum-time check, then add server-side validation and rate limits. If junk still gets through, add a challenge service such as Cloudflare Turnstile or Google reCAPTCHA and verify its token on the server."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Cloudflare Turnstile free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cloudflare's free Turnstile plan allows unlimited challenges, up to 20 widgets and 10 hostnames per widget, and it works on sites that are not proxied through Cloudflare."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How many free reCAPTCHA checks do I get?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Google lists reCAPTCHA Essentials as free up to 10,000 assessments per calendar month, counted per organization across all of its sites. Premium charges an $8 flat fee from 10,001 to 100,000 a month."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why is spam still getting through my CAPTCHA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The most common reason is that the token from the widget is never verified on the server. Cloudflare's documentation says the client-side widget alone does not protect a form; without the server check, an attacker can submit any string."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is SMS pumping?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Twilio describes it as fraud in which attackers use a phone number field to trigger text messages to number ranges controlled by one mobile operator, taking a share of the revenue. The business that sends the texts pays for them."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWK0S9KPBE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HWK0S9KPBE');</script>
+<script>(function(){function s(n,p){try{gtag('event',n,p)}catch(e){}}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a)s('phone_click',{phone_number:a.getAttribute('href').slice(4),link_text:(a.textContent||'').trim().slice(0,60)})},true);document.addEventListener('submit',function(e){var f=e.target;if(!f||f.getAttribute('role')==='search'||/search/i.test(f.id+' '+f.className+' '+(f.action||'')))return;var id=f.id||f.getAttribute('name')||f.className||'form';if(/estimat|calc/i.test(id+' '+(f.action||'')))s('estimator_use',{form_id:id});s('generate_lead',{form_id:id})},true);window.etAB=function(n,v){var k='etab_'+n,x;try{x=localStorage.getItem(k)}catch(e){}if(!x||v.indexOf(x)<0){x=v[Math.floor(Math.random()*v.length)];try{localStorage.setItem(k,x)}catch(e){}}s('ab_view',{experiment:n,variant:x});try{gtag('set','user_properties',{['ab_'+n]:x})}catch(e){}document.documentElement.setAttribute('data-ab-'+n,x);return x}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="mast-brandbar">
+    <div class="wrap">
+      <div class="mast-top">
+        <a class="logo" href="/" aria-label="Action Global News home">
+          <picture><source type="image/webp" srcset="/images/agn-logo-340.webp 340w, /images/agn-logo-600.webp 600w" sizes="(max-width:520px) 172px, (max-width:860px) 210px, 300px">
+          <img src="/images/agn-logo-600.png" alt="Action Global News" width="300" height="106" fetchpriority="high" decoding="async"></picture>
+        </a>
+        <span class="mast-spacer"></span>
+        <div class="mast-util">
+          <span class="clock" id="agn-clock" aria-live="off"></span>
+          <form class="mast-search hide-sm" action="/search/" role="search"><label class="vh" for="mq">Search Action Global News</label><input id="mq" name="q" type="search" placeholder="Search the paper" autocomplete="off"><button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></form>
+          <a class="hide-sm" href="/news-tips/">News tips</a>
+          <a class="hide-sm" href="/advertise/">Advertise</a>
+          <a class="btn-sub" href="/newsletter/">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="mainnav" aria-label="Main">
+    <div class="wrap nav-row">
+      <ul><li><a href="/">Front Page</a></li><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/health/">Health</a></li><li><a href="/colorado/">Colorado</a></li><li><a href="/world/">World</a></li></ul>
+      <button class="nav-all" id="nav-all" aria-expanded="false" aria-controls="sec-panel"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>All sections</span></button>
+    </div>
+    <div class="sec-panel" id="sec-panel" hidden>
+      <div class="wrap sec-panel-grid"><div><h3>News desks</h3><ul><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/world/">World</a></li><li><a href="/science/">Science</a></li><li><a href="/colorado/">Colorado &amp; Denver</a></li></ul></div><div><h3>Life &amp; culture</h3><ul><li><a href="/health/">Health &amp; Wellness</a></li><li><a href="/travel/">Travel</a></li><li><a href="/outdoors/">Outdoors</a></li></ul></div><div><h3>Formats</h3><ul><li><a href="/latest/">Latest</a></li><li><a href="/explainers/">Explainers</a></li><li><a href="/analysis/">Analysis</a></li><li><a href="/archive/">Archive</a></li><li><a href="/topics/">Topics A&ndash;Z</a></li></ul></div><div><h3>Work with us</h3><ul><li><a href="/advertise/">Advertise</a></li><li><a href="/media-kit/">Media kit</a></li><li><a href="/sponsored-content/">Sponsored content</a></li><li><a href="/newsletter-sponsorship/">Newsletter sponsorship</a></li><li><a href="/business-spotlight/">Business spotlight</a></li><li><a href="/press-release-distribution/">Press release distribution</a></li><li><a href="/news-tips/">Send a news tip</a></li></ul></div>
+        <form class="panel-search" action="/search/" role="search"><label for="pq">Search</label><input id="pq" name="q" type="search" placeholder="Topics, companies, places"><button type="submit">Search</button></form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<div class="art-wrap">
+  <article class="art">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Front Page</a> <span>/</span> <a href="/technology/">Technology</a></nav>
+    <div class="art-hero">
+      <span class="kicker">Technology · Explainer</span>
+      <h1>Bots now outnumber people online. How a small business can keep them out of its contact forms</h1>
+      <p class="art-standfirst">More than half of all web traffic is now automated, and contact forms are among the first things bots find. The fixes are mostly cheap. The one most sites get wrong is invisible to the owner.</p>
+    </div>
+    <div class="art-byline">
+      <span class="byline-av" aria-hidden="true">AGN</span>
+      <span class="byline-txt"><strong><a href="/authors/staff/">Action Global News Staff</a></strong>
+      <span>Edited by <a href="/authors/zach-wennstedt/">Zach Wennstedt</a> &middot; Published <time datetime="2026-11-17T09:00:00-07:00">November 17, 2026</time> &middot; 7 min read</span></span>
+    </div>
+    <div class="sharebar" aria-label="Share this article"><button type="button" data-copy>Copy link</button><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fstop-form-spam-bots-small-business-website%2F" target="_blank" rel="noopener nofollow">LinkedIn</a><a href="https://x.com/intent/post?url=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fstop-form-spam-bots-small-business-website%2F" target="_blank" rel="noopener nofollow">X</a><a href="mailto:?subject=Bots%20now%20outnumber%20people%20online.%20How%20a%20small%20business%20can%20keep%20them%20out%20of%20its%20contact%20forms&amp;body=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fstop-form-spam-bots-small-business-website%2F">Email</a></div>
+    
+    <section class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>Imperva says automated traffic made up more than 53% of all web traffic in 2025, up from 51% a year earlier.</li><li>Layer cheap defenses first: a hidden honeypot field, a minimum-time check, server-side validation and rate limits.</li><li>Cloudflare Turnstile's free plan allows unlimited challenges; Google reCAPTCHA Essentials is free up to 10,000 assessments a month per organization.</li><li>A challenge widget does nothing unless its token is verified on a server. Cloudflare says the widget alone does not protect a form.</li><li>Any form that sends text messages can be abused for SMS pumping fraud, billed to the business. Restrict countries and turn on fraud screening.</li></ul></section>
+
+<h2>Why does a small website get so much junk?</h2>
+
+<p>Because most of the traffic reaching it is not human. The bot-defense company Imperva, part of Thales, says in its <a href='https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age/' target='_blank' rel='noopener nofollow'>2026 Bad Bot Report</a> that automated traffic accounted for more than 53% of all web traffic in 2025, up from 51% the year before, leaving people at 47%. The report also says 27% of bot attacks targeted API endpoints, the machine-to-machine doors behind many forms, and that AI-driven bots have surged, though it does not put a number on that last point.</p>
+
+<p>Much of that traffic is not aimed at any one business. They crawl the web looking for anything that accepts input: a contact form, a quote request, a newsletter box, a sign-up page, a comment field. A five-person plumbing company gets hit for the same reason a national retailer does. The form is there, and it answers.</p>
+
+<p>The cost shows up in small, irritating ways. Sales staff waste time on fake leads. A customer database fills with junk names that later skew reports and email lists. Automatic replies go out to addresses a bot typed in, which can produce bounces and complaints that mailbox providers watch closely (our explainer on <a href='/articles/spf-dkim-dmarc-email-authentication-small-business-2026/'>SPF, DKIM and DMARC</a> covers the spam-rate limits Gmail, Yahoo and Outlook.com now enforce). And some attacks cost real money, as the section on text messages below explains.</p>
+
+<h2>What are the bots actually trying to do?</h2>
+
+<p>The security community has a vocabulary for this. The Open Worldwide Application Security Project (OWASP) keeps a catalog of <a href='https://wiki.owasp.org/index.php/Category:Automated_Threat' target='_blank' rel='noopener nofollow'>automated threats to web applications</a>, each with an identifier. Four of them map neatly onto what small business owners see in their inboxes:</p>
+
+<ul><li><strong>Spamming (OAT-017):</strong> pushing unwanted content, usually links, through forms and comment boxes.</li><li><strong>Account Creation (OAT-019):</strong> registering fake accounts in bulk, often to abuse a free trial, a referral reward or a listing.</li><li><strong>Credential Stuffing (OAT-008):</strong> trying stolen username and password pairs against a login page.</li><li><strong>Carding (OAT-001):</strong> testing stolen payment card numbers through a checkout or donation form.</li></ul>
+
+<p>The names matter because they tell you which defense fits. A honeypot field can stop crude form spam. It will do little against credential stuffing, which needs login rate limits and multi-factor authentication, or against carding, which your payment processor's fraud tools are built for.</p>
+
+<h2>Why can a phone number field cost money?</h2>
+
+<p>Any form that sends a text message, such as a one-time passcode, an appointment confirmation or an app download link, can be turned into a billing attack. Twilio, one of the largest SMS providers, <a href='https://static1.twilio.com/docs/glossary/what-is-sms-pumping-fraud' target='_blank' rel='noopener nofollow'>describes SMS pumping fraud</a> as what happens when fraudsters take advantage of a phone number input field, causing messages to be sent without the account owner's intent. The texts go to number ranges controlled by a single mobile network operator, and the fraudsters take a share of the revenue those messages generate. The business pays for every message.</p>
+
+<p>Twilio's own prevention advice is practical for any SMS setup: turn off sending to countries you do not serve, use its fraud screening features, and check the line type of a number before texting it so you only send to mobile numbers. If your website can trigger a text, those settings deserve ten minutes this week.</p>
+
+<h2>What should a small business put in place?</h2>
+
+<p>No single tool stops everything, and the most effective setups stack cheap layers so each one removes a different slice of junk. Roughly in order of cost and effort:</p>
+
+<ol class='steps'><li><strong>A honeypot field.</strong> Add a field that is hidden from people with CSS and labeled so screen readers skip it. Real visitors leave it empty; many simple bots fill in every field. Reject any submission where it has a value.</li><li><strong>A timing check.</strong> Record when the form loaded and reject submissions that arrive impossibly fast, such as within two or three seconds.</li><li><strong>Server-side validation.</strong> Check that an email address is shaped like one, that a phone number has the right number of digits, and that free-text fields do not contain long lists of links. Anything checked only in the browser can be skipped.</li><li><strong>Rate limits.</strong> Cap how many submissions one IP address or one email address can make in an hour. Many hosting platforms, firewalls and form services offer this.</li><li><strong>A challenge service</strong> such as Cloudflare Turnstile or Google reCAPTCHA, verified on the server (see below).</li><li><strong>Confirmation for sign-ups.</strong> For newsletters and accounts, send a confirmation link and only add the address once it is clicked. This keeps bot-entered addresses off your list.</li></ol>
+
+<h2>Turnstile or reCAPTCHA?</h2>
+
+<p>Both are widely used, and both have no-cost tiers that cover most small sites. Cloudflare says Turnstile <a href='https://developers.cloudflare.com/turnstile/get-started' target='_blank' rel='noopener nofollow'>can be used on any website</a>, whether or not the site is proxied through Cloudflare's network. Its <a href='https://developers.cloudflare.com/turnstile/plans' target='_blank' rel='noopener nofollow'>free plan</a> allows up to 20 widgets with 10 hostnames each and unlimited challenges. Google's <a href='https://docs.cloud.google.com/recaptcha/docs/compare-tiers' target='_blank' rel='noopener nofollow'>reCAPTCHA tiers page</a> lists an Essentials tier that is free up to 10,000 assessments per calendar month. That allowance is counted per organization across all of its sites. Above it, the Premium tier charges an $8 flat fee for 10,001 to 100,000 assessments a month and $1 per 1,000 beyond that.</p>
+
+<table class='dtable'><caption>No-cost tiers of two common form-protection services</caption><thead><tr><th>Service</th><th>No-cost allowance</th><th>Next step up</th></tr></thead><tbody><tr><td>Cloudflare Turnstile (Free)</td><td>Unlimited challenges; up to 20 widgets, 10 hostnames per widget; 7 days of analytics</td><td>Enterprise plan: unlimited widgets, up to 200 hostnames per widget, 30 days of analytics</td></tr><tr><td>Google reCAPTCHA (Essentials)</td><td>Up to 10,000 assessments per calendar month, per organization</td><td>Premium: $8 flat fee for 10,001 to 100,000 a month; $1 per 1,000 above 100,000</td></tr></tbody></table>
+
+<p><em>Sources: <a href='https://developers.cloudflare.com/turnstile/plans' target='_blank' rel='noopener nofollow'>Cloudflare Turnstile plans</a> and <a href='https://docs.cloud.google.com/recaptcha/docs/compare-tiers' target='_blank' rel='noopener nofollow'>Google Cloud reCAPTCHA tier comparison</a>, accessed November 17, 2026. Prices and limits change; check both pages before you choose.</em></p>
+
+<p>For a typical small business site the choice comes down to which ecosystem you already use and how much traffic your forms see. A busy site with several forms can pass 10,000 reCAPTCHA assessments a month faster than its owner expects, because the count is of verification requests, not of real leads.</p>
+
+<h2>The mistake that makes a challenge useless</h2>
+
+<p>Putting the widget on the page is only half the job. Cloudflare's documentation is blunt about it: <q>The client-side widget alone does not protect your forms.</q> The site must send the token the widget produces to Cloudflare's Siteverify API from the server and act on the answer. Without that check, the <a href='https://developers.cloudflare.com/turnstile/get-started/server-side-validation/' target='_blank' rel='noopener nofollow'>documentation warns</a>, an attacker can submit any string to your form endpoint without completing a challenge. Each Turnstile token is valid for 300 seconds and is intended for single use.</p>
+
+<p>The gap is easy to miss on sites assembled from templates and plugins, and on static sites that post forms directly to a third-party inbox service. If your form provider offers its own spam screening, turn it on, and ask whether it validates challenge tokens on its side. If you cannot confirm that someone checks the token on a server, assume nobody does.</p>
+
+<h2>What about real customers?</h2>
+
+<p>Every extra hurdle costs some genuine inquiries, so it is worth measuring. Watch the ratio of real leads to total submissions before and after each change. Prefer invisible or low-friction checks over puzzles, and make sure any challenge works with a keyboard and a screen reader. If a customer cannot get past your form, offer a visible phone number or email address as a fallback.</p>
+
+<p>Privacy is the other trade-off. Challenge services load code from a third party and send it information about the visitor's browser. That does not rule them out, but your privacy policy should name the service, and if you serve visitors in places with consent rules, your cookie or consent setup should account for it.</p>
+
+<h2>A one-hour checklist</h2>
+
+<ol class='steps'><li>List every form on your site, including old landing pages and pop-ups, and note where each one sends its data.</li><li>Add a honeypot field and a minimum-time check to each form.</li><li>Add a challenge service to forms that still attract junk, and confirm that the token is verified on a server.</li><li>Turn on rate limiting in your host, firewall or form provider.</li><li>If any form sends text messages, restrict destination countries and enable your SMS provider's fraud protection.</li><li>Switch newsletter and account sign-ups to confirmed opt-in.</li><li>Update your privacy policy to name any new third-party service.</li><li>Check results after two weeks: fewer junk submissions, and no drop in real leads.</li></ol>
+
+<p>Form spam will not go to zero. The goal is to make your forms more expensive to abuse than the next site's, which, for automated traffic hunting for easy targets, is usually enough.</p>
+
+    <section class="sources"><h2>Sources</h2><ol><li><a href="https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age/" target="_blank" rel="noopener nofollow">Imperva (Thales), &ldquo;Bad Bot Report 2026: Bots in the Agentic Age,&rdquo; April 29, 2026</a></li><li><a href="https://developers.cloudflare.com/turnstile/get-started/server-side-validation/" target="_blank" rel="noopener nofollow">Cloudflare, &ldquo;Turnstile: Server-side validation,&rdquo; accessed November 17, 2026</a></li><li><a href="https://developers.cloudflare.com/turnstile/get-started" target="_blank" rel="noopener nofollow">Cloudflare, &ldquo;Turnstile: Get started,&rdquo; accessed November 17, 2026</a></li><li><a href="https://developers.cloudflare.com/turnstile/plans" target="_blank" rel="noopener nofollow">Cloudflare, &ldquo;Turnstile: Plans,&rdquo; accessed November 17, 2026</a></li><li><a href="https://docs.cloud.google.com/recaptcha/docs/compare-tiers" target="_blank" rel="noopener nofollow">Google Cloud, &ldquo;Compare features between reCAPTCHA tiers,&rdquo; last updated November 13, 2026</a></li><li><a href="https://wiki.owasp.org/index.php/Category:Automated_Threat" target="_blank" rel="noopener nofollow">OWASP, &ldquo;Category: Automated Threat,&rdquo; accessed November 17, 2026</a></li><li><a href="https://static1.twilio.com/docs/glossary/what-is-sms-pumping-fraud" target="_blank" rel="noopener nofollow">Twilio, &ldquo;What is SMS Pumping Fraud?,&rdquo; accessed November 17, 2026</a></li></ol>
+    <p class="srcnote">Written by Action Global News from the sources above; quotations are attributed to the outlet that published them. See our <a href="/editorial-standards/">editorial standards</a> and <a href="/corrections/">corrections policy</a>.</p></section>
+    <section class="faq-block"><h2>Frequently asked</h2><details class="faq-item"><summary>What is the easiest way to stop contact form spam?</summary><p>Start with a hidden honeypot field and a minimum-time check, then add server-side validation and rate limits. If junk still gets through, add a challenge service such as Cloudflare Turnstile or Google reCAPTCHA and verify its token on the server.</p></details><details class="faq-item"><summary>Is Cloudflare Turnstile free?</summary><p>Cloudflare's free Turnstile plan allows unlimited challenges, up to 20 widgets and 10 hostnames per widget, and it works on sites that are not proxied through Cloudflare.</p></details><details class="faq-item"><summary>How many free reCAPTCHA checks do I get?</summary><p>Google lists reCAPTCHA Essentials as free up to 10,000 assessments per calendar month, counted per organization across all of its sites. Premium charges an $8 flat fee from 10,001 to 100,000 a month.</p></details><details class="faq-item"><summary>Why is spam still getting through my CAPTCHA?</summary><p>The most common reason is that the token from the widget is never verified on the server. Cloudflare's documentation says the client-side widget alone does not protect a form; without the server check, an attacker can submit any string.</p></details><details class="faq-item"><summary>What is SMS pumping?</summary><p>Twilio describes it as fraud in which attackers use a phone number field to trigger text messages to number ranges controlled by one mobile operator, taking a share of the revenue. The business that sends the texts pays for them.</p></details></section>
+  </article>
+  <aside class="rail">
+    <div class="rail-sec"><h4>Latest from AGN</h4>
+      <div class="rail-item"><span class="n">01</span><a href="/articles/business-email-compromise-payment-fraud-controls-small-business/"><h5>Fake invoices cost businesses $3 billion last year. How business email compromise works, and the controls that stop it</h5></a></div><div class="rail-item"><span class="n">02</span><a href="/articles/spf-dkim-dmarc-email-authentication-small-business-2026/"><h5>SPF, DKIM and DMARC explained: the email authentication rules a small business now has to meet</h5></a></div><div class="rail-item"><span class="n">03</span><a href="/articles/boyd-family-buying-snowy-range-ski-area-wyoming/"><h5>The Boyd family, who sold Peak Resorts to Vail in 2019, is buying Wyoming's small Snowy Range ski area</h5></a></div><div class="rail-item"><span class="n">04</span><a href="/articles/nvidia-national-security-export-control-oversight-committee/"><h5>Nvidia's board created a three-member committee to oversee export controls and national security after its CEO's exit</h5></a></div><div class="rail-item"><span class="n">05</span><a href="/articles/chase-software-bug-bank-outages-zelle-delays-november-16/"><h5>A Chase software bug slowed transactions at several U.S. banks on Monday, and services were back to normal by Tuesday</h5></a></div>
+      <div class="rail-item"><span class="n">&rarr;</span><a href="/technology/"><h5>All Technology coverage</h5></a></div>
+    </div>
+    <div class="rail-sec"><h4>The AGN Dispatch</h4><p style="font-size:14px;color:var(--ink-2);line-height:1.55">One email a week with the stories operators need. <a href="/newsletter/" style="color:var(--accent);font-weight:600">Subscribe free</a></p></div>
+    <div class="rail-sec"><h4>Got a story?</h4><p style="font-size:14px;color:var(--ink-2);line-height:1.55">Seeing a shift we should cover, or an error we should fix? <a href="/news-tips/" style="color:var(--accent);font-weight:600">Send the desk a tip</a></p></div>
+  </aside>
+</div>
+</main>
+<!--buy-block:start-->
+<section class="bb" aria-label="Prices and packages">
+<style>.bb{padding:40px 16px;background:#FFF7ED;border-top:1px solid #FED7AA;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#101828}.bb-in{max-width:1100px;margin:0 auto}.bb-lab{margin:0 0 8px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#667085}.bb h2{margin:0 0 8px;font:800 clamp(1.5rem,3vw,2.2rem)/1.15 Inter,system-ui,sans-serif;letter-spacing:-.02em;color:#101828}.bb p.bb-p{margin:0 0 18px;font-size:1.05rem;line-height:1.5;color:#344054;max-width:64ch}.bb-a{display:flex;flex-wrap:wrap;gap:10px}.bb-a a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:10px;font:800 .98rem/1.1 Inter,system-ui,sans-serif;text-decoration:none!important}.bb-1{background:#F97316;color:#fff!important}.bb-1:hover{background:#EA580C}.bb-2{background:#fff;color:#101828!important;border:2px solid #101828}.bb-call{background:#101828;color:#fff!important}.bb-t{margin:14px 0 0;font-size:.9rem;color:#475467}.bb-t a{color:#1D4ED8}@media (max-width:600px){.bb-a a{flex:1 1 100%}}</style>
+<div class="bb-in"><p class="bb-lab">Advertisement &middot; Eye To Ad Media</p><h2>Grow your business in 2027.</h2><p class="bb-p">SEO packages from $100, websites from $99 a month and TV-quality commercials, all with published prices.</p>
+<div class="bb-a"><a class="bb-1" href="https://eyetoad.com/denver-seo-pricing/?utm_source=actionglobalnews&utm_medium=referral&utm_campaign=buy-block">See prices &rarr;</a><a class="bb-2" href="https://eyetoad.com/seo-packages/?utm_source=actionglobalnews&utm_medium=referral&utm_campaign=buy-block">SEO packages</a><a class="bb-call" href="tel:18004818638">Call 1-800-481-8638</a></div>
+<p class="bb-t"><a href="https://share.google/t4wEpsdoJFyFEWa4H" target="_blank" rel="noopener">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 on Google, 60 reviews</a> &middot; <a href="https://www.bbb.org/us/co/denver/profile/advertising-agencies/search-converts-llc-1296-90228702/#sealclick" target="_blank" rel="nofollow noopener">A+ BBB accredited</a> &middot; Founder-led since 2012</p>
+</div></section>
+<!--buy-block:end-->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid foot-grid-5">
+      <div>
+        <a class="foot-logo" href="/" aria-label="Action Global News home"><span><em>Action</em> Global News</span></a>
+        <p class="foot-blurb">Independent coverage of business, technology, global commerce and the AI economy, written for operators rather than analysts. Headquartered in Denver, reporting on businesses everywhere.</p>
+        <p class="foot-blurb" style="margin-top:12px">1001 Bannock St #660, Denver, CO 80204<br>
+        <a href="#" data-mu="aW5mbw==" data-md="ZXlldG9hZC5jb20=">Email the desk</a><br>
+        <a href="tel:18004818638">1-800-481-8638</a></p>
+      </div>
+      <div><h4>Sections</h4><ul class="two-col"><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/health/">Health</a></li><li><a href="/travel/">Travel</a></li><li><a href="/colorado/">Colorado</a></li><li><a href="/world/">World</a></li><li><a href="/outdoors/">Outdoors</a></li></ul></div>
+      <div>
+        <h4>Read</h4>
+        <ul>
+          <li><a href="/latest/">Latest</a></li>
+          
+          
+          <li><a href="/explainers/">Explainers</a></li>
+          <li><a href="/analysis/">Analysis</a></li>
+          <li><a href="/archive/">Archive</a></li>
+          <li><a href="/topics/">Topics A&ndash;Z</a></li>
+          <li><a href="/feed.xml">RSS feed</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The paper</h4>
+        <ul>
+          <li><a href="/about/">About AGN</a></li>
+          <li><a href="/editorial-standards/">Editorial standards</a></li>
+          <li><a href="/ethics-ai-policy/">Ethics &amp; AI policy</a></li>
+          <li><a href="/corrections/">Corrections</a></li>
+          <li><a href="/ownership/">Ownership &amp; funding</a></li>
+          <li><a href="/disclosure/">Disclosures</a></li>
+          <li><a href="/newsletter/">Newsletter</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Work with us</h4>
+        <ul>
+          <li><a href="/advertise/">Advertise</a></li>
+          <li><a href="/media-kit/">Media kit</a></li>
+          <li><a href="/sponsored-content/">Sponsored content</a></li>
+          <li><a href="/newsletter-sponsorship/">Newsletter sponsorship</a></li>
+          <li><a href="/business-spotlight/">Business spotlight</a></li>
+          <li><a href="/press-release-distribution/">Press release distribution</a></li>
+          <li><a href="/news-tips/">Send a news tip</a></li>
+        </ul>
+        <h4 style="margin-top:20px">Network</h4>
+        <ul>
+          <li><a href="https://eyetoad.com/" target="_blank" rel="noopener sponsored">Eye To Ad Media</a></li>
+          <li><a href="https://pressreleaseforbusiness.com/" target="_blank" rel="noopener sponsored">PressReleaseForBusiness.com</a></li>
+          <li><a href="https://usabusinesssearch.com/" target="_blank" rel="noopener sponsored">USABusinessSearch.com</a></li>
+          <li><a href="https://www.searchconverts.com/" target="_blank" rel="noopener sponsored">Search Converts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; <span id="yr">2026</span> Action Global News. All rights reserved.</span>
+      <span class="foot-legal"><a href="/accessibility/">Accessibility</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></span>
+      <span>Sponsored and partner content is labeled. External links open at the originating publisher.</span>
+    </div>
+  </div>
+  <div class="heartline"><a href="https://eyetoad.com/" target="_blank" rel="noopener sponsored"><span class="sig-heart" aria-hidden="true"></span><span>Need a website?</span></a></div>
+</footer>
+<div id="newsie-root">
+  <div id="newsie-panel" role="dialog" aria-label="Newsie reading assistant">
+    <div class="nw-head">
+      <svg class="nw-face" viewBox="0 0 100 100" role="img" aria-label="Newsie, the AGN assistant">
+        <g>
+          
+          <path d="M26 30h48l6 6v34H26z" fill="#f4f1e8" stroke="#2b2f36" stroke-width="2.4"/>
+          <path d="M74 30l6 6h-6z" fill="#d9d4c4" stroke="#2b2f36" stroke-width="2.4"/>
+          <g stroke="#9a958a" stroke-width="1.6">
+            <path d="M32 44h16M32 50h16M32 56h16M56 44h16M56 50h16M56 56h10"/>
+          </g>
+          <rect x="32" y="35" width="40" height="5" fill="#2b2f36"/>
+          
+          <circle cx="50" cy="20" r="13" fill="#f4f1e8" stroke="#2b2f36" stroke-width="2.4"/>
+          
+          <path d="M37 15q13-13 26 0z" fill="#2b2f36"/>
+          <path d="M35 15h30q2 0 2 2h-34q0-2 2-2z" fill="#2b2f36"/>
+          
+          <circle cx="44" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+          <circle cx="56" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M49.2 21h1.6" stroke="#2b2f36" stroke-width="2"/>
+          <circle cx="44" cy="21" r="1.7" fill="#2b2f36"/>
+          <circle cx="56" cy="21" r="1.7" fill="#2b2f36"/>
+          
+          <path d="M45 28q5 3.5 10 0" fill="none" stroke="#2b2f36" stroke-width="2" stroke-linecap="round"/>
+          
+          <path d="M42 70v14M58 70v14" stroke="#2b2f36" stroke-width="2.6" stroke-linecap="round"/>
+          
+          <path d="M42 84h-8q-4 0-4 4t4 4h11q2 0 2-2v-6z" fill="#7a4a24" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M58 84h8q4 0 4 4t-4 4H55q-2 0-2-2v-6z" fill="#7a4a24" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M31 89h14M55 89h14" stroke="#5c3518" stroke-width="1.4"/>
+          
+          <path d="M26 42q-8 6-6 16" fill="none" stroke="#2b2f36" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M74 42q8 6 6 16" fill="none" stroke="#2b2f36" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div>
+        <strong>Newsie</strong>
+        <span><i aria-hidden="true"></i>Reading assistant</span>
+      </div>
+    </div>
+    <div id="newsie-log"></div>
+    <div class="nw-chips">
+      <button data-nw-chip="Show me the latest news">Latest</button><button data-nw-chip="Show me explainers">Explainers</button>
+      <button data-nw-chip="How do I advertise">Advertise</button>
+      <button data-nw-chip="I want to send a news tip">News tip</button>
+      <button data-nw-chip="How do I publish a press release">Press release</button>
+    </div>
+    <form id="newsie-form">
+      <input id="newsie-input" type="text" placeholder="Ask Newsie where to find something…"
+             autocomplete="off" aria-label="Ask Newsie">
+      <button type="submit" aria-label="Send">&rarr;</button>
+    </form>
+    <p class="nw-foot">Newsie is a navigational helper, not a reporter. It points to pages on this site.</p>
+  </div>
+
+  <button id="newsie-toggle" aria-expanded="false" aria-controls="newsie-panel">
+    <span id="newsie-badge"></span>
+    <svg class="nw-face" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M26 30h48l6 6v34H26z" fill="#f4f1e8" stroke="#fff" stroke-width="2.4"/>
+      <rect x="32" y="35" width="40" height="5" fill="#2b2f36"/>
+      <g stroke="#9a958a" stroke-width="1.6"><path d="M32 46h16M32 53h16M56 46h16M56 53h10"/></g>
+      <circle cx="50" cy="20" r="13" fill="#f4f1e8" stroke="#fff" stroke-width="2.4"/>
+      <path d="M37 15q13-13 26 0z" fill="#2b2f36"/>
+      <path d="M35 15h30q2 0 2 2h-34q0-2 2-2z" fill="#2b2f36"/>
+      <circle cx="44" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+      <circle cx="56" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+      <path d="M49.2 21h1.6" stroke="#2b2f36" stroke-width="2"/>
+      <circle cx="44" cy="21" r="1.7" fill="#2b2f36"/><circle cx="56" cy="21" r="1.7" fill="#2b2f36"/>
+      <path d="M45 28q5 3.5 10 0" fill="none" stroke="#2b2f36" stroke-width="2" stroke-linecap="round"/>
+      <path d="M42 70v13M58 70v13" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M42 83h-8q-4 0-4 4t4 4h11q2 0 2-2v-6z" fill="#7a4a24" stroke="#fff" stroke-width="1.8"/>
+      <path d="M58 83h8q4 0 4 4t-4 4H55q-2 0-2-2v-6z" fill="#7a4a24" stroke="#fff" stroke-width="1.8"/>
+    </svg>
+    <span class="nw-lbl">Ask Newsie<small>Find anything here</small></span>
+  </button>
+</div><script src="/assets/agn.js?v=23" defer></script>
+
+</body>
+</html>

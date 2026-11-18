@@ -6,6 +6,42 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/",
+   "url": "https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/",
+   "title": "Fake invoices cost businesses $3 billion last year. How business email compromise works, and the controls that stop it",
+   "summary": "Business email compromise was the second-costliest crime reported to the FBI in 2025, with more than $3 billion in losses. It often needs no sophisticated hacking, and the defenses that work best cost very little.",
+   "date_published": "2026-11-17T09:20:00-07:00",
+   "date_modified": "2026-11-17T09:20:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Small Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/",
+   "url": "https://actionglobalnews.com/articles/spf-dkim-dmarc-email-authentication-small-business-2026/",
+   "title": "SPF, DKIM and DMARC explained: the email authentication rules a small business now has to meet",
+   "summary": "Gmail, Yahoo and Outlook.com now treat email authentication as a condition of delivery, and Gmail has been ramping up rejections since November 2025. Here is what the three records do, what each provider demands, and how to set them up without breaking your own mail.",
+   "date_published": "2026-11-17T09:10:00-07:00",
+   "date_modified": "2026-11-17T09:10:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/",
+   "url": "https://actionglobalnews.com/articles/stop-form-spam-bots-small-business-website/",
+   "title": "Bots now outnumber people online. How a small business can keep them out of its contact forms",
+   "summary": "More than half of all web traffic is now automated, and contact forms are among the first things bots find. The fixes are mostly cheap. The one most sites get wrong is invisible to the owner.",
+   "date_published": "2026-11-17T09:00:00-07:00",
+   "date_modified": "2026-11-17T09:00:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/boyd-family-buying-snowy-range-ski-area-wyoming/",
    "url": "https://actionglobalnews.com/articles/boyd-family-buying-snowy-range-ski-area-wyoming/",
    "title": "The Boyd family, who sold Peak Resorts to Vail in 2019, is buying Wyoming's small Snowy Range ski area",
@@ -444,42 +480,6 @@
    "summary": "A Lakewood police agent died and three others were wounded Thursday evening when a man they approached on an RTD bus opened fire. The suspect was killed when officers shot back, and an outside team is investigating.",
    "date_published": "2026-11-07T08:55:00-07:00",
    "date_modified": "2026-11-07T08:55:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Colorado"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/tesla-to-end-cybertruck-production-mid-2027-cybercab/",
-   "url": "https://actionglobalnews.com/articles/tesla-to-end-cybertruck-production-mid-2027-cybercab/",
-   "title": "Elon Musk says Tesla will wind down Cybertruck production in Texas by mid-2027 to build more Cybercabs",
-   "summary": "The pickup that Tesla once expected to sell by the hundreds of thousands is being phased out. Musk says the floor space will go to the driverless Cybercab, while sales data point to weak demand.",
-   "date_published": "2026-11-07T00:26:00-07:00",
-   "date_modified": "2026-11-07T00:26:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Technology"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/kenya-cult-leader-mackenzie-sentenced-200-years-shakahola/",
-   "url": "https://actionglobalnews.com/articles/kenya-cult-leader-mackenzie-sentenced-200-years-shakahola/",
-   "title": "A Kenyan court sentenced cult leader Paul Mackenzie to 200 years in prison over the Shakahola starvation deaths",
-   "summary": "The sentence follows Mackenzie's October conviction for 191 murders tied to his Good News International Church. Prosecutors had sought the death penalty, and his lawyer says he will appeal.",
-   "date_published": "2026-11-07T00:24:00-07:00",
-   "date_modified": "2026-11-07T00:24:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "World"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/colorado-amendment-87-passes-graduated-income-tax/",
-   "url": "https://actionglobalnews.com/articles/colorado-amendment-87-passes-graduated-income-tax/",
-   "title": "Colorado voters approved Amendment 87, replacing the 4.4% flat income tax with graduated rates starting in 2027",
-   "summary": "Colorado will return to a graduated income tax for the first time since 1986. Rates fall on the first $100,000 of income and rise on income above roughly $500,000.",
-   "date_published": "2026-11-07T00:22:00-07:00",
-   "date_modified": "2026-11-07T00:22:00-07:00",
    "image": "https://actionglobalnews.com/images/agn-og.jpg",
    "tags": [
     "Colorado"

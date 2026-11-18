@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Business email compromise: how fake-invoice scams work and how to stop them</title>
+<meta name="description" content="Business email compromise explained: FBI IC3 2025 losses, how fake-invoice and payment-change scams work, the callback and dual-approval controls that stop them, what to do after a fraudulent transfer, and Nacha's 2026 fraud monitoring rules.">
+<link rel="canonical" href="https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Action Global News">
+<meta property="og:title" content="Business email compromise: how fake-invoice scams work and how to stop them">
+<meta property="og:description" content="Business email compromise explained: FBI IC3 2025 losses, how fake-invoice and payment-change scams work, the callback and dual-approval controls that stop them, what to do after a fraudulent transfer, and Nacha's 2026 fraud monitoring rules.">
+<meta property="og:url" content="https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/">
+<meta property="og:image" content="https://actionglobalnews.com/images/agn-og.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-11-17T09:20:00-07:00">
+<meta property="article:modified_time" content="2026-11-17T09:20:00-07:00">
+<meta property="article:section" content="Small Business">
+<meta property="article:author" content="https://actionglobalnews.com/authors/staff/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Business email compromise: how fake-invoice scams work and how to stop them">
+<meta name="twitter:description" content="Business email compromise explained: FBI IC3 2025 losses, how fake-invoice and payment-change scams work, the callback and dual-approval controls that stop them, what to do after a fraudulent transfer, and Nacha's 2026 fraud monitoring rules.">
+<meta name="twitter:image" content="https://actionglobalnews.com/images/agn-og.jpg">
+<meta name="theme-color" content="#16181c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/agn.min.css?v=23">
+<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Action Global News" href="/feed.xml">
+<link rel="alternate" type="application/feed+json" title="Action Global News (JSON)" href="/feed.json">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561679124556057" crossorigin="anonymous"></script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "NewsMediaOrganization",
+   "@id": "https://actionglobalnews.com/#org",
+   "name": "Action Global News",
+   "alternateName": "AGN",
+   "url": "https://actionglobalnews.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://actionglobalnews.com/images/agn-logo-600.png",
+    "width": 600,
+    "height": 211
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1001 Bannock St #660",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": "80204",
+    "addressCountry": "US"
+   },
+   "publishingPrinciples": "https://actionglobalnews.com/editorial-standards/",
+   "ethicsPolicy": "https://actionglobalnews.com/ethics-ai-policy/",
+   "correctionsPolicy": "https://actionglobalnews.com/corrections/",
+   "ownershipFundingInfo": "https://actionglobalnews.com/ownership/",
+   "actionableFeedbackPolicy": "https://actionglobalnews.com/news-tips/",
+   "masthead": "https://actionglobalnews.com/about/",
+   "founder": {
+    "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://actionglobalnews.com/#website",
+   "url": "https://actionglobalnews.com/",
+   "name": "Action Global News",
+   "publisher": {
+    "@id": "https://actionglobalnews.com/#org"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "Person",
+   "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person",
+   "name": "Zach Wennstedt",
+   "jobTitle": "Publisher and Editor",
+   "url": "https://actionglobalnews.com/authors/zach-wennstedt/",
+   "worksFor": {
+    "@id": "https://actionglobalnews.com/#org"
+   }
+  },
+  {
+   "@type": "NewsArticle",
+   "@id": "https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/#article",
+   "headline": "Fake invoices cost businesses $3 billion last year. How business email compromise works, and the controls that",
+   "description": "Business email compromise explained: FBI IC3 2025 losses, how fake-invoice and payment-change scams work, the callback and dual-approval controls that stop them, what to do after a fraudulent transfer, and Nacha's 2026 fraud monitoring rules.",
+   "url": "https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/",
+   "mainEntityOfPage": "https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/",
+   "datePublished": "2026-11-17T09:20:00-07:00",
+   "dateModified": "2026-11-17T09:20:00-07:00",
+   "articleSection": "Small Business",
+   "inLanguage": "en-US",
+   "wordCount": 1321,
+   "isAccessibleForFree": true,
+   "image": [
+    "https://actionglobalnews.com/images/agn-og.jpg"
+   ],
+   "publisher": {
+    "@id": "https://actionglobalnews.com/#org"
+   },
+   "author": {
+    "@type": "Organization",
+    "name": "Action Global News Staff",
+    "url": "https://actionglobalnews.com/authors/staff/"
+   },
+   "editor": {
+    "@id": "https://actionglobalnews.com/authors/zach-wennstedt/#person"
+   },
+   "keywords": "business email compromise, BEC scam, fake invoice scam, vendor payment fraud, FBI IC3 2025 report, Financial Fraud Kill Chain, Nacha fraud monitoring rule 2026, payment callback verification",
+   "citation": [
+    "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf",
+    "https://cyberscoop.com/fbi-internet-crime-complaint-center-annual-cybercrime-report/",
+    "https://www.alstonprivacy.com/cybercrime-trends-to-watch-takeaways-from-the-fbis-2025-ic3-annual-report/",
+    "https://www.nacha.org/system/files/2024-07/Business%20Email%20Compromise%20Action%20Plan.pdf",
+    "https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-1",
+    "https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-business-email-compromise-bec-fraud"
+   ],
+   "genre": "Explainer"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Front Page",
+     "item": "https://actionglobalnews.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Small Business",
+     "item": "https://actionglobalnews.com/small-business/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Fake invoices cost businesses $3 billion last year. How business email compromise works, and the controls that stop it",
+     "item": "https://actionglobalnews.com/articles/business-email-compromise-payment-fraud-controls-small-business/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is business email compromise?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The FBI describes it as a scam that targets businesses or individuals working with suppliers, in which fraudsters compromise email or other communication channels through social engineering or intrusion to make unauthorized transfers of funds."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much did business email compromise cost in 2025?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The FBI's IC3 recorded 24,768 BEC complaints with $3,046,598,558 in adjusted losses in 2025, the second-highest loss total of any crime type after investment fraud."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What should I do if we paid a fake invoice?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Contact your bank immediately to request a recall and a freeze on the receiving account, then file a complaint at ic3.gov with the full transaction details. The IC3 report says time is of the essence."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the single best control against BEC?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Verify every request to change payment details by calling the requester on a phone number you already have, never one given in the message. Nacha and the FBI both recommend it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do Nacha's 2026 fraud monitoring rules apply to my business?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If your business originates ACH entries, such as payroll or vendor payments, Phase 2 of the rules has applied since June 19, 2026. Covered parties need risk-based processes to identify payments that are unauthorized or sent under false pretenses, reviewed at least annually."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWK0S9KPBE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HWK0S9KPBE');</script>
+<script>(function(){function s(n,p){try{gtag('event',n,p)}catch(e){}}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a)s('phone_click',{phone_number:a.getAttribute('href').slice(4),link_text:(a.textContent||'').trim().slice(0,60)})},true);document.addEventListener('submit',function(e){var f=e.target;if(!f||f.getAttribute('role')==='search'||/search/i.test(f.id+' '+f.className+' '+(f.action||'')))return;var id=f.id||f.getAttribute('name')||f.className||'form';if(/estimat|calc/i.test(id+' '+(f.action||'')))s('estimator_use',{form_id:id});s('generate_lead',{form_id:id})},true);window.etAB=function(n,v){var k='etab_'+n,x;try{x=localStorage.getItem(k)}catch(e){}if(!x||v.indexOf(x)<0){x=v[Math.floor(Math.random()*v.length)];try{localStorage.setItem(k,x)}catch(e){}}s('ab_view',{experiment:n,variant:x});try{gtag('set','user_properties',{['ab_'+n]:x})}catch(e){}document.documentElement.setAttribute('data-ab-'+n,x);return x}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="mast-brandbar">
+    <div class="wrap">
+      <div class="mast-top">
+        <a class="logo" href="/" aria-label="Action Global News home">
+          <picture><source type="image/webp" srcset="/images/agn-logo-340.webp 340w, /images/agn-logo-600.webp 600w" sizes="(max-width:520px) 172px, (max-width:860px) 210px, 300px">
+          <img src="/images/agn-logo-600.png" alt="Action Global News" width="300" height="106" fetchpriority="high" decoding="async"></picture>
+        </a>
+        <span class="mast-spacer"></span>
+        <div class="mast-util">
+          <span class="clock" id="agn-clock" aria-live="off"></span>
+          <form class="mast-search hide-sm" action="/search/" role="search"><label class="vh" for="mq">Search Action Global News</label><input id="mq" name="q" type="search" placeholder="Search the paper" autocomplete="off"><button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></form>
+          <a class="hide-sm" href="/news-tips/">News tips</a>
+          <a class="hide-sm" href="/advertise/">Advertise</a>
+          <a class="btn-sub" href="/newsletter/">Newsletter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="mainnav" aria-label="Main">
+    <div class="wrap nav-row">
+      <ul><li><a href="/">Front Page</a></li><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/health/">Health</a></li><li><a href="/colorado/">Colorado</a></li><li><a href="/world/">World</a></li></ul>
+      <button class="nav-all" id="nav-all" aria-expanded="false" aria-controls="sec-panel"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span>All sections</span></button>
+    </div>
+    <div class="sec-panel" id="sec-panel" hidden>
+      <div class="wrap sec-panel-grid"><div><h3>News desks</h3><ul><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/world/">World</a></li><li><a href="/science/">Science</a></li><li><a href="/colorado/">Colorado &amp; Denver</a></li></ul></div><div><h3>Life &amp; culture</h3><ul><li><a href="/health/">Health &amp; Wellness</a></li><li><a href="/travel/">Travel</a></li><li><a href="/outdoors/">Outdoors</a></li></ul></div><div><h3>Formats</h3><ul><li><a href="/latest/">Latest</a></li><li><a href="/explainers/">Explainers</a></li><li><a href="/analysis/">Analysis</a></li><li><a href="/archive/">Archive</a></li><li><a href="/topics/">Topics A&ndash;Z</a></li></ul></div><div><h3>Work with us</h3><ul><li><a href="/advertise/">Advertise</a></li><li><a href="/media-kit/">Media kit</a></li><li><a href="/sponsored-content/">Sponsored content</a></li><li><a href="/newsletter-sponsorship/">Newsletter sponsorship</a></li><li><a href="/business-spotlight/">Business spotlight</a></li><li><a href="/press-release-distribution/">Press release distribution</a></li><li><a href="/news-tips/">Send a news tip</a></li></ul></div>
+        <form class="panel-search" action="/search/" role="search"><label for="pq">Search</label><input id="pq" name="q" type="search" placeholder="Topics, companies, places"><button type="submit">Search</button></form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<div class="art-wrap">
+  <article class="art">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Front Page</a> <span>/</span> <a href="/small-business/">Small Business</a></nav>
+    <div class="art-hero">
+      <span class="kicker">Small Business · Explainer</span>
+      <h1>Fake invoices cost businesses $3 billion last year. How business email compromise works, and the controls that stop it</h1>
+      <p class="art-standfirst">Business email compromise was the second-costliest crime reported to the FBI in 2025, with more than $3 billion in losses. It often needs no sophisticated hacking, and the defenses that work best cost very little.</p>
+    </div>
+    <div class="art-byline">
+      <span class="byline-av" aria-hidden="true">AGN</span>
+      <span class="byline-txt"><strong><a href="/authors/staff/">Action Global News Staff</a></strong>
+      <span>Edited by <a href="/authors/zach-wennstedt/">Zach Wennstedt</a> &middot; Published <time datetime="2026-11-17T09:20:00-07:00">November 17, 2026</time> &middot; 6 min read</span></span>
+    </div>
+    <div class="sharebar" aria-label="Share this article"><button type="button" data-copy>Copy link</button><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fbusiness-email-compromise-payment-fraud-controls-small-business%2F" target="_blank" rel="noopener nofollow">LinkedIn</a><a href="https://x.com/intent/post?url=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fbusiness-email-compromise-payment-fraud-controls-small-business%2F" target="_blank" rel="noopener nofollow">X</a><a href="mailto:?subject=Fake%20invoices%20cost%20businesses%20%243%20billion%20last%20year.%20How%20business%20email%20compromise%20works%2C%20and%20the%20controls%20that%20stop%20it&amp;body=https%3A%2F%2Factionglobalnews.com%2Farticles%2Fbusiness-email-compromise-payment-fraud-controls-small-business%2F">Email</a></div>
+    
+    <section class="takeaways" aria-label="Key takeaways"><h2>Key takeaways</h2><ul><li>The FBI's IC3 logged 24,768 business email compromise complaints and $3.05 billion in adjusted losses in 2025, second only to investment fraud.</li><li>Most BEC is a request to change where money goes. A callback to a phone number already on file defeats it.</li><li>Dual approval above a set threshold and multi-factor authentication on email and banking are the other core controls.</li><li>After a fraudulent transfer, call your bank immediately and file at ic3.gov. The FBI froze $679 million in 2025, a 58% success rate.</li><li>Nacha's fraud monitoring rules now cover businesses that originate ACH payments, with Phase 2 in effect since June 19, 2026.</li></ul></section>
+
+<h2>How big is the problem?</h2>
+
+<p>Big enough to rank second among every type of cybercrime the FBI tracks. The bureau's Internet Crime Complaint Center (IC3) recorded 1,008,597 complaints and $20.877 billion in reported losses in its <a href='https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf' target='_blank' rel='noopener nofollow'>2025 Internet Crime Report</a>, released on April 6, 2026, according to the law firm <a href='https://www.alstonprivacy.com/cybercrime-trends-to-watch-takeaways-from-the-fbis-2025-ic3-annual-report/' target='_blank' rel='noopener nofollow'>Alston &amp; Bird</a>. <a href='https://cyberscoop.com/fbi-internet-crime-complaint-center-annual-cybercrime-report/' target='_blank' rel='noopener nofollow'>CyberScoop</a> reported that total losses rose 26% from 2024. Business email compromise, known as BEC, accounted for 24,768 complaints and $3,046,598,558 in adjusted losses, behind only investment fraud.</p>
+
+<figure class='chart'><h3>Business email compromise was the second-costliest crime reported to the FBI in 2025</h3><p class='cs'>Reported losses by crime type, 2025, in billions of U.S. dollars</p><svg viewBox='0 0 720 186' role='img' aria-label='Reported losses by crime type in 2025, FBI IC3: investment fraud 8.65 billion dollars; business email compromise 3.05 billion; tech and customer support scams 2.13 billion; personal data breach 1.31 billion; confidence and romance scams 0.93 billion'><line x1='210' y1='8' x2='210' y2='178' stroke='#9aa6b4'/><text x='200' y='28' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Investment fraud</text><rect x='210' y='12' width='400.0' height='22' rx='3' fill='#5d6b7a'/><text x='618.0' y='28' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$8.65B</text><text x='200' y='62' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Business email compromise</text><rect x='210' y='46' width='140.9' height='22' rx='3' fill='#b3000f'/><text x='358.9' y='62' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$3.05B</text><text x='200' y='96' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Tech/customer support</text><rect x='210' y='80' width='98.7' height='22' rx='3' fill='#5d6b7a'/><text x='316.7' y='96' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$2.13B</text><text x='200' y='130' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Personal data breach</text><rect x='210' y='114' width='60.8' height='22' rx='3' fill='#5d6b7a'/><text x='278.8' y='130' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$1.31B</text><text x='200' y='164' text-anchor='end' font-size='15' fill='#3d4149' font-family='DM Sans,Arial,sans-serif'>Confidence/romance</text><rect x='210' y='148' width='43.0' height='22' rx='3' fill='#5d6b7a'/><text x='261.0' y='164' font-size='15' font-weight='700' fill='#16181c' font-family='DM Sans,Arial,sans-serif'>$0.93B</text></svg><figcaption>Source: <a href='https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf' target='_blank' rel='noopener nofollow'>FBI Internet Crime Complaint Center, 2025 Internet Crime Report</a>. Figures are losses reported by complainants.</figcaption></figure>
+
+<p>Divide those losses by the number of complaints and the average reported BEC case comes to roughly $123,000, by our arithmetic. Averages hide wide variation, but the figure explains why a single fake invoice can be an existential event for a small company.</p>
+
+<h2>How does business email compromise work?</h2>
+
+<p>The FBI's report describes BEC as a scam that targets businesses or individuals working with suppliers. Fraudsters compromise email accounts and other channels, including phone numbers and virtual meeting apps, through social engineering or computer intrusion, in order to make unauthorized transfers of funds. In practice it tends to take a few familiar shapes:</p>
+
+<ul><li><strong>The changed bank details.</strong> A message that appears to come from a real supplier, often in a real email thread, says the supplier has a new bank account and asks that the next invoice be paid there.</li><li><strong>The urgent request from the boss.</strong> Someone posing as an owner or executive asks an employee to send a wire or buy gift cards quickly and quietly.</li><li><strong>The hijacked mailbox.</strong> An attacker who gets into a real employee's or supplier's mailbox can send requests from inside genuine conversations, which makes them far harder to spot.</li></ul>
+
+<p>The FBI's Phoenix field office lists <a href='https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-business-email-compromise-bec-fraud' target='_blank' rel='noopener nofollow'>warning signs</a> that apply across these patterns: email addresses that look similar to, but not the same as, the real ones; pressure to act quickly; requests for gift cards or for gift card numbers and PINs; and odd phrasing. Its central advice is short: do not rely on email alone, and contact the person or company directly to confirm any payment change.</p>
+
+<h2>Why doesn't spam filtering stop it?</h2>
+
+<p>Because many BEC messages are not technically suspicious. A message from a compromised supplier mailbox is genuinely from that supplier. A message from a look-alike domain passes its own authentication checks. Email authentication still matters, because a domain with a DMARC enforcement policy is much harder to forge exactly, and our explainer on <a href='/articles/spf-dkim-dmarc-email-authentication-small-business-2026/'>SPF, DKIM and DMARC</a> walks through setting it up. But the reliable defenses are in how a business moves money, not in its inbox.</p>
+
+<h2>Which controls actually stop it?</h2>
+
+<p>Nacha, the organization that governs the ACH payment network, publishes a <a href='https://www.nacha.org/system/files/2024-07/Business%20Email%20Compromise%20Action%20Plan.pdf' target='_blank' rel='noopener nofollow'>BEC action plan</a> for businesses. Its prevention steps, combined with the FBI's, make a short list that any company can adopt:</p>
+
+<ol class='steps'><li><strong>Call back on a number you already have.</strong> Nacha's plan says to verify any request to change account or payment details by calling the requester on a known phone number, found in your own records or a public directory, never one supplied in the message.</li><li><strong>Require two people for big payments.</strong> Nacha recommends multi-layer review for transactions above set thresholds and dual approval for certain payments, with a named backup when an approver is away.</li><li><strong>Turn on multi-factor authentication</strong> for email, banking and accounting accounts, and do not switch it off. Both the FBI and Nacha recommend it.</li><li><strong>Treat urgency as a red flag.</strong> Both the FBI and Nacha single out pressure to act quickly.</li><li><strong>Write the rule down.</strong> A one-page policy that says bank details are never changed on the strength of an email gives an employee permission to slow down, even when the request appears to come from the owner.</li></ol>
+
+<p>For a small business, the callback rule does most of the work. It costs a phone call, and it defeats the changed-bank-details scam regardless of how convincing the email looks.</p>
+
+<h2>What if the money has already gone?</h2>
+
+<p>Speed matters more than anything else. The IC3 report says that if you discover a fraudulent transfer, time is of the essence: contact your financial institution immediately to request a recall of the funds, and file a complaint at ic3.gov regardless of the amount lost, with full transaction details. Nacha's plan adds asking the bank to freeze the receiving account, contacting local law enforcement, and notifying your insurance carrier.</p>
+
+<p>Recovery is possible when the report is fast. The IC3's Recovery Asset Team works with banks through what the FBI calls the Financial Fraud Kill Chain. In 2025 it handled 3,900 incidents involving $1,163,919,846 in attempted theft and froze $679,013,183, which the <a href='https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf' target='_blank' rel='noopener nofollow'>report</a> puts at a 58% success rate.</p>
+
+<p>Nacha's plan also lists clean-up steps that are easy to skip in the panic: scan systems for intrusions, check email accounts for forwarding rules an attacker may have added, have employees change passwords, and preserve every related message and record.</p>
+
+<h2>The new payment rules that apply to businesses, not just banks</h2>
+
+<p>Nacha rules that took effect in 2026 extend fraud-monitoring duties beyond banks. According to <a href='https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-1' target='_blank' rel='noopener nofollow'>Nacha</a>, Phase 1 took effect on March 20, 2026, for all banks that originate ACH payments and for businesses and payment processors that originated 6 million or more ACH entries in 2023. Phase 2 took effect on June 19, 2026, for all remaining non-consumer originators, a group that includes businesses that send payroll or vendor payments by ACH.</p>
+
+<p>Covered parties must establish and implement risk-based processes reasonably designed to identify entries that are unauthorized or sent under false pretenses, and review them at least once a year. Nacha defines false pretenses as inducing a payment by misrepresenting a person's identity, a person's association with or authority to act for someone else, or the ownership of the account being credited. That is a description of business email compromise. The rules do not require screening every entry individually. Nacha's own BEC action plan recommends callbacks and dual approval, which makes them natural parts of such a process. If your business originates ACH payments, ask your bank what it expects from you under the rule.</p>
+
+<h2>A checklist to adopt this week</h2>
+
+<ol class='steps'><li>Write a one-paragraph rule: no change to bank details without a callback to a number already on file.</li><li>Set a dollar threshold above which every payment needs a second approver.</li><li>Turn on multi-factor authentication for email, banking and accounting logins.</li><li>Publish a DMARC record for your domain and plan the move to enforcement.</li><li>Save your bank's fraud line and the IC3 complaint site where the person who pays bills can find them.</li><li>Check your mailbox settings for forwarding rules you did not create.</li><li>Ask your insurer whether your policy covers social engineering fraud.</li><li>If you originate ACH payments, document the procedures above as your risk-based fraud monitoring process.</li></ol>
+
+    <section class="sources"><h2>Sources</h2><ol><li><a href="https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf" target="_blank" rel="noopener nofollow">FBI Internet Crime Complaint Center, &ldquo;2025 Internet Crime Report,&rdquo; April 2026</a></li><li><a href="https://cyberscoop.com/fbi-internet-crime-complaint-center-annual-cybercrime-report/" target="_blank" rel="noopener nofollow">CyberScoop, &ldquo;Cybercrime losses jumped 26% to $20.9 billion in 2025,&rdquo; April 7, 2026</a></li><li><a href="https://www.alstonprivacy.com/cybercrime-trends-to-watch-takeaways-from-the-fbis-2025-ic3-annual-report/" target="_blank" rel="noopener nofollow">Alston &amp; Bird Privacy, Cyber &amp; Data Strategy Blog, &ldquo;Cybercrime Trends to Watch: Takeaways from the FBI's 2025 IC3 Annual Report,&rdquo; April 10, 2026</a></li><li><a href="https://www.nacha.org/system/files/2024-07/Business%20Email%20Compromise%20Action%20Plan.pdf" target="_blank" rel="noopener nofollow">Nacha, &ldquo;Business Email Compromise Action Plan,&rdquo; 2024</a></li><li><a href="https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-1" target="_blank" rel="noopener nofollow">Nacha, &ldquo;Risk Management Topics: Fraud Monitoring, Phase 1,&rdquo; accessed November 17, 2026</a></li><li><a href="https://www.fbi.gov/contact-us/field-offices/phoenix/news/press-releases/fbi-tech-tuesday-business-email-compromise-bec-fraud" target="_blank" rel="noopener nofollow">FBI Phoenix Field Office, &ldquo;FBI Tech Tuesday: Business Email Compromise (BEC) Fraud,&rdquo; accessed November 17, 2026</a></li></ol>
+    <p class="srcnote">Written by Action Global News from the sources above; quotations are attributed to the outlet that published them. See our <a href="/editorial-standards/">editorial standards</a> and <a href="/corrections/">corrections policy</a>.</p></section>
+    <section class="faq-block"><h2>Frequently asked</h2><details class="faq-item"><summary>What is business email compromise?</summary><p>The FBI describes it as a scam that targets businesses or individuals working with suppliers, in which fraudsters compromise email or other communication channels through social engineering or intrusion to make unauthorized transfers of funds.</p></details><details class="faq-item"><summary>How much did business email compromise cost in 2025?</summary><p>The FBI's IC3 recorded 24,768 BEC complaints with $3,046,598,558 in adjusted losses in 2025, the second-highest loss total of any crime type after investment fraud.</p></details><details class="faq-item"><summary>What should I do if we paid a fake invoice?</summary><p>Contact your bank immediately to request a recall and a freeze on the receiving account, then file a complaint at ic3.gov with the full transaction details. The IC3 report says time is of the essence.</p></details><details class="faq-item"><summary>What is the single best control against BEC?</summary><p>Verify every request to change payment details by calling the requester on a phone number you already have, never one given in the message. Nacha and the FBI both recommend it.</p></details><details class="faq-item"><summary>Do Nacha's 2026 fraud monitoring rules apply to my business?</summary><p>If your business originates ACH entries, such as payroll or vendor payments, Phase 2 of the rules has applied since June 19, 2026. Covered parties need risk-based processes to identify payments that are unauthorized or sent under false pretenses, reviewed at least annually.</p></details></section>
+  </article>
+  <aside class="rail">
+    <div class="rail-sec"><h4>Latest from AGN</h4>
+      <div class="rail-item"><span class="n">01</span><a href="/articles/spf-dkim-dmarc-email-authentication-small-business-2026/"><h5>SPF, DKIM and DMARC explained: the email authentication rules a small business now has to meet</h5></a></div><div class="rail-item"><span class="n">02</span><a href="/articles/stop-form-spam-bots-small-business-website/"><h5>Bots now outnumber people online. How a small business can keep them out of its contact forms</h5></a></div><div class="rail-item"><span class="n">03</span><a href="/articles/boyd-family-buying-snowy-range-ski-area-wyoming/"><h5>The Boyd family, who sold Peak Resorts to Vail in 2019, is buying Wyoming's small Snowy Range ski area</h5></a></div><div class="rail-item"><span class="n">04</span><a href="/articles/nvidia-national-security-export-control-oversight-committee/"><h5>Nvidia's board created a three-member committee to oversee export controls and national security after its CEO's exit</h5></a></div><div class="rail-item"><span class="n">05</span><a href="/articles/chase-software-bug-bank-outages-zelle-delays-november-16/"><h5>A Chase software bug slowed transactions at several U.S. banks on Monday, and services were back to normal by Tuesday</h5></a></div>
+      <div class="rail-item"><span class="n">&rarr;</span><a href="/small-business/"><h5>All Small Business coverage</h5></a></div>
+    </div>
+    <div class="rail-sec"><h4>The AGN Dispatch</h4><p style="font-size:14px;color:var(--ink-2);line-height:1.55">One email a week with the stories operators need. <a href="/newsletter/" style="color:var(--accent);font-weight:600">Subscribe free</a></p></div>
+    <div class="rail-sec"><h4>Got a story?</h4><p style="font-size:14px;color:var(--ink-2);line-height:1.55">Seeing a shift we should cover, or an error we should fix? <a href="/news-tips/" style="color:var(--accent);font-weight:600">Send the desk a tip</a></p></div>
+  </aside>
+</div>
+</main>
+<!--buy-block:start-->
+<section class="bb" aria-label="Prices and packages">
+<style>.bb{padding:40px 16px;background:#FFF7ED;border-top:1px solid #FED7AA;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#101828}.bb-in{max-width:1100px;margin:0 auto}.bb-lab{margin:0 0 8px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#667085}.bb h2{margin:0 0 8px;font:800 clamp(1.5rem,3vw,2.2rem)/1.15 Inter,system-ui,sans-serif;letter-spacing:-.02em;color:#101828}.bb p.bb-p{margin:0 0 18px;font-size:1.05rem;line-height:1.5;color:#344054;max-width:64ch}.bb-a{display:flex;flex-wrap:wrap;gap:10px}.bb-a a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:10px;font:800 .98rem/1.1 Inter,system-ui,sans-serif;text-decoration:none!important}.bb-1{background:#F97316;color:#fff!important}.bb-1:hover{background:#EA580C}.bb-2{background:#fff;color:#101828!important;border:2px solid #101828}.bb-call{background:#101828;color:#fff!important}.bb-t{margin:14px 0 0;font-size:.9rem;color:#475467}.bb-t a{color:#1D4ED8}@media (max-width:600px){.bb-a a{flex:1 1 100%}}</style>
+<div class="bb-in"><p class="bb-lab">Advertisement &middot; Eye To Ad Media</p><h2>Grow your business in 2027.</h2><p class="bb-p">SEO packages from $100, websites from $99 a month and TV-quality commercials, all with published prices.</p>
+<div class="bb-a"><a class="bb-1" href="https://eyetoad.com/denver-seo-pricing/?utm_source=actionglobalnews&utm_medium=referral&utm_campaign=buy-block">See prices &rarr;</a><a class="bb-2" href="https://eyetoad.com/seo-packages/?utm_source=actionglobalnews&utm_medium=referral&utm_campaign=buy-block">SEO packages</a><a class="bb-call" href="tel:18004818638">Call 1-800-481-8638</a></div>
+<p class="bb-t"><a href="https://share.google/t4wEpsdoJFyFEWa4H" target="_blank" rel="noopener">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0 on Google, 60 reviews</a> &middot; <a href="https://www.bbb.org/us/co/denver/profile/advertising-agencies/search-converts-llc-1296-90228702/#sealclick" target="_blank" rel="nofollow noopener">A+ BBB accredited</a> &middot; Founder-led since 2012</p>
+</div></section>
+<!--buy-block:end-->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid foot-grid-5">
+      <div>
+        <a class="foot-logo" href="/" aria-label="Action Global News home"><span><em>Action</em> Global News</span></a>
+        <p class="foot-blurb">Independent coverage of business, technology, global commerce and the AI economy, written for operators rather than analysts. Headquartered in Denver, reporting on businesses everywhere.</p>
+        <p class="foot-blurb" style="margin-top:12px">1001 Bannock St #660, Denver, CO 80204<br>
+        <a href="#" data-mu="aW5mbw==" data-md="ZXlldG9hZC5jb20=">Email the desk</a><br>
+        <a href="tel:18004818638">1-800-481-8638</a></p>
+      </div>
+      <div><h4>Sections</h4><ul class="two-col"><li><a href="/ai/">AI</a></li><li><a href="/technology/">Technology</a></li><li><a href="/business/">Business</a></li><li><a href="/markets/">Markets</a></li><li><a href="/small-business/">Small Business</a></li><li><a href="/health/">Health</a></li><li><a href="/travel/">Travel</a></li><li><a href="/colorado/">Colorado</a></li><li><a href="/world/">World</a></li><li><a href="/outdoors/">Outdoors</a></li></ul></div>
+      <div>
+        <h4>Read</h4>
+        <ul>
+          <li><a href="/latest/">Latest</a></li>
+          
+          
+          <li><a href="/explainers/">Explainers</a></li>
+          <li><a href="/analysis/">Analysis</a></li>
+          <li><a href="/archive/">Archive</a></li>
+          <li><a href="/topics/">Topics A&ndash;Z</a></li>
+          <li><a href="/feed.xml">RSS feed</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The paper</h4>
+        <ul>
+          <li><a href="/about/">About AGN</a></li>
+          <li><a href="/editorial-standards/">Editorial standards</a></li>
+          <li><a href="/ethics-ai-policy/">Ethics &amp; AI policy</a></li>
+          <li><a href="/corrections/">Corrections</a></li>
+          <li><a href="/ownership/">Ownership &amp; funding</a></li>
+          <li><a href="/disclosure/">Disclosures</a></li>
+          <li><a href="/newsletter/">Newsletter</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Work with us</h4>
+        <ul>
+          <li><a href="/advertise/">Advertise</a></li>
+          <li><a href="/media-kit/">Media kit</a></li>
+          <li><a href="/sponsored-content/">Sponsored content</a></li>
+          <li><a href="/newsletter-sponsorship/">Newsletter sponsorship</a></li>
+          <li><a href="/business-spotlight/">Business spotlight</a></li>
+          <li><a href="/press-release-distribution/">Press release distribution</a></li>
+          <li><a href="/news-tips/">Send a news tip</a></li>
+        </ul>
+        <h4 style="margin-top:20px">Network</h4>
+        <ul>
+          <li><a href="https://eyetoad.com/" target="_blank" rel="noopener sponsored">Eye To Ad Media</a></li>
+          <li><a href="https://pressreleaseforbusiness.com/" target="_blank" rel="noopener sponsored">PressReleaseForBusiness.com</a></li>
+          <li><a href="https://usabusinesssearch.com/" target="_blank" rel="noopener sponsored">USABusinessSearch.com</a></li>
+          <li><a href="https://www.searchconverts.com/" target="_blank" rel="noopener sponsored">Search Converts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; <span id="yr">2026</span> Action Global News. All rights reserved.</span>
+      <span class="foot-legal"><a href="/accessibility/">Accessibility</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></span>
+      <span>Sponsored and partner content is labeled. External links open at the originating publisher.</span>
+    </div>
+  </div>
+  <div class="heartline"><a href="https://eyetoad.com/" target="_blank" rel="noopener sponsored"><span class="sig-heart" aria-hidden="true"></span><span>Need a website?</span></a></div>
+</footer>
+<div id="newsie-root">
+  <div id="newsie-panel" role="dialog" aria-label="Newsie reading assistant">
+    <div class="nw-head">
+      <svg class="nw-face" viewBox="0 0 100 100" role="img" aria-label="Newsie, the AGN assistant">
+        <g>
+          
+          <path d="M26 30h48l6 6v34H26z" fill="#f4f1e8" stroke="#2b2f36" stroke-width="2.4"/>
+          <path d="M74 30l6 6h-6z" fill="#d9d4c4" stroke="#2b2f36" stroke-width="2.4"/>
+          <g stroke="#9a958a" stroke-width="1.6">
+            <path d="M32 44h16M32 50h16M32 56h16M56 44h16M56 50h16M56 56h10"/>
+          </g>
+          <rect x="32" y="35" width="40" height="5" fill="#2b2f36"/>
+          
+          <circle cx="50" cy="20" r="13" fill="#f4f1e8" stroke="#2b2f36" stroke-width="2.4"/>
+          
+          <path d="M37 15q13-13 26 0z" fill="#2b2f36"/>
+          <path d="M35 15h30q2 0 2 2h-34q0-2 2-2z" fill="#2b2f36"/>
+          
+          <circle cx="44" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+          <circle cx="56" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M49.2 21h1.6" stroke="#2b2f36" stroke-width="2"/>
+          <circle cx="44" cy="21" r="1.7" fill="#2b2f36"/>
+          <circle cx="56" cy="21" r="1.7" fill="#2b2f36"/>
+          
+          <path d="M45 28q5 3.5 10 0" fill="none" stroke="#2b2f36" stroke-width="2" stroke-linecap="round"/>
+          
+          <path d="M42 70v14M58 70v14" stroke="#2b2f36" stroke-width="2.6" stroke-linecap="round"/>
+          
+          <path d="M42 84h-8q-4 0-4 4t4 4h11q2 0 2-2v-6z" fill="#7a4a24" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M58 84h8q4 0 4 4t-4 4H55q-2 0-2-2v-6z" fill="#7a4a24" stroke="#2b2f36" stroke-width="2"/>
+          <path d="M31 89h14M55 89h14" stroke="#5c3518" stroke-width="1.4"/>
+          
+          <path d="M26 42q-8 6-6 16" fill="none" stroke="#2b2f36" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M74 42q8 6 6 16" fill="none" stroke="#2b2f36" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div>
+        <strong>Newsie</strong>
+        <span><i aria-hidden="true"></i>Reading assistant</span>
+      </div>
+    </div>
+    <div id="newsie-log"></div>
+    <div class="nw-chips">
+      <button data-nw-chip="Show me the latest news">Latest</button><button data-nw-chip="Show me explainers">Explainers</button>
+      <button data-nw-chip="How do I advertise">Advertise</button>
+      <button data-nw-chip="I want to send a news tip">News tip</button>
+      <button data-nw-chip="How do I publish a press release">Press release</button>
+    </div>
+    <form id="newsie-form">
+      <input id="newsie-input" type="text" placeholder="Ask Newsie where to find something…"
+             autocomplete="off" aria-label="Ask Newsie">
+      <button type="submit" aria-label="Send">&rarr;</button>
+    </form>
+    <p class="nw-foot">Newsie is a navigational helper, not a reporter. It points to pages on this site.</p>
+  </div>
+
+  <button id="newsie-toggle" aria-expanded="false" aria-controls="newsie-panel">
+    <span id="newsie-badge"></span>
+    <svg class="nw-face" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M26 30h48l6 6v34H26z" fill="#f4f1e8" stroke="#fff" stroke-width="2.4"/>
+      <rect x="32" y="35" width="40" height="5" fill="#2b2f36"/>
+      <g stroke="#9a958a" stroke-width="1.6"><path d="M32 46h16M32 53h16M56 46h16M56 53h10"/></g>
+      <circle cx="50" cy="20" r="13" fill="#f4f1e8" stroke="#fff" stroke-width="2.4"/>
+      <path d="M37 15q13-13 26 0z" fill="#2b2f36"/>
+      <path d="M35 15h30q2 0 2 2h-34q0-2 2-2z" fill="#2b2f36"/>
+      <circle cx="44" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+      <circle cx="56" cy="21" r="5.2" fill="#fff" stroke="#2b2f36" stroke-width="2"/>
+      <path d="M49.2 21h1.6" stroke="#2b2f36" stroke-width="2"/>
+      <circle cx="44" cy="21" r="1.7" fill="#2b2f36"/><circle cx="56" cy="21" r="1.7" fill="#2b2f36"/>
+      <path d="M45 28q5 3.5 10 0" fill="none" stroke="#2b2f36" stroke-width="2" stroke-linecap="round"/>
+      <path d="M42 70v13M58 70v13" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M42 83h-8q-4 0-4 4t4 4h11q2 0 2-2v-6z" fill="#7a4a24" stroke="#fff" stroke-width="1.8"/>
+      <path d="M58 83h8q4 0 4 4t-4 4H55q-2 0-2-2v-6z" fill="#7a4a24" stroke="#fff" stroke-width="1.8"/>
+    </svg>
+    <span class="nw-lbl">Ask Newsie<small>Find anything here</small></span>
+  </button>
+</div><script src="/assets/agn.js?v=23" defer></script>
+
+</body>
+</html>
