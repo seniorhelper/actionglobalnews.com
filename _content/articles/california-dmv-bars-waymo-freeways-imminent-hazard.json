@@ -1,0 +1,38 @@
+{
+ "slug": "california-dmv-bars-waymo-freeways-imminent-hazard",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-18T07:16:00-07:00",
+ "title": "California DMV bars Waymo robotaxis from state freeways",
+ "h1": "California has barred Waymo's driverless cars from its freeways, and the company has paused freeway rides nationwide",
+ "description": "California's DMV ordered Waymo off state freeways on November 11, 2026, citing construction zone incursions. Waymo paused freeway rides in all its markets.",
+ "standfirst": "State regulators called the robotaxis an imminent hazard after vehicles entered an active construction closure near Burlingame. Waymo says it is working to resume freeway service, and rides on surface streets continue.",
+ "keywords": "Waymo freeway ban California, California DMV Waymo order, Waymo imminent hazard, Waymo construction zones, Waymo suspends freeway rides November 2026",
+ "takeaways": [
+  "The California DMV issued its order on November 11, 2026, and it became public on November 17.",
+  "Three Waymo vehicles entered an active construction closure on U.S. 101 near Burlingame on November 5.",
+  "The limits stay in place until Waymo shows the DMV it has taken effective corrective action."
+ ],
+ "body": [
+  "<p>Waymo's driverless cars can no longer use California freeways. The state Department of Motor Vehicles issued the order on November 11, saying the company's freeway operations \"pose an imminent hazard to public safety\" because its vehicles kept entering active construction zones, <a href='https://abcnews.com/US/waymo-driverless-cars-barred-california-freeways-series-troubling/story?id=138221652' target='_blank' rel='noopener nofollow'>ABC News reported</a>. The restriction did not become public until November 17, according to <a href='https://techcrunch.com/2026/11/17/waymo-suspends-freeway-rides-nationwide-after-california-dmv-order/' target='_blank' rel='noopener nofollow'>TechCrunch</a>.</p>",
+  "<p>DMV spokesperson Jonathan Groveman told <a href='https://www.kcra.com/article/california-dmv-bans-waymo-on-freeways/74457328' target='_blank' rel='noopener nofollow'>KCRA</a> that the ban covers both operating and testing driverless vehicles on all California freeways.</p>",
+  "<h2>What led to the order?</h2>",
+  "<p>Regulators pointed to two episodes this month. On November 5, three Waymo vehicles drove into an active construction closure on U.S. Route 101 near Burlingame, KCRA reported. The next day, a Waymo vehicle tried to get around California Highway Patrol cars conducting a traffic break on Highway 280 in San Francisco, according to the station.</p>",
+  "<p>The problem is not new. Waymo halted freeway rides in May after its robotaxis were seen struggling in construction zones, then returned in July following a software update, TechCrunch reported. The DMV said the latest incursions happened despite earlier restrictions and corrective actions, ABC News reported.</p>",
+  "<h2>How has Waymo responded?</h2>",
+  "<p>The company went further than the order required. It said it has \"temporarily restricted freeway operations across our other operating markets to evaluate our performance,\" which takes its robotaxis off freeways in every city it serves. TechCrunch reported that Waymo has commercial service in 15 U.S. cities and described the wider pause as the company's own decision.</p>",
+  "<p>Waymo said the U.S. 101 encounters caused no injuries or collisions. Its ride-hailing service continues on surface streets, where the company says it provides more than half a million trips a week.</p>",
+  "<h2>What happens next</h2>",
+  "<p>The restrictions remain until Waymo shows the DMV that it has corrected the problems behind them, Groveman told KCRA. ABC News reported that the company must demonstrate its vehicles can safely detect and respond to construction zones and emergency vehicles. No date for a return to freeways has been announced in the reports reviewed for this story.</p>"
+ ],
+ "sources": [
+  {"publisher": "ABC News", "title": "Waymo driverless cars barred from California freeways following series of troubling incidents", "date": "November 18, 2026", "url": "https://abcnews.com/US/waymo-driverless-cars-barred-california-freeways-series-troubling/story?id=138221652"},
+  {"publisher": "TechCrunch", "title": "Waymo suspends freeway rides nationwide after California DMV order", "date": "November 17, 2026", "url": "https://techcrunch.com/2026/11/17/waymo-suspends-freeway-rides-nationwide-after-california-dmv-order/"},
+  {"publisher": "KCRA", "title": "California bans Waymo autonomous vehicles from state freeways, saying they pose an 'imminent hazard'", "date": "November 17, 2026", "url": "https://www.kcra.com/article/california-dmv-bans-waymo-on-freeways/74457328"}
+ ],
+ "faq": [
+  {"q": "Why did California ban Waymo from freeways?", "a": "The California DMV said Waymo's driverless freeway operations pose an imminent hazard to public safety because its vehicles repeatedly entered active construction zones."},
+  {"q": "Can people still ride Waymo in California?", "a": "Yes. Waymo says its ride-hailing service continues on surface streets while freeway operations are paused."}
+ ]
+}

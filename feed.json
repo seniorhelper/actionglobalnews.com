@@ -6,6 +6,54 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/colorado-federal-review-foster-care-safety-improvement-plan/",
+   "url": "https://actionglobalnews.com/articles/colorado-federal-review-foster-care-safety-improvement-plan/",
+   "title": "A federal review found Colorado fell short on six of seven child welfare outcomes, and an improvement plan is due in December",
+   "summary": "The Children's Bureau rated Colorado statistically worse than national performance on two key safety measures. State officials say they welcome the review, and the state's improvement plan goes to federal officials next month.",
+   "date_published": "2026-11-18T07:18:00-07:00",
+   "date_modified": "2026-11-18T07:18:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/target-third-quarter-2026-sales-rise-raises-outlook/",
+   "url": "https://actionglobalnews.com/articles/target-third-quarter-2026-sales-rise-raises-outlook/",
+   "title": "Target's third-quarter sales rose 7.1% on stronger customer traffic, and the retailer raised its full-year forecast",
+   "summary": "A 5% rise in customer transactions helped the retailer beat Wall Street's sales expectations. Tariff refunds added 50 cents to quarterly earnings per share and also lifted the full-year outlook.",
+   "date_published": "2026-11-18T07:17:00-07:00",
+   "date_modified": "2026-11-18T07:17:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/california-dmv-bars-waymo-freeways-imminent-hazard/",
+   "url": "https://actionglobalnews.com/articles/california-dmv-bars-waymo-freeways-imminent-hazard/",
+   "title": "California has barred Waymo's driverless cars from its freeways, and the company has paused freeway rides nationwide",
+   "summary": "State regulators called the robotaxis an imminent hazard after vehicles entered an active construction closure near Burlingame. Waymo says it is working to resume freeway service, and rides on surface streets continue.",
+   "date_published": "2026-11-18T07:16:00-07:00",
+   "date_modified": "2026-11-18T07:16:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/us-loses-measles-elimination-status-paho-mexico-bolivia/",
+   "url": "https://actionglobalnews.com/articles/us-loses-measles-elimination-status-paho-mexico-bolivia/",
+   "title": "The United States, Mexico and Bolivia have lost their measles elimination status, regional health officials say",
+   "summary": "The Pan American Health Organization accepted an expert panel's finding that measles spread has become continuous again in all three countries. The U.S. chain of infection dates to January 2025, and regaining the status will take at least a year without that spread.",
+   "date_published": "2026-11-18T07:15:00-07:00",
+   "date_modified": "2026-11-18T07:15:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Health"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/boi-reporting-ended-us-companies-what-small-businesses-still-need-to-know/",
    "url": "https://actionglobalnews.com/articles/boi-reporting-ended-us-companies-what-small-businesses-still-need-to-know/",
    "title": "Beneficial ownership reporting is over for U.S. companies. Here is what still applies to small businesses",
@@ -435,54 +483,6 @@
    "image": "https://actionglobalnews.com/images/agn-og.jpg",
    "tags": [
     "Technology"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/jeffco-schools-5a-5b-tax-measures-failing-recount-likely/",
-   "url": "https://actionglobalnews.com/articles/jeffco-schools-5a-5b-tax-measures-failing-recount-likely/",
-   "title": "Jeffco Public Schools' two tax measures are trailing, and a recount on 5A looks likely as the district plans for cuts",
-   "summary": "Voters in Jefferson County appear to have turned down two property tax measures for Jeffco Public Schools. The teacher pay measure is close enough for a recount, and district leaders say more budget cuts are coming either way.",
-   "date_published": "2026-11-09T08:10:00-07:00",
-   "date_modified": "2026-11-09T08:10:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Colorado"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/ftc-personalized-pricing-inquiry-nine-companies-delta-uber-walmart/",
-   "url": "https://actionglobalnews.com/articles/ftc-personalized-pricing-inquiry-nine-companies-delta-uber-walmart/",
-   "title": "FTC orders Delta, Uber, Walmart and six other companies to explain how personal data shapes prices and worker pay",
-   "summary": "The Federal Trade Commission has started a study of whether airlines, ride-share and delivery apps and two big retailers charge different people different prices, or pay different workers different rates, based on personal data. It is a study, not a lawsuit. Responses are due within 45 days of receipt.",
-   "date_published": "2026-11-08T03:00:00-07:00",
-   "date_modified": "2026-11-08T03:00:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/google-shared-ai-training-control-robots-txt-aipref/",
-   "url": "https://actionglobalnews.com/articles/google-shared-ai-training-control-robots-txt-aipref/",
-   "title": "Google says it will honor one shared robots.txt signal for AI training opt-outs, but not until 2027",
-   "summary": "Google announced on October 30 that it plans to support a shared, machine-readable way for websites to say no to AI training. The signal lives in robots.txt and comes from an IETF draft. It is not live yet, and today's controls, including Google-Extended, stay in place.",
-   "date_published": "2026-11-08T02:55:00-07:00",
-   "date_modified": "2026-11-08T02:55:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Technology"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/ftc-toast-riverside-payments-small-business-fees-cancellation/",
-   "url": "https://actionglobalnews.com/articles/ftc-toast-riverside-payments-small-business-fees-cancellation/",
-   "title": "Two FTC cases in five days target payment-processing fees and hard-to-cancel contracts for small businesses",
-   "summary": "The Federal Trade Commission filed two actions against payment companies that sell to small businesses. One is a lawsuit against restaurant-software maker Toast that Colorado joined. The other is a settlement with a Washington processor. Both turn on the same question: what a business agrees to when it signs up, and what it costs to leave.",
-   "date_published": "2026-11-08T02:50:00-07:00",
-   "date_modified": "2026-11-08T02:50:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Small Business"
    ]
   }
  ]

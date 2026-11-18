@@ -1,0 +1,36 @@
+{
+ "slug": "us-loses-measles-elimination-status-paho-mexico-bolivia",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-11-18T07:15:00-07:00",
+ "title": "U.S., Mexico and Bolivia lose measles elimination status",
+ "h1": "The United States, Mexico and Bolivia have lost their measles elimination status, regional health officials say",
+ "description": "PAHO said November 17, 2026 that measles is endemic again in the U.S., Mexico and Bolivia after chains of infection ran for 12 months or longer.",
+ "standfirst": "The Pan American Health Organization accepted an expert panel's finding that measles spread has become continuous again in all three countries. The U.S. chain of infection dates to January 2025, and regaining the status will take at least a year without that spread.",
+ "keywords": "US loses measles elimination status, PAHO measles November 2026, Mexico Bolivia measles status, measles endemic United States, how to regain measles elimination status",
+ "takeaways": [
+  "PAHO announced on November 17, 2026 that the U.S., Mexico and Bolivia no longer hold measles elimination status.",
+  "The U.S. chain of infection began January 20, 2025 and passed the 12-month threshold on January 20, 2026.",
+  "A country must show at least 12 straight months without endemic spread to win the status back."
+ ],
+ "body": [
+  "<p>The United States no longer counts as a country that has eliminated measles. The Pan American Health Organization said on November 17 that the U.S., Mexico and Bolivia all lost the designation after an expert commission, meeting November 10 to 13, found endemic spread had returned in each one. Director Jarbas Barbosa accepted those conclusions, according to the <a href='https://www.paho.org/en/news/17-11-2026-paho-urges-countries-step-efforts-stop-measles-outbreaks-and-move-towards' target='_blank' rel='noopener nofollow'>organization's announcement</a>. Our <a href='/articles/measles-elimination-review-paho-us-mexico-guatemala-november-2026/'>earlier brief</a> covered the commission's review.</p>",
+  "<h2>What triggered the decision?</h2>",
+  "<p>The label is lost when one chain of the same virus genotype and lineage keeps going for 12 months or more. A <a href='https://www.paho.org/en/news/17-11-2026-measles-americas-questions-and-answers-technical-reference-journalists-and-public' target='_blank' rel='noopener nofollow'>technical question-and-answer page</a> from the organization dates the U.S. chain to January 20, 2025, which put the country past the limit on January 20, 2026. Mexico's chain began on February 1, 2025, and Bolivia's on April 16, 2025.</p>",
+  "<p>More than 5,400 U.S. cases had been reported this year as of mid-November, and states have confirmed 10 deaths, <a href='https://www.cnbc.com/2026/11/17/us-measles-elimination-status.html' target='_blank' rel='noopener nofollow'>CNBC reported</a>. The outlet also put kindergarten measles, mumps and rubella vaccine coverage at 92.4% for the 2025-26 school year. The regional health agency says every community needs at least 95% coverage with both doses. Across the Americas, it counted 58,213 confirmed cases and 82 deaths as of November 13, compared with 12,806 cases in the same period last year.</p>",
+  "<h2>How did officials respond?</h2>",
+  "<p>Barbosa called the finding \"a serious warning for our Region, but it is not an irreversible setback.\" Centers for Disease Control and Prevention Director Erica Schwartz said in a release that the designation \"is not what protects Americans,\" CNBC reported, and pointed to vaccination instead.</p>",
+  "<h2>What happens next</h2>",
+  "<p>The U.S. is expected to present a corrective action plan in the coming weeks, Daniel Salas of the agency's immunization program said, according to CNBC. To regain the status, a country must show endemic spread has been interrupted for at least 12 consecutive months and provide evidence of stronger vaccination, surveillance and outbreak response. Brazil lost the label in 2019 and won it back in November 2024. Canada, which lost its status in November 2025, saw its outbreak declared over on October 19, 2026, though that does not restore the designation automatically. Vaccine guidance is available from the CDC and from state and local health departments.</p>"
+ ],
+ "sources": [
+  {"publisher": "Pan American Health Organization", "title": "PAHO urges countries to step up efforts to stop measles outbreaks and move towards elimination in the Americas", "date": "November 17, 2026", "url": "https://www.paho.org/en/news/17-11-2026-paho-urges-countries-step-efforts-stop-measles-outbreaks-and-move-towards"},
+  {"publisher": "Pan American Health Organization", "title": "Measles in the Americas: Questions and Answers – Technical Reference for Journalists and the Public", "date": "November 17, 2026", "url": "https://www.paho.org/en/news/17-11-2026-measles-americas-questions-and-answers-technical-reference-journalists-and-public"},
+  {"publisher": "CNBC", "title": "U.S. officially loses measles elimination status", "date": "November 17, 2026", "url": "https://www.cnbc.com/2026/11/17/us-measles-elimination-status.html"}
+ ],
+ "faq": [
+  {"q": "Why did the U.S. lose its measles elimination status?", "a": "The Pan American Health Organization found that the same measles chain of infection had continued for 12 months or longer. It dates the U.S. chain to January 20, 2025."},
+  {"q": "Can the U.S. regain measles elimination status?", "a": "Yes. A country must show endemic spread has been interrupted for at least 12 consecutive months and provide evidence of stronger health systems. Brazil regained its status in November 2024."}
+ ]
+}
