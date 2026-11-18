@@ -1,0 +1,103 @@
+{
+ "slug": "boi-reporting-ended-us-companies-what-small-businesses-still-need-to-know",
+ "type": "explainer",
+ "section": "Small Business",
+ "kicker": "Small Business · Explainer",
+ "published": "2026-11-17T20:40:00-07:00",
+ "title": "BOI reporting ended for U.S. companies: what small businesses still need to know",
+ "h1": "Beneficial ownership reporting is over for U.S. companies. Here is what still applies to small businesses",
+ "description": "FinCEN's August 2026 final rule permanently ended BOI reports for U.S. companies. Who still files, what happens to old reports, New York's LLC law and the scam letters to ignore.",
+ "standfirst": "For two years, millions of small business owners were told they faced penalties if they did not report their owners to the Treasury Department. A final rule has now ended that duty for companies formed in the United States. A few obligations, and plenty of confusion, remain.",
+ "keywords": "BOI reporting 2026, do I need to file BOI, beneficial ownership information, Corporate Transparency Act, FinCEN final rule August 2026, foreign reporting company, New York LLC Transparency Act, BOI scam letter",
+ "takeaways": [
+  "FinCEN's final rule, announced August 11, 2026, permanently ends beneficial ownership reporting for U.S. companies and U.S. persons, making the March 2025 interim exemptions permanent.",
+  "Companies formed under foreign law and registered to do business in a U.S. state still must report their non-U.S. beneficial owners, generally within 30 calendar days.",
+  "FinCEN says it will delete previously reported information on U.S. persons. Companies do not need to ask for deletion.",
+  "Banks and lenders can still ask for ownership details under their own know-your-customer procedures.",
+  "There is no fee to file with FinCEN, and FinCEN does not send first notices of penalties by email or phone. Letters citing a Form 4022 or Form 5102 are fraudulent."
+ ],
+ "body": [
+  "<h2>What changed, in one paragraph?</h2>",
+  "<p>On August 11, 2026, the Treasury Department's Financial Crimes Enforcement Network, or FinCEN, announced a final rule that makes permanent the exemptions it first adopted in a March 2025 interim rule and ends beneficial ownership information reporting for U.S. companies, according to <a href='https://content.govdelivery.com/accounts/USTREAS/bulletins/4247aec' target='_blank' rel='noopener nofollow'>the Treasury press release</a>. In practice, a corporation, limited liability company or similar entity formed in the United States no longer has to file a beneficial ownership information report, often shortened to BOI, and no longer has to update or correct one it already filed. Treasury Secretary Scott Bessent called it <q>a victory for common sense and American small businesses.</q></p>",
+  "<p>The <a href='https://www.journalofaccountancy.com/news/2026/aug/final-rule-will-eliminate-boi-reporting-for-us-entities.html' target='_blank' rel='noopener nofollow'>Journal of Accountancy</a>, published by the AICPA, reported that the rule takes effect on publication in the Federal Register. FinCEN has said it will update its guidance and frequently asked questions on FinCEN.gov.</p>",
+  "<h2>Why was there so much confusion?</h2>",
+  "<p>Because the requirement changed several times in a short period. The Corporate Transparency Act directed FinCEN to collect information about the people who own or control many small companies. FinCEN set filing deadlines, legal challenges followed, a federal court order at one point made filing voluntary (a status Treasury's inspector general page still describes), and FinCEN then exempted U.S. companies in an interim rule in March 2025 before finalizing that exemption in 2026. Owners who read news coverage from different months could have come away with different answers, and many search results still show old deadlines.</p>",
+  "<p>The underlying law has not been repealed. A <a href='https://www.stradley.com/publications/fincen-final-rule-ends-beneficial-ownership-reporting-requirements-for-u-s-entities-permanently' target='_blank' rel='noopener nofollow'>Stradley Ronon client alert</a> notes that the act remains in effect despite several unsuccessful legislative efforts to repeal it, and that a petition asking the Supreme Court to review its constitutionality was pending. The reporting duty for U.S. companies ended because FinCEN, which writes the implementing rules, exempted them.</p>",
+  "<h2>Does my business still have to file?</h2>",
+  "<p>For most readers of this site, no. The answer turns on where the entity was formed, not where the owners live.</p>",
+  "<table class='dtable'><caption>Who files a BOI report under the final rule</caption><thead><tr><th>Type of entity</th><th>File a BOI report with FinCEN?</th><th>Notes</th></tr></thead><tbody><tr><td>Corporation or LLC formed in any U.S. state or tribal jurisdiction</td><td>No</td><td>Applies whether the owners are U.S. citizens or not; no updates or corrections needed for past reports</td></tr><tr><td>Company formed under foreign law and registered to do business in a U.S. state</td><td>Yes</td><td>Reports non-U.S. beneficial owners and company applicants; U.S. persons are not reported</td></tr><tr><td>U.S.-registered foreign pooled investment vehicle</td><td>Limited</td><td>Does not report information on a U.S. person who controls it</td></tr><tr><td>Individual who obtained a FinCEN ID</td><td>No updates</td><td>U.S. persons need not update or correct information they submitted</td></tr></tbody></table>",
+  "<p><em>Sources: <a href='https://content.govdelivery.com/accounts/USTREAS/bulletins/4247aec' target='_blank' rel='noopener nofollow'>Treasury</a>, <a href='https://www.journalofaccountancy.com/news/2026/aug/final-rule-will-eliminate-boi-reporting-for-us-entities.html' target='_blank' rel='noopener nofollow'>Journal of Accountancy</a>, <a href='https://www.stradley.com/publications/fincen-final-rule-ends-beneficial-ownership-reporting-requirements-for-u-s-entities-permanently' target='_blank' rel='noopener nofollow'>Stradley Ronon</a> and <a href='https://www.bakermckenzie.com/en/insight/publications/2026/02/united-states-new-york-llc-transparency-act' target='_blank' rel='noopener nofollow'>Baker McKenzie</a>. The act's exemptions, which Baker McKenzie counts at 23 and which include banks, insurance companies and registered broker-dealers, still matter for foreign companies.</em></p>",
+  "<h2>What foreign companies still owe</h2>",
+  "<p>A foreign reporting company is an entity formed under the law of another country and registered to do business in a U.S. state or tribal jurisdiction, unless an exemption applies. According to the Stradley Ronon alert, a foreign entity that became a reporting company after March 26, 2025 generally must file within 30 calendar days after the earlier of receiving actual notice that its U.S. registration is effective or the state office providing public notice of it. The report covers non-U.S. individuals who exercise substantial control or own or control at least 25% of the ownership interests, plus up to two company applicants who filed or directed the registration.</p>",
+  "<p>Under the final rule, foreign companies no longer report U.S. persons, either as beneficial owners or as company applicants. A Canadian or Mexican company that registered in Colorado to run a branch office, for example, would report its foreign owners but not a Denver attorney who filed the paperwork.</p>",
+  "<h2>What happens to reports already filed?</h2>",
+  "<p>Treasury says FinCEN will delete previously reported information from U.S. persons and information on any individual it reasonably believes is a U.S. person, such as data tied to a U.S. passport or driver's license, the Journal of Accountancy reported. A <a href='https://www.morganlewis.com/pubs/2026/08/fincen-permanently-eliminates-boi-reporting-requirements-for-us-companies-and-persons' target='_blank' rel='noopener nofollow'>Morgan Lewis analysis</a> says FinCEN has not set a completion date for the deletion and does not expect U.S. companies or persons to request it. Owners who filed in 2024 or early 2025 do not need to do anything. Stradley Ronon suggests keeping prior filing receipts as historical records and removing CTA deadlines from compliance calendars.</p>",
+  "<h2>Will anyone else ask for ownership information?</h2>",
+  "<p>Yes, and this is where owners can get caught off guard. The end of FinCEN reporting does not end ownership questions from other institutions.</p>",
+  "<ul><li><strong>Banks and lenders.</strong> Stradley Ronon notes that a bank may still require ownership information under its customer due diligence or know-your-customer procedures. Expect to provide it when opening accounts, applying for credit or adding signers.</li><li><strong>New York.</strong> The New York LLC Transparency Act took effect January 1, 2026. Under guidance the New York Department of State issued December 31, 2025, it applies only to LLCs formed outside the United States that are authorized to do business in New York, <a href='https://www.bakermckenzie.com/en/insight/publications/2026/02/united-states-new-york-llc-transparency-act' target='_blank' rel='noopener nofollow'>Baker McKenzie reported</a>. Covered LLCs authorized before 2026 must file a disclosure or an attestation of exemption by December 31, 2026; those authorized since then have 30 days from their application. New York LLCs and LLCs from other U.S. states are not covered.</li><li><strong>Other states.</strong> Check whether any state where you are registered has adopted its own disclosure law. State rules can differ from the federal one.</li><li><strong>Buyers, investors and partners.</strong> Anyone doing due diligence on a sale, investment or large contract will ask who owns the company.</li></ul>",
+  "<p>The simplest defense is an up-to-date ownership record kept with the company's formation documents: who owns what percentage, who has signing authority, and when each changed. It costs nothing to maintain and saves time every time a bank or buyer asks.</p>",
+  "<h2>How to spot BOI scam letters</h2>",
+  "<p>The confusion created an opening for fraud, and some of it continues. The Treasury Office of Inspector General's <a href='https://oig.treasury.gov/fraud-alerts' target='_blank' rel='noopener nofollow'>fraud alerts page</a> lists the signs:</p>",
+  "<ul class='checks'><li>Correspondence that references a &ldquo;Form 4022&rdquo; or &ldquo;Form 5102&rdquo; is fraudulent; FinCEN has no such forms.</li><li>Mail from a &ldquo;US Business Regulations Dept.&rdquo; is fake. There is no government entity by that name.</li><li>There is no fee to file a BOI report directly with FinCEN, so any demand for payment to file is a red flag.</li><li>FinCEN does not send initial correspondence about penalties by email or over the phone.</li><li>Do not click suspicious links or attachments or scan suspicious QR codes.</li></ul>",
+  "<p>Now that U.S. companies are exempt, any message telling a U.S.-formed LLC or corporation that it must file a BOI report, or pay to avoid a penalty, deserves extra suspicion. Check with your accountant or attorney before responding, and go to FinCEN's website directly rather than through a link in the message.</p>",
+  "<h2>A five-minute checklist</h2>",
+  "<ol class='steps'><li><strong>Confirm where each entity was formed.</strong> If every entity you own was formed in a U.S. state, you have no FinCEN BOI filing to make.</li><li><strong>Flag any foreign-formed entity</strong> registered in a U.S. state and confirm its filing with your advisor.</li><li><strong>Check New York</strong> if any foreign-formed LLC you control is authorized there; the deadline for existing companies is December 31, 2026.</li><li><strong>File away old BOI receipts</strong> and remove CTA reminders from your calendar.</li><li><strong>Keep an ownership record</strong> current for banks, lenders and buyers.</li><li><strong>Brief your staff</strong> on the scam signs above, especially whoever opens the mail and pays bills.</li></ol>",
+  "<p>This explainer summarizes the Treasury announcement and published legal analyses; it is not legal advice. Because the rule has changed before, check FinCEN's own guidance for the current status before relying on any summary, including this one.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "U.S. Department of the Treasury",
+   "title": "FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners",
+   "date": "August 11, 2026",
+   "url": "https://content.govdelivery.com/accounts/USTREAS/bulletins/4247aec"
+  },
+  {
+   "publisher": "Journal of Accountancy (AICPA)",
+   "title": "Final rule will eliminate BOI reporting for U.S. entities",
+   "date": "August 12, 2026",
+   "url": "https://www.journalofaccountancy.com/news/2026/aug/final-rule-will-eliminate-boi-reporting-for-us-entities.html"
+  },
+  {
+   "publisher": "Morgan Lewis",
+   "title": "FinCEN permanently eliminates BOI reporting requirements for US companies and persons",
+   "date": "August 2026",
+   "url": "https://www.morganlewis.com/pubs/2026/08/fincen-permanently-eliminates-boi-reporting-requirements-for-us-companies-and-persons"
+  },
+  {
+   "publisher": "Stradley Ronon",
+   "title": "FinCEN final rule ends beneficial ownership reporting requirements for U.S. entities permanently",
+   "date": "August 19, 2026",
+   "url": "https://www.stradley.com/publications/fincen-final-rule-ends-beneficial-ownership-reporting-requirements-for-u-s-entities-permanently"
+  },
+  {
+   "publisher": "U.S. Department of the Treasury, Office of Inspector General",
+   "title": "Fraud Alerts",
+   "date": "accessed November 17, 2026",
+   "url": "https://oig.treasury.gov/fraud-alerts"
+  },
+  {
+   "publisher": "Baker McKenzie",
+   "title": "United States: New York LLC Transparency Act",
+   "date": "February 5, 2026",
+   "url": "https://www.bakermckenzie.com/en/insight/publications/2026/02/united-states-new-york-llc-transparency-act"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Do I still need to file a BOI report in 2026?",
+   "a": "Not if your company was formed in the United States. FinCEN's final rule, announced August 11, 2026, permanently ended beneficial ownership reporting for U.S. companies and U.S. persons. Companies formed under foreign law and registered in a U.S. state still file."
+  },
+  {
+   "q": "What happens to the BOI report I already filed?",
+   "a": "Treasury says FinCEN will delete previously reported information on U.S. persons. Companies do not need to request deletion, and U.S. persons do not need to update or correct past reports."
+  },
+  {
+   "q": "Is the Corporate Transparency Act repealed?",
+   "a": "No. The law remains in effect; FinCEN used its rulemaking authority to exempt U.S. companies and persons from reporting. Foreign reporting companies still have obligations under it."
+  },
+  {
+   "q": "Is a letter about BOI penalties real?",
+   "a": "Be cautious. Treasury's inspector general says there is no fee to file with FinCEN, FinCEN does not send first penalty notices by email or phone, and letters citing Form 4022 or Form 5102 are fraudulent."
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "slug": "credit-card-surcharge-rules-small-business-2026",
+ "type": "explainer",
+ "section": "Small Business",
+ "kicker": "Small Business · Explainer",
+ "published": "2026-11-17T20:20:00-07:00",
+ "title": "Credit card surcharge rules for small businesses in 2026",
+ "h1": "Can a small business charge customers extra for paying by card? The surcharge rules in 2026",
+ "description": "Visa caps credit card surcharges at 3%, Mastercard at 4%, Colorado at 2% or actual cost, and debit is off-limits. What the pending $38 billion Visa-Mastercard deal would change.",
+ "standfirst": "More merchants are passing card fees on to customers, and a pending antitrust settlement could give them more room to do it. The rules that apply today come from three places at once: the card networks, state law and, in some industries, federal pricing rules.",
+ "keywords": "credit card surcharge rules 2026, can I charge a credit card fee, Visa surcharge cap 3%, Mastercard surcharge 4%, Colorado surcharge 2 percent, debit card surcharge, Visa Mastercard settlement, swipe fees small business",
+ "takeaways": [
+  "A surcharge may apply only to credit cards. Visa, Mastercard and Colorado law all bar surcharges on debit and prepaid cards.",
+  "Visa caps a surcharge at the lower of the merchant's card cost or 3%. Mastercard's brand-level cap is the lower of the merchant's average effective rate or 4%.",
+  "Colorado allows a surcharge of up to 2% of the payment or up to the merchant discount fee the seller incurs, with signage and a separate receipt line.",
+  "Both networks require at least 30 days' notice before a merchant starts surcharging.",
+  "A $38 billion Visa-Mastercard settlement won preliminary approval in June 2026. It would cut swipe fees slightly and let merchants refuse some card types, but it is not final."
+ ],
+ "body": [
+  "<h2>Why is everyone talking about surcharges again?</h2>",
+  "<p>Card acceptance is one of the larger fixed costs for many small businesses, and it scales with sales. A shop that takes most of its revenue on credit cards pays a percentage of nearly every sale to its processor and, through it, to the card-issuing banks and networks. As those costs have risen, more small businesses have started adding a line to the bill for paying by card, and more customers have started noticing.</p>",
+  "<p>A court case is adding to the attention. On June 9, 2026, U.S. District Judge Brian Cogan in Brooklyn granted preliminary approval to a revised $38 billion settlement between Visa, Mastercard and more than 12 million merchants, <a href='https://www.bnnbloomberg.ca/business/international/2026/06/10/visa-mastercard-us38-billion-swipe-fee-settlement-wins-us-judges-approval/' target='_blank' rel='noopener nofollow'>Reuters reported</a>. Under the terms Reuters described, swipe fees would fall by 0.1 percentage point for five years, standard consumer card rates would be capped at no more than 1.25% for eight years, merchants could choose whether to accept commercial, premium rewards and standard consumer cards, and merchants would get more options to impose surcharges.</p>",
+  "<p>The deal is not final. Retail groups including the National Retail Federation and the National Association of Convenience Stores criticized it, and objectors including Walmart argued merchants would still pay too much for rewards cards. Cogan said many objections had merit but that a settlement did not need to be perfect, and that he was likely to grant final approval eventually. As of mid-November, <a href='https://www.cardrates.com/news/judge-signals-end-to-20-year-visa-mastercard-fee-fight/' target='_blank' rel='noopener nofollow'>CardRates</a> still described the settlement as preliminarily approved only. An earlier $30 billion version was rejected in June 2024 by Judge Margo Brodie as too small.</p>",
+  "<p>When the original version of this deal was announced in November 2025, <a href='https://www.digitaltransactions.net/not-the-final-chapter-questions-arise-about-the-latest-interchange-settlement/' target='_blank' rel='noopener nofollow'>Digital Transactions</a> reported that it would let merchants levy surcharges of up to 3% and that Visa and Mastercard would amend their rules to allow it, a change the publication expected to make surcharging more widespread.</p>",
+  "<p>Until a final order, the network rules and state laws below are the ones that apply right now. If the settlement is approved, expect Visa and Mastercard to publish revised merchant rules, and check them before changing your own pricing.</p>",
+  "<h2>What is a surcharge, exactly?</h2>",
+  "<p>A surcharge is an extra amount added to a transaction because the customer pays with a credit card. It is different from a convenience fee for using a particular channel, such as paying a bill by phone, and different from a discount offered for paying another way. The rules below are written for surcharges. The other practices can be governed by different rules, so ask your processor which category your plan falls into before you put it in front of customers.</p>",
+  "<h2>What do Visa and Mastercard allow?</h2>",
+  "<p>Visa's <a href='https://www.jmu.edu/financeoffice/_files/cash-investments-files/us_merchant_surcharging.pdf' target='_blank' rel='noopener nofollow'>U.S. merchant surcharging Q&amp;A</a> says merchants must <q>limit the amount to your merchant discount rate (MDR) for the applicable credit card or 3% whichever is lowest.</q> Only credit cards may be surcharged; debit and prepaid cards are excluded, and a customer choosing &ldquo;credit&rdquo; at the terminal while using a debit card does not change that. Merchants must notify their acquirer, meaning the bank or processor that handles their card payments, at least 30 days before they begin. The surcharge must be disclosed at the point of entry and at the point of sale, both in stores and online, and it must appear as a separate charge on the receipt. Visa lets merchants surcharge all Visa credit cards or specific Visa credit card products, but not both.</p>",
+  "<p>Mastercard's <a href='https://www.mastercard.com/us/en/business/support/merchant-surcharge-rules.html' target='_blank' rel='noopener nofollow'>U.S. merchant surcharge rules</a> are similar but not identical. For a single rate across all Mastercard credit cards, the cap is the lower of the merchant's average effective discount rate for Mastercard credit or a maximum of 4%. For a surcharge on a specific card product, it may not exceed the merchant's cost to accept that product. Surcharges are not allowed on Debit Mastercard or Mastercard prepaid cards. Merchants must notify both Mastercard and their acquirer at least 30 days before starting, disclose the practice clearly at the point of interaction, and show the surcharge as both a percentage and a dollar amount on the receipt.</p>",
+  "<p>The practical effect: if a business accepts both brands and wants a single posted rate, the Visa ceiling of 3% is the binding limit, and the rate can never exceed what the business actually pays to accept the card.</p>",
+  "<h2>What does state law add?</h2>",
+  "<p>State law can be stricter than the networks. Visa's Q&amp;A, with state information current as of February 15, 2024, listed Connecticut, Maine, Massachusetts, Oklahoma and Puerto Rico as prohibiting surcharges and Colorado, Minnesota, New Jersey and New York as having specific requirements. Visa says it cannot give legal advice and that its summary may contain errors, and state laws in this area have changed repeatedly, so treat any list as a starting point and confirm with your state's attorney general or a lawyer.</p>",
+  "<h3>The Colorado rules</h3>",
+  "<p>Colorado is a useful example of a state with detailed requirements. The Administrator of the Uniform Consumer Credit Code, part of the Colorado attorney general's office, explained the amended statute in a <a href='https://coag.gov/app/uploads/2022/06/Administrative-Opinion-re-Amended-Surcharge-Statute-6-29-22-.pdf' target='_blank' rel='noopener nofollow'>2022 administrative opinion</a>. Since July 1, 2022, a seller may impose a surcharge <q>in an amount not to exceed 2% of the total payment made for goods or services</q>, or one <q>not to exceed the merchant discount fee that the seller or lessor incurs.</q> Only one surcharge may be imposed per transaction. It must appear as a separate line item on the receipt and be disclosed through signage visible to consumers, and online the disclosure must appear before the customer completes the purchase.</p>",
+  "<p>The opinion is explicit that no surcharge may be imposed on payments made by cash, check, debit card or gift card redemption. It also says the statute applies to consumer sales and leases, including residential leases, and that it is reasonable to read the provisions as not applying to business-to-business transactions without a consumer purpose, such as purchases made with a business credit card.</p>",
+  "<table class='dtable'><caption>Surcharge limits side by side</caption><thead><tr><th>Rule</th><th>Maximum</th><th>Debit and prepaid</th><th>Advance notice</th><th>Disclosure</th></tr></thead><tbody><tr><td>Visa (U.S.)</td><td>Lower of the merchant's discount rate or 3%</td><td>Not allowed</td><td>30 days to acquirer</td><td>Point of entry and point of sale; separate line on receipt</td></tr><tr><td>Mastercard (U.S.)</td><td>Brand level: lower of average effective rate or 4%. Product level: cost to accept that product</td><td>Not allowed</td><td>30 days to Mastercard and acquirer</td><td>At the point of interaction; receipt shows percent and dollar amount</td></tr><tr><td>Colorado law (consumer sales)</td><td>Up to 2% of the payment, or up to the merchant discount fee incurred</td><td>Not allowed (also cash, check, gift cards)</td><td>Not specified in the opinion</td><td>Visible signage; separate receipt line; online before checkout</td></tr></tbody></table>",
+  "<p><em>Sources: <a href='https://www.jmu.edu/financeoffice/_files/cash-investments-files/us_merchant_surcharging.pdf' target='_blank' rel='noopener nofollow'>Visa</a>, <a href='https://www.mastercard.com/us/en/business/support/merchant-surcharge-rules.html' target='_blank' rel='noopener nofollow'>Mastercard</a> and the <a href='https://coag.gov/app/uploads/2022/06/Administrative-Opinion-re-Amended-Surcharge-Statute-6-29-22-.pdf' target='_blank' rel='noopener nofollow'>Colorado Administrator of the Uniform Consumer Credit Code</a>. When rules overlap, the strictest one that applies sets the limit.</em></p>",
+  "<h2>Do federal pricing rules apply?</h2>",
+  "<p>For two industries, yes. The Federal Trade Commission's Rule on Unfair or Deceptive Fees took effect May 12, 2025, and covers sellers of live-event tickets and short-term lodging, including platforms, resellers and travel agents. The <a href='https://www.ftc.gov/business-guidance/resources/rule-unfair-or-deceptive-fees-frequently-asked-questions' target='_blank' rel='noopener nofollow'>FTC guidance</a> says a card surcharge counts as a mandatory fee that must be included in the advertised total price if the business requires card payment. If another viable payment method at the same location or on the same platform carries no fee, the surcharge is optional and can be left out of the displayed total, but it must still be disclosed before payment and included in the final amount. Hotels, vacation rental hosts, venues and ticket sellers should check this before adding a card fee.</p>",
+  "<h2>Is surcharging worth it?</h2>",
+  "<p>That is a business decision, not a legal one, and the numbers are easy to run. Start with your processing statement and calculate what you actually paid last year for credit card acceptance as a percentage of credit card sales. That figure is both your legal ceiling under the network rules and the most you could recover. Then estimate how many customers might leave, switch to debit or cash, or complain.</p>",
+  "<p>A business with thin margins, large average tickets and loyal or business-to-business customers may find the trade-off acceptable. One that competes on convenience, such as a cafe or quick-service restaurant, may lose more in goodwill than it saves. A middle path some owners take is to build card costs into posted prices instead, which avoids the compliance work entirely.</p>",
+  "<p>If the settlement is approved, the calculation could shift. The ability to decline premium rewards cards, which objectors in the case say cost merchants too much, would be a second lever alongside surcharging. Merchants should wait for the final rules rather than act on early summaries.</p>",
+  "<h2>A compliance checklist before you add a card fee</h2>",
+  "<ol class='steps'><li><strong>Check your state's law</strong> and any city rules, using the attorney general's office or a lawyer, not a vendor blog.</li><li><strong>Calculate your actual cost</strong> of accepting credit cards from recent processing statements. Your surcharge may not exceed it.</li><li><strong>Set one rate within every cap that applies</strong>, including Visa's 3% and any state limit such as Colorado's.</li><li><strong>Confirm your processor can tell debit from credit</strong> automatically and will not surcharge debit or prepaid cards.</li><li><strong>Send the required notices</strong> to your acquirer and to Mastercard at least 30 days before you start.</li><li><strong>Post signs</strong> at the entrance and at the register, and add the disclosure to online checkout before the customer pays.</li><li><strong>Check the receipt</strong> shows the surcharge as its own line, with the percentage and dollar amount.</li><li><strong>Train staff</strong> to explain the fee and the no-fee alternatives you accept.</li><li><strong>If you sell tickets or short-term lodging</strong>, apply the FTC's total-price rules.</li><li><strong>Review the policy</strong> when your processing rates change and when the settlement's final rules are published.</li></ol>",
+  "<p>This explainer summarizes network rules, a state regulator's opinion and federal guidance as published; it is not legal advice. Card networks update their rules regularly, so confirm the current versions with your processor before you start.</p>"
+ ],
+ "sources": [
+  {
+   "publisher": "Reuters (via BNN Bloomberg)",
+   "title": "Visa, Mastercard US$38 billion swipe fee settlement wins US judge's approval",
+   "date": "June 10, 2026",
+   "url": "https://www.bnnbloomberg.ca/business/international/2026/06/10/visa-mastercard-us38-billion-swipe-fee-settlement-wins-us-judges-approval/"
+  },
+  {
+   "publisher": "CardRates",
+   "title": "Judge signals end to 20-year Visa, Mastercard fee fight",
+   "date": "accessed November 17, 2026",
+   "url": "https://www.cardrates.com/news/judge-signals-end-to-20-year-visa-mastercard-fee-fight/"
+  },
+  {
+   "publisher": "Digital Transactions",
+   "title": "Not the final chapter: Questions arise about the latest interchange settlement",
+   "date": "November 14, 2025",
+   "url": "https://www.digitaltransactions.net/not-the-final-chapter-questions-arise-about-the-latest-interchange-settlement/"
+  },
+  {
+   "publisher": "Visa (copy hosted by James Madison University)",
+   "title": "U.S. Merchant Surcharge Q&A",
+   "date": "version February 15, 2024",
+   "url": "https://www.jmu.edu/financeoffice/_files/cash-investments-files/us_merchant_surcharging.pdf"
+  },
+  {
+   "publisher": "Mastercard",
+   "title": "Merchant surcharge rules",
+   "date": "accessed November 17, 2026",
+   "url": "https://www.mastercard.com/us/en/business/support/merchant-surcharge-rules.html"
+  },
+  {
+   "publisher": "Colorado Department of Law, Administrator of the Uniform Consumer Credit Code",
+   "title": "Administrative opinion regarding the amended surcharge statute",
+   "date": "June 29, 2022",
+   "url": "https://coag.gov/app/uploads/2022/06/Administrative-Opinion-re-Amended-Surcharge-Statute-6-29-22-.pdf"
+  },
+  {
+   "publisher": "Federal Trade Commission",
+   "title": "Rule on Unfair or Deceptive Fees: Frequently Asked Questions",
+   "date": "accessed November 17, 2026",
+   "url": "https://www.ftc.gov/business-guidance/resources/rule-unfair-or-deceptive-fees-frequently-asked-questions"
+  }
+ ],
+ "faq": [
+  {
+   "q": "Can I charge a fee for credit card payments?",
+   "a": "In most states, yes, within limits. Visa caps surcharges at the lower of your card cost or 3%, Mastercard at the lower of your average effective rate or 4%, and some states ban or limit them further. You must give 30 days' notice to your processor, post disclosures and show the fee on the receipt."
+  },
+  {
+   "q": "Can I add a surcharge to debit card payments?",
+   "a": "No. Visa, Mastercard and Colorado law all prohibit surcharges on debit and prepaid cards, even when a customer selects credit at the terminal."
+  },
+  {
+   "q": "What is the credit card surcharge limit in Colorado?",
+   "a": "Colorado's consumer credit administrator says a seller may surcharge up to 2% of the payment or up to the merchant discount fee it incurs, with signage, a separate receipt line and online disclosure before checkout. Card network caps still apply."
+  },
+  {
+   "q": "Has the Visa-Mastercard settlement been approved?",
+   "a": "It received preliminary approval from Judge Brian Cogan in June 2026. Final approval had not been granted as of mid-November 2026, and merchant groups continue to object."
+  }
+ ]
+}
