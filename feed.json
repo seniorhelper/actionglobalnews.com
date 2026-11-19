@@ -6,6 +6,42 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/voyager-1-reaches-one-light-day-from-earth/",
+   "url": "https://actionglobalnews.com/articles/voyager-1-reaches-one-light-day-from-earth/",
+   "title": "NASA's Voyager 1 became the first spacecraft to reach one light-day from Earth, even as engineers chase a data outage",
+   "summary": "NASA says Voyager 1 crossed the one-light-day mark on Nov. 18, 2026, after more than 49 years in flight. The celebration comes with a problem: the probe stopped sending science and engineering data on Nov. 14.",
+   "date_published": "2026-11-19T12:24:00-07:00",
+   "date_modified": "2026-11-19T12:24:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Science"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/icj-finds-myanmar-committed-genocide-rohingya/",
+   "url": "https://actionglobalnews.com/articles/icj-finds-myanmar-committed-genocide-rohingya/",
+   "title": "The International Court of Justice ruled that Myanmar committed genocide against the Rohingya, the first time it has found a state responsible",
+   "summary": "In a divided judgment read in The Hague on Thursday, the UN's top court held Myanmar responsible for genocide during the 2017 military campaign in Rakhine state. The ruling is binding, but the court has no way to enforce it on its own.",
+   "date_published": "2026-11-19T12:22:00-07:00",
+   "date_modified": "2026-11-19T12:22:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "World"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/colorado-judge-holds-ice-officials-contempt-re-arrests/",
+   "url": "https://actionglobalnews.com/articles/colorado-judge-holds-ice-officials-contempt-re-arrests/",
+   "title": "A federal judge in Colorado found ICE officials in contempt for re-arresting immigrants moments after courts ordered them freed",
+   "summary": "U.S. District Judge Charlotte Sweeney found that top Colorado immigration officials defied release orders by detaining people again within minutes. She declined to punish them because ICE has stopped, but warned she could reopen the matter.",
+   "date_published": "2026-11-19T12:20:00-07:00",
+   "date_modified": "2026-11-19T12:20:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/colorado-federal-review-foster-care-safety-improvement-plan/",
    "url": "https://actionglobalnews.com/articles/colorado-federal-review-foster-care-safety-improvement-plan/",
    "title": "A federal review found Colorado fell short on six of seven child welfare outcomes, and an improvement plan is due in December",
@@ -447,42 +483,6 @@
    "image": "https://actionglobalnews.com/images/agn-og.jpg",
    "tags": [
     "Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/herzog-gives-eisenkot-mandate-form-israel-government/",
-   "url": "https://actionglobalnews.com/articles/herzog-gives-eisenkot-mandate-form-israel-government/",
-   "title": "Israel's president gives Gadi Eisenkot, not Benjamin Netanyahu, the first chance to form a government",
-   "summary": "Eisenkot won more recommendations than Netanyahu, but his own bloc is well short of a majority. He is calling for a national emergency government, and Netanyahu stays prime minister until a new one is sworn in.",
-   "date_published": "2026-11-09T08:16:00-07:00",
-   "date_modified": "2026-11-09T08:16:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "World"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/china-october-2026-producer-prices-5-7-percent-cpi-0-7/",
-   "url": "https://actionglobalnews.com/articles/china-october-2026-producer-prices-5-7-percent-cpi-0-7/",
-   "title": "China's factory-gate prices rose 5.7% in October, the fastest pace in more than four years, while consumer inflation slowed to 0.7%",
-   "summary": "Mining and raw materials are pushing up what Chinese factories charge, but households are seeing little inflation. The split points to strong outside demand and a weak home market.",
-   "date_published": "2026-11-09T08:14:00-07:00",
-   "date_modified": "2026-11-09T08:14:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/nvidia-board-investigates-jensen-huang-alleged-chinese-spy/",
-   "url": "https://actionglobalnews.com/articles/nvidia-board-investigates-jensen-huang-alleged-chinese-spy/",
-   "title": "Nvidia's board opens an independent investigation after reports that CEO Jensen Huang was targeted by a suspected Chinese intelligence asset",
-   "summary": "Nvidia's directors say they have no reason to think company or national security secrets leaked, but they will review the reports anyway. Huang, who told staff he had an affair with the woman at the center of the reports, says he will stay on as CEO.",
-   "date_published": "2026-11-09T08:12:00-07:00",
-   "date_modified": "2026-11-09T08:12:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Technology"
    ]
   }
  ]

@@ -1,0 +1,35 @@
+{
+ "slug": "voyager-1-reaches-one-light-day-from-earth",
+ "type": "brief",
+ "section": "Science",
+ "kicker": "Science · Brief",
+ "published": "2026-11-19T12:24:00-07:00",
+ "title": "Voyager 1 reaches one light-day from Earth, a first for NASA",
+ "h1": "NASA's Voyager 1 became the first spacecraft to reach one light-day from Earth, even as engineers chase a data outage",
+ "description": "Voyager 1 hit one light-day, about 16.1 billion miles, from Earth on Nov. 18, 2026. NASA confirmed it Nov. 19 but has had no data from the probe since Nov. 14.",
+ "standfirst": "NASA says Voyager 1 crossed the one-light-day mark on Nov. 18, 2026, after more than 49 years in flight. The celebration comes with a problem: the probe stopped sending science and engineering data on Nov. 14.",
+ "keywords": "Voyager 1 one light-day, Voyager 1 distance from Earth 2026, Voyager 1 data outage November 2026, NASA JPL Voyager milestone, Voyager 2 light-day 2035",
+ "takeaways": [
+  "Voyager 1 reached one light-day, about 16.1 billion miles (25.9 billion km), at 2:16 a.m. PST on Nov. 18, 2026.",
+  "A radio signal now takes 24 hours each way, so a command and reply take about two days.",
+  "No science or engineering data has arrived since Nov. 14; only the carrier signal is coming through."
+ ],
+ "body": [
+  "<p>NASA's Voyager 1 is now one light-day from Earth, the first human-made object to get that far. The spacecraft crossed the mark at 2:16 a.m. PST on Nov. 18, 2026, according to a <a href='https://www.jpl.nasa.gov/news/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/' target='_blank' rel='noopener nofollow'>Jet Propulsion Laboratory release</a> issued Nov. 19. A light-day, the distance light covers in 24 hours, is about 16.1 billion miles, or 25.9 billion kilometers.</p>",
+  "<h2>How did NASA confirm it?</h2>",
+  "<p>Engineers used trajectory calculations and the spacecraft's carrier signal, the basic radio tone that normally carries its data. The team then picked up a signal from the probe 24 hours later, the time radio waves now need to reach Earth. JPL director Dave Gallagher called the crossing \"yet another historic feat\" for the mission. Voyager 1 is moving at roughly 38,000 mph.</p>",
+  "<h2>What is wrong with the data?</h2>",
+  "<p>The milestone arrived during a fault. Voyager 1 stopped returning science and engineering data on Nov. 14, NASA said in a <a href='https://science.nasa.gov/blogs/voyager/2026/11/18/voyager-1-engineers-analyze-data-issue-ready-to-confirm-light-day/' target='_blank' rel='noopener nofollow'>mission blog post</a>. A Deep Space Network antenna in Canberra, Australia, still locks onto the carrier signal, which shows the probe is pointed at Earth and its transmitter works. The team suspects the onboard computer that gathers and formats data. A similar problem in 2023 traced back to one of the onboard computers. With a day of delay each way, NASA says diagnosis could take weeks or longer.</p>",
+  "<h2>What happens next</h2>",
+  "<p>Voyager 1 launched in 1977 and entered interstellar space in 2012, the <a href='https://www.pbs.org/newshour/science/nasas-voyager-1-calls-earth-from-more-than-16-billion-miles-or-one-light-day-away' target='_blank' rel='noopener nofollow'>AP reported</a>. Its twin, Voyager 2, followed in 2018 and should reach one light-day in 2035. Both probes lose power every year; JPL says recent energy-saving changes should keep their current instruments running until at least their 50th launch anniversaries next summer.</p>"
+ ],
+ "sources": [
+  {"publisher": "NASA Jet Propulsion Laboratory", "title": "NASA's Voyager 1 Makes History Reaching One Light-Day from Earth", "date": "November 19, 2026", "url": "https://www.jpl.nasa.gov/news/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/"},
+  {"publisher": "NASA Science", "title": "Voyager 1 Engineers Analyze Data Issue, Ready to Confirm Light-day", "date": "November 18, 2026", "url": "https://science.nasa.gov/blogs/voyager/2026/11/18/voyager-1-engineers-analyze-data-issue-ready-to-confirm-light-day/"},
+  {"publisher": "PBS NewsHour (Associated Press)", "title": "NASA's Voyager 1 calls Earth from more than 16 billion miles, or one light-day, away", "date": "November 19, 2026", "url": "https://www.pbs.org/newshour/science/nasas-voyager-1-calls-earth-from-more-than-16-billion-miles-or-one-light-day-away"}
+ ],
+ "faq": [
+  {"q": "How far is one light-day?", "a": "About 16.1 billion miles (25.9 billion kilometers), the distance light travels in 24 hours."},
+  {"q": "Is Voyager 1 still working?", "a": "It is still sending a carrier signal and pointing at Earth, but it has not sent science or engineering data since Nov. 14, 2026. NASA engineers are investigating."}
+ ]
+}
