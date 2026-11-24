@@ -1,0 +1,39 @@
+{
+ "slug": "newborn-vitamin-k-shot-refusals-double-2017-2025",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-11-24T12:36:00-07:00",
+ "title": "Share of US newborns without vitamin K shot has doubled",
+ "h1": "The share of U.S. newborns who do not get a vitamin K shot more than doubled from 2017 to 2025, and doctors report more cases of dangerous bleeding",
+ "description": "The share of U.S. newborns not given a vitamin K shot rose from 3.1% in 2017 to 6.8% in 2025, NPR and KFF Health News reported on November 24, 2026.",
+ "standfirst": "The shot prevents a rare bleeding disorder in babies. Doctors at several hospitals say they now see cases that used to be extremely uncommon.",
+ "keywords": "vitamin K shot newborn, vitamin K refusal, vitamin K deficiency bleeding, VKDB, newborn care, CDC vitamin K",
+ "takeaways": [
+  "The share of newborns not given the injection rose from 3.1% in 2017 to 6.8% in 2025, according to research cited by NPR.",
+  "Babies who do not get the shot are 81 times more likely to develop late vitamin K deficiency bleeding, the CDC says.",
+  "One Michigan hospital reports at least one family a day, on average, declining the shot."
+ ],
+ "body": [
+  "<p>More American parents are declining the vitamin K injection given to newborns. The share of babies who did not receive it rose from 3.1% in 2017 to 6.8% in 2025, according to research published in the journal JAMA this month and described in <a href='https://www.npr.org/2026/11/24/nx-s1-6001723/vitamin-k-deficiency-refusal-vaccine-misinformation-newborn-bleeding' target='_blank' rel='noopener nofollow'>a report by KFF Health News and NPR</a> on Tuesday, November 24, 2026.</p>",
+  "<h2>What does the shot do?</h2>",
+  "<p>Babies are born with very little vitamin K, which the body needs to form blood clots, according to the <a href='https://www.cdc.gov/vitamin-k-deficiency/about/index.html' target='_blank' rel='noopener nofollow'>Centers for Disease Control and Prevention</a>. Without enough of it, a baby can develop vitamin K deficiency bleeding, including bleeding in the intestines or the brain. The CDC says there are often no warning signs and that a single shot prevents the condition.</p>",
+  "<p>Infants who do not get the shot at birth are 81 times more likely to develop the late form of the disorder than those who do, the agency says. That form appears between one week and six months after birth, and 30% to 60% of affected infants have bleeding in the brain.</p>",
+  "<h2>What are hospitals seeing?</h2>",
+  "<p>Doctors at several U.S. hospitals told KFF Health News they now regularly treat babies with life-threatening bleeding from the deficiency, and that some have died or have lasting brain injuries. At Corewell Health's Butterworth Hospital in Grand Rapids, Michigan, at least one family a day declines the shot on average.</p>",
+  "<h2>How are doctors responding?</h2>",
+  "<p>Pediatrician Torrie LeBlanc led a two-year effort at the Grand Rapids hospital to reduce refusals. Staff were given a fact sheet for parents and trained to listen to parents' concerns without judging them. Refusal rates there are now flat, NPR reported. About half of the parents who first say no to LeBlanc change their minds, according to the report.</p>",
+  "<p>\"I honestly thought it would be easier,\" LeBlanc told KFF Health News.</p>",
+  "<p>Some doctors are also more open to oral vitamin K for families who refuse the injection. Researchers say it is less effective than the shot and takes several doses, and there is no federally approved oral product, according to the report.</p>",
+  "<h2>What happens next</h2>",
+  "<p>Refusals at the Michigan hospital are now recorded in the baby's medical record so the family's pediatrician can raise the issue at the first checkup. Parents with questions can read the CDC's guidance and talk with their own doctor.</p>"
+ ],
+ "sources": [
+  {"publisher": "NPR / KFF Health News", "title": "Doctors struggle to save babies after parents refuse vitamin K", "date": "November 24, 2026", "url": "https://www.npr.org/2026/11/24/nx-s1-6001723/vitamin-k-deficiency-refusal-vaccine-misinformation-newborn-bleeding"},
+  {"publisher": "Centers for Disease Control and Prevention", "title": "About Vitamin K Deficiency Bleeding", "date": "January 17, 2025", "url": "https://www.cdc.gov/vitamin-k-deficiency/about/index.html"}
+ ],
+ "faq": [
+  {"q": "How many U.S. newborns do not get the vitamin K shot?", "a": "About 6.8% in 2025, up from 3.1% in 2017, according to research published in JAMA and reported by NPR and KFF Health News."},
+  {"q": "Why are newborns given vitamin K?", "a": "The CDC says babies are born with very little vitamin K, which is needed for blood to clot, and that a single shot prevents vitamin K deficiency bleeding."}
+ ]
+}

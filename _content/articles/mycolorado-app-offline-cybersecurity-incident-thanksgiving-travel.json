@@ -1,0 +1,38 @@
+{
+ "slug": "mycolorado-app-offline-cybersecurity-incident-thanksgiving-travel",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-24T12:33:00-07:00",
+ "title": "myColorado app offline after breach; up to 150,000 affected",
+ "h1": "Colorado's myColorado digital ID app is still offline after a cybersecurity incident that may involve the data of up to 150,000 people",
+ "description": "Colorado shut down the myColorado app on November 18, 2026 after an unauthorized user accessed data. The state says 50,000 to 150,000 people may be affected.",
+ "standfirst": "The state took the app down on November 18 and has not said when it will return. Travelers are being told to carry a physical ID for Thanksgiving flights.",
+ "keywords": "myColorado app down, myColorado cybersecurity incident, Colorado digital ID, mobile driver license Colorado, Office of Information Technology, TSA ConfirmID",
+ "takeaways": [
+  "The state found the incident on the night of November 18, 2026 and shut down the whole app.",
+  "Between 50,000 and 150,000 people's data may be affected, out of about 2.1 million users.",
+  "The state urges residents to carry a physical driver's license or state ID card until the app returns."
+ ],
+ "body": [
+  "<p>Colorado's digital ID app, myColorado, was still offline on Tuesday, November 24, 2026, days after the state shut it down over a security incident. The Governor's Office of Information Technology said in <a href='https://oit.colorado.gov/press-releases/mycolorado-mobile-app-temporarily-unavailable-office-of-information-technology' target='_blank' rel='noopener nofollow'>a release dated November 23</a> that it found the incident on the night of Wednesday, November 18, when an unauthorized user was able to reach data on the platform. The office took the entire app down and started an investigation.</p>",
+  "<h2>How many people could be affected?</h2>",
+  "<p>The office estimates that data belonging to between 50,000 and 150,000 people may be involved. It says the investigation is still under way, so that range could change. The app has about 2.1 million users, according to the release, which does not describe what kind of data was accessed.</p>",
+  "<p>Once the review is finished, people whose data was affected will be notified directly and told what steps they can take, the office said.</p>",
+  "<p>\"Protecting our users' data is our first priority, and we will bring systems back online as quickly as we can once security is restored,\" Sarah Tuneberg, the state's chief information officer, said in the release.</p>",
+  "<h2>What does it mean for Thanksgiving travel?</h2>",
+  "<p>The app lets residents store a driver's license on a phone and show it at Transportation Security Administration checkpoints at Denver International Airport and more than 250 other participating airports, <a href='https://coloradosun.com/2026/11/24/mycolorado-digital-id-app-down-cyber-security-incident/' target='_blank' rel='noopener nofollow'>The Colorado Sun reported</a>.</p>",
+  "<p>Until the app returns, the state is urging people to carry a physical driver's license or state ID card. Residents who planned to fly with a mobile license can add it to another digital wallet approved by the Division of Motor Vehicles, the office said. Travelers who have no acceptable ID, such as a passport or REAL ID, can consider the TSA ConfirmID option, which costs $45.</p>",
+  "<p>State services that people normally reach through the app are still available on agency websites. That includes the Division of Motor Vehicles site for license and vehicle registration renewals.</p>",
+  "<h2>What happens next</h2>",
+  "<p>There is no date for the app's return. The office says it will share a timeline when it has one and points users to myColorado.gov for updates.</p>"
+ ],
+ "sources": [
+  {"publisher": "Colorado Governor's Office of Information Technology", "title": "myColorado Mobile App Temporarily Unavailable, Office of Information Technology Thoroughly Investigating", "date": "November 23, 2026", "url": "https://oit.colorado.gov/press-releases/mycolorado-mobile-app-temporarily-unavailable-office-of-information-technology"},
+  {"publisher": "The Colorado Sun", "title": "myColorado app remains down ahead of Thanksgiving travel after cybersecurity incident", "date": "November 24, 2026", "url": "https://coloradosun.com/2026/11/24/mycolorado-digital-id-app-down-cyber-security-incident/"}
+ ],
+ "faq": [
+  {"q": "Why is the myColorado app down?", "a": "The state shut it down after finding on November 18, 2026 that an unauthorized user had accessed platform data. The Office of Information Technology is investigating and has not given a return date."},
+  {"q": "Can I still fly without my myColorado digital ID?", "a": "The state urges travelers to carry a physical driver's license or state ID card. It says a mobile license can also be added to another DMV-approved digital wallet."}
+ ]
+}
