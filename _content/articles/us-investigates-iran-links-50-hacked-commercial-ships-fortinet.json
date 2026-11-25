@@ -1,0 +1,36 @@
+{
+ "slug": "us-investigates-iran-links-50-hacked-commercial-ships-fortinet",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-25T14:24:00-07:00",
+ "title": "US probes possible Iran link to up to 50 hacked cargo ships",
+ "h1": "US officials are investigating possible Iranian links to cyberattacks on as many as 50 commercial ships",
+ "description": "US intelligence suggests up to 50 commercial vessels were hacked through unpatched Fortinet devices, NPR reported November 24, 2026. Iran is a suspect.",
+ "standfirst": "Hackers are believed to have entered ship networks through a known flaw in common firewall gear. Officials say there are no reports of physical harm so far, but warn the same weakness could reach steering and engine systems.",
+ "keywords": "ships hacked Iran, commercial vessel cyberattack, Fortinet FortiGate maritime, Coast Guard cyber bulletin, LNG tanker hack, maritime cybersecurity",
+ "takeaways": [
+  "Up to 50 commercial vessels may have been compromised, according to a US official cited by NPR on November 24, 2026.",
+  "Attackers are believed to have used known vulnerabilities in Fortinet FortiGate devices, which the Coast Guard and FBI warned about in September.",
+  "The FBI and Coast Guard say there are no current reports of operational disruptions, danger to crews or environmental harm."
+ ],
+ "body": [
+  "<p>The US government has intelligence indicating that as many as 50 commercial ships were recently breached by hackers, and federal officials are investigating whether Iran was behind it, <a href='https://www.npr.org/2026/11/24/nx-s1-6052994/hack-commercial-vessels-iran' target='_blank' rel='noopener nofollow'>NPR reported</a> on November 24, 2026. NPR cited a US official, a former military cyber operator and an industry executive briefed on the attacks. The Wall Street Journal first reported the breaches.</p>",
+  "<h2>How did the hackers get in?</h2>",
+  "<p>According to the US official, the attackers exploited known flaws in Fortinet FortiGate devices, which many shipping companies use to run firewalls and virtual private networks. The Coast Guard and FBI warned the industry about attacks on those devices in a September bulletin. From a ship's office network, the hackers were able to move into the operational technology that runs physical equipment on board.</p>",
+  "<p>The official told NPR the intruders could have affected propulsion, steering, navigation and cargo systems, but gave no examples of that happening. At least one affected ship was a liquefied natural gas tanker. Some crews grew suspicious after email trouble, account lockouts or, in one case, a long communications blackout.</p>",
+  "<p>\"These are not sophisticated attacks,\" the official said, according to NPR, describing the flaw as one that basic security practices could fix.</p>",
+  "<h2>What was known before?</h2>",
+  "<p>In August, Coast Guard and FBI teams boarded two foreign vessels bound for US ports after signs their networks were compromised. <a href='https://www.cbsnews.com/news/coast-guard-fbi-board-oil-tanker-texas/' target='_blank' rel='noopener nofollow'>CBS News reported</a> in September that one was a Texas-bound supertanker that Iranian media named as the VL Prosperity. At that time, the US had not publicly blamed any specific actor.</p>",
+  "<h2>What happens next</h2>",
+  "<p>The FBI and Coast Guard told NPR there are no current reports of operational disruptions, vessel instability, danger to crews or environmental damage. Officials are preparing to check ships arriving at US ports during the busy holiday shipping season. The Coast Guard says it regularly publishes cyber bulletins with steps vessel owners can take to secure their networks.</p>"
+ ],
+ "sources": [
+  {"publisher": "NPR", "title": "The U.S. government is investigating Iranian ties to as many as 50 hacked commercial vessels", "date": "November 24, 2026", "url": "https://www.npr.org/2026/11/24/nx-s1-6052994/hack-commercial-vessels-iran"},
+  {"publisher": "CBS News", "title": "Coast Guard, FBI boarded Texas-bound oil tanker after ship's network was potentially breached", "date": "September 16, 2026", "url": "https://www.cbsnews.com/news/coast-guard-fbi-board-oil-tanker-texas/"}
+ ],
+ "faq": [
+  {"q": "How many ships were hacked?", "a": "A US official told NPR that intelligence suggests up to 50 commercial vessels were recently compromised. Officials have not released a full list."},
+  {"q": "Has Iran been blamed for the ship hacks?", "a": "Federal officials are investigating a possible Iranian link, NPR reported. In September, CBS News reported that the US had not publicly attributed the earlier tanker breaches to any actor."}
+ ]
+}

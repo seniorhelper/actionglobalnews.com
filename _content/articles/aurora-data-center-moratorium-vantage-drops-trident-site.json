@@ -1,0 +1,36 @@
+{
+ "slug": "aurora-data-center-moratorium-vantage-drops-trident-site",
+ "type": "brief",
+ "section": "Colorado",
+ "kicker": "Colorado · Brief",
+ "published": "2026-11-25T14:22:00-07:00",
+ "title": "Aurora pauses new data centers; Vantage drops Trident site",
+ "h1": "Aurora pauses new data centers in most of the city as Vantage drops its Trident site near E-470",
+ "description": "Aurora City Council passed a data center moratorium on November 23, 2026 for most of the city through September 2027, and Vantage dropped its Trident site.",
+ "standfirst": "The pause covers the developed part of Aurora while the city writes new rules. The same night, the developer of the state's biggest announced data center said it would leave its site near Green Valley Ranch.",
+ "keywords": "Aurora data center moratorium, Trident data center, Vantage Data Centers Aurora, Aurora City Council data centers, Colorado data centers, QTS Aurora",
+ "takeaways": [
+  "The moratorium covers land west and south of Powhaton Road and Interstate 70 until after September 30, 2027, or sooner if new rules are adopted.",
+  "Vantage will no longer pursue its planned 500-megawatt Trident campus near E-470 and East 48th Avenue.",
+  "The council also voted to end new tax incentives for data centers; that ban needs one more vote."
+ ],
+ "body": [
+  "<p>Aurora City Council on Monday, November 23, 2026, adopted a temporary ban on new data centers across most of the city, and the developer of the most contested project said it would give up its site. The <a href='https://sentinelcolorado.com/metro/aurora-city-council-passes-data-center-moratorium-through-september-2027/' target='_blank' rel='noopener nofollow'>Sentinel Colorado reported</a> that the vote was unanimous among members present, with one member excused.</p>",
+  "<h2>What does the moratorium cover?</h2>",
+  "<p>New data centers may not locate west and south of the intersection of Powhaton Road and Interstate 70 until after September 30, 2027, or until the council decides proper land use rules are in place, according to the Sentinel. Projects whose applications were already accepted are exempt. The council had twice failed to pass a broader, citywide pause, <a href='https://coloradosun.com/2026/11/25/aurora-data-center-moratorium-vantage-data-trident/' target='_blank' rel='noopener nofollow'>The Colorado Sun reported</a>.</p>",
+  "<p>Rules under discussion include a ban on data centers within 750 feet of residential zoning, conditional approval for sites between 750 feet and half a mile away, and a required noise study.</p>",
+  "<h2>What happened to Trident?</h2>",
+  "<p>Denver-based Vantage Data Centers had planned a 500-megawatt campus, called Trident, on 108 acres near E-470 and East 48th Avenue. The Sun described it as the largest data center announced in Colorado; it had drawn strong opposition from nearby neighborhoods. Mayor Mike Coffman announced at the meeting that Vantage would drop the site. In a statement, the company said it is still reviewing other locations and wants to remain a long-term partner in the state.</p>",
+  "<p>\"I am just grateful the nightmare is over and you have prevailed,\" Coffman told residents, according to the Sun.</p>",
+  "<h2>What happens next</h2>",
+  "<p>Council members also voted unanimously to stop offering tax incentives to data centers. That policy needs one more vote and would not affect the city's four existing agreements, worth up to about $83 million in rebates, the Sentinel reported. Construction continues on a 160-megawatt QTS facility, the largest data center being built in the state. Statewide, regulators are also weighing <a href='/articles/colorado-puc-xcel-data-center-tariff-hearings/'>how data centers should pay for power</a>.</p>"
+ ],
+ "sources": [
+  {"publisher": "The Colorado Sun", "title": "New data centers in Aurora? Thanks, but no. At least not for now, council votes.", "date": "November 25, 2026", "url": "https://coloradosun.com/2026/11/25/aurora-data-center-moratorium-vantage-data-trident/"},
+  {"publisher": "Sentinel Colorado", "title": "Aurora City Council passes data center moratorium through September 2027", "date": "November 23, 2026", "url": "https://sentinelcolorado.com/metro/aurora-city-council-passes-data-center-moratorium-through-september-2027/"}
+ ],
+ "faq": [
+  {"q": "How long does Aurora's data center moratorium last?", "a": "It runs until after September 30, 2027, or earlier if the council decides new land use rules are in place."},
+  {"q": "Is the Trident data center still being built in Aurora?", "a": "Vantage Data Centers said on November 23, 2026 that it will no longer pursue the Trident site near E-470 and East 48th Avenue and is reviewing other locations."}
+ ]
+}
