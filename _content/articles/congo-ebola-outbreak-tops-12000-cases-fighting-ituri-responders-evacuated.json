@@ -1,0 +1,36 @@
+{
+ "slug": "congo-ebola-outbreak-tops-12000-cases-fighting-ituri-responders-evacuated",
+ "type": "brief",
+ "section": "Health",
+ "kicker": "Health · Brief",
+ "published": "2026-11-27T11:08:00-07:00",
+ "title": "Congo Ebola outbreak tops 12,000 cases as fighting slows response",
+ "h1": "Congo's Ebola outbreak passes 12,000 confirmed cases as fighting near Bunia disrupts the response",
+ "description": "Congo's health ministry reported 12,021 confirmed Ebola cases on November 26, 2026, as fighting in Ituri province forced some responders to evacuate.",
+ "standfirst": "Nearly half of the people confirmed to have the Bundibugyo virus have died. Clashes between the army and rebels have kept health teams from reaching some communities.",
+ "keywords": "Congo Ebola outbreak, Bundibugyo virus, Ebola 12,000 cases, Ituri Ebola, Bunia fighting, WHO Ebola emergency 2026",
+ "takeaways": [
+  "Congo's Ministry of Health counted 12,021 confirmed cases as of Thursday, November 26, 2026; nearly half have died.",
+  "WHO's last full report listed 11,613 cases and 5,678 deaths as of November 17, across 68 health zones in eight provinces.",
+  "About a dozen people, including two WHO staff, were evacuated to Bunia on November 24 after being trapped in a hospital for three days."
+ ],
+ "body": [
+  "<p>The Ebola outbreak in eastern Congo has passed 12,000 confirmed cases, and fighting is making it harder to contain. Data from Congo's Ministry of Health released Thursday, November 26, 2026, showed 12,021 confirmed cases, with nearly half of those patients dead, according to <a href='https://www.npr.org/2026/11/26/g-s1-155957/congo-ebola-responders' target='_blank' rel='noopener nofollow'>an Associated Press report carried by NPR</a>. The AP described it as the fastest-growing Ebola outbreak on record and the deadliest of Congo's 17 outbreaks.</p>",
+  "<h2>How is the fighting affecting the response?</h2>",
+  "<p>Clashes between the army and the rebel group Convention pour la révolution populaire resumed Thursday in Iga-Barrière, a mining town about 25 kilometers north of Bunia, the AP reported. Bunia is the capital of Ituri province and a main base for Ebola teams. The fighting pushed more displaced people toward the city.</p>",
+  "<p>Earlier clashes this week kept teams out of some communities, interrupted the monitoring of people exposed to the virus and left some treatment centers short of staff, Dr. Catherine Smallwood, the World Health Organization's Ebola incident manager, said Wednesday, according to the AP. She said about a dozen people, including two WHO personnel and Congolese health officials, were moved to Bunia on Tuesday after three days trapped by crossfire in a hospital in Akwe.</p>",
+  "<h2>What do the WHO figures show?</h2>",
+  "<p>The WHO's most recent <a href='https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON630' target='_blank' rel='noopener nofollow'>Disease Outbreak News update</a>, dated November 20, counted 11,613 confirmed cases and 5,678 deaths as of November 17, a crude fatality ratio of 48.9%. Cases had been confirmed in 68 health zones across eight provinces, with Ituri and Nord Kivu hit hardest. The agency called rising insecurity the greatest obstacle to expanding the response.</p>",
+  "<p>The outbreak was declared on May 15, 2026. It is caused by the Bundibugyo virus, which has no approved vaccine or treatment, the AP noted. Of 720 deaths reported in the three weeks after October 28, 452 happened in communities, outside treatment centers, the WHO said.</p>",
+  "<h2>What happens next</h2>",
+  "<p>On November 18 the WHO director-general determined that the outbreak remains a public health emergency of international concern, and the agency said updated recommendations would follow. Kenya and <a href='/articles/nigeria-confirms-first-ebola-case-abuja-bundibugyo/'>Nigeria</a> have reported no new cases and have each begun a 42-day countdown toward declaring their outbreaks over.</p>"
+ ],
+ "sources": [
+  {"publisher": "NPR (The Associated Press)", "title": "Congo Ebola outbreak reaches 12,000 cases as some responders evacuate", "date": "November 26, 2026", "url": "https://www.npr.org/2026/11/26/g-s1-155957/congo-ebola-responders"},
+  {"publisher": "World Health Organization", "title": "Ebola disease caused by Bundibugyo virus- Democratic Republic of the Congo, Kenya and Nigeria", "date": "November 20, 2026", "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON630"}
+ ],
+ "faq": [
+  {"q": "How many Ebola cases are there in Congo?", "a": "Congo's Ministry of Health reported 12,021 confirmed cases as of November 26, 2026, and nearly half of those patients have died, according to the Associated Press."},
+  {"q": "Is there a vaccine for the Bundibugyo strain of Ebola?", "a": "No. The Associated Press reports there is no approved vaccine or treatment for the Bundibugyo virus."}
+ ]
+}

@@ -6,6 +6,54 @@
  "language": "en-US",
  "items": [
   {
+   "id": "https://actionglobalnews.com/articles/colorado-waste-diversion-rate-16-7-percent-2025-recycling-composting/",
+   "url": "https://actionglobalnews.com/articles/colorado-waste-diversion-rate-16-7-percent-2025-recycling-composting/",
+   "title": "Colorado kept 16.7% of its waste out of landfills in 2025, up a point, as composting grows",
+   "summary": "The state has trailed much of the country on recycling for years. A tenth annual report from two nonprofits credits city composting programs and newer state laws for the gain.",
+   "date_published": "2026-11-27T11:12:00-07:00",
+   "date_modified": "2026-11-27T11:12:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Colorado"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/judge-blocks-fcc-early-review-abc-licenses-disney-first-amendment/",
+   "url": "https://actionglobalnews.com/articles/judge-blocks-fcc-early-review-abc-licenses-disney-first-amendment/",
+   "title": "Federal judge blocks the FCC's early review of Disney's ABC station licenses, citing free speech",
+   "summary": "The preliminary injunction stops the license reviews while Disney's lawsuit continues. The judge also refused the government's request to throw the case out.",
+   "date_published": "2026-11-27T11:10:00-07:00",
+   "date_modified": "2026-11-27T11:10:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Business"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/congo-ebola-outbreak-tops-12000-cases-fighting-ituri-responders-evacuated/",
+   "url": "https://actionglobalnews.com/articles/congo-ebola-outbreak-tops-12000-cases-fighting-ituri-responders-evacuated/",
+   "title": "Congo's Ebola outbreak passes 12,000 confirmed cases as fighting near Bunia disrupts the response",
+   "summary": "Nearly half of the people confirmed to have the Bundibugyo virus have died. Clashes between the army and rebels have kept health teams from reaching some communities.",
+   "date_published": "2026-11-27T11:08:00-07:00",
+   "date_modified": "2026-11-27T11:08:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Health"
+   ]
+  },
+  {
+   "id": "https://actionglobalnews.com/articles/fcc-authorizes-spacex-1-million-satellites-starmind-orbital-data-centers/",
+   "url": "https://actionglobalnews.com/articles/fcc-authorizes-spacex-1-million-satellites-starmind-orbital-data-centers/",
+   "title": "FCC authorizes SpaceX to deploy up to 1 million 'Starmind' satellites as data centers in orbit",
+   "summary": "The agency called it the first U.S. authorization for a data center constellation in space. Astronomers and rival satellite companies had asked the FCC to say no, and some scientists doubt the plan can work.",
+   "date_published": "2026-11-27T11:05:00-07:00",
+   "date_modified": "2026-11-27T11:05:00-07:00",
+   "image": "https://actionglobalnews.com/images/agn-og.jpg",
+   "tags": [
+    "Technology"
+   ]
+  },
+  {
    "id": "https://actionglobalnews.com/articles/us-investigates-iran-links-50-hacked-commercial-ships-fortinet/",
    "url": "https://actionglobalnews.com/articles/us-investigates-iran-links-50-hacked-commercial-ships-fortinet/",
    "title": "US officials are investigating possible Iranian links to cyberattacks on as many as 50 commercial ships",
@@ -435,54 +483,6 @@
    "image": "https://actionglobalnews.com/images/agn-og.jpg",
    "tags": [
     "Business"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/spacex-starship-flight-15-booster-lost-ship-42-orbit-catch-attempt/",
-   "url": "https://actionglobalnews.com/articles/spacex-starship-flight-15-booster-lost-ship-42-orbit-catch-attempt/",
-   "title": "SpaceX's 15th Starship flight reached orbit and released 26 satellites, but the booster was lost after an aborted catch",
-   "summary": "The company wanted to catch both halves of the rocket at its Texas launch site for the first time. The first half of that plan failed. The second half is scheduled for Saturday afternoon.",
-   "date_published": "2026-11-14T10:48:00-07:00",
-   "date_modified": "2026-11-14T10:48:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Technology"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/lauren-boebert-loses-4th-district-eileen-laubacher-ap-call/",
-   "url": "https://actionglobalnews.com/articles/lauren-boebert-loses-4th-district-eileen-laubacher-ap-call/",
-   "title": "Rep. Lauren Boebert has lost Colorado's 4th Congressional District to Democrat Eileen Laubacher, the Associated Press says",
-   "summary": "The call came 10 days after Election Day in the district considered the most Republican in Colorado. Boebert has not conceded, and the margin is too wide for an automatic recount.",
-   "date_published": "2026-11-14T10:47:00-07:00",
-   "date_modified": "2026-11-14T10:47:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Colorado"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/faa-nationwide-ground-stop-november-13-2026-flights-canceled/",
-   "url": "https://actionglobalnews.com/articles/faa-nationwide-ground-stop-november-13-2026-flights-canceled/",
-   "title": "The FAA has lifted a nationwide ground stop that halted every U.S. departure for hours, but cancellations are running into the weekend",
-   "summary": "Officials blame overloaded routers in an aging communications network, not a cyberattack. Airlines spent Saturday moving planes and crews back into place, less than two weeks before Thanksgiving.",
-   "date_published": "2026-11-14T10:46:00-07:00",
-   "date_modified": "2026-11-14T10:46:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Travel"
-   ]
-  },
-  {
-   "id": "https://actionglobalnews.com/articles/who-global-tuberculosis-report-2026-deaths-down-donor-funding-falls/",
-   "url": "https://actionglobalnews.com/articles/who-global-tuberculosis-report-2026-deaths-down-donor-funding-falls/",
-   "title": "Tuberculosis deaths have fallen 35% since 2015, the WHO says, but donor funding dropped 14% last year",
-   "summary": "The world has hit its first target for cutting tuberculosis deaths, five years late. Governments spent more of their own money in 2025 as international aid shrank.",
-   "date_published": "2026-11-13T12:07:00-07:00",
-   "date_modified": "2026-11-13T12:07:00-07:00",
-   "image": "https://actionglobalnews.com/images/agn-og.jpg",
-   "tags": [
-    "Health"
    ]
   }
  ]

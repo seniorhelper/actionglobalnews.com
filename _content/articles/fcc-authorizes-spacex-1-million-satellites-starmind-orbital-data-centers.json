@@ -1,0 +1,38 @@
+{
+ "slug": "fcc-authorizes-spacex-1-million-satellites-starmind-orbital-data-centers",
+ "type": "brief",
+ "section": "Technology",
+ "kicker": "Technology · Brief",
+ "published": "2026-11-27T11:05:00-07:00",
+ "title": "FCC clears SpaceX to launch 1 million data center satellites",
+ "h1": "FCC authorizes SpaceX to deploy up to 1 million 'Starmind' satellites as data centers in orbit",
+ "description": "The FCC on November 25, 2026 authorized SpaceX to deploy up to 1 million Starmind satellites as orbital data centers, with deadlines from 2033 to 2040.",
+ "standfirst": "The agency called it the first U.S. authorization for a data center constellation in space. Astronomers and rival satellite companies had asked the FCC to say no, and some scientists doubt the plan can work.",
+ "keywords": "SpaceX Starmind, FCC SpaceX 1 million satellites, orbital data centers, data centers in space, Brendan Carr SpaceX, American Astronomical Society satellites",
+ "takeaways": [
+  "The FCC's Space Bureau granted the SpaceX application in part on November 25, 2026, covering up to 1,000,000 satellites.",
+  "SpaceX must operate one satellite by November 25, 2033, 10% of the system by 2035, half by 2038 and the rest by 2040.",
+  "Petitions to deny from Viasat, Kuiper Systems and the American Astronomical Society were rejected."
+ ],
+ "body": [
+  "<p>The Federal Communications Commission on Wednesday, November 25, 2026, authorized SpaceX to deploy up to 1 million satellites designed to work as data centers in orbit. In its <a href='https://docs.fcc.gov/public/attachments/DOC-427572A1.txt' target='_blank' rel='noopener nofollow'>news release</a>, the agency described the decision as the first U.S. authorization for a constellation of data centers in space. The system is named Starmind.</p>",
+  "<h2>What did the FCC approve?</h2>",
+  "<p>The <a href='https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt' target='_blank' rel='noopener nofollow'>order from the FCC's Space Bureau</a> grants the application in part and defers part of it, with conditions. It covers 1,000,000 satellites in orbital shells at altitudes from 500 to 1,002 kilometers. SpaceX filed the application on January 30, 2026.</p>",
+  "<p>The approval comes with deadlines. SpaceX must have one satellite operating by November 25, 2033, 10% of the system by the same date in 2035, 50% by 2038 and the remainder by 2040, or the authorization becomes void. The license term is 15 years. The satellites would use radio links for backup command and control and to supplement laser links between satellites, the release said.</p>",
+  "<p>FCC Chairman Brendan Carr said in the release that the action \"opens a bold new frontier for the computing infrastructure needed to power America's leadership and growth.\" The agency said it is still reviewing other companies' orbital data center proposals.</p>",
+  "<h2>Why are scientists skeptical?</h2>",
+  "<p>The order denied petitions from Viasat, Amazon-owned Kuiper Systems and the American Astronomical Society. The bureau wrote that many of the concerns raised were outside the FCC's limited mandate to regulate radio communications.</p>",
+  "<p>The astronomical society said it was \"disheartened and dismayed,\" and warned that the satellites would be larger, brighter and more numerous than current ones, according to <a href='https://www.npr.org/2026/11/26/g-s1-155940/fcc-spacex-satellites-data-centers-in-space' target='_blank' rel='noopener nofollow'>an Associated Press report carried by NPR</a>. Astrophysicist and author Adam Becker told the AP that the plan is \"a fantasy,\" pointing to the difficulty of shedding heat in a vacuum, the cost, and the risk of chain-reaction collisions in low Earth orbit, where many weather and telecommunications satellites operate.</p>",
+  "<h2>What happens next</h2>",
+  "<p>The order gives SpaceX 30 days from release to decline the authorization as conditioned. The first hard deadline is the single-satellite milestone in 2033. Earlier SpaceX coverage: <a href='/articles/spacex-starship-flight-15-booster-lost-ship-42-orbit-catch-attempt/'>Starship Flight 15</a>.</p>"
+ ],
+ "sources": [
+  {"publisher": "Federal Communications Commission", "title": "FCC Authorizes 1 Million Satellites for Data Centers in Space", "date": "November 25, 2026", "url": "https://docs.fcc.gov/public/attachments/DOC-427572A1.txt"},
+  {"publisher": "Federal Communications Commission, Space Bureau", "note": "Memorandum Opinion and Order and Authorization, DA 26-1273, SpaceX Orbital Data Center System", "date": "November 25, 2026", "url": "https://docs.fcc.gov/public/attachments/DA-26-1273A1.txt"},
+  {"publisher": "NPR (The Associated Press)", "title": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical", "date": "November 26, 2026", "url": "https://www.npr.org/2026/11/26/g-s1-155940/fcc-spacex-satellites-data-centers-in-space"}
+ ],
+ "faq": [
+  {"q": "How many satellites did the FCC authorize for SpaceX's Starmind system?", "a": "Up to 1,000,000 satellites, at altitudes from 500 to 1,002 kilometers, under an order released November 25, 2026."},
+  {"q": "When does SpaceX have to launch the Starmind satellites?", "a": "One satellite must be operating by November 25, 2033, 10% of the system by 2035, 50% by 2038 and the rest by 2040, or the authorization becomes void."}
+ ]
+}
